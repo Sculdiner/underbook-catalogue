@@ -1,6 +1,29 @@
 {
   "version": 1,
-  "edits": [],
+  "edits": [
+    {
+      "id": "mut0fxtueknyh",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "twin-spined-bookmark",
+      "before": {
+        "id": "twin-spined-bookmark",
+        "name": "Twin-Spined Bookmark",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two paid assignments in a row use your two different Traits, the second book gains +1 Value. A neutral book breaks the sequence."
+      },
+      "after": {
+        "id": "twin-spined-bookmark",
+        "name": "Twin-Spined Bookmark",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two actions in a row use different Traits, the third book gains +1 Value"
+      },
+      "note": "",
+      "at": "2026-10-03T23:15:42.974Z"
+    }
+  ],
   "applied": [
     {
       "id": "muszs8hhe8um8",
@@ -93,5 +116,5 @@
       "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
     }
   ],
-  "updatedAt": "2026-10-03T22:59:51.851Z"
+  "updatedAt": "2026-10-03T23:15:42.978Z"
 }
