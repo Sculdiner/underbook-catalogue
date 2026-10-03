@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#15110e">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>Underbook Catalogue</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn back" id="back" aria-label="Back" hidden>
+      <svg viewBox="0 0 24 24" width="22" height="22"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <h1 id="title">Underbook</h1>
+    <span class="sync" id="sync" title="Sync status"></span>
+    <a class="icon-btn" href="#/settings" aria-label="Settings">
+      <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2.8v2.6M12 18.6v2.6M2.8 12h2.6M18.6 12h2.6M5.5 5.5l1.8 1.8M16.7 16.7l1.8 1.8M5.5 18.5l1.8-1.8M16.7 7.3l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </a>
+  </header>
+
+  <main id="view" tabindex="-1"></main>
+
+  <a class="fab" id="fab" href="#" aria-label="Add" hidden>
+    <svg viewBox="0 0 24 24" width="26" height="26"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+  </a>
+
+  <nav class="tabbar" id="tabbar">
+    <a href="#/books" data-tab="books"><span class="ti">📖</span>Books</a>
+    <a href="#/curios" data-tab="curios"><span class="ti">🗝️</span>Curios</a>
+    <a href="#/routes" data-tab="routes"><span class="ti">🗺️</span>Routes</a>
+    <a href="#/encounters" data-tab="encounters"><span class="ti">🕯️</span>Encounters</a>
+    <a href="#/changes" data-tab="changes"><span class="ti">✎</span>Changes<b class="badge" id="badge" hidden></b></a>
+  </nav>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal" id="modal" hidden></div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
