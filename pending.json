@@ -60,6 +60,28 @@
       },
       "note": "",
       "at": "2026-10-03T23:20:38.705Z"
+    },
+    {
+      "id": "mut0oeukrfjbc",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "old-queue-number",
+      "before": {
+        "id": "old-queue-number",
+        "name": "Old Queue Number",
+        "rarity": "common",
+        "price": 65,
+        "text": "While 3 or more visitors are waiting, books assigned to the one who has waited longest gain +1 Value."
+      },
+      "after": {
+        "id": "old-queue-number",
+        "name": "Old Queue Number",
+        "rarity": "common",
+        "price": 65,
+        "text": "Every 5 visitors that you fullfill"
+      },
+      "note": "",
+      "at": "2026-10-03T23:22:18.283Z"
     }
   ],
   "applied": [
@@ -154,5 +176,5 @@
       "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
     }
   ],
-  "updatedAt": "2026-10-03T23:20:38.706Z"
+  "updatedAt": "2026-10-03T23:22:18.284Z"
 }
