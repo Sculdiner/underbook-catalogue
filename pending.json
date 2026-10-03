@@ -22,6 +22,21 @@
       },
       "note": "",
       "at": "2026-10-03T23:15:42.974Z"
+    },
+    {
+      "id": "mut0j4ln9col6",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "the-volume-ii",
+      "before": null,
+      "after": {
+        "id": "the-volume-ii",
+        "name": "The volume II'",
+        "rarity": "common",
+        "price": 65
+      },
+      "note": "",
+      "at": "2026-10-03T23:18:11.723Z"
     }
   ],
   "applied": [
@@ -116,5 +131,5 @@
       "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
     }
   ],
-  "updatedAt": "2026-10-03T23:15:42.978Z"
+  "updatedAt": "2026-10-03T23:18:11.723Z"
 }
