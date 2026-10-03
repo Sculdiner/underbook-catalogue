@@ -229,3 +229,15 @@ table.paths th:first-child, table.paths td:first-child { text-align: left; }
   .grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
   .hero .cover { width: 170px; }
 }
+
+/* ---------------------------------------------------------------- inline encounter editing */
+button.visitor, .tap-edit { width: 100%; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+button.visitor:disabled, .tap-edit:disabled { cursor: default; }
+button.visitor:not(:disabled):active { background: var(--card2); }
+.tap-edit { display: block; padding: 0; margin: 0 0 4px; border: 0; background: none; }
+.tap-edit .pencil { font-size: 1rem; color: var(--ink3); vertical-align: middle; }
+.modal .sheet.tall { max-height: calc(100dvh - 32px); overflow-y: auto; display: flex; flex-direction: column; gap: 12px; }
+.modal .sheet.tall .row { position: sticky; bottom: -18px; margin: 0 -18px -18px; padding: 12px 18px 18px; background: var(--bg2); border-top: 1px solid var(--line); }
+.sheet-h { display: flex; gap: 12px; align-items: center; }
+.sheet-h h3 { margin: 0; }
+.two > .field.check { align-self: end; padding-bottom: 10px; }

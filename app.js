@@ -346,6 +346,11 @@ function render() {
   if (r.tab === 'settings') title = 'Settings';
   else if (r.tab === 'changes') title = 'Changes';
   else if (listTab && !r.id) title = cap(r.tab);
+  if (r.tab === 'encounters' && isForm) {
+    location.replace(r.id === 'new' ? '#/encounters' : `#/encounters/${encodeURIComponent(r.id)}`);
+    if (r.id === 'new') editEncounterDetails();
+    return;
+  }
   if (listTab && isForm) {
     if (S.form?.hash !== location.hash) {
       S.form = newForm(r);
@@ -675,16 +680,17 @@ function detailActions(kind, it) {
   const k = encodeURIComponent(it.key);
   if (it.pending?.op === 'delete')
     return `<div class="actions"><button class="btn" data-act="discard" data-id="${it.pending.id}">Undo delete</button></div>`;
+  const inline = kind === 'encounters';
   return `<div class="actions">
-    <a class="btn primary" href="#/${kind}/${k}/edit">Edit</a>
-    <a class="btn" href="#/${kind}/${k}/duplicate">Duplicate</a>
+    ${inline ? '' : `<a class="btn primary" href="#/${kind}/${k}/edit">Edit</a>`}
+    ${inline ? `<button class="btn" data-act="enc-duplicate" data-key="${esc(it.key)}">Duplicate</button>` : `<a class="btn" href="#/${kind}/${k}/duplicate">Duplicate</a>`}
     <button class="btn" data-act="note" data-kind="${kind}" data-key="${esc(it.key)}">Note to Claude</button>
     ${it.pending ? `<button class="btn" data-act="discard" data-id="${it.pending.id}">Discard my change</button>` : ''}
     <button class="btn danger" data-act="delete" data-kind="${kind}" data-key="${esc(it.key)}">Delete</button>
   </div>`;
 }
 
-const ENGINE_SKIP = new Set(['id', 'title', 'traits', 'rarity', 'value', 'actionCost', 'copies', 'shortText', 'rulesText', 'flavor', 'flags', 'extension', 'rebinds']);
+const ENGINE_SKIP = new Set(['id', 'title', 'traits', 'rarity', 'value', 'actionCost', 'copies', 'shortText', 'rulesText', 'flavor', 'flags', 'extension', 'rebinds', 'reminders']);
 
 views.detail = {
   books(it) {
@@ -696,14 +702,11 @@ views.detail = {
         <div class="info"><h2>${esc(b.title)}</h2>
           <div class="tags">${b.traits.map((t) => `<span class="tag" style="border-color:${trait(t)?.accent ?? ''}">${esc(traitName(t))}</span>`).join('') || '<span class="tag">Traitless</span>'}
             <span class="tag ${b.rarity}">${cap(b.rarity)}</span>${b.extension ? '<span class="tag">Extension</span>' : ''}${(b.flags ?? []).map((f) => `<span class="tag">${esc(f)}</span>`).join('')}${sig ? `<span class="tag legendary">${esc(sig.name)} signature</span>` : ''}</div>
-          <div class="stats"><div class="stat"><b>${b.value}</b><span>Value</span></div><div class="stat"><b>${b.actionCost ?? 1}</b><span>Actions</span></div><div class="stat"><b>${b.copies ?? 1}</b><span>Copies</span></div></div>
+          <div class="stats"><div class="stat"><b>${b.value}</b><span>Value</span></div><div class="stat"><b>${b.actionCost ?? 1}</b><span>Actions</span></div></div>
         </div></div>
-      ${b.shortText ? `<h3>Short text</h3><div class="rules">${esc(b.shortText)}</div>` : ''}
       ${b.rulesText ? `<h3>Rules</h3><div class="rules">${esc(b.rulesText)}</div>` : ''}
-      ${b.flavor ? `<p class="flavor">“${esc(b.flavor)}”</p>` : ''}
       ${b.rebinds?.length ? `<h3>Rebinds</h3>${b.rebinds.map((u) => `<div class="rebind"><div class="rn">${esc(u.name)}</div><div class="ba">${esc(u.before)} → ${esc(u.after)}</div><div>${esc(u.text)}</div></div>`).join('')}` : ''}
       ${engine.length ? `<h3>Engine fields</h3><dl class="kv">${engine.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(typeof v === 'object' ? JSON.stringify(v) : v)}</dd>`).join('')}</dl>` : ''}
-      <p class="small muted">id: ${esc(b.id)}</p>
       ${detailActions('books', it)}`;
   },
 
@@ -718,7 +721,6 @@ views.detail = {
           ${c.price != null ? `<div class="stats"><div class="stat"><b>${c.price}</b><span>Gold</span></div></div>` : ''}
         </div></div>
       <h3>Effect</h3><div class="rules">${esc(c.text)}</div>
-      <p class="small muted">id: ${esc(c.id)}</p>
       ${detailActions('curios', it)}`;
   },
 
@@ -734,29 +736,35 @@ views.detail = {
         .sort((a, b) => a.depth - b.depth || a.lane - b.lane)
         .map((n) => `<tr><td>${esc(n.key)}</td><td>${NODE_STYLE[n.type]?.l ?? '?'}${n.band ? `<sup>${n.band[0].toUpperCase()}</sup>` : ''}</td><td>${esc(n.branch)}</td><td>${n.depth}</td><td>${n.lane}</td><td>${esc((n.next ?? []).join(', '))}</td></tr>`)
         .join('')}</tbody></table></div>
-      <p class="small muted">id: ${esc(r.id)}</p>
       ${detailActions('routes', it)}`;
   },
 
   encounters(it) {
     const e = it.data;
     const t = thresholds(e);
+    const live = it.pending?.op !== 'delete';
+    const key = esc(it.key);
     const waves = [...new Set(e.visitors.map((v) => v.arriveAfterTurn))].sort((a, b) => a - b);
-    return `${pendingNotice(it)}<h2>${esc(e.name)}</h2>
-      <div class="tags"><span class="tag">${e.stage === 0 ? 'Tutorial' : `Stage ${e.stage ?? 1}`}</span><span class="tag">${CATEGORY_LABEL[e.category] ?? e.category}</span>${e.band ? `<span class="tag">${cap(e.band)} band</span>` : ''}<span class="tag">${cap(e.type)} reward</span></div>
-      ${e.purpose ? `<p class="muted">${esc(e.purpose)}</p>` : ''}
+    return `${pendingNotice(it)}
+      <button type="button" class="tap-edit" ${live ? `data-act="enc-details" data-key="${key}"` : 'disabled'}>
+        <h2>${esc(e.name)}${live ? ' <span class="pencil">✎</span>' : ''}</h2>
+        <div class="tags"><span class="tag">${e.stage === 0 ? 'Tutorial' : `Stage ${e.stage ?? 1}`}</span><span class="tag">${CATEGORY_LABEL[e.category] ?? e.category}</span>${e.band ? `<span class="tag">${cap(e.band)} band</span>` : ''}<span class="tag">${cap(e.type)} reward</span></div>
+        ${e.purpose ? `<p class="muted" style="margin:6px 0 0">${esc(e.purpose)}</p>` : ''}
+        ${e.intro ? `<div class="notice"><b>${esc(e.intro.title)}</b> — <i>${esc(e.intro.epithet)}</i><br>“${esc(e.intro.line)}”</div>` : ''}
+      </button>
       <div class="stats"><div class="stat"><b>${e.visitors.length}</b><span>Visitors</span></div><div class="stat"><b>${t.survival}</b><span>Survival</span></div><div class="stat"><b>${t.strong}</b><span>Strong</span></div><div class="stat"><b>${t.perfect}</b><span>Perfect</span></div></div>
-      ${e.intro ? `<div class="notice"><b>${esc(e.intro.title)}</b> — <i>${esc(e.intro.epithet)}</i><br>“${esc(e.intro.line)}”</div>` : ''}
       ${e.ruleText ? `<div class="notice warn">${esc(e.ruleText)}</div>` : ''}
+      ${e.visitors.length ? '' : '<div class="empty" style="padding:20px 0">No visitors yet.</div>'}
       ${waves
         .map(
           (w) => `<div class="wave-h">${w === 0 ? 'At the open' : `After turn ${w}`}</div>${e.visitors
-            .filter((v) => v.arriveAfterTurn === w)
-            .map(visitorCard)
+            .map((v, i) => [v, i])
+            .filter(([v]) => v.arriveAfterTurn === w)
+            .map(([v, i]) => visitorCard(v, live ? { key: it.key, i } : null))
             .join('')}`,
         )
         .join('')}
-      <p class="small muted">id: ${esc(e.id)}</p>
+      ${live ? `<button class="btn" style="width:100%;margin-top:6px" data-act="visitor-add" data-key="${key}">+ Add visitor</button>` : ''}
       ${detailActions('encounters', it)}`;
   },
 };
@@ -766,12 +774,170 @@ function portrait(id) {
   return `<div class="portrait" title="Drawn from the crowd">?</div>`;
 }
 
-function visitorCard(v) {
+function visitorCard(v, edit = null) {
   const a = ability(v.abilityId);
-  return `<div class="visitor ${v.headliner ? 'head' : ''}">${portrait(v.visitorDefId)}
+  const attrs = edit ? `type="button" data-act="visitor-edit" data-key="${esc(edit.key)}" data-i="${edit.i}"` : 'type="button" disabled';
+  return `<button class="visitor ${v.headliner ? 'head' : ''}" ${attrs}>${portrait(v.visitorDefId)}
     <div class="vb"><div class="vn">${esc(v.name || visitorDef(v.visitorDefId)?.name || 'Visitor')} ${v.headliner ? '<span class="tag legendary">Headliner</span>' : ''}</div>
     <div class="np"><span>Need <b>${v.fulfillment}</b></span><span>Patience <b>${v.patience}</b></span>${v.tag ? `<span>tag: ${esc(v.tag)}</span>` : ''}</div>
-    ${a ? `<div class="ab"><b>${esc(a.name)}.</b> ${esc(a.text)}</div>` : v.abilityId ? `<div class="ab"><b>${esc(v.abilityId)}</b> <span class="muted">(new ability — describe it in the note)</span></div>` : ''}</div></div>`;
+    ${a ? `<div class="ab"><b>${esc(a.name)}.</b> ${esc(a.text)}</div>` : v.abilityId ? `<div class="ab"><b>${esc(v.abilityId)}</b> <span class="muted">(new ability — describe it in the note)</span></div>` : ''}</div></button>`;
+}
+
+// ------------------------------------------------------------------ sheets (inline encounter editing)
+
+/** A bottom sheet holding a small form. Resolves to { action, values } or null on cancel. */
+function sheet(html, onChange) {
+  return new Promise((resolve) => {
+    const m = $('#modal');
+    m.innerHTML = `<div class="sheet tall" role="dialog" aria-modal="true">${html}</div>`;
+    m.hidden = false;
+    const done = (r) => {
+      m.hidden = true;
+      m.innerHTML = '';
+      m.onclick = m.onchange = null;
+      resolve(r);
+    };
+    m.onclick = (e) => {
+      if (e.target === m) return done(null);
+      const b = e.target.closest('[data-r]');
+      if (!b) return;
+      if (b.dataset.r === 'cancel') return done(null);
+      const values = {};
+      for (const el of m.querySelectorAll('[data-f]')) {
+        const k = el.dataset.f;
+        if (el.type === 'checkbox') values[k] = el.checked;
+        else if (el.type === 'number') values[k] = el.value === '' ? undefined : Number(el.value);
+        else values[k] = el.value.trim();
+      }
+      done({ action: b.dataset.r, values });
+    };
+    m.onchange = (e) => onChange?.(e.target, m);
+  });
+}
+
+const sf = {
+  num: (k, l, v) => `<div class="field"><label>${esc(l)}</label><input type="number" data-f="${k}" value="${v ?? ''}"></div>`,
+  text: (k, l, v, area = false) =>
+    `<div class="field"><label>${esc(l)}</label>${area ? `<textarea data-f="${k}">${esc(v ?? '')}</textarea>` : `<input type="text" data-f="${k}" value="${esc(v ?? '')}" autocomplete="off">`}</div>`,
+  select: (k, l, v, opts, blank = null) =>
+    `<div class="field"><label>${esc(l)}</label><select data-f="${k}">${blank != null ? `<option value="">${esc(blank)}</option>` : ''}${opts
+      .map(([o, ol]) => `<option value="${esc(o)}" ${String(v ?? '') === String(o) ? 'selected' : ''}>${esc(ol)}</option>`)
+      .join('')}</select></div>`,
+  check: (k, l, v) => `<div class="field check"><label><input type="checkbox" data-f="${k}" ${v ? 'checked' : ''}> ${esc(l)}</label></div>`,
+  note: (v) => `<div class="field note-field"><label>Note to Claude (optional)</label><textarea data-f="_note" placeholder="Why, or anything I should know…">${esc(v ?? '')}</textarea></div>`,
+  buttons: (del = '') =>
+    `<div class="row">${del ? `<button class="btn danger" data-r="delete" style="margin-right:auto">${esc(del)}</button>` : ''}<button class="btn ghost" data-r="cancel">Cancel</button><button class="btn primary" data-r="save">Save</button></div>`,
+};
+
+/** Write a changed encounter to the queue, folding into any change already pending on it. */
+function commitEncounter(it, after, note, message) {
+  const op = it.pending?.op === 'add' ? 'add' : 'edit';
+  return commitPending((d) => stage(d, { kind: 'encounters', key: it.key, op, before: clone(it.orig), after: tidy(after), note }), message);
+}
+
+const encounterDraft = (it) => clone(it.pending?.after ?? it.orig ?? it.data);
+
+async function editVisitor(key, i) {
+  const it = findItem('encounters', key);
+  const isNew = i == null;
+  const draft = encounterDraft(it);
+  const last = draft.visitors[draft.visitors.length - 1];
+  const v = isNew ? { arriveAfterTurn: last?.arriveAfterTurn ?? 0, name: '', fulfillment: 5, patience: 2 } : draft.visitors[i];
+  const abilityText = (id) => ability(id)?.text ?? '';
+  const res = await sheet(
+    `<div class="sheet-h">${portrait(v.visitorDefId)}<h3>${isNew ? 'New visitor' : esc(v.name || 'Visitor')}</h3></div>
+     <div class="three">${sf.num('arriveAfterTurn', 'Arrives after turn', v.arriveAfterTurn)}${sf.num('fulfillment', 'Need', v.fulfillment)}${sf.num('patience', 'Patience', v.patience)}</div>
+     ${sf.text('name', 'Name', v.name)}
+     ${sf.select('visitorDefId', 'Portrait / identity', v.visitorDefId, S.cat.visitors.map((x) => [x.id, `${x.name}${x.castOnly ? ' (cast)' : ''}`]), 'Random from the crowd')}
+     ${sf.select('abilityId', 'Ability', v.abilityId, S.cat.abilities.map((a) => [a.id, a.name]), 'None (Need + Patience only)')}
+     <div class="hint" id="ab-text">${esc(abilityText(v.abilityId))}</div>
+     <div class="two">${sf.text('tag', 'Cast tag', v.tag)}${sf.check('headliner', 'Headliner', v.headliner)}</div>
+     ${sf.note(it.pending?.note)}
+     ${sf.buttons(isNew ? '' : 'Remove visitor')}`,
+    (el, m) => {
+      if (el.dataset.f === 'visitorDefId') {
+        m.querySelector('.sheet-h .portrait').outerHTML = portrait(el.value);
+        const name = m.querySelector('[data-f="name"]');
+        if (!name.value && el.value) name.value = visitorDef(el.value)?.name ?? '';
+      }
+      if (el.dataset.f === 'abilityId') m.querySelector('#ab-text').textContent = abilityText(el.value);
+    },
+  );
+  if (!res) return;
+  const { _note, ...f } = res.values;
+  if (res.action === 'delete') {
+    if (!(await ask({ title: `Remove ${v.name || 'this visitor'}?`, ok: 'Remove', danger: true }))) return;
+    draft.visitors.splice(i, 1);
+  } else {
+    const nv = {
+      ...f,
+      arriveAfterTurn: f.arriveAfterTurn ?? 0,
+      fulfillment: f.fulfillment ?? 0,
+      patience: f.patience ?? 1,
+      name: f.name || visitorDef(f.visitorDefId)?.name || '',
+    };
+    if (isNew) draft.visitors.push(nv);
+    else draft.visitors[i] = nv;
+  }
+  const verb = res.action === 'delete' ? 'Remove' : isNew ? 'Add' : 'Edit';
+  if (await commitEncounter(it, draft, _note, `${verb} a visitor in ${it.key}`)) {
+    toast(res.action === 'delete' ? 'Visitor removed' : 'Saved');
+    render();
+  }
+}
+
+/** The encounter's own fields; with no `key`, creates a new encounter. */
+async function editEncounterDetails(key = null) {
+  const it = key ? findItem('encounters', key) : null;
+  const d = it ? encounterDraft(it) : { name: '', stage: 1, type: 'normal', category: 'normal', band: 'opening', purpose: '', visitors: [] };
+  const show = (m) => {
+    m.querySelector('#band-wrap').hidden = m.querySelector('[data-f="category"]').value !== 'normal';
+    m.querySelector('#intro-wrap').hidden = m.querySelector('[data-f="type"]').value !== 'boss';
+  };
+  const res = await sheet(
+    `<h3 style="margin-top:0">${it ? 'Encounter details' : 'New encounter'}</h3>
+     ${sf.text('name', 'Name', d.name)}
+     <div class="two">${sf.num('stage', 'Stage (0 = tutorial)', d.stage ?? 1)}${sf.select('type', 'Reward tier', d.type, ENC_TYPES.map((x) => [x, cap(x)]))}</div>
+     <div class="two">${sf.select('category', 'Category', d.category, ENC_CATEGORIES.map((c) => [c, CATEGORY_LABEL[c]]))}<div id="band-wrap" ${d.category === 'normal' ? '' : 'hidden'}>${sf.select('band', 'Band', d.band ?? 'opening', BANDS.map((b) => [b, cap(b)]))}</div></div>
+     ${sf.text('purpose', 'Purpose / design note', d.purpose, true)}
+     <div id="intro-wrap" class="sub-card" ${d.type === 'boss' ? '' : 'hidden'}><b>Boss title card</b>${sf.text('introTitle', 'Title', d.intro?.title)}${sf.text('introEpithet', 'Epithet', d.intro?.epithet)}${sf.text('introLine', 'Line', d.intro?.line, true)}</div>
+     ${sf.note(it?.pending?.note)}
+     ${sf.buttons()}`,
+    (_el, m) => show(m),
+  );
+  if (!res) return;
+  const f = res.values;
+  if (!f.name) return toast('Name is required', true);
+  const next = { ...d, name: f.name, stage: f.stage ?? 1, type: f.type, category: f.category, purpose: f.purpose };
+  // An encounter that never had a stage is Stage 1 by default; don't invent the field.
+  if (it && it.orig && it.orig.stage === undefined && next.stage === 1) delete next.stage;
+  if (f.category === 'normal') next.band = f.band;
+  else delete next.band;
+  if (f.type === 'boss') next.intro = { ...(d.intro ?? {}), title: f.introTitle, epithet: f.introEpithet, line: f.introLine };
+  else delete next.intro;
+  if (it) {
+    if (await commitEncounter(it, next, f._note, `Edit encounter ${it.key}`)) {
+      toast('Saved');
+      render();
+    }
+    return;
+  }
+  next.id = freshId('encounters', f.name);
+  if (await commitPending((q) => stage(q, { kind: 'encounters', key: next.id, op: 'add', before: null, after: tidy(next), note: f._note }), `Propose encounter ${next.id}`)) {
+    toast('Proposed — now add its visitors');
+    location.hash = `#/encounters/${encodeURIComponent(next.id)}`;
+  }
+}
+
+async function duplicateEncounter(key) {
+  const it = findItem('encounters', key);
+  const d = clone(it.data);
+  d.name = `${d.name} (copy)`;
+  d.id = freshId('encounters', d.name);
+  if (await commitPending((q) => stage(q, { kind: 'encounters', key: d.id, op: 'add', before: null, after: tidy(d), note: '' }), `Duplicate encounter ${key}`)) {
+    toast('Copy proposed');
+    location.hash = `#/encounters/${encodeURIComponent(d.id)}`;
+  }
 }
 
 // ------------------------------------------------------------------ changes
@@ -829,7 +995,10 @@ function changeCard(e, applied = false) {
 
 views.changes = () => {
   if (!token())
-    return `<div class="notice warn">Read-only mode. Add a GitHub token in <a href="#/settings">Settings</a> to make and see changes.</div>`;
+    return `<div class="notice warn">This browser has no GitHub token yet, so it can only view. Paste one to make and see changes.</div>
+      <div class="form"><div class="field"><label for="quick-token">GitHub token</label><input type="text" id="quick-token" placeholder="github_pat_…" autocomplete="off" autocapitalize="off" spellcheck="false" style="-webkit-text-security:disc">
+      <div class="hint">Create a <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">fine-grained token</a>: Repository access → only <b>${esc(repo())}</b>; Permissions → <b>Contents: Read and write</b>.</div></div>
+      <div class="actions"><button class="btn primary" data-act="quick-token">Connect</button></div></div>`;
   const edits = [...S.pending.edits].reverse();
   const applied = [...(S.pending.applied ?? [])].reverse().slice(0, 40);
   return `${S.pendingError ? `<div class="notice err">${esc(S.pendingError)}</div>` : ''}
@@ -858,7 +1027,6 @@ views.settings = () => `
 const BLANK = {
   books: () => ({ id: '', title: '', traits: [], rarity: 'common', value: 2, actionCost: 1, copies: 1, rebinds: [] }),
   curios: () => ({ id: '', name: '', text: '', rarity: 'common', price: 65 }),
-  encounters: () => ({ id: '', name: '', stage: 1, type: 'normal', category: 'normal', band: 'opening', purpose: '', visitors: [{ arriveAfterTurn: 0, name: '', fulfillment: 5, patience: 2 }] }),
   routes: () => ({
     id: '',
     name: '',
@@ -874,7 +1042,7 @@ const BLANK = {
 
 function newForm(r) {
   const kind = r.tab;
-  if (r.id === 'new') return { kind, op: 'add', key: null, orig: null, draft: BLANK[kind](), note: '', autoId: true };
+  if (r.id === 'new') return { kind, op: 'add', key: null, orig: null, draft: BLANK[kind](), note: '' };
   const it = findItem(kind, r.id);
   if (!it) return null;
   if (r.mode === 'duplicate') {
@@ -884,10 +1052,10 @@ function newForm(r) {
       d.title = `${d.title} (copy)`;
       d.rebinds = (d.rebinds ?? []).map((u) => ({ ...u, id: undefined }));
     } else d.name = `${d.name} (copy)`;
-    return { kind, op: 'add', key: null, orig: null, draft: d, note: '', autoId: false };
+    return { kind, op: 'add', key: null, orig: null, draft: d, note: '' };
   }
   const op = it.pending?.op === 'add' ? 'add' : 'edit';
-  return { kind, op, key: it.key, orig: it.orig, draft: clone(it.pending?.after ?? it.data), note: it.pending?.note ?? '', autoId: false };
+  return { kind, op, key: it.key, orig: it.orig, draft: clone(it.pending?.after ?? it.data), note: it.pending?.note ?? '' };
 }
 
 const fieldText = (path, label, value, { area = false, hint = '', ph = '' } = {}) =>
@@ -915,13 +1083,9 @@ const formBody = {
   books(d) {
     return `
       ${fieldText('title', 'Title', d.title)}
-      ${fieldText('id', 'Id', d.id, { hint: 'Lower-case-with-dashes. Renaming an existing id breaks saves; avoid it unless you mean it.' })}
-      ${fieldChips('traits', 'Traits', d.traits, S.cat.traits.map((t) => [t.id, t.name]))}
+      ${fieldSelect('_trait', 'Trait', d.traits?.[0] ?? '', S.cat.traits.map((t) => [t.id, t.name]), { blank: 'None (traitless Basic)' })}
       <div class="three">${fieldSelect('rarity', 'Rarity', d.rarity, RARITIES.map((r) => [r, cap(r)]))}${fieldNum('value', 'Value', d.value)}${fieldNum('actionCost', 'Actions', d.actionCost)}</div>
-      <div class="two">${fieldNum('copies', 'Copies', d.copies)}<div></div></div>
-      ${fieldText('shortText', 'Short text (on the card)', d.shortText)}
       ${fieldText('rulesText', 'Rules text', d.rulesText, { area: true })}
-      ${fieldText('flavor', 'Flavour', d.flavor, { area: true })}
       ${fieldChips('flags', 'Flags', d.flags, BOOK_FLAGS.map((f) => [f, f]))}
       ${fieldCheck('extension', 'Extension book (beyond its Trait’s core ten)', d.extension)}
       <h3>Rebinds</h3>
@@ -940,7 +1104,6 @@ const formBody = {
     const curse = d.curse != null;
     return `
       ${fieldText('name', 'Name', d.name)}
-      ${fieldText('id', 'Id', d.id)}
       ${fieldSelect('_kind', 'Kind', curse ? 'curse' : 'positive', [['positive', 'Positive Curio'], ['curse', 'Curse (negative Curio)']], { rerender: true })}
       ${
         curse
@@ -951,49 +1114,11 @@ const formBody = {
       ${fieldText('text', 'Effect', d.text, { area: true })}`;
   },
 
-  encounters(d) {
-    const visitorOpts = S.cat.visitors.map((v) => [v.id, `${v.name}${v.castOnly ? ' (cast)' : ''}`]);
-    const abilityOpts = S.cat.abilities.map((a) => [a.id, a.name]);
-    return `
-      ${fieldText('name', 'Name', d.name)}
-      ${fieldText('id', 'Id', d.id)}
-      <div class="two">${fieldNum('stage', 'Stage (0 = tutorial)', d.stage ?? 1, { opt: true })}${fieldSelect('type', 'Reward tier', d.type, ENC_TYPES.map((t) => [t, cap(t)]), { rerender: true })}</div>
-      <div class="two">${fieldSelect('category', 'Category', d.category, ENC_CATEGORIES.map((c) => [c, CATEGORY_LABEL[c]]), { rerender: true })}${
-        d.category === 'normal' ? fieldSelect('band', 'Band', d.band, BANDS.map((b) => [b, cap(b)])) : '<div></div>'
-      }</div>
-      ${fieldText('purpose', 'Purpose / design note', d.purpose, { area: true })}
-      ${
-        d.type === 'boss'
-          ? `<div class="sub-card"><b>Boss title card</b>${fieldText('intro.title', 'Title', d.intro?.title)}${fieldText('intro.epithet', 'Epithet', d.intro?.epithet)}${fieldText('intro.line', 'Line', d.intro?.line, { area: true })}</div>`
-          : ''
-      }
-      <div class="notice small">${(() => {
-        const t = thresholds(d);
-        return `Survival ${t.survival} · Strong ${t.strong} · Perfect ${t.perfect} · ${d.visitors.length} visitors`;
-      })()}</div>
-      <h3>Visitors</h3>
-      ${d.visitors
-        .map((v, i) => {
-          const a = ability(v.abilityId);
-          return `<div class="sub-card"><div class="sub-h">${portrait(v.visitorDefId)}<b>${esc(v.name || visitorDef(v.visitorDefId)?.name || `Visitor ${i + 1}`)}</b>${miniBtns('visitors', i)}</div>
-            <div class="three">${fieldNum(`visitors.${i}.arriveAfterTurn`, 'Arrives', v.arriveAfterTurn)}${fieldNum(`visitors.${i}.fulfillment`, 'Need', v.fulfillment)}${fieldNum(`visitors.${i}.patience`, 'Patience', v.patience)}</div>
-            ${fieldText(`visitors.${i}.name`, 'Name', v.name)}
-            ${fieldSelect(`visitors.${i}.visitorDefId`, 'Portrait / identity', v.visitorDefId, visitorOpts, { rerender: true, blank: 'Random from the crowd' })}
-            ${fieldSelect(`visitors.${i}.abilityId`, 'Ability', v.abilityId, abilityOpts, { rerender: true, blank: 'None (Need + Patience only)' })}
-            ${a ? `<div class="hint">${esc(a.text)}</div>` : ''}
-            <div class="two">${fieldText(`visitors.${i}.tag`, 'Cast tag', v.tag)}${fieldCheck(`visitors.${i}.headliner`, 'Headliner', v.headliner)}</div></div>`;
-        })
-        .join('')}
-      <button type="button" class="btn" data-act="add-visitor">+ Add visitor</button>
-      <p class="small muted">A new ability? Pick “None” and describe it in the note to Claude.</p>`;
-  },
-
   routes(d) {
     const { errs, warns } = routeChecks(d);
     const sorted = d.nodes.map((n, i) => [n, i]).sort(([a], [b]) => a.depth - b.depth || a.lane - b.lane);
     return `
       ${fieldText('name', 'Name', d.name)}
-      ${fieldText('id', 'Id', d.id)}
       <div class="map-wrap">${routeSvg(d)}</div>${legend()}
       ${errs.map((e) => `<div class="notice err">${esc(e)}</div>`).join('')}${warns.map((e) => `<div class="notice warn">${esc(e)}</div>`).join('')}
       <details><summary class="muted small" style="padding:6px 0">Path counts</summary>${routePathTable(d)}</details>
@@ -1070,12 +1195,17 @@ function tidy(v, key = '') {
   return typeof v === 'string' ? v.trim() : v;
 }
 
+/** An id for something new, derived from its name and never clashing with another. */
+function freshId(kind, name, ownKey = null) {
+  const base = slug(name) || kind.slice(0, -1);
+  const taken = new Set(items(kind).filter((x) => x.key !== ownKey).map((x) => x.data.id));
+  let id = base;
+  for (let n = 2; taken.has(id); n++) id = `${base}-${n}`;
+  return id;
+}
+
 function validate(F, d) {
   const errs = [];
-  if (!d.id) errs.push('Id is required');
-  else if (!/^[a-z0-9][a-z0-9-]*$/.test(d.id)) errs.push('Id must be lower-case letters, digits and dashes');
-  const clash = items(F.kind).find((x) => x.data.id === d.id && x.key !== F.key && x.pending?.op !== 'delete');
-  if (clash) errs.push(`Id “${d.id}” is already used by ${KIND[F.kind].name(clash.data)}`);
   if (F.kind === 'books' && !d.title) errs.push('Title is required');
   if (F.kind === 'curios' && !d.name) errs.push('Name is required');
   if (F.kind === 'encounters') {
@@ -1092,6 +1222,8 @@ function validate(F, d) {
 
 function finalize(F) {
   const d = tidy(F.draft);
+  // Ids are never shown: a new item takes one from its name; an existing one keeps its own.
+  if (F.op === 'add') d.id = freshId(F.kind, d.title ?? d.name, F.key);
   if (F.kind === 'books') d.rebinds = (d.rebinds ?? []).map((u) => ({ ...u, id: u.id ?? `${d.id}:${slug(u.name)}` }));
   if (F.kind === 'curios') {
     if (d.curse) {
@@ -1148,12 +1280,6 @@ document.addEventListener('input', (e) => {
   let v = t.value;
   if (t.dataset.type === 'number') v = v === '' ? (t.dataset.opt ? undefined : 0) : Number(v);
   setPath(F.draft, path, v);
-  if (F.autoId && (path === 'title' || path === 'name')) {
-    F.draft.id = slug(v);
-    const idIn = $('[data-path="id"]');
-    if (idIn) idIn.value = F.draft.id;
-  }
-  if (path === 'id') F.autoId = false;
   if (F.kind === 'routes' && /^nodes\.\d+\.(depth|lane)$/.test(path)) {
     const wrap = $('.map-wrap');
     if (wrap) wrap.innerHTML = routeSvg(F.draft);
@@ -1162,6 +1288,11 @@ document.addEventListener('input', (e) => {
 
 document.addEventListener('change', (e) => {
   const t = e.target;
+  if (t.id === 'set-token') {
+    LS.set('token', t.value.trim());
+    refreshPending().then(render);
+    return;
+  }
   const F = S.form;
   if (!F) return;
   if (t.dataset.actChange === 'rename-node') {
@@ -1177,7 +1308,8 @@ document.addEventListener('change', (e) => {
   if (!path) return;
   if (t.type === 'checkbox') setPath(F.draft, path, t.checked || undefined);
   else if (t.tagName === 'SELECT') {
-    if (path === '_kind') {
+    if (path === '_trait') F.draft.traits = t.value ? [t.value] : [];
+    else if (path === '_kind') {
       if (t.value === 'curse') F.draft.curse = F.draft.curse ?? 'bookselling';
       else {
         delete F.draft.curse;
@@ -1295,6 +1427,19 @@ document.addEventListener('click', async (e) => {
       }
       return;
     }
+    case 'visitor-edit':
+      return editVisitor(b.dataset.key, +b.dataset.i);
+    case 'visitor-add':
+      return editVisitor(b.dataset.key, null);
+    case 'enc-details':
+      return editEncounterDetails(b.dataset.key);
+    case 'enc-duplicate':
+      return duplicateEncounter(b.dataset.key);
+    case 'quick-token':
+      LS.set('token', $('#quick-token').value.trim());
+      await refreshPending();
+      if (token() && !S.pendingError) toast('Connected — changes will save to GitHub');
+      return render();
     case 'refresh':
       await refreshPending();
       return render();
@@ -1311,6 +1456,12 @@ document.addEventListener('click', async (e) => {
       await boot();
       return toast('Catalogue reloaded');
   }
+});
+
+$('#fab').addEventListener('click', (e) => {
+  if (parseHash().tab !== 'encounters') return;
+  e.preventDefault();
+  editEncounterDetails();
 });
 
 $('#back').addEventListener('click', () => {
