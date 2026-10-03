@@ -372,3 +372,36 @@ button.rb:active { background: rgba(255, 255, 255, .08); }
 .rb-tools button:disabled { opacity: .35; }
 .rb-tools .danger { color: var(--danger); background: rgba(196, 85, 74, .12); }
 .field textarea { resize: none; }
+
+/* ---- in-place editing: fields look like the page until tapped */
+fieldset.inl-wrap { border: 0; margin: 0; padding: 0; min-width: 0; }
+.inl {
+  display: block; width: 100%; margin: 0; padding: 6px 10px; border: 0; border-radius: 12px;
+  background: transparent; color: inherit; font: inherit;
+  transition: background-color .15s, box-shadow .15s;
+}
+textarea.inl { resize: none; overflow: hidden; field-sizing: content; }
+.inl:focus { outline: none; background: rgba(255, 255, 255, .06); box-shadow: 0 0 0 2px rgba(216, 165, 74, .5); }
+fieldset:not(:disabled) .inl:not(:focus) { background-image: linear-gradient(rgba(255, 255, 255, .025), rgba(255, 255, 255, .025)); }
+.inl-title { margin-left: -10px; font: 700 1.6rem/1.15 var(--serif); font-variant-numeric: lining-nums; min-height: 0; }
+.inl-rules { padding: 14px 16px; min-height: 5em; line-height: 1.5; background-color: rgba(255, 255, 255, .04); border-radius: 14px; }
+fieldset:not(:disabled) .inl-rules:not(:focus) { background-image: none; }
+.stat .inl-num {
+  width: 100%; padding: 2px 0; text-align: center; border-radius: 8px;
+  font: 700 1.3rem/1.1 var(--serif); font-variant-numeric: lining-nums;
+  -moz-appearance: textfield; appearance: textfield;
+}
+.inl-num::-webkit-inner-spin-button, .inl-num::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+label.stat { cursor: text; }
+select.inl-chip {
+  appearance: none; -webkit-appearance: none; border: 0; border-radius: 999px; cursor: pointer;
+  padding: 5px 26px 5px 12px; font: 600 .8rem var(--sans); color: var(--ink2);
+  background: rgba(255, 255, 255, .07) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23b7a98f' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 10px center;
+}
+select.inl-chip.tag { border: 0; }
+select.inl-chip option { background: var(--bg2); color: var(--ink); }
+fieldset:disabled select.inl-chip { background-image: none; padding-right: 12px; cursor: default; }
+.edit-hint { margin: 10px 0 0; font-size: .8rem; color: var(--ink3); }
+#view h3 small { font: 600 .8rem var(--sans); }
+.stats label.stat { flex: 0 0 auto; width: 84px; }
+.stats label.stat .inl-num { width: 100%; min-width: 0; }

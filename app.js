@@ -347,9 +347,9 @@ function render() {
   if (r.tab === 'settings') title = 'Settings';
   else if (r.tab === 'changes') title = 'Changes';
   else if (listTab && !r.id) title = cap(r.tab);
-  if (r.tab === 'encounters' && isForm) {
-    location.replace(r.id === 'new' ? '#/encounters' : `#/encounters/${encodeURIComponent(r.id)}`);
-    if (r.id === 'new') editEncounterDetails();
+  if (INLINE_KINDS.includes(r.tab) && isForm) {
+    location.replace(r.id === 'new' ? `#/${r.tab}` : `#/${r.tab}/${encodeURIComponent(r.id)}`);
+    if (r.id === 'new') createItem(r.tab);
     return;
   }
   if (listTab && isForm) {
@@ -706,14 +706,17 @@ function pendingNotice(it) {
   return `<div class="notice warn">${pendingTag(it)} ${what}${p.note ? `<div class="change" style="margin:8px 0 0;padding:0;border:0;background:none"><div class="note">${esc(p.note)}</div></div>` : ''}</div>`;
 }
 
+/** Kinds edited in place on their own page; only routes keep the popup editor. */
+const INLINE_KINDS = ['books', 'curios', 'encounters'];
+
 function detailActions(kind, it) {
   const k = encodeURIComponent(it.key);
   if (it.pending?.op === 'delete')
     return `<div class="actions"><button class="btn" data-act="discard" data-id="${it.pending.id}">Undo delete</button></div>`;
-  const inline = kind === 'encounters';
+  const inline = INLINE_KINDS.includes(kind);
   return `<div class="actions">
     ${inline ? '' : `<a class="btn primary" href="#/${kind}/${k}/edit">Edit</a>`}
-    ${inline ? `<button class="btn" data-act="enc-duplicate" data-key="${esc(it.key)}">Duplicate</button>` : `<a class="btn" href="#/${kind}/${k}/duplicate">Duplicate</a>`}
+    ${inline ? `<button class="btn" data-act="dup" data-kind="${kind}" data-key="${esc(it.key)}">Duplicate</button>` : `<a class="btn" href="#/${kind}/${k}/duplicate">Duplicate</a>`}
     <button class="btn" data-act="note" data-kind="${kind}" data-key="${esc(it.key)}">Note to Claude</button>
     ${it.pending ? `<button class="btn" data-act="discard" data-id="${it.pending.id}">Discard my change</button>` : ''}
     <button class="btn danger" data-act="delete" data-kind="${kind}" data-key="${esc(it.key)}">Delete</button>
@@ -724,34 +727,71 @@ const ENGINE_SKIP = new Set(['id', 'title', 'traits', 'rarity', 'value', 'action
 
 views.detail = {
   books(it) {
-    const b = it.data;
+    const { live, d: b } = inlineFor('books', it);
     const sig = S.cat.traits.find((t) => t.signatureBook === b.id);
     const engine = Object.entries(b).filter(([k]) => !ENGINE_SKIP.has(k));
-    return `${pendingNotice(it)}
+    const rebinds = b.rebinds ?? [];
+    const tr = trait(b.traits?.[0]);
+    return `<div id="pending-slot">${pendingNotice(it)}</div>
+      <fieldset class="inl-wrap" ${live ? '' : 'disabled'}>
       <div class="hero">${bookCover(b)}
-        <div class="info"><h2>${esc(b.title)}</h2>
-          <div class="tags">${b.traits.map((t) => `<span class="tag" style="border-color:${trait(t)?.accent ?? ''}">${esc(traitName(t))}</span>`).join('') || '<span class="tag">Traitless</span>'}
-            <span class="tag ${b.rarity}">${cap(b.rarity)}</span>${b.extension ? '<span class="tag">Extension</span>' : ''}${(b.flags ?? []).map((f) => `<span class="tag">${esc(f)}</span>`).join('')}${sig ? `<span class="tag legendary">${esc(sig.name)} signature</span>` : ''}</div>
-          <div class="stats"><div class="stat"><b>${b.value}</b><span>Value</span></div><div class="stat"><b>${b.actionCost ?? 1}</b><span>Actions</span></div></div>
+        <div class="info">
+          <textarea class="inl inl-title" rows="1" data-ipath="title" placeholder="Title">${esc(b.title)}</textarea>
+          <div class="tags">
+            <select class="inl-chip" data-ipath="_trait" aria-label="Trait" style="${tr ? `box-shadow: inset 0 0 0 1.5px ${tr.accent}` : ''}">
+              <option value="">No Trait (Basic)</option>${S.cat.traits.map((t) => `<option value="${t.id}" ${t.id === b.traits?.[0] ? 'selected' : ''}>${esc(t.name)}</option>`).join('')}
+            </select>
+            <select class="inl-chip tag ${b.rarity}" data-ipath="rarity" aria-label="Rarity">
+              ${RARITIES.map((r) => `<option value="${r}" ${r === b.rarity ? 'selected' : ''}>${cap(r)}</option>`).join('')}
+            </select>
+            ${b.extension ? '<span class="tag">Extension</span>' : ''}${sig ? `<span class="tag legendary">${esc(sig.name)} signature</span>` : ''}
+          </div>
+          <div class="stats">
+            <label class="stat"><input type="number" class="inl inl-num" data-ipath="value" value="${b.value ?? 0}"><span>Value</span></label>
+            <label class="stat"><input type="number" class="inl inl-num" data-ipath="actionCost" value="${b.actionCost ?? 1}"><span>Actions</span></label>
+          </div>
         </div></div>
-      ${b.rulesText ? `<h3>Rules</h3><div class="rules">${esc(b.rulesText)}</div>` : ''}
-      ${b.rebinds?.length ? `<h3>Rebinds</h3>${b.rebinds.map((u) => `<div class="rebind"><div class="rn">${esc(u.name)}</div><div class="ba">${esc(u.before)} → ${esc(u.after)}</div><div>${esc(u.text)}</div></div>`).join('')}` : ''}
+      ${live ? '<p class="edit-hint">Tap anything to change it. It saves by itself.</p>' : ''}
+      <h3>Rules</h3>
+      <textarea class="inl inl-rules" data-ipath="rulesText" placeholder="Tap to write the rules…">${esc(b.rulesText ?? '')}</textarea>
+      <h3>Rebinds <small class="muted small">${rebinds.length}</small></h3>
+      <div class="rb-list">${rebinds.map((u, i) => rebindCard(u, i, live && S.inline?.openRebind === i, { attr: 'data-ipath', count: rebinds.length })).join('')}</div>
+      ${live ? '<button type="button" class="btn ghost add-row" style="width:100%;margin-top:10px" data-act="add-rebind">+ Add rebind</button>' : ''}
+      <h3>Flags</h3>
+      <div class="chips" style="flex-wrap:wrap;overflow:visible">${BOOK_FLAGS.map((f) => `<button type="button" class="chip ${(b.flags ?? []).includes(f) ? 'on' : ''}" data-itoggle="flags" data-val="${f}">${f}</button>`).join('')}</div>
+      <div class="field check" style="margin-top:12px"><label><input type="checkbox" data-ipath="extension" ${b.extension ? 'checked' : ''}> Extension book (beyond its Trait’s core ten)</label></div>
+      </fieldset>
       ${engine.length ? `<h3>Engine fields</h3><dl class="kv">${engine.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(typeof v === 'object' ? JSON.stringify(v) : v)}</dd>`).join('')}</dl>` : ''}
-      ${detailActions('books', it)}`;
+      <div id="actions-slot">${detailActions('books', it)}</div>`;
   },
 
   curios(it) {
-    const c = it.data;
-    const cls = c.curse ? 'curse' : c.rarity;
+    const { live, d: c } = inlineFor('curios', it);
+    const curse = c.curse != null;
+    const cls = curse ? 'curse' : c.rarity;
     const icon = hasArt('curios', c.id) ? `style="background-image:url('${artUrl('curios', c.id)}')"` : '';
-    return `${pendingNotice(it)}
+    const opts = (list, cur) => list.map(([v, l]) => `<option value="${esc(v)}" ${String(cur ?? '') === String(v) ? 'selected' : ''}>${esc(l)}</option>`).join('');
+    return `<div id="pending-slot">${pendingNotice(it)}</div>
+      <fieldset class="inl-wrap" ${live ? '' : 'disabled'}>
       <div class="hero"><div class="curio-icon big ${cls}" ${icon}></div>
-        <div class="info"><h2>${esc(c.name)}</h2>
-          <div class="tags">${c.curse ? `<span class="tag curse">${esc(cap(c.curse))} curse</span>` : `<span class="tag ${c.rarity}">${cap(c.rarity)}</span>`}${c.trait ? `<span class="tag">${esc(traitName(c.trait))} only</span>` : ''}</div>
-          ${c.price != null ? `<div class="stats"><div class="stat"><b>${c.price}</b><span>Gold</span></div></div>` : ''}
+        <div class="info">
+          <textarea class="inl inl-title" rows="1" data-ipath="name" placeholder="Name">${esc(c.name)}</textarea>
+          <div class="tags">
+            <select class="inl-chip" data-ipath="_kind" aria-label="Kind">${opts([['positive', 'Positive'], ['curse', 'Curse']], curse ? 'curse' : 'positive')}</select>
+            ${
+              curse
+                ? `<select class="inl-chip tag curse" data-ipath="curse" aria-label="Curse family">${opts(CURSE_FAMILIES.map((f) => [f, `${cap(f)} curse`]), c.curse)}</select>`
+                : `<select class="inl-chip tag ${c.rarity}" data-ipath="rarity" aria-label="Rarity">${opts(CURIO_RARITIES.map((r) => [r, cap(r)]), c.rarity)}</select>`
+            }
+            <select class="inl-chip" data-ipath="trait" aria-label="Trait">${opts([['', 'Any run'], ...S.cat.traits.map((t) => [t.id, `${t.name} only`])], c.trait)}</select>
+          </div>
+          ${curse ? '' : `<div class="stats"><label class="stat"><input type="number" class="inl inl-num" data-ipath="price" data-opt="1" value="${c.price ?? ''}"><span>Gold</span></label></div>`}
         </div></div>
-      <h3>Effect</h3><div class="rules">${esc(c.text)}</div>
-      ${detailActions('curios', it)}`;
+      ${live ? '<p class="edit-hint">Tap anything to change it. It saves by itself.</p>' : ''}
+      <h3>Effect</h3>
+      <textarea class="inl inl-rules" data-ipath="text" placeholder="Tap to write what it does…">${esc(c.text ?? '')}</textarea>
+      </fieldset>
+      <div id="actions-slot">${detailActions('curios', it)}</div>`;
   },
 
   routes(it) {
@@ -856,8 +896,8 @@ const sf = {
       .join('')}</select></div>`,
   check: (k, l, v) => `<div class="field check"><label><input type="checkbox" data-f="${k}" ${v ? 'checked' : ''}> ${esc(l)}</label></div>`,
   note: (v) => `<div class="field note-field"><label>Note to Claude (optional)</label><textarea data-f="_note" placeholder="Why, or anything I should know…">${esc(v ?? '')}</textarea></div>`,
-  buttons: (del = '') =>
-    `<div class="row">${del ? `<button class="btn danger" data-r="delete" style="margin-right:auto">${esc(del)}</button>` : ''}<button class="btn ghost" data-r="cancel">Cancel</button><button class="btn primary" data-r="save">Save</button></div>`,
+  buttons: (del = '', ok = 'Save') =>
+    `<div class="row">${del ? `<button class="btn danger" data-r="delete" style="margin-right:auto">${esc(del)}</button>` : ''}<button class="btn ghost" data-r="cancel">Cancel</button><button class="btn primary" data-r="save">${esc(ok)}</button></div>`,
 };
 
 /** Write a changed encounter to the queue, folding into any change already pending on it. */
@@ -960,16 +1000,171 @@ async function editEncounterDetails(key = null) {
   }
 }
 
-async function duplicateEncounter(key) {
-  const it = findItem('encounters', key);
-  const d = clone(it.data);
-  d.name = `${d.name} (copy)`;
-  d.id = freshId('encounters', d.name);
-  if (await commitPending((q) => stage(q, { kind: 'encounters', key: d.id, op: 'add', before: null, after: tidy(d), note: '' }), `Duplicate encounter ${key}`)) {
+async function duplicateItem(kind, key) {
+  await flushInline();
+  const it = findItem(kind, key);
+  const d = clone(it.pending?.after ?? it.data);
+  if (kind === 'books') {
+    d.title = `${d.title} (copy)`;
+    d.rebinds = (d.rebinds ?? []).map(({ id: _id, ...u }) => u);
+  } else d.name = `${d.name} (copy)`;
+  d.id = freshId(kind, d.title ?? d.name);
+  const after = cleanup(kind, tidy(d));
+  if (await commitPending((q) => stage(q, { kind, key: after.id, op: 'add', before: null, after, note: '' }), `Duplicate ${kind.slice(0, -1)} ${key}`)) {
+    S.inline = null;
     toast('Copy proposed');
-    location.hash = `#/encounters/${encodeURIComponent(d.id)}`;
+    location.hash = `#/${kind}/${encodeURIComponent(after.id)}`;
   }
 }
+
+// ------------------------------------------------------------------ in-place editing (books, curios)
+
+/*
+ * A book or Curio page is its own editor. Its fields carry `data-ipath`;
+ * finishing a field (`change`: leaving it, or picking from a list) saves the
+ * whole item to the queue a moment later. Rapid edits fold into one queued
+ * change, and saves never overlap (a change made mid-save is sent right after).
+ */
+
+/** The page's working copy: kept while edits are unsaved, otherwise rebuilt from the queue. */
+function inlineFor(kind, it) {
+  const live = it.pending?.op !== 'delete';
+  if (!live) return { live, d: it.data };
+  const I = S.inline;
+  const mine = I && I.kind === kind && I.key === it.key;
+  if (!(mine && (I.dirty || I.busy))) {
+    S.inline = {
+      kind,
+      key: it.key,
+      op: it.pending?.op === 'add' ? 'add' : 'edit',
+      orig: it.orig,
+      draft: clone(it.pending?.after ?? it.orig ?? it.data),
+      openRebind: mine ? I.openRebind : null,
+      dirty: false,
+      busy: false,
+    };
+  }
+  return { live, d: S.inline.draft };
+}
+
+function inlineValue(t) {
+  if (t.type !== 'number') return t.value;
+  if (t.value === '') return t.dataset.opt ? undefined : 0;
+  return Number(t.value);
+}
+
+/** A Rebind's open card follows its name as it is typed. */
+function rebindTitle(path, v) {
+  const m = /^rebinds\.(\d+)\.name$/.exec(path);
+  if (!m) return;
+  const h = $(`[data-rb-title="${m[1]}"]`);
+  if (h) h.textContent = v || 'New rebind';
+}
+
+function inlineChanged() {
+  const I = S.inline;
+  if (!I) return;
+  I.dirty = true;
+  clearTimeout(I.timer);
+  I.timer = setTimeout(() => flushInline(I), 450);
+}
+
+/** Send the page's working copy to the queue, if it has unsaved edits. */
+async function flushInline(I = S.inline) {
+  if (!I || !I.dirty) return;
+  clearTimeout(I.timer);
+  if (I.busy) {
+    I.again = true;
+    return;
+  }
+  const after = cleanup(I.kind, tidy(I.draft));
+  const missing = I.kind === 'books' ? !after.title : !after.name;
+  if (missing) return toast(I.kind === 'books' ? 'A book needs a title' : 'A curio needs a name', true);
+  I.busy = true;
+  I.dirty = false;
+  const ok = await commitPending(
+    (q) =>
+      stage(q, {
+        kind: I.kind,
+        key: I.key,
+        op: I.op,
+        before: clone(I.orig),
+        after,
+        note: q.edits.find((e) => e.kind === I.kind && e.targetId === I.key)?.note ?? '',
+      }),
+    `${I.op === 'add' ? 'Propose' : 'Edit'} ${I.kind.slice(0, -1)} ${I.key}`,
+  );
+  I.busy = false;
+  if (!ok) I.dirty = true;
+  if (I.again) {
+    I.again = false;
+    I.dirty = true;
+    return flushInline(I);
+  }
+  if (ok && !I.dirty) {
+    toast('Saved');
+    if (S.inline === I) refreshSlots(I);
+  }
+}
+
+/** After a save: the pending banner and the action buttons, without touching the fields. */
+function refreshSlots(I) {
+  const it = findItem(I.kind, I.key);
+  if (!it || parseHash().tab !== I.kind) return;
+  const p = $('#pending-slot');
+  if (p) p.innerHTML = pendingNotice(it);
+  const a = $('#actions-slot');
+  if (a) a.innerHTML = detailActions(I.kind, it);
+}
+
+/** Redraw the page from its working copy (after a choice that changes how it looks). */
+function rerenderInline() {
+  const I = S.inline;
+  if (!I) return;
+  const it = findItem(I.kind, I.key);
+  if (!it) return;
+  const y = window.scrollY;
+  $('#view').innerHTML = views.detail[I.kind](it);
+  autosize($('#view'));
+  window.scrollTo(0, y);
+}
+
+/** "+" on Books, Curios or Encounters: a small sheet, then the new item's own page. */
+async function createItem(kind) {
+  if (kind === 'encounters') return editEncounterDetails();
+  const book = kind === 'books';
+  const res = await sheet(
+    `<h3 style="margin-top:0">${book ? 'New book' : 'New curio'}</h3>
+     ${sf.text('name', book ? 'Title' : 'Name', '')}
+     ${
+       book
+         ? `<div class="two">${sf.select('trait', 'Trait', '', S.cat.traits.map((t) => [t.id, t.name]), 'None (Basic)')}${sf.select('rarity', 'Rarity', 'common', RARITIES.map((r) => [r, cap(r)]))}</div>`
+         : sf.select('kind', 'Kind', 'positive', [['positive', 'Positive Curio'], ['curse', 'Curse']])
+     }
+     <p class="small muted" style="margin:0">Everything else is filled in on its page.</p>
+     ${sf.buttons('', 'Create')}`,
+  );
+  if (!res) return;
+  const f = res.values;
+  if (!f.name) return toast(book ? 'A book needs a title' : 'A curio needs a name', true);
+  const d = BLANK[kind]();
+  if (book) {
+    d.title = f.name;
+    d.traits = f.trait ? [f.trait] : [];
+    d.rarity = f.rarity;
+  } else {
+    d.name = f.name;
+    if (f.kind === 'curse') setField(d, '_kind', 'curse');
+  }
+  d.id = freshId(kind, f.name);
+  const after = cleanup(kind, tidy(d));
+  if (await commitPending((q) => stage(q, { kind, key: after.id, op: 'add', before: null, after, note: '' }), `Propose ${kind.slice(0, -1)} ${after.id}`)) {
+    S.inline = null;
+    toast('Created. Fill in the rest here.');
+    location.hash = `#/${kind}/${encodeURIComponent(after.id)}`;
+  }
+}
+
 
 // ------------------------------------------------------------------ changes
 
@@ -1089,11 +1284,11 @@ function newForm(r) {
   return { kind, op, key: it.key, orig: it.orig, draft: clone(it.pending?.after ?? it.data), note: it.pending?.note ?? '' };
 }
 
-const fieldText = (path, label, value, { area = false, one = false, hint = '', ph = '' } = {}) =>
+const fieldText = (path, label, value, { area = false, one = false, hint = '', ph = '', attr = 'data-path' } = {}) =>
   `<div class="field"><label>${esc(label)}</label>${
     area || one
-      ? `<textarea data-path="${path}" placeholder="${esc(ph)}" ${one ? 'class="one" rows="1"' : ''}>${esc(value ?? '')}</textarea>`
-      : `<input type="text" data-path="${path}" value="${esc(value ?? '')}" placeholder="${esc(ph)}" autocomplete="off">`
+      ? `<textarea ${attr}="${path}" placeholder="${esc(ph)}" ${one ? 'class="one" rows="1"' : ''}>${esc(value ?? '')}</textarea>`
+      : `<input type="text" ${attr}="${path}" value="${esc(value ?? '')}" placeholder="${esc(ph)}" autocomplete="off">`
   }${hint ? `<div class="hint">${hint}</div>` : ''}</div>`;
 const fieldNum = (path, label, value, { opt = false } = {}) =>
   `<div class="field"><label>${esc(label)}</label><input type="number" data-path="${path}" data-type="number" ${opt ? 'data-opt="1"' : ''} value="${value ?? ''}"></div>`;
@@ -1111,7 +1306,7 @@ const miniBtns = (list, i) =>
   `<div class="mini-btns"><button type="button" data-act="row-up" data-list="${list}" data-i="${i}" aria-label="Move up">↑</button><button type="button" data-act="row-down" data-list="${list}" data-i="${i}" aria-label="Move down">↓</button><button type="button" data-act="row-copy" data-list="${list}" data-i="${i}" aria-label="Duplicate">⧉</button><button type="button" data-act="row-del" data-list="${list}" data-i="${i}" aria-label="Remove">✕</button></div>`;
 
 /** A Rebind: a readable card, or (opened) its editor. */
-function rebindCard(u, i, open) {
+function rebindCard(u, i, open, { attr = 'data-path', count = 0 } = {}) {
   if (!open) {
     return `<button type="button" class="rb" data-act="rb-open" data-i="${i}">
       <span class="rb-n">${i + 1}</span>
@@ -1126,55 +1321,19 @@ function rebindCard(u, i, open) {
   return `<div class="rb open">
     <div class="rb-head"><span class="rb-n">${i + 1}</span><span class="rb-name" data-rb-title="${i}">${esc(u.name || 'New rebind')}</span>
       <button type="button" class="btn sm primary" data-act="rb-close">Done</button></div>
-    ${fieldText(`rebinds.${i}.name`, 'Name', u.name, { ph: 'e.g. Better Bound' })}
-    ${fieldText(`rebinds.${i}.before`, 'Before', u.before, { one: true, ph: 'e.g. Value 2' })}
-    ${fieldText(`rebinds.${i}.after`, 'After', u.after, { one: true, ph: 'e.g. Value 4' })}
-    ${fieldText(`rebinds.${i}.text`, 'Rule', u.text, { area: true, ph: 'What a copy with this Rebind does.' })}
+    ${fieldText(`rebinds.${i}.name`, 'Name', u.name, { ph: 'e.g. Better Bound', attr })}
+    ${fieldText(`rebinds.${i}.before`, 'Before', u.before, { one: true, ph: 'e.g. Value 2', attr })}
+    ${fieldText(`rebinds.${i}.after`, 'After', u.after, { one: true, ph: 'e.g. Value 4', attr })}
+    ${fieldText(`rebinds.${i}.text`, 'Rule', u.text, { area: true, ph: 'What a copy with this Rebind does.', attr })}
     <div class="rb-tools">
       <button type="button" data-act="row-up" data-list="rebinds" data-i="${i}" ${i === 0 ? 'disabled' : ''}>↑ Move up</button>
-      <button type="button" data-act="row-down" data-list="rebinds" data-i="${i}" ${i === (S.form.draft.rebinds?.length ?? 0) - 1 ? 'disabled' : ''}>↓ Move down</button>
+      <button type="button" data-act="row-down" data-list="rebinds" data-i="${i}" ${i === count - 1 ? 'disabled' : ''}>↓ Move down</button>
       <button type="button" class="danger" data-act="row-del" data-list="rebinds" data-i="${i}">Remove</button>
     </div>
   </div>`;
 }
 
 const formBody = {
-  books(d) {
-    const rebinds = d.rebinds ?? [];
-    return `
-      <section class="fsec">
-        ${fieldText('title', 'Title', d.title)}
-        <div class="two">${fieldSelect('_trait', 'Trait', d.traits?.[0] ?? '', S.cat.traits.map((t) => [t.id, t.name]), { blank: 'None (Basic)' })}${fieldSelect('rarity', 'Rarity', d.rarity, RARITIES.map((r) => [r, cap(r)]))}</div>
-        <div class="two">${fieldNum('value', 'Value', d.value)}${fieldNum('actionCost', 'Action cost', d.actionCost)}</div>
-      </section>
-      <section class="fsec"><h3 class="fsec-h">Rules</h3>
-        ${fieldText('rulesText', 'Rules text', d.rulesText, { area: true, ph: 'On Assign: …' })}
-      </section>
-      <section class="fsec"><h3 class="fsec-h">Rebinds <small>${rebinds.length}</small></h3>
-        <p class="fsec-hint">A Rebind patches one copy: the player is offered 2 of these and keeps 1.</p>
-        <div class="rb-list">${rebinds.map((u, i) => rebindCard(u, i, S.form.openRebind === i)).join('')}</div>
-        <button type="button" class="btn ghost add-row" data-act="add-rebind">+ Add rebind</button>
-      </section>
-      <section class="fsec"><h3 class="fsec-h">Flags</h3>
-        ${fieldChips('flags', '', d.flags, BOOK_FLAGS.map((f) => [f, f]))}
-        ${fieldCheck('extension', 'Extension book (beyond its Trait’s core ten)', d.extension)}
-      </section>`;
-  },
-
-  curios(d) {
-    const curse = d.curse != null;
-    return `
-      ${fieldText('name', 'Name', d.name)}
-      ${fieldSelect('_kind', 'Kind', curse ? 'curse' : 'positive', [['positive', 'Positive Curio'], ['curse', 'Curse (negative Curio)']], { rerender: true })}
-      ${
-        curse
-          ? fieldSelect('curse', 'Curse family', d.curse, CURSE_FAMILIES.map((f) => [f, cap(f)]))
-          : `<div class="two">${fieldSelect('rarity', 'Rarity', d.rarity, CURIO_RARITIES.map((r) => [r, cap(r)]))}${fieldNum('price', 'Merchant price (Gold)', d.price, { opt: true })}</div>`
-      }
-      ${fieldSelect('trait', 'Only with Trait', d.trait, S.cat.traits.map((t) => [t.id, t.name]), { blank: 'Any run' })}
-      ${fieldText('text', 'Effect', d.text, { area: true })}`;
-  },
-
   routes(d) {
     const { errs, warns } = routeChecks(d);
     const sorted = d.nodes.map((n, i) => [n, i]).sort(([a], [b]) => a.depth - b.depth || a.lane - b.lane);
@@ -1233,6 +1392,18 @@ function fit(ta) {
 }
 function autosize(root = document) {
   if (!FIELD_SIZING) for (const ta of root.querySelectorAll('textarea')) fit(ta);
+}
+
+/** A select's value into a draft, with the two derived fields (`_trait`, `_kind`). */
+function setField(draft, path, value) {
+  if (path === '_trait') draft.traits = value ? [value] : [];
+  else if (path === '_kind') {
+    if (value === 'curse') draft.curse ??= 'bookselling';
+    else {
+      delete draft.curse;
+      draft.rarity ??= 'common';
+    }
+  } else setPath(draft, path, value === '' ? undefined : value);
 }
 
 function getPath(obj, path) {
@@ -1298,6 +1469,12 @@ function finalize(F) {
   const d = tidy(F.draft);
   // Ids are never shown: a new item takes one from its name; an existing one keeps its own.
   if (F.op === 'add') d.id = freshId(F.kind, d.title ?? d.name, F.key);
+  return cleanup(F.kind, d);
+}
+
+/** Per-kind tidying of a finished draft (shared by the popup editor and in-place editing). */
+function cleanup(kind, d) {
+  const F = { kind };
   if (F.kind === 'books') d.rebinds = (d.rebinds ?? []).map((u) => ({ ...u, id: u.id ?? `${d.id}:${slug(u.name)}` }));
   if (F.kind === 'curios') {
     if (d.curse) {
@@ -1347,6 +1524,12 @@ document.addEventListener('input', (e) => {
     $('#results')?.replaceWith(tmp.querySelector('#results'));
     return;
   }
+  if (t.dataset.ipath && S.inline) {
+    if (t.tagName === 'SELECT' || t.type === 'checkbox') return;
+    setPath(S.inline.draft, t.dataset.ipath, inlineValue(t));
+    rebindTitle(t.dataset.ipath, t.value);
+    return;
+  }
   const F = S.form;
   if (!F) return;
   if (t.dataset.note) return void (F.note = t.value);
@@ -1355,11 +1538,7 @@ document.addEventListener('input', (e) => {
   let v = t.value;
   if (t.dataset.type === 'number') v = v === '' ? (t.dataset.opt ? undefined : 0) : Number(v);
   setPath(F.draft, path, v);
-  const rbName = /^rebinds\.(\d+)\.name$/.exec(path);
-  if (rbName) {
-    const h = $(`[data-rb-title="${rbName[1]}"]`);
-    if (h) h.textContent = v || 'New rebind';
-  }
+  rebindTitle(path, v);
   if (F.kind === 'routes' && /^nodes\.\d+\.(depth|lane)$/.test(path)) {
     const wrap = $('#editor-body .map-wrap');
     if (wrap) wrap.innerHTML = routeSvg(F.draft);
@@ -1371,6 +1550,18 @@ document.addEventListener('change', (e) => {
   if (t.id === 'set-token') {
     LS.set('token', t.value.trim());
     refreshPending().then(render);
+    return;
+  }
+  if (t.dataset.ipath && S.inline) {
+    const path = t.dataset.ipath;
+    const I = S.inline;
+    if (t.tagName === 'SELECT') setField(I.draft, path, t.value);
+    else if (t.type === 'checkbox') setPath(I.draft, path, t.checked || undefined);
+    else setPath(I.draft, path, inlineValue(t));
+    if (path === 'title' || path === 'name') $('#title').textContent = t.value.trim() || KIND[I.kind].one;
+    inlineChanged();
+    // Picking a Trait, rarity or kind changes how the page looks; typing doesn't.
+    if (t.tagName === 'SELECT' || t.type === 'checkbox') rerenderInline();
     return;
   }
   const F = S.form;
@@ -1388,14 +1579,7 @@ document.addEventListener('change', (e) => {
   if (!path) return;
   if (t.type === 'checkbox') setPath(F.draft, path, t.checked || undefined);
   else if (t.tagName === 'SELECT') {
-    if (path === '_trait') F.draft.traits = t.value ? [t.value] : [];
-    else if (path === '_kind') {
-      if (t.value === 'curse') F.draft.curse = F.draft.curse ?? 'bookselling';
-      else {
-        delete F.draft.curse;
-        F.draft.rarity ??= 'common';
-      }
-    } else setPath(F.draft, path, t.value === '' ? undefined : t.value);
+    setField(F.draft, path, t.value);
     if (F.kind === 'routes' && /\.type$/.test(path)) {
       const n = getPath(F.draft, path.replace(/\.type$/, ''));
       if (n.type === 'encounter-normal') n.band ??= 'mid';
@@ -1410,6 +1594,14 @@ document.addEventListener('click', async (e) => {
     S.filters[chip.dataset.chip][chip.dataset.key] = chip.dataset.val;
     return render();
   }
+  const itog = e.target.closest('[data-itoggle]');
+  if (itog && S.inline && !itog.closest('fieldset:disabled')) {
+    const arr = getPath(S.inline.draft, itog.dataset.itoggle) ?? [];
+    const v = itog.dataset.val;
+    setPath(S.inline.draft, itog.dataset.itoggle, arr.includes(v) ? arr.filter((x) => x !== v) : [...arr, v]);
+    inlineChanged();
+    return rerenderInline();
+  }
   const tog = e.target.closest('[data-toggle]');
   if (tog && S.form) {
     const arr = getPath(S.form.draft, tog.dataset.toggle) ?? [];
@@ -1421,28 +1613,35 @@ document.addEventListener('click', async (e) => {
   if (!b) return;
   const act = b.dataset.act;
   const F = S.form;
-  const list = b.dataset.list && F ? (F.draft[b.dataset.list] ??= []) : null;
+  // Row and Rebind buttons act on the popup editor, or on the page being edited in place.
+  const T = F ?? S.inline;
+  const list = b.dataset.list && T ? (T.draft[b.dataset.list] ??= []) : null;
   const i = +b.dataset.i;
+  const redraw = () => (F ? rerenderForm() : rerenderInline());
+  const changed = () => F || inlineChanged();
+  const openCard = () => $(F ? '#editor-body .rb.open' : '#view .rb.open')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   switch (act) {
     case 'row-up':
       if (i > 0) {
         [list[i - 1], list[i]] = [list[i], list[i - 1]];
-        if (F.openRebind === i && b.dataset.list === 'rebinds') F.openRebind = i - 1;
+        if (T.openRebind === i && b.dataset.list === 'rebinds') T.openRebind = i - 1;
+        changed();
       }
-      return rerenderForm();
+      return redraw();
     case 'row-down':
       if (i < list.length - 1) {
         [list[i + 1], list[i]] = [list[i], list[i + 1]];
-        if (F.openRebind === i && b.dataset.list === 'rebinds') F.openRebind = i + 1;
+        if (T.openRebind === i && b.dataset.list === 'rebinds') T.openRebind = i + 1;
+        changed();
       }
-      return rerenderForm();
+      return redraw();
     case 'rb-open':
-      F.openRebind = i;
-      rerenderForm();
-      return $('#editor-body .rb.open')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      T.openRebind = i;
+      redraw();
+      return openCard();
     case 'rb-close':
-      F.openRebind = null;
-      return rerenderForm();
+      T.openRebind = null;
+      return redraw();
     case 'row-copy': {
       const c = clone(list[i]);
       if (b.dataset.list === 'nodes') {
@@ -1454,16 +1653,20 @@ document.addEventListener('click', async (e) => {
       return rerenderForm();
     }
     case 'row-del': {
+      if (b.dataset.list === 'rebinds' && !(await ask({ title: `Remove ${list[i]?.name || 'this rebind'}?`, ok: 'Remove', danger: true }))) return;
       const gone = list.splice(i, 1)[0];
-      if (b.dataset.list === 'rebinds') F.openRebind = null;
+      if (b.dataset.list === 'rebinds') T.openRebind = null;
       if (b.dataset.list === 'nodes') for (const m of list) m.next = (m.next ?? []).filter((k) => k !== gone.key);
-      return rerenderForm();
+      changed();
+      return redraw();
     }
     case 'add-rebind':
-      (F.draft.rebinds ??= []).push({ name: '', before: '', after: '', text: '' });
-      F.openRebind = F.draft.rebinds.length - 1;
-      rerenderForm();
-      return $('#editor-body .rb.open')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+      (T.draft.rebinds ??= []).push({ name: '', before: '', after: '', text: '' });
+      T.openRebind = T.draft.rebinds.length - 1;
+      redraw();
+      return openCard();
+    case 'dup':
+      return duplicateItem(b.dataset.kind, b.dataset.key);
     case 'add-visitor': {
       const last = F.draft.visitors[F.draft.visitors.length - 1];
       F.draft.visitors.push({ arriveAfterTurn: last?.arriveAfterTurn ?? 0, name: '', fulfillment: 5, patience: 2 });
@@ -1489,6 +1692,8 @@ document.addEventListener('click', async (e) => {
       b.disabled = false;
       return;
     case 'delete': {
+      await flushInline();
+      S.inline = null;
       const it = findItem(b.dataset.kind, b.dataset.key);
       const note = await ask({ title: `Delete ${KIND[b.dataset.kind].name(it.data)}?`, body: 'Claude will remove it from the game when applying changes.', input: true, placeholder: 'Why? (optional)', ok: 'Mark for deletion', danger: true });
       if (note === null) return;
@@ -1500,6 +1705,8 @@ document.addEventListener('click', async (e) => {
       return;
     }
     case 'note': {
+      await flushInline();
+      S.inline = null;
       const it = findItem(b.dataset.kind, b.dataset.key);
       const note = await ask({ title: `Note on ${KIND[b.dataset.kind].name(it.data)}`, body: 'Ask for something without editing fields yourself — e.g. “make this stronger, you choose how”.', input: true, value: it.pending?.note ?? '', ok: 'Save note' });
       if (!note) return;
@@ -1512,7 +1719,9 @@ document.addEventListener('click', async (e) => {
     }
     case 'discard': {
       if (!(await ask({ title: 'Discard this change?', body: 'It will be removed from the queue for Claude.', ok: 'Discard', danger: true }))) return;
+      await flushInline();
       if (await commitPending((d) => (d.edits = d.edits.filter((x) => x.id !== b.dataset.id)), 'Discard a pending change')) {
+        S.inline = null;
         toast('Discarded');
         render();
       }
@@ -1533,8 +1742,6 @@ document.addEventListener('click', async (e) => {
       return editVisitor(b.dataset.key, null);
     case 'enc-details':
       return editEncounterDetails(b.dataset.key);
-    case 'enc-duplicate':
-      return duplicateEncounter(b.dataset.key);
     case 'quick-token':
       LS.set('token', $('#quick-token').value.trim());
       await refreshPending();
@@ -1559,9 +1766,10 @@ document.addEventListener('click', async (e) => {
 });
 
 $('#fab').addEventListener('click', (e) => {
-  if (parseHash().tab !== 'encounters') return;
+  const tab = parseHash().tab;
+  if (!INLINE_KINDS.includes(tab)) return;
   e.preventDefault();
-  editEncounterDetails();
+  createItem(tab);
 });
 
 $('#back').addEventListener('click', () => {
@@ -1572,13 +1780,16 @@ $('#back').addEventListener('click', () => {
 
 window.addEventListener('hashchange', () => {
   S.hops = (S.hops ?? 0) + 1;
+  flushInline();
   render();
   if (!S.form) window.scrollTo(0, 0);
 });
 
 // Pick up Claude's applied changes when the phone comes back to the tab.
 document.addEventListener('visibilitychange', async () => {
-  if (document.visibilityState === 'visible' && S.cat && !S.form) {
+  if (document.visibilityState === 'hidden') return void flushInline();
+  const typing = document.activeElement?.matches?.('input, textarea, select');
+  if (document.visibilityState === 'visible' && S.cat && !S.form && !typing && !S.inline?.dirty) {
     await loadCatalogue().catch(() => {});
     await refreshPending({ quiet: true });
     render();
