@@ -1,5 +1,95 @@
 {
   "version": 1,
-  "edits": [],
-  "applied": []
+  "edits": [
+    {
+      "id": "muszs8hhe8um8",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "the-spellbound-sea",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "the-spellbound-sea",
+        "title": "The Spellbound Sea",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 5,
+        "extension": true,
+        "shortText": "Discarded Magic books are randomly assigned, then DESTROYed.",
+        "rulesText": "On Assign: randomly assign each Magic book from your discard pile to visitors for 0 Actions. Their On Assign abilities resolve. Any options they require are chosen at random. DESTROY those books afterwards.",
+        "reminders": [
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "the-spellbound-sea:high-tide",
+            "name": "High Tide",
+            "before": "Discarded Magic books assigned",
+            "after": "Each gains +1 Value first",
+            "text": "On Assign: each Magic book in your discard pile gains +1 Value, then is randomly assigned to a visitor for 0 Actions. Their On Assign abilities resolve; options are chosen at random. DESTROY those books afterwards."
+          },
+          {
+            "id": "the-spellbound-sea:returning-tide",
+            "name": "Returning Tide",
+            "before": "All DESTROYed afterwards",
+            "after": "Then 1 random one returns to hand",
+            "text": "As The Spellbound Sea, then 1 random book it DESTROYed returns to your hand."
+          },
+          {
+            "id": "the-spellbound-sea:undertow",
+            "name": "Undertow",
+            "before": "No gain",
+            "after": "+1 Value per book DESTROYed, this Encounter",
+            "text": "As The Spellbound Sea, then it gains +1 Value for each book it DESTROYed, until the end of the Encounter."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "the-spellbound-sea",
+        "title": "The Spellbound Sea",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 2,
+        "extension": true,
+        "shortText": "Discarded Magic books are randomly assigned, then DESTROYed.",
+        "rulesText": "On Assign: randomly assign each Magic book from your discard pile to visitors for 0 Actions. Their On Assign abilities resolve. Any options they require are chosen at random. DESTROY those books afterwards.",
+        "reminders": [
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "the-spellbound-sea:high-tide",
+            "name": "High Tide",
+            "before": "Discarded Magic books assigned",
+            "after": "Each gains +1 Value first",
+            "text": "On Assign: each Magic book in your discard pile gains +1 Value, then is randomly assigned to a visitor for 0 Actions. Their On Assign abilities resolve; options are chosen at random. DESTROY those books afterwards."
+          },
+          {
+            "id": "the-spellbound-sea:returning-tide",
+            "name": "Returning Tide",
+            "before": "All DESTROYed afterwards",
+            "after": "Then 1 random one returns to hand",
+            "text": "As The Spellbound Sea, then 1 random book it DESTROYed returns to your hand."
+          },
+          {
+            "id": "the-spellbound-sea:undertow",
+            "name": "Undertow",
+            "before": "No gain",
+            "after": "+1 Value per book DESTROYed, this Encounter",
+            "text": "As The Spellbound Sea, then it gains +1 Value for each book it DESTROYed, until the end of the Encounter."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-03T22:57:17.024Z"
+    }
+  ],
+  "applied": [],
+  "updatedAt": "2026-10-03T22:57:17.045Z"
 }
