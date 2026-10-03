@@ -77,11 +77,11 @@
         "id": "old-queue-number",
         "name": "Golden Scarab Coin",
         "rarity": "common",
-        "price": 65,
-        "text": "After serving 20 visitors, get 1 Rare and destroy this."
+        "text": "After serving 20 visitors, get 1 Rare and destroy this.",
+        "price": 75
       },
       "note": "",
-      "at": "2026-10-03T23:25:10.036Z"
+      "at": "2026-10-03T23:25:17.396Z"
     }
   ],
   "applied": [
@@ -176,5 +176,5 @@
       "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
     }
   ],
-  "updatedAt": "2026-10-03T23:25:10.036Z"
+  "updatedAt": "2026-10-03T23:25:17.396Z"
 }
