@@ -38,6 +38,28 @@
       },
       "note": "",
       "at": "2026-10-03T23:19:04.283Z"
+    },
+    {
+      "id": "mut0ma0i9wq59",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "crowded-counter-sign",
+      "before": {
+        "id": "crowded-counter-sign",
+        "name": "Crowded Counter Sign",
+        "rarity": "common",
+        "price": 60,
+        "text": "While 4 or more visitors are waiting, Basic books gain +1 Value."
+      },
+      "after": {
+        "id": "crowded-counter-sign",
+        "name": "Crowded Counter Sign",
+        "rarity": "common",
+        "price": 60,
+        "text": "The first time each encounter, you are serving 4 visitors, draw1 and get +1 action this turn."
+      },
+      "note": "",
+      "at": "2026-10-03T23:20:38.705Z"
     }
   ],
   "applied": [
@@ -132,5 +154,5 @@
       "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
     }
   ],
-  "updatedAt": "2026-10-03T23:19:04.283Z"
+  "updatedAt": "2026-10-03T23:20:38.706Z"
 }
