@@ -78,10 +78,10 @@
         "name": "Old Queue Number",
         "rarity": "common",
         "price": 65,
-        "text": "Every 5 visitors that you fullfill"
+        "text": "After serving 20 visitors, get 1 Rare and destroy this."
       },
       "note": "",
-      "at": "2026-10-03T23:22:18.283Z"
+      "at": "2026-10-03T23:24:43.303Z"
     }
   ],
   "applied": [
@@ -176,5 +176,5 @@
       "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
     }
   ],
-  "updatedAt": "2026-10-03T23:22:18.284Z"
+  "updatedAt": "2026-10-03T23:24:43.303Z"
 }
