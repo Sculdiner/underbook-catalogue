@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Underbook Studio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=EB+Garamond:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="studio.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="brand">Underbook <b>Studio</b></div>
+    <nav class="modes">
+      <a href="#/encounters" data-mode="encounters">Encounters</a>
+      <a href="#/routes" data-mode="routes">Routes</a>
+    </nav>
+    <div class="bar-right">
+      <span class="saved" id="saved"></span>
+      <span class="sync" id="sync" title="Sync status"></span>
+      <a class="ghost-link" href="index.html">Phone catalogue ↗</a>
+    </div>
+  </header>
+  <div class="token-banner" id="token-banner" hidden>
+    <span>This browser has no GitHub token, so the Studio is view-only.</span>
+    <input type="text" id="token-in" placeholder="Paste a github_pat_… token" autocomplete="off" spellcheck="false" style="-webkit-text-security:disc">
+    <button class="btn primary" id="token-save">Connect</button>
+    <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">Create one</a>
+  </div>
+  <div class="shell">
+    <aside class="side" id="side"></aside>
+    <main class="main" id="main"></main>
+    <aside class="rail" id="rail"></aside>
+  </div>
+  <div class="pop" id="pop" hidden></div>
+  <div class="dialog" id="dialog" hidden></div>
+  <div class="toast" id="toast"></div>
+  <div class="small-screen">The Studio is made for a computer screen. On the phone, use the <a href="index.html">catalogue</a>.</div>
+  <script type="module" src="studio.js"></script>
+</body>
+</html>
