@@ -32,12 +32,12 @@
       "after": {
         "id": "the-volume-ii",
         "name": "The volume II'",
-        "rarity": "common",
+        "rarity": "uncommon",
         "text": "All basic books gain +1 value",
         "price": 80
       },
       "note": "",
-      "at": "2026-10-03T23:18:53.966Z"
+      "at": "2026-10-03T23:19:04.283Z"
     }
   ],
   "applied": [
@@ -132,5 +132,5 @@
       "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
     }
   ],
-  "updatedAt": "2026-10-03T23:18:53.966Z"
+  "updatedAt": "2026-10-03T23:19:04.283Z"
 }
