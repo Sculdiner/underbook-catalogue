@@ -361,13 +361,30 @@ function render() {
       return;
     }
   } else S.form = null;
-  if (listTab && r.id && !isForm) {
+  const editor = $('#editor');
+  if (listTab && isForm) {
+    // The page stays underneath: the item itself, or the list when proposing something new.
+    const base = r.id !== 'new' ? findItem(r.tab, r.id) : null;
+    title = base ? KIND[r.tab].name(base.data) : cap(r.tab);
+    view.innerHTML = base ? views.detail[r.tab](base) : views.list[r.tab]();
+    $('#editor-title').textContent = S.form.op === 'add' ? `New ${KIND[r.tab].one.toLowerCase()}` : `Edit ${KIND[r.tab].one.toLowerCase()}`;
+    const opening = editor.hidden;
+    const body = $('#editor-body');
+    const y = body.scrollTop;
+    body.innerHTML = formHtml();
+    body.scrollTop = opening ? 0 : y;
+    editor.hidden = false;
+    document.body.classList.add('locked');
+  } else {
+    editor.hidden = true;
+    document.body.classList.remove('locked');
+  }
+  if (listTab && isForm) {
+    /* drawn above */
+  } else if (listTab && r.id) {
     const it = findItem(r.tab, r.id);
     title = it ? KIND[r.tab].name(it.data) : 'Not found';
     view.innerHTML = it ? views.detail[r.tab](it) : `<div class="empty">Nothing called “${esc(r.id)}” here.<br><a href="#/${r.tab}">Back to ${r.tab}</a></div>`;
-  } else if (listTab && isForm) {
-    title = S.form.op === 'add' ? `New ${KIND[r.tab].one.toLowerCase()}` : `Edit ${KIND[r.tab].one.toLowerCase()}`;
-    view.innerHTML = formHtml();
   } else if (listTab) {
     view.innerHTML = views.list[r.tab]();
   } else if (views[r.tab]) {
@@ -409,6 +426,19 @@ function bookCover(b, extra = '') {
   return `<div class="cover placeholder ${extra}">${esc(b.title || b.id)}${v}</div>`;
 }
 
+/** One book as the game's deck list draws it: rarity stripe, cropped cover, title, Value. */
+function bookRow(it) {
+  const b = it.data;
+  const thumb = hasArt('books', b.id)
+    ? `<span class="deck-thumb"><i style="background-image:url('${artUrl('books', b.id)}')"></i></span>`
+    : `<span class="deck-thumb blank">${esc((b.title || '?')[0])}</span>`;
+  const sub = [(b.actionCost ?? 1) !== 1 ? `${b.actionCost} Actions` : '', b.extension ? 'Extension' : '', ...(b.flags ?? [])].filter(Boolean);
+  return `<a class="deck-row ${b.rarity} ${it.pending?.op === 'delete' ? 'deleted' : ''}" href="#/books/${encodeURIComponent(it.key)}">
+    ${thumb}
+    <span class="deck-name"><span class="deck-title name">${esc(b.title)}</span>${sub.length ? `<span class="deck-sub">${esc(sub.join(' · '))}</span>` : ''}</span>
+    ${pendingTag(it)}<span class="deck-value">${b.value ?? '?'}</span></a>`;
+}
+
 function bookGroup(b) {
   if (b.flags?.some((f) => f === 'token' || f === 'tutorial-only')) return 'special';
   return b.traits?.[0] ?? 'basics';
@@ -439,14 +469,7 @@ views.list = {
         ? groups
             .map(
               ([g, xs]) => `<div class="group-h">${esc(label(g))} <span class="small muted">${xs.length}</span></div>
-          <div class="grid">${xs
-            .map(
-              (it) => `<a class="book-tile ${it.pending?.op === 'delete' ? 'deleted' : ''}" href="#/books/${encodeURIComponent(it.key)}">
-                ${bookCover(it.data)}${pendingTag(it)}
-                <div class="t">${esc(it.data.title)}</div>
-                <div class="s">${esc(cap(it.data.rarity))}${it.data.extension ? ' · ext' : ''}</div></a>`,
-            )
-            .join('')}</div>`,
+          <div class="deck-list">${xs.map(bookRow).join('')}</div>`,
             )
             .join('')
         : `<div class="empty">No books match.</div>`) +
@@ -1073,7 +1096,7 @@ const fieldSelect = (path, label, value, options, { rerender = false, blank = nu
 const fieldCheck = (path, label, value) =>
   `<div class="field check"><label><input type="checkbox" data-path="${path}" data-type="check" ${value ? 'checked' : ''}> ${esc(label)}</label></div>`;
 const fieldChips = (path, label, values, options) =>
-  `<div class="field"><span class="lbl">${esc(label)}</span><div class="chips" style="flex-wrap:wrap;overflow:visible">${options
+  `<div class="field">${label ? `<span class="lbl">${esc(label)}</span>` : ''}<div class="chips" style="flex-wrap:wrap;overflow:visible">${options
     .map(([v, l]) => `<button type="button" class="chip ${(values ?? []).includes(v) ? 'on' : ''}" data-toggle="${path}" data-val="${esc(v)}">${esc(l)}</button>`)
     .join('')}</div></div>`;
 const miniBtns = (list, i) =>
@@ -1081,23 +1104,32 @@ const miniBtns = (list, i) =>
 
 const formBody = {
   books(d) {
+    const rebinds = d.rebinds ?? [];
     return `
-      ${fieldText('title', 'Title', d.title)}
-      ${fieldSelect('_trait', 'Trait', d.traits?.[0] ?? '', S.cat.traits.map((t) => [t.id, t.name]), { blank: 'None (traitless Basic)' })}
-      <div class="three">${fieldSelect('rarity', 'Rarity', d.rarity, RARITIES.map((r) => [r, cap(r)]))}${fieldNum('value', 'Value', d.value)}${fieldNum('actionCost', 'Actions', d.actionCost)}</div>
-      ${fieldText('rulesText', 'Rules text', d.rulesText, { area: true })}
-      ${fieldChips('flags', 'Flags', d.flags, BOOK_FLAGS.map((f) => [f, f]))}
-      ${fieldCheck('extension', 'Extension book (beyond its Trait’s core ten)', d.extension)}
-      <h3>Rebinds</h3>
-      ${(d.rebinds ?? [])
-        .map(
-          (u, i) => `<div class="sub-card"><div class="sub-h"><b>Rebind ${i + 1}</b>${miniBtns('rebinds', i)}</div>
-            ${fieldText(`rebinds.${i}.name`, 'Name', u.name)}
-            <div class="two">${fieldText(`rebinds.${i}.before`, 'Before', u.before)}${fieldText(`rebinds.${i}.after`, 'After', u.after)}</div>
-            ${fieldText(`rebinds.${i}.text`, 'Rule', u.text, { area: true })}</div>`,
-        )
-        .join('')}
-      <button type="button" class="btn" data-act="add-rebind">+ Add rebind</button>`;
+      <section class="fsec">
+        ${fieldText('title', 'Title', d.title)}
+        <div class="two">${fieldSelect('_trait', 'Trait', d.traits?.[0] ?? '', S.cat.traits.map((t) => [t.id, t.name]), { blank: 'None (Basic)' })}${fieldSelect('rarity', 'Rarity', d.rarity, RARITIES.map((r) => [r, cap(r)]))}</div>
+        <div class="two">${fieldNum('value', 'Value', d.value)}${fieldNum('actionCost', 'Action cost', d.actionCost)}</div>
+      </section>
+      <section class="fsec"><h3 class="fsec-h">Rules</h3>
+        ${fieldText('rulesText', 'Rules text', d.rulesText, { area: true, ph: 'On Assign: …' })}
+      </section>
+      <section class="fsec"><h3 class="fsec-h">Rebinds <small>${rebinds.length}</small></h3>
+        <p class="fsec-hint">A Rebind patches one copy: the player is offered 2 of these and keeps 1.</p>
+        ${rebinds
+          .map(
+            (u, i) => `<div class="sub-card"><div class="sub-h"><b>${esc(u.name || `Rebind ${i + 1}`)}</b>${miniBtns('rebinds', i)}</div>
+              ${fieldText(`rebinds.${i}.name`, 'Name', u.name)}
+              <div class="two">${fieldText(`rebinds.${i}.before`, 'Before', u.before, { ph: 'Value 2' })}${fieldText(`rebinds.${i}.after`, 'After', u.after, { ph: 'Value 4' })}</div>
+              ${fieldText(`rebinds.${i}.text`, 'Rule', u.text, { area: true })}</div>`,
+          )
+          .join('')}
+        <button type="button" class="btn ghost add-row" data-act="add-rebind">+ Add rebind</button>
+      </section>
+      <section class="fsec"><h3 class="fsec-h">Flags</h3>
+        ${fieldChips('flags', '', d.flags, BOOK_FLAGS.map((f) => [f, f]))}
+        ${fieldCheck('extension', 'Extension book (beyond its Trait’s core ten)', d.extension)}
+      </section>`;
   },
 
   curios(d) {
@@ -1150,15 +1182,17 @@ function formHtml() {
   const F = S.form;
   return `<form class="form" id="edit-form" onsubmit="return false">
     ${formBody[F.kind](F.draft)}
-    <div class="field note-field"><label>Note to Claude (optional)</label><textarea data-note="1" placeholder="Why, or anything I should know when implementing this (new mechanics, art, balance intent)…">${esc(F.note)}</textarea></div>
+    <section class="fsec"><h3 class="fsec-h">Note to Claude <small>optional</small></h3>
+      <div class="field note-field"><textarea data-note="1" placeholder="Why, or anything I should know when implementing this (new mechanics, art, balance intent)…">${esc(F.note)}</textarea></div></section>
     <div class="sticky-save"><button type="button" class="btn ghost" data-act="cancel">Cancel</button><button type="button" class="btn primary" data-act="save">${F.op === 'add' ? 'Propose new' : 'Save change'}</button></div>
   </form>`;
 }
 
 function rerenderForm() {
-  const y = window.scrollY;
-  $('#view').innerHTML = formHtml();
-  window.scrollTo(0, y);
+  const body = $('#editor-body');
+  const y = body.scrollTop;
+  body.innerHTML = formHtml();
+  body.scrollTop = y;
 }
 
 function getPath(obj, path) {
@@ -1281,7 +1315,7 @@ document.addEventListener('input', (e) => {
   if (t.dataset.type === 'number') v = v === '' ? (t.dataset.opt ? undefined : 0) : Number(v);
   setPath(F.draft, path, v);
   if (F.kind === 'routes' && /^nodes\.\d+\.(depth|lane)$/.test(path)) {
-    const wrap = $('.map-wrap');
+    const wrap = $('#editor-body .map-wrap');
     if (wrap) wrap.innerHTML = routeSvg(F.draft);
   }
 });
@@ -1380,9 +1414,13 @@ document.addEventListener('click', async (e) => {
       F.draft.nodes.push({ key: `x${k}`, type: 'event', branch: 'shared', depth: maxD, lane: 0, next: [] });
       return rerenderForm();
     }
-    case 'cancel':
+    case 'cancel': {
       S.form = null;
-      return history.length > 1 ? history.back() : (location.hash = `#/${F.kind}`);
+      // Back when the editor was opened from inside the site; otherwise close onto its page.
+      if (S.hops > 0) return history.back();
+      const r = parseHash();
+      return location.replace(r.id && r.id !== 'new' ? `#/${r.tab}/${encodeURIComponent(r.id)}` : `#/${r.tab}`);
+    }
     case 'save':
       b.disabled = true;
       await saveForm();
@@ -1471,6 +1509,7 @@ $('#back').addEventListener('click', () => {
 });
 
 window.addEventListener('hashchange', () => {
+  S.hops = (S.hops ?? 0) + 1;
   render();
   if (!S.form) window.scrollTo(0, 0);
 });

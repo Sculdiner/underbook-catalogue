@@ -11,7 +11,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=EB+Garamond:wght@500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -39,6 +39,18 @@
     <a href="#/encounters" data-tab="encounters"><span class="ti">🕯️</span>Encounters</a>
     <a href="#/changes" data-tab="changes"><span class="ti">✎</span>Changes<b class="badge" id="badge" hidden></b></a>
   </nav>
+
+  <div class="editor" id="editor" hidden>
+    <div class="editor-panel" role="dialog" aria-modal="true" aria-labelledby="editor-title">
+      <header class="editor-head">
+        <h2 id="editor-title"></h2>
+        <button class="icon-btn" data-act="cancel" aria-label="Close">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+      <div class="editor-body" id="editor-body"></div>
+    </div>
+  </div>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <div class="modal" id="modal" hidden></div>
