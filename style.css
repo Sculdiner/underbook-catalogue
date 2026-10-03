@@ -340,3 +340,35 @@ body.locked { overflow: hidden; }
 /* the small sheets (visitors, encounter details) share the look */
 .modal .sheet { border: 0; border-radius: 22px; }
 .search { background: var(--bg); padding-bottom: 12px; box-shadow: 0 8px 12px -6px var(--bg); }
+
+/* ---- text boxes always show all their text (JS measures where field-sizing is missing) */
+textarea { field-sizing: content; resize: none; overflow: hidden; }
+.field textarea { min-height: 100px; line-height: 1.45; }
+.field textarea.one { min-height: 50px; }
+
+/* ---- rebinds: readable cards; one opens into its editor */
+.rb-list { display: flex; flex-direction: column; gap: 10px; }
+.rb {
+  display: flex; gap: 14px; align-items: flex-start; width: 100%; padding: 16px;
+  border: 0; border-radius: 18px; background: rgba(255, 255, 255, .04);
+  font: inherit; color: inherit; text-align: left; cursor: pointer;
+}
+button.rb:active { background: rgba(255, 255, 255, .08); }
+.rb-n { flex: none; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: rgba(216, 165, 74, .15); color: var(--accent); font: 700 .85rem var(--sans); }
+.rb-body { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 7px; padding-top: 2px; }
+.rb-name { font: 600 1.18rem/1.2 var(--serif); }
+.rb-delta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 8px; font-size: .88rem; }
+.rb-from { color: var(--ink3); text-decoration: line-through; text-decoration-color: rgba(255, 255, 255, .25); }
+.rb-arrow { color: var(--ink3); }
+.rb-to { color: #a7d9a0; font-weight: 600; }
+.rb-text { color: var(--ink2); font-size: .92rem; line-height: 1.5; }
+.rb-edit { flex: none; align-self: center; font-size: .8rem; font-weight: 600; color: var(--accent); }
+.rb.open { flex-direction: column; align-items: stretch; gap: 18px; padding: 18px; cursor: default; background: rgba(255, 255, 255, .055); box-shadow: inset 0 0 0 1.5px rgba(216, 165, 74, .35); }
+.rb-head { display: flex; align-items: center; gap: 12px; }
+.rb-head .rb-name { flex: 1; min-width: 0; }
+.rb.open .field input[type=text], .rb.open .field textarea { background-color: rgba(0, 0, 0, .28); }
+.rb-tools { display: flex; gap: 8px; }
+.rb-tools button { flex: 1; min-height: 46px; border: 0; border-radius: 12px; background: rgba(255, 255, 255, .06); color: var(--ink2); font: 600 .86rem var(--sans); cursor: pointer; }
+.rb-tools button:disabled { opacity: .35; }
+.rb-tools .danger { color: var(--danger); background: rgba(196, 85, 74, .12); }
+.field textarea { resize: none; }

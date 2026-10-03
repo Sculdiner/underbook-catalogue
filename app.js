@@ -109,6 +109,7 @@ function ask({ title, body = '', input = false, placeholder = '', ok = 'OK', dan
       <div class="row"><button class="btn ghost" data-r="0">Cancel</button><button class="btn ${danger ? 'danger' : 'primary'}" data-r="1">${esc(ok)}</button></div>
     </div>`;
     m.hidden = false;
+    autosize(m);
     const done = (r) => {
       m.hidden = true;
       m.innerHTML = '';
@@ -372,8 +373,9 @@ function render() {
     const body = $('#editor-body');
     const y = body.scrollTop;
     body.innerHTML = formHtml();
-    body.scrollTop = opening ? 0 : y;
     editor.hidden = false;
+    autosize(body);
+    body.scrollTop = opening ? 0 : y;
     document.body.classList.add('locked');
   } else {
     editor.hidden = true;
@@ -426,6 +428,11 @@ function bookCover(b, extra = '') {
   return `<div class="cover placeholder ${extra}">${esc(b.title || b.id)}${v}</div>`;
 }
 
+const rarityRank = (r) => {
+  const i = RARITIES.indexOf(r);
+  return i === -1 ? RARITIES.length : i;
+};
+
 /** One book as the game's deck list draws it: rarity stripe, cropped cover, title, Value. */
 function bookRow(it) {
   const b = it.data;
@@ -456,7 +463,7 @@ views.list = {
         (!f.rarity || b.rarity === f.rarity),
     );
     const groups = order
-      .map((g) => [g, all.filter((x) => bookGroup(x.data) === g)])
+      .map((g) => [g, all.filter((x) => bookGroup(x.data) === g).sort((a, b) => rarityRank(a.data.rarity) - rarityRank(b.data.rarity))])
       .filter(([, xs]) => xs.length);
     const label = (g) => (g === 'basics' ? 'Basics' : g === 'special' ? 'Tokens & special' : traitName(g));
     return (
@@ -814,6 +821,7 @@ function sheet(html, onChange) {
     const m = $('#modal');
     m.innerHTML = `<div class="sheet tall" role="dialog" aria-modal="true">${html}</div>`;
     m.hidden = false;
+    autosize(m);
     const done = (r) => {
       m.hidden = true;
       m.innerHTML = '';
@@ -1081,10 +1089,10 @@ function newForm(r) {
   return { kind, op, key: it.key, orig: it.orig, draft: clone(it.pending?.after ?? it.data), note: it.pending?.note ?? '' };
 }
 
-const fieldText = (path, label, value, { area = false, hint = '', ph = '' } = {}) =>
+const fieldText = (path, label, value, { area = false, one = false, hint = '', ph = '' } = {}) =>
   `<div class="field"><label>${esc(label)}</label>${
-    area
-      ? `<textarea data-path="${path}" placeholder="${esc(ph)}">${esc(value ?? '')}</textarea>`
+    area || one
+      ? `<textarea data-path="${path}" placeholder="${esc(ph)}" ${one ? 'class="one" rows="1"' : ''}>${esc(value ?? '')}</textarea>`
       : `<input type="text" data-path="${path}" value="${esc(value ?? '')}" placeholder="${esc(ph)}" autocomplete="off">`
   }${hint ? `<div class="hint">${hint}</div>` : ''}</div>`;
 const fieldNum = (path, label, value, { opt = false } = {}) =>
@@ -1102,6 +1110,34 @@ const fieldChips = (path, label, values, options) =>
 const miniBtns = (list, i) =>
   `<div class="mini-btns"><button type="button" data-act="row-up" data-list="${list}" data-i="${i}" aria-label="Move up">↑</button><button type="button" data-act="row-down" data-list="${list}" data-i="${i}" aria-label="Move down">↓</button><button type="button" data-act="row-copy" data-list="${list}" data-i="${i}" aria-label="Duplicate">⧉</button><button type="button" data-act="row-del" data-list="${list}" data-i="${i}" aria-label="Remove">✕</button></div>`;
 
+/** A Rebind: a readable card, or (opened) its editor. */
+function rebindCard(u, i, open) {
+  if (!open) {
+    return `<button type="button" class="rb" data-act="rb-open" data-i="${i}">
+      <span class="rb-n">${i + 1}</span>
+      <span class="rb-body">
+        <span class="rb-name">${esc(u.name || 'Untitled rebind')}</span>
+        ${u.before || u.after ? `<span class="rb-delta"><span class="rb-from">${esc(u.before || '—')}</span><span class="rb-arrow">→</span><span class="rb-to">${esc(u.after || '—')}</span></span>` : ''}
+        ${u.text ? `<span class="rb-text">${esc(u.text)}</span>` : '<span class="rb-text muted">No rule yet — tap to write it.</span>'}
+      </span>
+      <span class="rb-edit">Edit</span>
+    </button>`;
+  }
+  return `<div class="rb open">
+    <div class="rb-head"><span class="rb-n">${i + 1}</span><span class="rb-name" data-rb-title="${i}">${esc(u.name || 'New rebind')}</span>
+      <button type="button" class="btn sm primary" data-act="rb-close">Done</button></div>
+    ${fieldText(`rebinds.${i}.name`, 'Name', u.name, { ph: 'e.g. Better Bound' })}
+    ${fieldText(`rebinds.${i}.before`, 'Before', u.before, { one: true, ph: 'e.g. Value 2' })}
+    ${fieldText(`rebinds.${i}.after`, 'After', u.after, { one: true, ph: 'e.g. Value 4' })}
+    ${fieldText(`rebinds.${i}.text`, 'Rule', u.text, { area: true, ph: 'What a copy with this Rebind does.' })}
+    <div class="rb-tools">
+      <button type="button" data-act="row-up" data-list="rebinds" data-i="${i}" ${i === 0 ? 'disabled' : ''}>↑ Move up</button>
+      <button type="button" data-act="row-down" data-list="rebinds" data-i="${i}" ${i === (S.form.draft.rebinds?.length ?? 0) - 1 ? 'disabled' : ''}>↓ Move down</button>
+      <button type="button" class="danger" data-act="row-del" data-list="rebinds" data-i="${i}">Remove</button>
+    </div>
+  </div>`;
+}
+
 const formBody = {
   books(d) {
     const rebinds = d.rebinds ?? [];
@@ -1116,14 +1152,7 @@ const formBody = {
       </section>
       <section class="fsec"><h3 class="fsec-h">Rebinds <small>${rebinds.length}</small></h3>
         <p class="fsec-hint">A Rebind patches one copy: the player is offered 2 of these and keeps 1.</p>
-        ${rebinds
-          .map(
-            (u, i) => `<div class="sub-card"><div class="sub-h"><b>${esc(u.name || `Rebind ${i + 1}`)}</b>${miniBtns('rebinds', i)}</div>
-              ${fieldText(`rebinds.${i}.name`, 'Name', u.name)}
-              <div class="two">${fieldText(`rebinds.${i}.before`, 'Before', u.before, { ph: 'Value 2' })}${fieldText(`rebinds.${i}.after`, 'After', u.after, { ph: 'Value 4' })}</div>
-              ${fieldText(`rebinds.${i}.text`, 'Rule', u.text, { area: true })}</div>`,
-          )
-          .join('')}
+        <div class="rb-list">${rebinds.map((u, i) => rebindCard(u, i, S.form.openRebind === i)).join('')}</div>
         <button type="button" class="btn ghost add-row" data-act="add-rebind">+ Add rebind</button>
       </section>
       <section class="fsec"><h3 class="fsec-h">Flags</h3>
@@ -1192,7 +1221,18 @@ function rerenderForm() {
   const body = $('#editor-body');
   const y = body.scrollTop;
   body.innerHTML = formHtml();
+  autosize(body);
   body.scrollTop = y;
+}
+
+/** Text boxes always show all their text: CSS field-sizing where the browser has it, else measured. */
+const FIELD_SIZING = typeof CSS !== 'undefined' && CSS.supports?.('field-sizing', 'content');
+function fit(ta) {
+  ta.style.height = 'auto';
+  ta.style.height = `${ta.scrollHeight + 2}px`;
+}
+function autosize(root = document) {
+  if (!FIELD_SIZING) for (const ta of root.querySelectorAll('textarea')) fit(ta);
 }
 
 function getPath(obj, path) {
@@ -1299,6 +1339,7 @@ async function saveForm() {
 
 document.addEventListener('input', (e) => {
   const t = e.target;
+  if (t.tagName === 'TEXTAREA' && !FIELD_SIZING) fit(t);
   if (t.dataset.filter) {
     S.filters[t.dataset.filter].q = t.value;
     const tmp = document.createElement('div');
@@ -1314,6 +1355,11 @@ document.addEventListener('input', (e) => {
   let v = t.value;
   if (t.dataset.type === 'number') v = v === '' ? (t.dataset.opt ? undefined : 0) : Number(v);
   setPath(F.draft, path, v);
+  const rbName = /^rebinds\.(\d+)\.name$/.exec(path);
+  if (rbName) {
+    const h = $(`[data-rb-title="${rbName[1]}"]`);
+    if (h) h.textContent = v || 'New rebind';
+  }
   if (F.kind === 'routes' && /^nodes\.\d+\.(depth|lane)$/.test(path)) {
     const wrap = $('#editor-body .map-wrap');
     if (wrap) wrap.innerHTML = routeSvg(F.draft);
@@ -1379,10 +1425,23 @@ document.addEventListener('click', async (e) => {
   const i = +b.dataset.i;
   switch (act) {
     case 'row-up':
-      if (i > 0) [list[i - 1], list[i]] = [list[i], list[i - 1]];
+      if (i > 0) {
+        [list[i - 1], list[i]] = [list[i], list[i - 1]];
+        if (F.openRebind === i && b.dataset.list === 'rebinds') F.openRebind = i - 1;
+      }
       return rerenderForm();
     case 'row-down':
-      if (i < list.length - 1) [list[i + 1], list[i]] = [list[i], list[i + 1]];
+      if (i < list.length - 1) {
+        [list[i + 1], list[i]] = [list[i], list[i + 1]];
+        if (F.openRebind === i && b.dataset.list === 'rebinds') F.openRebind = i + 1;
+      }
+      return rerenderForm();
+    case 'rb-open':
+      F.openRebind = i;
+      rerenderForm();
+      return $('#editor-body .rb.open')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    case 'rb-close':
+      F.openRebind = null;
       return rerenderForm();
     case 'row-copy': {
       const c = clone(list[i]);
@@ -1396,12 +1455,15 @@ document.addEventListener('click', async (e) => {
     }
     case 'row-del': {
       const gone = list.splice(i, 1)[0];
+      if (b.dataset.list === 'rebinds') F.openRebind = null;
       if (b.dataset.list === 'nodes') for (const m of list) m.next = (m.next ?? []).filter((k) => k !== gone.key);
       return rerenderForm();
     }
     case 'add-rebind':
       (F.draft.rebinds ??= []).push({ name: '', before: '', after: '', text: '' });
-      return rerenderForm();
+      F.openRebind = F.draft.rebinds.length - 1;
+      rerenderForm();
+      return $('#editor-body .rb.open')?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
     case 'add-visitor': {
       const last = F.draft.visitors[F.draft.visitors.length - 1];
       F.draft.visitors.push({ arriveAfterTurn: last?.arriveAfterTurn ?? 0, name: '', fulfillment: 5, patience: 2 });
