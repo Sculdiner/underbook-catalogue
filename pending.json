@@ -104,6 +104,28 @@
       },
       "note": "",
       "at": "2026-10-03T23:25:48.428Z"
+    },
+    {
+      "id": "mut0ym57izfv3",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "long-job-spectacles",
+      "before": {
+        "id": "long-job-spectacles",
+        "name": "Long-Job Spectacles",
+        "rarity": "common",
+        "price": 65,
+        "text": "Books assigned to a visitor with 4 or more Patience gain +1 Value."
+      },
+      "after": {
+        "id": "long-job-spectacles",
+        "name": "Long-Job Spectacles",
+        "rarity": "common",
+        "price": 65,
+        "text": "The first time each encounter, that you fulfill a visitor at the round he arrives, get +1 action and draw 1 next turn."
+      },
+      "note": "",
+      "at": "2026-10-03T23:30:14.298Z"
     }
   ],
   "applied": [
@@ -198,5 +220,5 @@
       "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
     }
   ],
-  "updatedAt": "2026-10-03T23:25:48.428Z"
+  "updatedAt": "2026-10-03T23:30:14.299Z"
 }
