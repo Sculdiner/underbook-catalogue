@@ -1,6 +1,7 @@
 {
   "version": 1,
-  "edits": [
+  "edits": [],
+  "applied": [
     {
       "id": "muszs8hhe8um8",
       "kind": "books",
@@ -87,9 +88,10 @@
         ]
       },
       "note": "",
-      "at": "2026-10-03T22:57:17.024Z"
+      "at": "2026-10-03T22:57:17.024Z",
+      "appliedAt": "2026-10-03T22:59:51.850Z",
+      "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
     }
   ],
-  "applied": [],
-  "updatedAt": "2026-10-03T22:57:17.045Z"
+  "updatedAt": "2026-10-03T22:59:51.851Z"
 }
