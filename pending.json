@@ -404,7 +404,7 @@
             "name": "Assistant",
             "fulfillment": 5,
             "patience": 2,
-            "visitorDefId": "beargrump-smuggler"
+            "visitorDefId": "human-night-student"
           },
           {
             "arriveAfterTurn": 1,
@@ -440,7 +440,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T18:28:00.960Z"
+      "at": "2026-10-04T18:28:03.050Z"
     },
     {
       "id": "muu3biqg3ibz3",
@@ -3425,5 +3425,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T18:28:00.960Z"
+  "updatedAt": "2026-10-04T18:28:03.050Z"
 }
