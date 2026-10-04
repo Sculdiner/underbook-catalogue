@@ -305,6 +305,137 @@
       },
       "note": "",
       "at": "2026-10-04T17:20:16.784Z"
+    },
+    {
+      "id": "muu37r4srd99o",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "headless-academic",
+      "before": {
+        "id": "headless-academic",
+        "name": "The Headless Academic",
+        "type": "elite",
+        "category": "distinguished",
+        "purpose": "A long project that draws, against a stream of Assistants who cost you your hand. 50 total.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Student",
+            "fulfillment": 6,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Lecturer",
+            "fulfillment": 6,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Headless Academic",
+            "fulfillment": 14,
+            "patience": 5,
+            "abilityId": "where-did-i-put-that",
+            "tag": "academic",
+            "visitorDefId": "headless"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Irritated Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Irritated Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up"
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Irritated Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up"
+          },
+          {
+            "arriveAfterTurn": 4,
+            "name": "Irritated Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up"
+          }
+        ]
+      },
+      "after": {
+        "id": "headless-academic",
+        "name": "The Headless Academic",
+        "type": "elite",
+        "category": "distinguished",
+        "purpose": "A long project that draws, against a stream of Assistants who cost you your hand. 50 total.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Student",
+            "fulfillment": 6,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Lecturer",
+            "fulfillment": 6,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Headless Academic",
+            "fulfillment": 14,
+            "patience": 5,
+            "abilityId": "where-did-i-put-that",
+            "tag": "academic",
+            "visitorDefId": "headless"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Crow Reader",
+            "fulfillment": 5,
+            "patience": 2,
+            "visitorDefId": "crow"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Irritated Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Irritated Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up"
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Irritated Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up"
+          },
+          {
+            "arriveAfterTurn": 4,
+            "name": "Irritated Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up"
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T17:21:06.076Z"
     }
   ],
   "applied": [
@@ -2489,5 +2620,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:20:16.784Z"
+  "updatedAt": "2026-10-04T17:21:06.076Z"
 }
