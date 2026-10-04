@@ -184,6 +184,29 @@
       },
       "note": "",
       "at": "2026-10-04T20:57:07.035Z"
+    },
+    {
+      "id": "muub2q6whamdj",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "mixed-recommendations-ledger",
+      "before": {
+        "id": "mixed-recommendations-ledger",
+        "name": "Mixed Recommendations Ledger",
+        "rarity": "uncommon",
+        "price": 80,
+        "text": "Once a visitor holds a book of each of your two Traits, every further book assigned to them gives +1 Fulfillment more."
+      },
+      "after": {
+        "id": "mixed-recommendations-ledger",
+        "name": "Animating Chains",
+        "rarity": "uncommon",
+        "price": 80,
+        "text": "Once a visitor holds a book of each of your two Traits, every further book assigned to them gives +1 Fulfillment more.",
+        "icon": "rings_b_02"
+      },
+      "note": "",
+      "at": "2026-10-04T21:01:08.504Z"
     }
   ],
   "applied": [
@@ -3644,5 +3667,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T20:57:07.035Z"
+  "updatedAt": "2026-10-04T21:01:08.504Z"
 }
