@@ -937,6 +937,98 @@
       },
       "note": "",
       "at": "2026-10-04T18:03:41.017Z"
+    },
+    {
+      "id": "muu5c4s04qmfh",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "hungry-dead",
+      "before": {
+        "id": "hungry-dead",
+        "stage": 2,
+        "name": "The Hungry Dead",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Recognisable discard-count zombie pressure. 25 / 35 / 46.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Hungry Zombie",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "discard-value-minus"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Shambling Reader",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Hungry Zombie",
+            "fulfillment": 9,
+            "patience": 3,
+            "abilityId": "discard-value-minus"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Bloated Corpse",
+            "fulfillment": 10,
+            "patience": 4
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Very Hungry Zombie",
+            "fulfillment": 11,
+            "patience": 3
+          }
+        ]
+      },
+      "after": {
+        "id": "hungry-dead",
+        "stage": 2,
+        "name": "The Hungry Dead",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Recognisable discard-count zombie pressure. 25 / 35 / 46.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Hungry Zombie",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "discard-value-minus"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Shambling Reader",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Hungry Zombie",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "discard-value-minus"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Bloated Corpse",
+            "fulfillment": 10,
+            "patience": 4
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Very Hungry Zombie",
+            "fulfillment": 11,
+            "patience": 3
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T18:20:29.616Z"
     }
   ],
   "applied": [
@@ -3121,5 +3213,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T18:10:02.608Z"
+  "updatedAt": "2026-10-04T18:20:29.616Z"
 }
