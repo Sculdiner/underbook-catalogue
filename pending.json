@@ -1149,6 +1149,99 @@
       },
       "note": "",
       "at": "2026-10-04T18:24:07.150Z"
+    },
+    {
+      "id": "muu5iv9oryo0v",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "long-reading",
+      "before": {
+        "id": "long-reading",
+        "stage": 2,
+        "name": "The Long Reading",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Tall, slow developed-deck normal. 23 / 33 / 45.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Patient Skeleton",
+            "fulfillment": 7,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Old Scholar",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "discard-value-plus"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Jawless Reader",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Ancient Scholar",
+            "fulfillment": 10,
+            "patience": 4
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Extremely Old Skeleton",
+            "fulfillment": 12,
+            "patience": 5,
+            "abilityId": "one-book-per-turn"
+          }
+        ]
+      },
+      "after": {
+        "id": "long-reading",
+        "stage": 2,
+        "name": "The Long Reading",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Tall, slow developed-deck normal. 23 / 33 / 45.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Patient Skeleton",
+            "fulfillment": 7,
+            "patience": 3,
+            "abilityId": "one-book-per-turn"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Old Scholar",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "discard-value-plus"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Jawless Reader",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Ancient Scholar",
+            "fulfillment": 10,
+            "patience": 4
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Extremely Old Skeleton",
+            "fulfillment": 12,
+            "patience": 5,
+            "abilityId": "one-book-per-turn"
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T18:25:43.884Z"
     }
   ],
   "applied": [
@@ -3333,5 +3426,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T18:25:17.650Z"
+  "updatedAt": "2026-10-04T18:25:43.884Z"
 }
