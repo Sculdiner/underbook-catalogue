@@ -346,14 +346,14 @@
       },
       "after": {
         "id": "red-string-bookmark",
-        "name": "Talisman of the Angry God",
+        "name": "Talisman of the Anger",
         "rarity": "rare",
         "price": 95,
         "text": "Books assigned to a visitor at 1 Patience gain +1 Value.",
         "icon": "addons_34_b"
       },
       "note": "",
-      "at": "2026-10-04T21:20:28.108Z"
+      "at": "2026-10-04T21:20:34.843Z"
     }
   ],
   "applied": [
@@ -3814,5 +3814,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:20:28.108Z"
+  "updatedAt": "2026-10-04T21:20:34.843Z"
 }
