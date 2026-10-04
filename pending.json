@@ -867,6 +867,7 @@
           },
           {
             "arriveAfterTurn": 1,
+            "name": "Fresh Zombie",
             "fulfillment": 5,
             "patience": 2
           },
@@ -879,7 +880,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T18:02:04.735Z"
+      "at": "2026-10-04T18:02:12.790Z"
     },
     {
       "id": "muu4jolg3cwfp",
@@ -3096,5 +3097,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T18:02:04.735Z"
+  "updatedAt": "2026-10-04T18:02:12.790Z"
 }
