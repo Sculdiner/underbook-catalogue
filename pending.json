@@ -354,6 +354,22 @@
       },
       "note": "",
       "at": "2026-10-04T21:20:34.843Z"
+    },
+    {
+      "id": "muubtsj2hk4b9",
+      "kind": "curios",
+      "op": "delete",
+      "targetId": "balanced-shelves",
+      "before": {
+        "id": "balanced-shelves",
+        "name": "Balanced Shelves",
+        "rarity": "rare",
+        "price": 100,
+        "text": "While your deck holds within 1 as many books of one of your Traits as of the other, books of either Trait gain +1 Value. Neutral books are not counted."
+      },
+      "after": null,
+      "note": "",
+      "at": "2026-10-04T21:22:11.246Z"
     }
   ],
   "applied": [
@@ -3814,5 +3830,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:20:34.843Z"
+  "updatedAt": "2026-10-04T21:22:11.246Z"
 }
