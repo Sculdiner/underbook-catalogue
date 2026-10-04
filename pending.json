@@ -277,14 +277,14 @@
       },
       "after": {
         "id": "overbooking-ledger",
-        "name": "Queue Kebabs",
+        "name": "Queue Delicacies",
         "rarity": "uncommon",
         "price": 75,
         "text": "Whenever you fulfill a visitor while 4 or more others are still waiting, gain 5 Gold.",
         "icon": "NecromancerIcons_33_b"
       },
       "note": "",
-      "at": "2026-10-04T21:08:31.394Z"
+      "at": "2026-10-04T21:08:55.351Z"
     }
   ],
   "applied": [
@@ -3745,5 +3745,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:08:31.394Z"
+  "updatedAt": "2026-10-04T21:08:55.351Z"
 }
