@@ -88,6 +88,28 @@
       },
       "note": "",
       "at": "2026-10-04T08:22:07.887Z"
+    },
+    {
+      "id": "mutjyue79g39h",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "unwelcome-critics-monocle",
+      "before": {
+        "id": "unwelcome-critics-monocle",
+        "name": "Unwelcome Critic's Monocle",
+        "rarity": "common",
+        "price": 65,
+        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
+      },
+      "after": {
+        "id": "unwelcome-critics-monocle",
+        "name": "Unwelcome Critic's Monocle",
+        "rarity": "uncommon",
+        "price": 65,
+        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
+      },
+      "note": "",
+      "at": "2026-10-04T08:22:17.694Z"
     }
   ],
   "applied": [
@@ -320,5 +342,5 @@
       "result": "Long-Job Spectacles: the first visitor each Encounter fulfilled on their arrival turn gives +1 Action and a draw next turn."
     }
   ],
-  "updatedAt": "2026-10-04T08:22:07.888Z"
+  "updatedAt": "2026-10-04T08:22:17.695Z"
 }
