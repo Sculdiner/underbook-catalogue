@@ -285,6 +285,28 @@
       },
       "note": "",
       "at": "2026-10-04T21:08:55.351Z"
+    },
+    {
+      "id": "muubhhrrsqaoh",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "patrons-pocket-watch",
+      "before": {
+        "id": "patrons-pocket-watch",
+        "name": "Patron's Pocket Watch",
+        "rarity": "uncommon",
+        "price": 85,
+        "text": "Books assigned to a visitor whose Patience is above what they arrived with gain +2 Value."
+      },
+      "after": {
+        "id": "patrons-pocket-watch",
+        "name": "Patron's Pocket Watch",
+        "rarity": "uncommon",
+        "price": 85,
+        "text": "Once per encounter: if all visitors have a book assigned,"
+      },
+      "note": "",
+      "at": "2026-10-04T21:12:37.431Z"
     }
   ],
   "applied": [
@@ -3745,5 +3767,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:08:55.351Z"
+  "updatedAt": "2026-10-04T21:12:37.431Z"
 }
