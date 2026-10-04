@@ -23,6 +23,29 @@
       },
       "note": "",
       "at": "2026-10-04T18:58:26.623Z"
+    },
+    {
+      "id": "muu6rcg6uje7q",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "twin-spined-bookmark",
+      "before": {
+        "id": "twin-spined-bookmark",
+        "name": "Twin-Spined Bookmark",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two books in a row played from your hand use your two different Traits, the third book gains +1 Value."
+      },
+      "after": {
+        "id": "twin-spined-bookmark",
+        "name": "Twin-Spined Bookmark",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two books in a row played from your hand use your two different Traits, the third book gains +1 Value.",
+        "icon": "NecromancerIcons_38_b"
+      },
+      "note": "",
+      "at": "2026-10-04T19:00:19.014Z"
     }
   ],
   "applied": [
@@ -3483,5 +3506,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T18:58:26.623Z"
+  "updatedAt": "2026-10-04T19:00:19.014Z"
 }
