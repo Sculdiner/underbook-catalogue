@@ -1237,12 +1237,13 @@
             "arriveAfterTurn": 2,
             "name": "Extremely Old Skeleton",
             "fulfillment": 12,
-            "patience": 4
+            "patience": 4,
+            "visitorDefId": "ossuary-slack-jawed-zombie"
           }
         ]
       },
       "note": "",
-      "at": "2026-10-04T18:30:49.350Z"
+      "at": "2026-10-04T18:31:24.713Z"
     }
   ],
   "applied": [
@@ -3427,5 +3428,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T18:30:49.350Z"
+  "updatedAt": "2026-10-04T18:31:24.714Z"
 }
