@@ -882,7 +882,7 @@
           {
             "arriveAfterTurn": 2,
             "name": "Lost Pilgrim",
-            "fulfillment": 9,
+            "fulfillment": 8,
             "patience": 3,
             "visitorDefId": "ossuary-lost-pilgrim",
             "abilityId": "lost"
@@ -890,7 +890,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T18:10:02.608Z"
+      "at": "2026-10-04T18:21:44.381Z"
     },
     {
       "id": "muu4jolg3cwfp",
@@ -3217,5 +3217,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T18:21:09.670Z"
+  "updatedAt": "2026-10-04T18:21:44.381Z"
 }
