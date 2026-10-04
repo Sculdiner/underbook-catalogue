@@ -852,7 +852,7 @@
           },
           {
             "arriveAfterTurn": 0,
-            "name": "Zombie Parishioner",
+            "name": "Landlord",
             "fulfillment": 7,
             "patience": 3,
             "abilityId": "extra-patience-if-untended",
@@ -880,7 +880,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T17:57:36.020Z"
+      "at": "2026-10-04T17:57:40.159Z"
     }
   ],
   "applied": [
@@ -3065,5 +3065,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:57:36.020Z"
+  "updatedAt": "2026-10-04T17:57:40.159Z"
 }
