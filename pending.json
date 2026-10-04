@@ -323,14 +323,14 @@
       },
       "after": {
         "id": "crooked-queue-ticket",
-        "name": "Crooked Queue Ticket",
+        "name": "Underjade Colorings",
         "rarity": "rare",
         "price": 95,
         "text": "Books assigned to a visitor on the turn that visitor arrives gain +1 Value.",
         "icon": "artifact_02_b"
       },
       "note": "",
-      "at": "2026-10-04T21:17:37.555Z"
+      "at": "2026-10-04T21:17:57.780Z"
     }
   ],
   "applied": [
@@ -3791,5 +3791,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:17:37.555Z"
+  "updatedAt": "2026-10-04T21:17:57.780Z"
 }
