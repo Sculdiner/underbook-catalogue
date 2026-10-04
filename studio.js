@@ -400,8 +400,15 @@ function placeVisitor(d, v, w, before) {
 
 // ------------------------------------------------------------------ route editor
 
-const CW = 92, CH = 66, PAD = 48, R = 19;
+const CW = 104, CH = 78, PAD = 56, R = 25;
 let GEO = null;
+
+/** The game's own route-map medallion for a node type (cut to its ring by the exporter). */
+const nodeIcon = (type) => (hasArt('nodes', type) ? artUrl('nodes', type) : null);
+const iconImg = (type, size) => {
+  const src = nodeIcon(type);
+  return src ? `<img src="${src}" width="${size}" height="${size}" alt="" draggable="false">` : `<i style="background:${NODE_STYLE[type].c}">${NODE_STYLE[type].l}</i>`;
+};
 
 function geometry(d) {
   const lanes = d.nodes.map((n) => Number(n.lane) || 0);
@@ -426,7 +433,7 @@ function routeMain() {
     </div>${headActions()}</div>
     <div id="banner"></div>
     <div class="route-tools">
-      <div class="palette">${NODE_TYPES.map((t) => `<span class="pal" draggable="true" data-node-type="${t}"><i style="background:${NODE_STYLE[t].c}">${NODE_STYLE[t].l}</i>${NODE_STYLE[t].name}</span>`).join('')}</div>
+      <div class="palette">${NODE_TYPES.map((t) => `<span class="pal" draggable="true" data-node-type="${t}">${iconImg(t, 30)}${NODE_STYLE[t].name}</span>`).join('')}</div>
     </div>
     <p class="hint" style="margin:8px 0 0">Drag a type onto the grid to add a node · drag a node to move it · drag from its <b>◯</b> handle onto another node to connect · double-click empty space to add a ${NODE_STYLE[lastNodeType].name} · <kbd>Del</kbd> removes the selection</p>
     <div class="canvas-wrap" id="canvas-wrap">${canvasSvg()}</div>`;
@@ -457,7 +464,7 @@ function canvasSvg(dragging = null) {
       if (!m) continue;
       const [x2, y2] = pos(m);
       const fwd = x2 > x1;
-      const sx = x1 + (fwd ? R : 0), ex = x2 - (fwd ? R + 4 : 0);
+      const sx = x1 + (fwd ? R : 0), ex = x2 - (fwd ? R + 5 + (m.type === 'encounter-boss' ? 5 : 0) : 0);
       const mx = (sx + ex) / 2;
       const dd = fwd ? `M${sx} ${y1} C${mx} ${y1} ${mx} ${y2} ${ex} ${y2}` : `M${x1} ${y1} L${x2} ${y2}`;
       const sel = ED.sel?.edge && ED.sel.edge[0] === n.key && ED.sel.edge[1] === k;
@@ -469,14 +476,23 @@ function canvasSvg(dragging = null) {
   for (const n of d.nodes) {
     const [x, y] = pos(n);
     const st = NODE_STYLE[n.type] ?? { c: '#888', l: '?' };
-    const r = n.type === 'encounter-boss' ? R + 5 : R;
+    const r = n.type === 'encounter-boss' ? R + 6 : R;
     const band = n.type === 'encounter-normal' && n.band ? n.band[0].toUpperCase() : '';
     const sel = ED.sel?.node === n.key;
+    const icon = nodeIcon(n.type);
+    const boss = n.type === 'encounter-boss';
+    const s = r * 2 * 1.04;
     nodes += `<g class="node ${sel ? 'sel' : ''} ${onPath && !onPath.has(n.key) ? 'dim' : ''}" data-node="${esc(n.key)}" transform="translate(${x} ${y})">
-      <circle class="body" r="${r}" fill="${st.c}"/>
-      <text class="l" y="5" text-anchor="middle">${st.l}${band ? `<tspan font-size="9" dy="-6">${band}</tspan>` : ''}</text>
-      <text class="k" y="${r + 14}" text-anchor="middle">${esc(n.key)}${n.branch && n.branch !== 'shared' ? ` · ${esc(n.branch)}` : ''}</text>
-      <circle class="port" cx="${r + 9}" cy="0" r="6" data-port="${esc(n.key)}"/>
+      <circle class="sel-ring" r="${r + 5}"/>
+      ${
+        icon
+          ? `${boss ? `<circle r="${r * 0.8}" fill="#3a1512"/><text class="boss-l" y="4" text-anchor="middle">BOSS</text>` : ''}<image href="${icon}" x="${-s / 2}" y="${-s / 2}" width="${s}" height="${s}"/>`
+          : `<circle r="${r}" fill="${st.c}"/><text class="l" y="5" text-anchor="middle">${st.l}</text>`
+      }
+      <circle class="body" r="${r}"/>
+      ${band ? `<g class="band" transform="translate(${r * 0.78} ${-r * 0.78})"><circle r="8.5"/><text y="3.5" text-anchor="middle">${band}</text></g>` : ''}
+      <text class="k" y="${r + 16}" text-anchor="middle">${esc(n.key)}${n.branch && n.branch !== 'shared' ? ` · ${esc(n.branch)}` : ''}</text>
+      <circle class="port" cx="${r + 10}" cy="0" r="6.5" data-port="${esc(n.key)}"/>
     </g>`;
   }
   return `<svg class="canvas" id="canvas" width="${g.w}" height="${g.h}" viewBox="0 0 ${g.w} ${g.h}">
@@ -591,7 +607,7 @@ function routeRail() {
   if (n) {
     const incoming = d.nodes.filter((m) => (m.next ?? []).includes(n.key));
     insp = `
-      <div class="insp-types">${NODE_TYPES.map((t) => `<button type="button" class="${n.type === t ? 'on' : ''}" data-act="node-type" data-type="${t}"><i style="background:${NODE_STYLE[t].c}">${NODE_STYLE[t].l}</i>${NODE_STYLE[t].name}</button>`).join('')}</div>
+      <div class="insp-types">${NODE_TYPES.map((t) => `<button type="button" class="${n.type === t ? 'on' : ''}" data-act="node-type" data-type="${t}">${iconImg(t, 36)}${NODE_STYLE[t].name}</button>`).join('')}</div>
       ${n.type === 'encounter-normal' ? `<div class="field-row"><span>Band</span><div class="seg">${BANDS.map((b) => `<button type="button" class="${n.band === b ? 'on' : ''}" data-act="node-band" data-band="${b}">${cap(b)}</button>`).join('')}</div></div>` : ''}
       <div class="field-row"><span>Branch</span><input list="branch-list" data-node-field="branch" value="${esc(n.branch ?? 'shared')}"><datalist id="branch-list">${BRANCHES.map((b) => `<option value="${b}">`).join('')}</datalist></div>
       <div class="field-row"><span>Key</span><input data-node-field="key" value="${esc(n.key)}"></div>

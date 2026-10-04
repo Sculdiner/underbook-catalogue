@@ -233,3 +233,17 @@ kbd { padding: 1px 6px; border-radius: 5px; background: rgba(255, 255, 255, .08)
 .board { flex-wrap: wrap; }
 .canvas .edge.hl + path, .canvas .edge { marker-end: url(#arrow); }
 .wave { width: 246px; }
+
+/* ---- the game's node medallions on the canvas, palette and inspector */
+.canvas .node circle.body { fill: transparent; stroke: none; }
+.canvas .node .sel-ring { fill: none; stroke: none; }
+.canvas .node.sel .sel-ring { stroke: #fff; stroke-width: 2.5; }
+.canvas .node:hover .sel-ring { stroke: rgba(216, 165, 74, .6); stroke-width: 2; }
+.canvas .node image { pointer-events: none; filter: drop-shadow(0 3px 5px rgba(0, 0, 0, .55)); }
+.canvas .node .boss-l { font: 700 9px var(--sans); letter-spacing: .08em; fill: #f0c9a0; pointer-events: none; }
+.canvas .node .band circle { fill: #15110e; stroke: var(--accent); stroke-width: 1.5; }
+.canvas .node .band text { font: 700 9px var(--sans); fill: var(--accent); pointer-events: none; }
+.pal { padding: 3px 12px 3px 3px; }
+.pal img { display: block; pointer-events: none; }
+.insp-types button img { display: block; }
+.pal img[src*="encounter-boss"], .insp-types img[src*="encounter-boss"] { border-radius: 50%; background: radial-gradient(circle, #3a1512 58%, transparent 60%); }
