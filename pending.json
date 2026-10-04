@@ -886,8 +886,8 @@
             "type": "encounter-normal",
             "band": "late",
             "branch": "shrine",
-            "depth": 8,
-            "lane": -3,
+            "depth": 10,
+            "lane": -2,
             "next": [
               "ce"
             ]
@@ -1018,7 +1018,7 @@
         "merchant": "m"
       },
       "note": "",
-      "at": "2026-10-04T09:40:17.380Z"
+      "at": "2026-10-04T09:40:20.209Z"
     }
   ],
   "applied": [
@@ -1251,5 +1251,5 @@
       "result": "Long-Job Spectacles: the first visitor each Encounter fulfilled on their arrival turn gives +1 Action and a draw next turn."
     }
   ],
-  "updatedAt": "2026-10-04T09:40:17.380Z"
+  "updatedAt": "2026-10-04T09:40:20.210Z"
 }
