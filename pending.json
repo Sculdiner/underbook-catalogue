@@ -1034,6 +1034,97 @@
       },
       "note": "",
       "at": "2026-10-04T18:21:56.581Z"
+    },
+    {
+      "id": "muu5fqk9ltebu",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "parish-registry",
+      "before": {
+        "id": "parish-registry",
+        "stage": 2,
+        "name": "Parish Registry",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Urgency and a readable discard threshold. 24 / 34 / 44.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Applicant",
+            "fulfillment": 7,
+            "patience": 2,
+            "abilityId": "extra-patience-if-untended"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Skeleton Clerk",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Parish Registrar",
+            "fulfillment": 9,
+            "patience": 3,
+            "abilityId": "draw-if-discard-three"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Devout Applicant",
+            "fulfillment": 10,
+            "patience": 4
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Ancient Bureaucrat",
+            "fulfillment": 10,
+            "patience": 3
+          }
+        ]
+      },
+      "after": {
+        "id": "parish-registry",
+        "stage": 2,
+        "name": "Parish Registry",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Urgency and a readable discard threshold. 24 / 34 / 44.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Applicant",
+            "fulfillment": 7,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Skeleton Clerk",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Parish Registrar",
+            "fulfillment": 9,
+            "patience": 3,
+            "abilityId": "draw-if-discard-three"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Devout Applicant",
+            "fulfillment": 10,
+            "patience": 4
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Ancient Bureaucrat",
+            "fulfillment": 10,
+            "patience": 3
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T18:23:17.817Z"
     }
   ],
   "applied": [
@@ -3218,5 +3309,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T18:21:56.581Z"
+  "updatedAt": "2026-10-04T18:23:17.817Z"
 }
