@@ -110,13 +110,17 @@ const KIND = {
   curios: { one: 'Curio', name: (c) => c.name || c.id },
   routes: { one: 'Route', name: (r) => r.name || r.id },
   encounters: { one: 'Encounter', name: (e) => e.name || e.id },
+  abilities: { one: 'Visitor ability', name: (a) => a.name || a.id },
   general: { one: 'Note', name: () => 'General note' },
 };
 
 const trait = (id) => S.cat?.traits.find((t) => t.id === id);
 const traitName = (id) => trait(id)?.name ?? cap(id);
 const visitorDef = (id) => S.cat?.visitors.find((v) => v.id === id);
-const ability = (id) => S.cat?.abilities.find((a) => a.id === id);
+/** A visitor ability as proposed: queued edits and new abilities included. */
+const ability = (id) => (id ? allAbilities().find((a) => a.id === id) : undefined);
+/** Every visitor ability with the queue laid over it, proposed ones last. */
+const allAbilities = () => (S.cat ? items('abilities').filter((x) => x.pending?.op !== 'delete').map((x) => x.data) : []);
 const hasArt = (kind, id) => S.cat?.art?.[kind]?.includes(id);
 const artUrl = (kind, id) => `art/${kind}/${encodeURIComponent(id)}.webp`;
 
@@ -385,6 +389,7 @@ function freshId(kind, name, ownKey = null) {
 }
 
 export {
+  allAbilities,
   API,
   BANDS,
   BOOK_FLAGS,

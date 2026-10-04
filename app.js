@@ -11,6 +11,7 @@
  */
 
 import {
+  allAbilities,
   API,
   BANDS,
   BOOK_FLAGS,
@@ -683,7 +684,7 @@ async function editVisitor(key, i) {
      <div class="three">${sf.num('arriveAfterTurn', 'Arrives after turn', v.arriveAfterTurn)}${sf.num('fulfillment', 'Need', v.fulfillment)}${sf.num('patience', 'Patience', v.patience)}</div>
      ${sf.text('name', 'Name', v.name)}
      ${sf.select('visitorDefId', 'Portrait / identity', v.visitorDefId, S.cat.visitors.map((x) => [x.id, `${x.name}${x.castOnly ? ' (cast)' : ''}`]), 'Random from the crowd')}
-     ${sf.select('abilityId', 'Ability', v.abilityId, S.cat.abilities.map((a) => [a.id, a.name]), 'None (Need + Patience only)')}
+     ${sf.select('abilityId', 'Ability', v.abilityId, allAbilities().map((a) => [a.id, a.name]), 'None (Need + Patience only)')}
      <div class="hint" id="ab-text">${esc(abilityText(v.abilityId))}</div>
      <div class="two">${sf.text('tag', 'Cast tag', v.tag)}${sf.check('headliner', 'Headliner', v.headliner)}</div>
      ${sf.note(it.pending?.note)}
@@ -971,7 +972,7 @@ function changeCard(e, applied = false) {
   const kind = KIND[e.kind] ?? { one: e.kind, name: () => e.targetId };
   const name = e.kind === 'general' ? 'General note' : kind.name(e.after ?? e.before ?? { id: e.targetId });
   const opLabel = { add: 'New', edit: same(e.before, e.after) ? 'Note' : 'Edit', delete: 'Delete', note: 'Note' }[e.op];
-  const link = e.kind !== 'general' && !applied && e.op !== 'delete' ? `href="#/${e.kind}/${encodeURIComponent(e.targetId)}"` : '';
+  const link = ['books', 'curios', 'routes', 'encounters'].includes(e.kind) && !applied && e.op !== 'delete' ? `href="#/${e.kind}/${encodeURIComponent(e.targetId)}"` : '';
   return `<div class="change">
     <div class="ch"><span class="tag p-${e.op === 'note' ? 'edit' : e.op}">${opLabel}</span><span class="tag">${esc(kind.one)}</span>
       <a class="nm" ${link} style="color:inherit;text-decoration:none">${esc(name)}</a>

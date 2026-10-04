@@ -15,6 +15,7 @@
 
 import {
   S,
+  allAbilities,
   hooks,
   LS,
   token,
@@ -374,12 +375,97 @@ function visitorCard(v, i) {
       <div class="vname"><input class="inl" data-bind="visitors.${i}.name" value="${esc(v.name ?? '')}" placeholder="${esc(id?.name ?? 'Visitor')}">
         <div class="idn">${id ? esc(id.name) : 'Random from the crowd'}</div></div></div>
     <div class="steppers">${stepper(i, 'fulfillment', 'Need', v.fulfillment)}${stepper(i, 'patience', 'Patience', v.patience)}</div>
-    <button type="button" class="vab ${a || v.abilityId ? '' : 'none'}" data-act="pick-ab" data-i="${i}" data-drop-ability="${i}">${
-      a ? `<b>${esc(a.name)}</b><span class="txt">${esc(a.text)}</span>` : v.abilityId ? `<b>${esc(v.abilityId)}</b><span class="txt">New ability: describe it in the note</span>` : '+ Ability'
-    }</button>
+    ${abilitySlot(v, i, a)}
     <div class="vfoot"><button type="button" class="star ${v.headliner ? 'on' : ''}" data-act="v-head" data-i="${i}" title="Headliner: if they walk out, the run ends">★</button>
       <input class="inl" data-bind="visitors.${i}.tag" value="${esc(v.tag ?? '')}" placeholder="cast tag"></div>
   </div>`;
+}
+
+/**
+ * A visitor's ability, edited in place: its name and rule are fields on the
+ * card. An ability can be shared, and editing it edits it for everyone using
+ * it, so the card says when it is.
+ */
+function abilitySlot(v, i, a) {
+  if (!v.abilityId) return `<button type="button" class="vab none" data-act="pick-ab" data-i="${i}" data-drop-ability="${i}">+ Ability</button>`;
+  const others = abilityUsers(v.abilityId).filter((u) => !(u.mine && u.index === i));
+  const id = esc(v.abilityId);
+  return `<div class="vab edit" data-drop-ability="${i}">
+    <div class="vab-head">
+      <input class="inl ab-name" data-ab-id="${id}" data-ab-field="name" value="${esc(a?.name ?? v.abilityId)}" placeholder="Ability name">
+      <button type="button" class="icon" data-act="pick-ab" data-i="${i}" title="Choose a different ability">⇄</button>
+      <button type="button" class="icon" data-act="ab-clear" data-i="${i}" title="Take the ability off this visitor">✕</button>
+    </div>
+    <textarea class="inl ab-text" rows="1" data-ab-id="${id}" data-ab-field="text" placeholder="What it does…">${esc(a?.text ?? '')}</textarea>
+    ${
+      others.length
+        ? `<div class="ab-shared" title="${esc(others.map((u) => `${u.encounter}: ${u.visitor}`).join('\n'))}">Shared — editing changes it for ${others.length} other visitor${others.length === 1 ? '' : 's'} too</div>`
+        : ''
+    }
+  </div>`;
+}
+
+/** Everyone carrying an ability: this encounter from the working copy, the rest as proposed. */
+function abilityUsers(id) {
+  const out = [];
+  for (const it of items('encounters')) {
+    const mine = ED?.mode === 'encounters' && it.key === ED.key;
+    const enc = mine ? ED.draft : it.data;
+    enc.visitors?.forEach((v, index) => {
+      if (v.abilityId === id) out.push({ mine, index, encounter: enc.name, visitor: v.name || visitorDef(v.visitorDefId)?.name || 'Visitor' });
+    });
+  }
+  return out;
+}
+
+/** Save one field of a visitor ability to the queue (an unknown id becomes a new ability). */
+async function saveAbility(id, field, value) {
+  const it = findItem('abilities', id);
+  const after = clone(it?.pending?.after ?? it?.orig ?? { id, name: id, text: '' });
+  if ((after[field] ?? '') === value) return;
+  after[field] = value;
+  if (!after.name) {
+    toast('An ability needs a name', true);
+    return drawMain();
+  }
+  const op = !it || it.pending?.op === 'add' ? 'add' : 'edit';
+  setSaved('Saving…');
+  const ok = await commitPending(
+    (q) =>
+      stage(q, {
+        kind: 'abilities',
+        key: id,
+        op,
+        before: clone(it?.orig ?? null),
+        after,
+        note: q.edits.find((e) => e.kind === 'abilities' && e.targetId === id)?.note ?? '',
+      }),
+    `${op === 'add' ? 'Propose' : 'Edit'} ability ${id} (Studio)`,
+  );
+  if (!ok) return setSaved('Not saved: check the token or connection');
+  setSaved('Saved');
+  // Every other card showing this ability follows, without disturbing the field being typed in.
+  for (const el of $$(`[data-ab-id="${CSS.escape(id)}"][data-ab-field="${field}"]`)) if (el !== document.activeElement) el.value = value;
+  if (!$('#rail').contains(document.activeElement)) drawRail();
+}
+
+/** "+ New ability": name it and say what it does; it is proposed and given to the visitor. */
+async function newAbility(i) {
+  const f = await dialog(
+    `<h3>New visitor ability</h3>
+     <div class="field-row"><span>Name</span><input data-f="name" placeholder="e.g. Haggler"></div>
+     <textarea class="note-box" data-f="text" placeholder="What it does, as the player reads it on the visitor's plate."></textarea>
+     <p class="hint">Claude implements the behaviour when you sync, and asks if the wording leaves something open.</p>`,
+    'Create',
+  );
+  if (!f) return;
+  if (!f.name) return toast('An ability needs a name', true);
+  const id = freshId('abilities', f.name);
+  const ok = await commitPending(
+    (q) => stage(q, { kind: 'abilities', key: id, op: 'add', before: null, after: { id, name: f.name, text: f.text ?? '' }, note: '' }),
+    `Propose ability ${id} (Studio)`,
+  );
+  if (ok) setAbility(i, id);
 }
 
 /** Re-sort visitors by wave, keeping their order inside each wave. */
@@ -582,7 +668,7 @@ function encounterRail() {
   const q = railFilter.cast.toLowerCase();
   const people = S.cat.visitors.filter((v) => !q || v.name.toLowerCase().includes(q));
   const qa = railFilter.abil.toLowerCase();
-  const abil = S.cat.abilities.filter((a) => !qa || (a.name + a.text).toLowerCase().includes(qa));
+  const abil = allAbilities().filter((a) => !qa || (a.name + a.text).toLowerCase().includes(qa));
   const castItem = (v) =>
     `<div class="cast-item" draggable="true" data-identity="${esc(v.id)}" title="${esc(v.name)}">${portraitHtml(v.id, 'tabindex="-1"')}<span>${esc(v.name)}</span></div>`;
   return `
@@ -695,9 +781,10 @@ function pickAbility(anchor, i) {
   popover(
     anchor,
     `<input class="search" placeholder="Search abilities…"><div class="list">
+      <div class="pop-item new" data-pick="__new"><b>+ New ability…</b>Name it and say what it does</div>
       <div class="pop-item ${v.abilityId ? '' : 'on'}" data-pick=""><b>None</b>Need and Patience only</div>
-      ${S.cat.abilities.map((a) => `<div class="pop-item ${v.abilityId === a.id ? 'on' : ''}" data-pick="${esc(a.id)}"><b>${esc(a.name)}</b>${esc(a.text)}</div>`).join('')}</div>`,
-    (id) => setAbility(i, id),
+      ${allAbilities().map((a) => `<div class="pop-item ${v.abilityId === a.id ? 'on' : ''}" data-pick="${esc(a.id)}"><b>${esc(a.name)}</b>${esc(a.text)}</div>`).join('')}</div>`,
+    (id) => (id === '__new' ? newAbility(i) : setAbility(i, id)),
   );
 }
 
@@ -818,6 +905,7 @@ document.addEventListener('input', (e) => {
 document.addEventListener('change', (e) => {
   const t = e.target;
   if (!ED?.live) return;
+  if (t.dataset.abField) return void saveAbility(t.dataset.abId, t.dataset.abField, t.value.trim());
   if (t.dataset.note != null) return changed();
   if (t.dataset.bind) {
     // One history step per finished field, not per keystroke.
@@ -910,6 +998,8 @@ document.addEventListener('click', async (e) => {
     case 'pick-ab':
       e.stopPropagation();
       return pickAbility(b, i);
+    case 'ab-clear':
+      return setAbility(i, '');
     case 'node-type':
       return edit((d) => {
         const n = d.nodes.find((x) => x.key === ED.sel.node);
