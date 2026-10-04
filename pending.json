@@ -775,6 +775,110 @@
       },
       "note": "",
       "at": "2026-10-04T17:53:13.781Z"
+    },
+    {
+      "id": "muu4fpynly8q4",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "after-after-mass",
+      "before": {
+        "id": "after-after-mass",
+        "stage": 2,
+        "name": "After-After Mass",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "A deliberately wider Ossuary Normal. 28 / 36 / 45.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Skeletal Parishioner",
+            "fulfillment": 6,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Skeletal Parishioner",
+            "fulfillment": 7,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Zombie Parishioner",
+            "fulfillment": 7,
+            "patience": 3,
+            "abilityId": "extra-patience-if-untended"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Ancient Parishioner",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Devout Corpse",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "return-to-library"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Bell-Ringer",
+            "fulfillment": 9,
+            "patience": 3
+          }
+        ]
+      },
+      "after": {
+        "id": "after-after-mass",
+        "stage": 2,
+        "name": "After-After Mass",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "A deliberately wider Ossuary Normal. 28 / 36 / 45.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Slow Reader",
+            "fulfillment": 6,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Skeletal Parishioner",
+            "fulfillment": 7,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Zombie Parishioner",
+            "fulfillment": 7,
+            "patience": 3,
+            "abilityId": "extra-patience-if-untended"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Ancient Parishioner",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Devout Corpse",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "return-to-library"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Bell-Ringer",
+            "fulfillment": 9,
+            "patience": 3
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T17:55:17.423Z"
     }
   ],
   "applied": [
@@ -2959,5 +3063,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:53:13.781Z"
+  "updatedAt": "2026-10-04T17:55:17.423Z"
 }
