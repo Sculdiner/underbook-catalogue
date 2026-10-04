@@ -1230,7 +1230,8 @@
             "arriveAfterTurn": 1,
             "name": "Ancient Scholar",
             "fulfillment": 10,
-            "patience": 4
+            "patience": 4,
+            "visitorDefId": "ossuary-crypt-archivist"
           },
           {
             "arriveAfterTurn": 2,
@@ -1241,7 +1242,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T18:26:06.750Z"
+      "at": "2026-10-04T18:30:49.350Z"
     }
   ],
   "applied": [
@@ -3426,5 +3427,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T18:29:26.509Z"
+  "updatedAt": "2026-10-04T18:30:49.350Z"
 }
