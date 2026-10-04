@@ -442,6 +442,123 @@
       },
       "note": "",
       "at": "2026-10-04T17:23:31.333Z"
+    },
+    {
+      "id": "muu3biqg3ibz3",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "occult-collector",
+      "before": {
+        "id": "occult-collector",
+        "name": "The Occult Collector",
+        "type": "elite",
+        "category": "distinguished",
+        "purpose": "An opportunity, not a punishment: the Collector doubles On Assign, while his Bodyguard takes the first book. 47 total.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Porter",
+            "fulfillment": 6,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Reader",
+            "fulfillment": 6,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Occult Collector",
+            "fulfillment": 15,
+            "patience": 4,
+            "abilityId": "insatiable-curiosity",
+            "visitorDefId": "occult-collector"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Bodyguard",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "first-in-line"
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Antiquarian",
+            "fulfillment": 4,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Antiquarian",
+            "fulfillment": 4,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 4,
+            "name": "Antiquarian",
+            "fulfillment": 4,
+            "patience": 3
+          }
+        ]
+      },
+      "after": {
+        "id": "occult-collector",
+        "name": "The Occult Collector",
+        "type": "elite",
+        "category": "distinguished",
+        "purpose": "An opportunity, not a punishment: the Collector doubles On Assign, while his Bodyguard takes the first book. 47 total.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Porter",
+            "fulfillment": 6,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Reader",
+            "fulfillment": 6,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Occult Collector",
+            "fulfillment": 15,
+            "patience": 4,
+            "abilityId": "insatiable-curiosity",
+            "visitorDefId": "occult-collector"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Bodyguard",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "first-in-line",
+            "visitorDefId": "human-highwaywoman"
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Antiquarian",
+            "fulfillment": 4,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Antiquarian",
+            "fulfillment": 4,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 4,
+            "name": "Antiquarian",
+            "fulfillment": 4,
+            "patience": 3
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T17:24:01.816Z"
     }
   ],
   "applied": [
@@ -2626,5 +2743,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:23:31.333Z"
+  "updatedAt": "2026-10-04T17:24:01.816Z"
 }
