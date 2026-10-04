@@ -999,6 +999,582 @@
       },
       "note": "",
       "at": "2026-10-04T09:40:53.379Z"
+    },
+    {
+      "id": "mutmt4givvl61",
+      "kind": "routes",
+      "op": "edit",
+      "targetId": "market-braid",
+      "before": {
+        "id": "market-braid",
+        "name": "The Market Braid",
+        "nodes": [
+          {
+            "key": "n1",
+            "type": "encounter-normal",
+            "band": "opening",
+            "branch": "shared",
+            "depth": 0,
+            "lane": 0,
+            "next": [
+              "ae",
+              "bf",
+              "ce1"
+            ]
+          },
+          {
+            "key": "ae",
+            "type": "event",
+            "branch": "shared",
+            "depth": 1,
+            "lane": -3,
+            "next": [
+              "af"
+            ]
+          },
+          {
+            "key": "af",
+            "type": "reward",
+            "branch": "shared",
+            "depth": 2,
+            "lane": -3,
+            "next": [
+              "n2"
+            ]
+          },
+          {
+            "key": "bf",
+            "type": "reward",
+            "branch": "shared",
+            "depth": 1,
+            "lane": 0,
+            "next": [
+              "be"
+            ]
+          },
+          {
+            "key": "be",
+            "type": "event",
+            "branch": "shared",
+            "depth": 2,
+            "lane": 0,
+            "next": [
+              "n2"
+            ]
+          },
+          {
+            "key": "ce1",
+            "type": "event",
+            "branch": "shared",
+            "depth": 1,
+            "lane": 3,
+            "next": [
+              "cf1"
+            ]
+          },
+          {
+            "key": "cf1",
+            "type": "reward",
+            "branch": "shared",
+            "depth": 2,
+            "lane": 3,
+            "next": [
+              "n2"
+            ]
+          },
+          {
+            "key": "n2",
+            "type": "encounter-normal",
+            "band": "mid",
+            "branch": "shared",
+            "depth": 3,
+            "lane": 0,
+            "next": [
+              "d1"
+            ]
+          },
+          {
+            "key": "d1",
+            "type": "encounter-elite",
+            "branch": "shared",
+            "depth": 4,
+            "lane": 0,
+            "next": [
+              "m"
+            ]
+          },
+          {
+            "key": "m",
+            "type": "merchant",
+            "branch": "shared",
+            "depth": 5,
+            "lane": 0,
+            "next": [
+              "sn",
+              "s",
+              "wn1",
+              "hn1"
+            ]
+          },
+          {
+            "key": "sn",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "short",
+            "depth": 6,
+            "lane": -3,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "s",
+            "type": "shrine",
+            "branch": "shrine",
+            "depth": 6,
+            "lane": -1,
+            "next": [
+              "cn"
+            ]
+          },
+          {
+            "key": "cn",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "shrine",
+            "depth": 7,
+            "lane": -1,
+            "next": [
+              "cf"
+            ]
+          },
+          {
+            "key": "cf",
+            "type": "reward",
+            "branch": "shrine",
+            "depth": 8,
+            "lane": -1,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "wn1",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "wander",
+            "depth": 6,
+            "lane": 1,
+            "next": [
+              "wf1"
+            ]
+          },
+          {
+            "key": "wf1",
+            "type": "reward",
+            "branch": "wander",
+            "depth": 7,
+            "lane": 1,
+            "next": [
+              "we1"
+            ]
+          },
+          {
+            "key": "we1",
+            "type": "event",
+            "branch": "wander",
+            "depth": 8,
+            "lane": 1,
+            "next": [
+              "wn2"
+            ]
+          },
+          {
+            "key": "wn2",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "wander",
+            "depth": 9,
+            "lane": 1,
+            "next": [
+              "wf2"
+            ]
+          },
+          {
+            "key": "wf2",
+            "type": "reward",
+            "branch": "wander",
+            "depth": 10,
+            "lane": 1,
+            "next": [
+              "we2"
+            ]
+          },
+          {
+            "key": "we2",
+            "type": "event",
+            "branch": "wander",
+            "depth": 11,
+            "lane": 1,
+            "next": [
+              "wn3"
+            ]
+          },
+          {
+            "key": "wn3",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "wander",
+            "depth": 12,
+            "lane": 1,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "hn1",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "hard",
+            "depth": 6,
+            "lane": 3,
+            "next": [
+              "hn2"
+            ]
+          },
+          {
+            "key": "hn2",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "hard",
+            "depth": 7,
+            "lane": 3,
+            "next": [
+              "hd"
+            ]
+          },
+          {
+            "key": "hd",
+            "type": "encounter-elite",
+            "branch": "hard",
+            "depth": 8,
+            "lane": 3,
+            "next": [
+              "ht"
+            ]
+          },
+          {
+            "key": "ht",
+            "type": "treasure",
+            "branch": "hard",
+            "depth": 9,
+            "lane": 3,
+            "next": [
+              "he"
+            ]
+          },
+          {
+            "key": "he",
+            "type": "event",
+            "branch": "hard",
+            "depth": 10,
+            "lane": 3,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "b",
+            "type": "encounter-boss",
+            "branch": "shared",
+            "depth": 13,
+            "lane": 0,
+            "next": []
+          }
+        ],
+        "boss": "b",
+        "merchant": "m"
+      },
+      "after": {
+        "id": "market-braid",
+        "name": "The Market Braid",
+        "nodes": [
+          {
+            "key": "n1",
+            "type": "encounter-normal",
+            "band": "opening",
+            "branch": "shared",
+            "depth": 0,
+            "lane": 0,
+            "next": [
+              "ae",
+              "bf",
+              "ce1"
+            ]
+          },
+          {
+            "key": "ae",
+            "type": "event",
+            "branch": "shared",
+            "depth": 1,
+            "lane": -3,
+            "next": []
+          },
+          {
+            "key": "bf",
+            "type": "reward",
+            "branch": "shared",
+            "depth": 1,
+            "lane": 0,
+            "next": [
+              "be"
+            ]
+          },
+          {
+            "key": "be",
+            "type": "event",
+            "branch": "shared",
+            "depth": 2,
+            "lane": 0,
+            "next": [
+              "n2"
+            ]
+          },
+          {
+            "key": "ce1",
+            "type": "event",
+            "branch": "shared",
+            "depth": 1,
+            "lane": 3,
+            "next": [
+              "cf1"
+            ]
+          },
+          {
+            "key": "cf1",
+            "type": "reward",
+            "branch": "shared",
+            "depth": 2,
+            "lane": 3,
+            "next": [
+              "n2"
+            ]
+          },
+          {
+            "key": "n2",
+            "type": "encounter-normal",
+            "band": "mid",
+            "branch": "shared",
+            "depth": 3,
+            "lane": 0,
+            "next": [
+              "d1"
+            ]
+          },
+          {
+            "key": "d1",
+            "type": "encounter-elite",
+            "branch": "shared",
+            "depth": 4,
+            "lane": 0,
+            "next": [
+              "m"
+            ]
+          },
+          {
+            "key": "m",
+            "type": "merchant",
+            "branch": "shared",
+            "depth": 5,
+            "lane": 0,
+            "next": [
+              "sn",
+              "s",
+              "wn1",
+              "hn1"
+            ]
+          },
+          {
+            "key": "sn",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "short",
+            "depth": 6,
+            "lane": -3,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "s",
+            "type": "shrine",
+            "branch": "shrine",
+            "depth": 6,
+            "lane": -1,
+            "next": [
+              "cn"
+            ]
+          },
+          {
+            "key": "cn",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "shrine",
+            "depth": 7,
+            "lane": -1,
+            "next": [
+              "cf"
+            ]
+          },
+          {
+            "key": "cf",
+            "type": "reward",
+            "branch": "shrine",
+            "depth": 8,
+            "lane": -1,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "wn1",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "wander",
+            "depth": 6,
+            "lane": 1,
+            "next": [
+              "wf1"
+            ]
+          },
+          {
+            "key": "wf1",
+            "type": "reward",
+            "branch": "wander",
+            "depth": 7,
+            "lane": 1,
+            "next": [
+              "we1"
+            ]
+          },
+          {
+            "key": "we1",
+            "type": "event",
+            "branch": "wander",
+            "depth": 8,
+            "lane": 1,
+            "next": [
+              "wn2"
+            ]
+          },
+          {
+            "key": "wn2",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "wander",
+            "depth": 9,
+            "lane": 1,
+            "next": [
+              "wf2"
+            ]
+          },
+          {
+            "key": "wf2",
+            "type": "reward",
+            "branch": "wander",
+            "depth": 10,
+            "lane": 1,
+            "next": [
+              "we2"
+            ]
+          },
+          {
+            "key": "we2",
+            "type": "event",
+            "branch": "wander",
+            "depth": 11,
+            "lane": 1,
+            "next": [
+              "wn3"
+            ]
+          },
+          {
+            "key": "wn3",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "wander",
+            "depth": 12,
+            "lane": 1,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "hn1",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "hard",
+            "depth": 6,
+            "lane": 3,
+            "next": [
+              "hn2"
+            ]
+          },
+          {
+            "key": "hn2",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "hard",
+            "depth": 7,
+            "lane": 3,
+            "next": [
+              "hd"
+            ]
+          },
+          {
+            "key": "hd",
+            "type": "encounter-elite",
+            "branch": "hard",
+            "depth": 8,
+            "lane": 3,
+            "next": [
+              "ht"
+            ]
+          },
+          {
+            "key": "ht",
+            "type": "treasure",
+            "branch": "hard",
+            "depth": 9,
+            "lane": 3,
+            "next": [
+              "he"
+            ]
+          },
+          {
+            "key": "he",
+            "type": "event",
+            "branch": "hard",
+            "depth": 10,
+            "lane": 3,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "b",
+            "type": "encounter-boss",
+            "branch": "shared",
+            "depth": 13,
+            "lane": 0,
+            "next": []
+          }
+        ],
+        "boss": "b",
+        "merchant": "m"
+      },
+      "note": "",
+      "at": "2026-10-04T09:41:49.650Z"
     }
   ],
   "applied": [
@@ -1231,5 +1807,5 @@
       "result": "Long-Job Spectacles: the first visitor each Encounter fulfilled on their arrival turn gives +1 Action and a draw next turn."
     }
   ],
-  "updatedAt": "2026-10-04T09:40:53.379Z"
+  "updatedAt": "2026-10-04T09:41:49.650Z"
 }
