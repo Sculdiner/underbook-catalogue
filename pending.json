@@ -1819,7 +1819,7 @@
             "band": "late",
             "branch": "long",
             "depth": 7,
-            "lane": 0,
+            "lane": -1,
             "next": [
               "lf"
             ]
@@ -1829,7 +1829,7 @@
             "type": "reward",
             "branch": "long",
             "depth": 8,
-            "lane": 0,
+            "lane": -1,
             "next": [
               "ln2"
             ]
@@ -1929,7 +1929,7 @@
         "merchant": "m"
       },
       "note": "",
-      "at": "2026-10-04T09:49:02.200Z"
+      "at": "2026-10-04T09:49:04.523Z"
     }
   ],
   "applied": [
@@ -2162,5 +2162,5 @@
       "result": "Long-Job Spectacles: the first visitor each Encounter fulfilled on their arrival turn gives +1 Action and a draw next turn."
     }
   ],
-  "updatedAt": "2026-10-04T09:49:02.200Z"
+  "updatedAt": "2026-10-04T09:49:04.523Z"
 }
