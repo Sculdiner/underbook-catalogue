@@ -92,6 +92,28 @@
       },
       "note": "",
       "at": "2026-10-04T20:26:54.125Z"
+    },
+    {
+      "id": "muu9wpmpe4l7c",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "crowded-counter-sign",
+      "before": {
+        "id": "crowded-counter-sign",
+        "name": "Crowded Counter Sign",
+        "rarity": "common",
+        "price": 60,
+        "text": "The first time each Encounter that 4 or more visitors are waiting at the start of a turn, draw 1 and gain +1 Action that turn."
+      },
+      "after": {
+        "id": "crowded-counter-sign",
+        "name": "Crowded Counter Sign",
+        "rarity": "common",
+        "price": 60,
+        "text": "The first time each Encounter that 4 or more visitors are waiting at the start of a turn, they all gain 1 fulfillment"
+      },
+      "note": "",
+      "at": "2026-10-04T20:28:28.225Z"
     }
   ],
   "applied": [
@@ -3552,5 +3574,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T20:26:54.125Z"
+  "updatedAt": "2026-10-04T20:28:28.225Z"
 }
