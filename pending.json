@@ -767,20 +767,14 @@
           {
             "arriveAfterTurn": 2,
             "name": "Shroud Tailor",
-            "fulfillment": 5,
+            "fulfillment": 9,
             "patience": 2,
             "visitorDefId": "ossuary-shroud-tailor"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Rib Counter",
-            "fulfillment": 9,
-            "patience": 3
           }
         ]
       },
       "note": "",
-      "at": "2026-10-04T17:53:06.502Z"
+      "at": "2026-10-04T17:53:11.842Z"
     }
   ],
   "applied": [
@@ -2965,5 +2959,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:53:06.503Z"
+  "updatedAt": "2026-10-04T17:53:11.842Z"
 }
