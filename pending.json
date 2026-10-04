@@ -1,23 +1,6 @@
 {
   "version": 1,
-  "edits": [
-    {
-      "id": "mutk3jrryunvl",
-      "kind": "curios",
-      "op": "add",
-      "targetId": "test2",
-      "before": null,
-      "after": {
-        "id": "test2",
-        "name": "Test",
-        "rarity": "common",
-        "text": "Merchants offer an additional Curio and you can reroll their inventory once for free",
-        "price": 45
-      },
-      "note": "",
-      "at": "2026-10-04T08:28:23.380Z"
-    }
-  ],
+  "edits": [],
   "applied": [
     {
       "id": "muszs8hhe8um8",
@@ -2180,7 +2163,25 @@
       "at": "2026-10-04T09:49:25.887Z",
       "appliedAt": "2026-10-04T10:22:47.071Z",
       "result": "Applied as drawn. Path rules widened to fit (Normal 2-5, Distinguished 0-3, Event 0-4, Finding 0-3); the Treasure just needs a hard Distinguished before it."
+    },
+    {
+      "id": "mutk3jrryunvl",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "test2",
+      "before": null,
+      "after": {
+        "id": "test2",
+        "name": "Test",
+        "rarity": "common",
+        "text": "Merchants offer an additional Curio and you can reroll their inventory once for free",
+        "price": 45
+      },
+      "note": "",
+      "at": "2026-10-04T08:28:23.380Z",
+      "appliedAt": "2026-10-04T10:25:48.656Z",
+      "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T10:22:47.072Z"
+  "updatedAt": "2026-10-04T10:25:48.658Z"
 }
