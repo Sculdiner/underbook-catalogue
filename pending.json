@@ -126,6 +126,21 @@
       },
       "note": "",
       "at": "2026-10-04T08:25:24.850Z"
+    },
+    {
+      "id": "mutk3jrryunvl",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "test2",
+      "before": null,
+      "after": {
+        "id": "test2",
+        "name": "Test2",
+        "rarity": "common",
+        "price": 65
+      },
+      "note": "",
+      "at": "2026-10-04T08:25:57.207Z"
     }
   ],
   "applied": [
@@ -358,5 +373,5 @@
       "result": "Long-Job Spectacles: the first visitor each Encounter fulfilled on their arrival turn gives +1 Action and a draw next turn."
     }
   ],
-  "updatedAt": "2026-10-04T08:25:24.850Z"
+  "updatedAt": "2026-10-04T08:25:57.207Z"
 }
