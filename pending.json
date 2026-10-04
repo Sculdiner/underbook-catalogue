@@ -161,6 +161,29 @@
       },
       "note": "",
       "at": "2026-10-04T20:55:51.564Z"
+    },
+    {
+      "id": "muuaww0fz0kg3",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "standing-room-only",
+      "before": {
+        "id": "standing-room-only",
+        "name": "Standing Room Only",
+        "rarity": "uncommon",
+        "price": 85,
+        "text": "While 4 or more visitors are waiting, every book gains +1 Value."
+      },
+      "after": {
+        "id": "standing-room-only",
+        "name": "Standing Room Only",
+        "rarity": "uncommon",
+        "price": 85,
+        "text": "While 4 or more visitors are waiting, every book gains +1 Value.",
+        "icon": "addons_08_b"
+      },
+      "note": "",
+      "at": "2026-10-04T20:56:36.111Z"
     }
   ],
   "applied": [
@@ -3621,5 +3644,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T20:55:51.564Z"
+  "updatedAt": "2026-10-04T20:56:36.111Z"
 }
