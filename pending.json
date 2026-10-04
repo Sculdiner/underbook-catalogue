@@ -1,6 +1,30 @@
 {
   "version": 1,
-  "edits": [],
+  "edits": [
+    {
+      "id": "muu6on6k2ul79",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "test",
+      "before": {
+        "id": "test",
+        "name": "Test",
+        "rarity": "common",
+        "price": 45,
+        "text": "Merchants offer an additional Curio, and the first time you refresh their wares at each Merchant it is free."
+      },
+      "after": {
+        "id": "test",
+        "name": "Test",
+        "rarity": "common",
+        "price": 45,
+        "text": "Merchants offer an additional Curio, and the first time you refresh their wares at each Merchant it is free.",
+        "icon": "WitchCraftIcons_95_b"
+      },
+      "note": "",
+      "at": "2026-10-04T18:58:12.956Z"
+    }
+  ],
   "applied": [
     {
       "id": "muszs8hhe8um8",
@@ -3459,5 +3483,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T18:42:45.834Z"
+  "updatedAt": "2026-10-04T18:58:12.956Z"
 }
