@@ -989,9 +989,7 @@
             "branch": "hard",
             "depth": 10,
             "lane": 3,
-            "next": [
-              "xe2"
-            ]
+            "next": []
           },
           {
             "key": "b",
@@ -1016,7 +1014,7 @@
         "merchant": "m"
       },
       "note": "",
-      "at": "2026-10-04T09:40:04.133Z"
+      "at": "2026-10-04T09:40:07.487Z"
     }
   ],
   "applied": [
@@ -1249,5 +1247,5 @@
       "result": "Long-Job Spectacles: the first visitor each Encounter fulfilled on their arrival turn gives +1 Action and a draw next turn."
     }
   ],
-  "updatedAt": "2026-10-04T09:40:04.133Z"
+  "updatedAt": "2026-10-04T09:40:07.487Z"
 }
