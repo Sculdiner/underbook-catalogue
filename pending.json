@@ -915,6 +915,20 @@
       },
       "note": "",
       "at": "2026-10-04T17:59:17.545Z"
+    },
+    {
+      "id": "muu4qijdu189g",
+      "kind": "abilities",
+      "op": "add",
+      "targetId": "lost",
+      "before": null,
+      "after": {
+        "id": "lost",
+        "name": "Lost!",
+        "text": "If there are 3 or more Visitors at the end of the turn, lose 1 additional Patience"
+      },
+      "note": "",
+      "at": "2026-10-04T18:03:41.017Z"
     }
   ],
   "applied": [
@@ -3099,5 +3113,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T18:02:49.963Z"
+  "updatedAt": "2026-10-04T18:03:41.017Z"
 }
