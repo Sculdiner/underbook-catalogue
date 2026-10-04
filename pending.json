@@ -839,7 +839,7 @@
         "visitors": [
           {
             "arriveAfterTurn": 0,
-            "name": "Eternal Queuer",
+            "name": "Accountant",
             "fulfillment": 6,
             "patience": 3,
             "visitorDefId": "ossuary-eternal-queuer"
@@ -881,7 +881,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T18:00:00.522Z"
+      "at": "2026-10-04T18:00:52.332Z"
     },
     {
       "id": "muu4jolg3cwfp",
@@ -3098,5 +3098,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T18:00:00.523Z"
+  "updatedAt": "2026-10-04T18:00:52.332Z"
 }
