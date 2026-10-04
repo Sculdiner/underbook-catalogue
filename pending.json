@@ -126,52 +126,6 @@
       },
       "note": "",
       "at": "2026-10-03T23:30:14.298Z"
-    },
-    {
-      "id": "mutiyyn2hzcyb",
-      "kind": "routes",
-      "op": "add",
-      "targetId": "the-spiral",
-      "before": null,
-      "after": {
-        "name": "The Spiral",
-        "nodes": [
-          {
-            "key": "n1",
-            "type": "encounter-normal",
-            "band": "opening",
-            "branch": "shared",
-            "depth": 0,
-            "lane": 0,
-            "next": [
-              "m"
-            ]
-          },
-          {
-            "key": "m",
-            "type": "merchant",
-            "branch": "shared",
-            "depth": 1,
-            "lane": 0,
-            "next": [
-              "b"
-            ]
-          },
-          {
-            "key": "b",
-            "type": "encounter-boss",
-            "branch": "shared",
-            "depth": 2,
-            "lane": 0,
-            "next": []
-          }
-        ],
-        "boss": "b",
-        "merchant": "m",
-        "id": "the-spiral"
-      },
-      "note": "",
-      "at": "2026-10-04T07:54:31.423Z"
     }
   ],
   "applied": [
@@ -266,5 +220,5 @@
       "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
     }
   ],
-  "updatedAt": "2026-10-04T07:54:31.423Z"
+  "updatedAt": "2026-10-04T07:55:16.924Z"
 }
