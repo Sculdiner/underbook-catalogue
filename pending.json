@@ -654,13 +654,13 @@
           },
           {
             "arriveAfterTurn": 2,
-            "fulfillment": 9,
+            "fulfillment": 10,
             "patience": 3
           }
         ]
       },
       "note": "",
-      "at": "2026-10-04T17:35:31.555Z"
+      "at": "2026-10-04T17:35:34.310Z"
     },
     {
       "id": "muu3m7xye2on5",
@@ -2859,5 +2859,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:35:31.555Z"
+  "updatedAt": "2026-10-04T17:35:34.310Z"
 }
