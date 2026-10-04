@@ -2,132 +2,6 @@
   "version": 1,
   "edits": [
     {
-      "id": "mutjpmns01y68",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "retinues-book-of-etiquette",
-      "before": {
-        "id": "retinues-book-of-etiquette",
-        "name": "The Retinue's Book of Etiquette",
-        "rarity": "legendary",
-        "price": 115,
-        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Patience and every newcomer gains +1 Fulfillment."
-      },
-      "after": {
-        "id": "retinues-book-of-etiquette",
-        "name": "The Retinue's Book of Etiquette",
-        "rarity": "legendary",
-        "price": 115,
-        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Fulfillment."
-      },
-      "note": "",
-      "at": "2026-10-04T08:15:07.767Z"
-    },
-    {
-      "id": "mutjsfmlqdtax",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "crooked-queue-ticket",
-      "before": {
-        "id": "crooked-queue-ticket",
-        "name": "Crooked Queue Ticket",
-        "rarity": "common",
-        "price": 60,
-        "text": "Books assigned to a visitor on the turn that visitor arrives gain +1 Value."
-      },
-      "after": {
-        "id": "crooked-queue-ticket",
-        "name": "Crooked Queue Ticket",
-        "rarity": "rare",
-        "price": 60,
-        "text": "Books assigned to a visitor on the turn that visitor arrives gain +1 Value."
-      },
-      "note": "",
-      "at": "2026-10-04T08:17:18.621Z"
-    },
-    {
-      "id": "mutjxbils9f0o",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "red-string-bookmark",
-      "before": {
-        "id": "red-string-bookmark",
-        "name": "Red String Bookmark",
-        "rarity": "common",
-        "price": 65,
-        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
-      },
-      "after": {
-        "id": "red-string-bookmark",
-        "name": "Red String Bookmark",
-        "rarity": "rare",
-        "price": 65,
-        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
-      },
-      "note": "",
-      "at": "2026-10-04T08:21:06.573Z"
-    },
-    {
-      "id": "mutjymts9tr42",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "twin-spined-bookmark",
-      "before": {
-        "id": "twin-spined-bookmark",
-        "name": "Twin-Spined Bookmark",
-        "rarity": "common",
-        "price": 70,
-        "text": "When two paid assignments in a row use your two different Traits, the third book gains +1 Value."
-      },
-      "after": {
-        "id": "twin-spined-bookmark",
-        "name": "Twin-Spined Bookmark",
-        "rarity": "common",
-        "price": 70,
-        "text": "When two books played from your hand, use two different Traits, the third book gains +1 Value."
-      },
-      "note": "",
-      "at": "2026-10-04T08:22:07.887Z"
-    },
-    {
-      "id": "mutjyue79g39h",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "unwelcome-critics-monocle",
-      "before": {
-        "id": "unwelcome-critics-monocle",
-        "name": "Unwelcome Critic's Monocle",
-        "rarity": "common",
-        "price": 65,
-        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
-      },
-      "after": {
-        "id": "unwelcome-critics-monocle",
-        "name": "Unwelcome Critic's Monocle",
-        "rarity": "uncommon",
-        "price": 65,
-        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
-      },
-      "note": "",
-      "at": "2026-10-04T08:22:17.694Z"
-    },
-    {
-      "id": "mutk09mknhag2",
-      "kind": "curios",
-      "op": "add",
-      "targetId": "test",
-      "before": null,
-      "after": {
-        "id": "test",
-        "name": "Talisman of the After-After Life",
-        "rarity": "common",
-        "text": "Whenever your discard is shuffled in your Deck, give a random Book +1 value (until the end of the encounter)",
-        "price": 70
-      },
-      "note": "",
-      "at": "2026-10-04T08:25:24.850Z"
-    },
-    {
       "id": "mutk3jrryunvl",
       "kind": "curios",
       "op": "add",
@@ -2160,7 +2034,145 @@
       "at": "2026-10-03T23:30:14.298Z",
       "appliedAt": "2026-10-04T08:04:24.399Z",
       "result": "Long-Job Spectacles: the first visitor each Encounter fulfilled on their arrival turn gives +1 Action and a draw next turn."
+    },
+    {
+      "id": "mutjpmns01y68",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "retinues-book-of-etiquette",
+      "before": {
+        "id": "retinues-book-of-etiquette",
+        "name": "The Retinue's Book of Etiquette",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Patience and every newcomer gains +1 Fulfillment."
+      },
+      "after": {
+        "id": "retinues-book-of-etiquette",
+        "name": "The Retinue's Book of Etiquette",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Fulfillment."
+      },
+      "note": "",
+      "at": "2026-10-04T08:15:07.767Z",
+      "appliedAt": "2026-10-04T09:56:08.759Z",
+      "result": "Done: those already waiting gain +1 Fulfillment when a new wave arrives; no Patience, nothing for newcomers."
+    },
+    {
+      "id": "mutjsfmlqdtax",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "crooked-queue-ticket",
+      "before": {
+        "id": "crooked-queue-ticket",
+        "name": "Crooked Queue Ticket",
+        "rarity": "common",
+        "price": 60,
+        "text": "Books assigned to a visitor on the turn that visitor arrives gain +1 Value."
+      },
+      "after": {
+        "id": "crooked-queue-ticket",
+        "name": "Crooked Queue Ticket",
+        "rarity": "rare",
+        "price": 60,
+        "text": "Books assigned to a visitor on the turn that visitor arrives gain +1 Value."
+      },
+      "note": "",
+      "at": "2026-10-04T08:17:18.621Z",
+      "appliedAt": "2026-10-04T09:56:08.759Z",
+      "result": "Done: now Rare, repriced to 95G to fit the Rare band."
+    },
+    {
+      "id": "mutjxbils9f0o",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "red-string-bookmark",
+      "before": {
+        "id": "red-string-bookmark",
+        "name": "Red String Bookmark",
+        "rarity": "common",
+        "price": 65,
+        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
+      },
+      "after": {
+        "id": "red-string-bookmark",
+        "name": "Red String Bookmark",
+        "rarity": "rare",
+        "price": 65,
+        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
+      },
+      "note": "",
+      "at": "2026-10-04T08:21:06.573Z",
+      "appliedAt": "2026-10-04T09:56:08.759Z",
+      "result": "Done: now Rare, repriced to 95G to fit the Rare band."
+    },
+    {
+      "id": "mutjymts9tr42",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "twin-spined-bookmark",
+      "before": {
+        "id": "twin-spined-bookmark",
+        "name": "Twin-Spined Bookmark",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two paid assignments in a row use your two different Traits, the third book gains +1 Value."
+      },
+      "after": {
+        "id": "twin-spined-bookmark",
+        "name": "Twin-Spined Bookmark",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two books played from your hand, use two different Traits, the third book gains +1 Value."
+      },
+      "note": "",
+      "at": "2026-10-04T08:22:07.887Z",
+      "appliedAt": "2026-10-04T09:56:08.759Z",
+      "result": "Done: every book played from your hand counts, free ones too; books placed by effects still don't."
+    },
+    {
+      "id": "mutjyue79g39h",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "unwelcome-critics-monocle",
+      "before": {
+        "id": "unwelcome-critics-monocle",
+        "name": "Unwelcome Critic's Monocle",
+        "rarity": "common",
+        "price": 65,
+        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
+      },
+      "after": {
+        "id": "unwelcome-critics-monocle",
+        "name": "Unwelcome Critic's Monocle",
+        "rarity": "uncommon",
+        "price": 65,
+        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
+      },
+      "note": "",
+      "at": "2026-10-04T08:22:17.694Z",
+      "appliedAt": "2026-10-04T09:56:08.759Z",
+      "result": "Done: now Uncommon, repriced to 75G to fit the Uncommon band."
+    },
+    {
+      "id": "mutk09mknhag2",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "test",
+      "before": null,
+      "after": {
+        "id": "test",
+        "name": "Talisman of the After-After Life",
+        "rarity": "common",
+        "text": "Whenever your discard is shuffled in your Deck, give a random Book +1 value (until the end of the encounter)",
+        "price": 70
+      },
+      "note": "",
+      "at": "2026-10-04T08:25:24.850Z",
+      "appliedAt": "2026-10-04T09:56:08.759Z",
+      "result": "Added (Common, 70G) with a skull-medallion icon. The +1 goes to one of the books just shuffled back in."
     }
   ],
-  "updatedAt": "2026-10-04T09:49:25.888Z"
+  "updatedAt": "2026-10-04T09:56:08.761Z"
 }
