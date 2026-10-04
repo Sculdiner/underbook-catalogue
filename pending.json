@@ -752,8 +752,7 @@
             "arriveAfterTurn": 1,
             "name": "Embalmer",
             "fulfillment": 10,
-            "patience": 3,
-            "abilityId": "braaaains"
+            "patience": 3
           },
           {
             "arriveAfterTurn": 1,
@@ -772,7 +771,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T17:50:37.484Z"
+      "at": "2026-10-04T17:50:40.293Z"
     }
   ],
   "applied": [
@@ -2957,5 +2956,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:50:37.484Z"
+  "updatedAt": "2026-10-04T17:50:40.293Z"
 }
