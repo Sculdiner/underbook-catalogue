@@ -380,7 +380,8 @@
             "arriveAfterTurn": 0,
             "name": "Student",
             "fulfillment": 6,
-            "patience": 2
+            "patience": 2,
+            "visitorDefId": "mushroom"
           },
           {
             "arriveAfterTurn": 0,
@@ -440,7 +441,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T17:23:17.499Z"
+      "at": "2026-10-04T17:23:31.333Z"
     }
   ],
   "applied": [
@@ -2625,5 +2626,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:23:17.499Z"
+  "updatedAt": "2026-10-04T17:23:31.333Z"
 }
