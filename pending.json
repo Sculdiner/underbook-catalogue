@@ -424,7 +424,8 @@
             "name": "Irritated Assistant",
             "fulfillment": 6,
             "patience": 3,
-            "abilityId": "keep-up"
+            "abilityId": "keep-up",
+            "visitorDefId": "crow"
           },
           {
             "arriveAfterTurn": 4,
@@ -436,7 +437,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T17:21:28.900Z"
+      "at": "2026-10-04T17:21:31.392Z"
     }
   ],
   "applied": [
@@ -2621,5 +2622,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:21:28.900Z"
+  "updatedAt": "2026-10-04T17:21:31.392Z"
 }
