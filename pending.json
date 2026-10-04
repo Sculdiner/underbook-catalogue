@@ -239,6 +239,29 @@
       "after": null,
       "note": "",
       "at": "2026-10-04T21:05:01.675Z"
+    },
+    {
+      "id": "muub9eh7ijola",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "complaint-department-stamp",
+      "before": {
+        "id": "complaint-department-stamp",
+        "name": "Complaint Department Stamp",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "When a visitor's ability lowers a book's Value, or discards or DESTROYs one of your books, books you assign to that visitor gain +1 Value for the rest of the Encounter."
+      },
+      "after": {
+        "id": "complaint-department-stamp",
+        "name": "Complaint Department Stamp",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "When a visitor's ability lowers a book's Value, or discards or DESTROYs one of your books, books you assign to that visitor gain +1 Value for the rest of the Encounter.",
+        "icon": "NecromancerIcons_33_b"
+      },
+      "note": "",
+      "at": "2026-10-04T21:06:19.915Z"
     }
   ],
   "applied": [
@@ -3699,5 +3722,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:05:01.676Z"
+  "updatedAt": "2026-10-04T21:06:19.915Z"
 }
