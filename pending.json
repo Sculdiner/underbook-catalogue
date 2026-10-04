@@ -223,6 +223,22 @@
       "after": null,
       "note": "",
       "at": "2026-10-04T21:04:39.930Z"
+    },
+    {
+      "id": "muub7q3w9t2o5",
+      "kind": "curios",
+      "op": "delete",
+      "targetId": "wave-receipt",
+      "before": {
+        "id": "wave-receipt",
+        "name": "Wave Receipt",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "Books assigned to visitors of the latest arrival wave gain +1 Value, until the next wave arrives."
+      },
+      "after": null,
+      "note": "",
+      "at": "2026-10-04T21:05:01.675Z"
     }
   ],
   "applied": [
@@ -3683,5 +3699,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:04:39.930Z"
+  "updatedAt": "2026-10-04T21:05:01.676Z"
 }
