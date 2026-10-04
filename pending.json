@@ -300,14 +300,14 @@
       },
       "after": {
         "id": "patrons-pocket-watch",
-        "name": "Patron's Pocket Watch",
+        "name": "Lost Epochs Ring",
         "rarity": "uncommon",
         "price": 85,
         "text": "Once per encounter: if all visitors have a book assigned, draw 1 extra book at random from your discard pile next turn.",
         "icon": "NecromancerIcons_48_b"
       },
       "note": "",
-      "at": "2026-10-04T21:14:22.306Z"
+      "at": "2026-10-04T21:15:27.547Z"
     }
   ],
   "applied": [
@@ -3768,5 +3768,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:14:22.306Z"
+  "updatedAt": "2026-10-04T21:15:27.547Z"
 }
