@@ -246,6 +246,55 @@ const rarityRank = (r) => {
   return i === -1 ? RARITIES.length : i;
 };
 
+/** A Curio's icon: the one picked from the set if the queue changes it, else its own. */
+function curioIconUrl(c) {
+  if (c.icon) return artUrl('library', c.icon);
+  return hasArt('curios', c.id) ? artUrl('curios', c.id) : null;
+}
+
+/** The full icon set in a tall sheet, grouped by set; tapping one picks it for the open Curio. */
+function pickIcon() {
+  const I = S.inline;
+  if (!I || I.kind !== 'curios') return;
+  const lib = S.cat.iconLibrary ?? [];
+  if (!lib.length) return toast('The icon set is not published yet', true);
+  const sets = [...new Set(lib.map((x) => x.set))].sort((a, b) => (a === 'Assorted') - (b === 'Assorted') || a.localeCompare(b));
+  const m = $('#modal');
+  const own = hasArt('curios', I.draft.id) ? artUrl('curios', I.draft.id) : null;
+  m.innerHTML = `<div class="sheet tall icon-sheet" role="dialog" aria-modal="true">
+    <div class="icon-head"><h3>Choose an icon</h3><button type="button" class="btn sm ghost" data-close>Close</button></div>
+    ${I.draft.icon && own ? `<button type="button" class="keep-icon" data-icon=""><span style="background-image:url('${own}')"></span>Keep the current icon</button>` : ''}
+    <div class="chips icon-sets">${sets.map((s) => `<button type="button" class="chip" data-jump="${esc(slug(s))}">${esc(s)}</button>`).join('')}</div>
+    ${sets
+      .map(
+        (s) => `<div class="group-h" id="iconset-${esc(slug(s))}">${esc(s)} <span class="small muted">${lib.filter((x) => x.set === s).length}</span></div>
+      <div class="icon-grid">${lib
+        .filter((x) => x.set === s)
+        .map((x) => `<button type="button" class="lib-icon ${I.draft.icon === x.id ? 'on' : ''}" data-icon="${esc(x.id)}"><img loading="lazy" src="${artUrl('library', x.id)}" alt=""></button>`)
+        .join('')}</div>`,
+      )
+      .join('')}
+  </div>`;
+  m.hidden = false;
+  const close = () => {
+    m.hidden = true;
+    m.innerHTML = '';
+    m.onclick = null;
+  };
+  m.onclick = (e) => {
+    if (e.target === m || e.target.closest('[data-close]')) return close();
+    const jump = e.target.closest('[data-jump]');
+    if (jump) return $(`#iconset-${jump.dataset.jump}`, m)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    const pick = e.target.closest('[data-icon]');
+    if (!pick) return;
+    if (pick.dataset.icon) I.draft.icon = pick.dataset.icon;
+    else delete I.draft.icon;
+    close();
+    inlineChanged();
+    rerenderInline();
+  };
+}
+
 /** One book as the game's deck list draws it: rarity stripe, cropped cover, title, Value. */
 function bookRow(it) {
   const b = it.data;
@@ -384,7 +433,8 @@ views.list = {
 function curioRow(it) {
   const c = it.data;
   const cls = c.curse ? 'curse' : c.rarity;
-  const icon = hasArt('curios', c.id) ? `style="background-image:url('${artUrl('curios', c.id)}')"` : '';
+  const src = curioIconUrl(c);
+  const icon = src ? `style="background-image:url('${src}')"` : '';
   return `<a class="row-item ${it.pending?.op === 'delete' ? 'deleted' : ''}" href="#/curios/${encodeURIComponent(it.key)}">
     <div class="curio-icon ${cls}" ${icon}></div>
     <div class="body"><div class="name">${esc(c.name)} ${pendingTag(it)}</div><div class="sub">${esc(c.text)}</div></div>
@@ -533,11 +583,12 @@ views.detail = {
     const { live, d: c } = inlineFor('curios', it);
     const curse = c.curse != null;
     const cls = curse ? 'curse' : c.rarity;
-    const icon = hasArt('curios', c.id) ? `style="background-image:url('${artUrl('curios', c.id)}')"` : '';
+    const src = curioIconUrl(c);
+    const icon = src ? `style="background-image:url('${src}')"` : '';
     const opts = (list, cur) => list.map(([v, l]) => `<option value="${esc(v)}" ${String(cur ?? '') === String(v) ? 'selected' : ''}>${esc(l)}</option>`).join('');
     return `<div id="pending-slot">${pendingNotice(it)}</div>
       <fieldset class="inl-wrap" ${live ? '' : 'disabled'}>
-      <div class="hero"><div class="curio-icon big ${cls}" ${icon}></div>
+      <div class="hero"><button type="button" class="curio-icon big ${cls} pick-icon" ${icon} data-act="pick-icon" aria-label="Change the icon">${live ? '<span class="pick-badge">Change</span>' : ''}</button>
         <div class="info">
           <textarea class="inl inl-title" rows="1" data-ipath="name" placeholder="Name">${esc(c.name)}</textarea>
           <div class="tags">
@@ -959,6 +1010,7 @@ function diffHtml(e) {
   return `<div class="diff">${keys
     .filter((k) => !same(e.before[k], e.after[k]))
     .map((k) => {
+      if (k === 'icon' && e.after.icon) return `<div class="dk">icon</div><img class="diff-icon" src="${artUrl('library', e.after.icon)}" alt="">`;
       const a = summarize(e.kind, k, e.before[k]) || [];
       const b = summarize(e.kind, k, e.after[k]) || [];
       const minus = a.filter((l) => !b.includes(l));
@@ -1374,6 +1426,8 @@ document.addEventListener('click', async (e) => {
       T.openRebind = T.draft.rebinds.length - 1;
       redraw();
       return openCard();
+    case 'pick-icon':
+      return pickIcon();
     case 'dup':
       return duplicateItem(b.dataset.kind, b.dataset.key);
     case 'add-visitor': {
