@@ -207,6 +207,22 @@
       },
       "note": "",
       "at": "2026-10-04T21:01:08.504Z"
+    },
+    {
+      "id": "muub79bu2lngx",
+      "kind": "curios",
+      "op": "delete",
+      "targetId": "queuemasters-chalk",
+      "before": {
+        "id": "queuemasters-chalk",
+        "name": "Queuemaster's Chalk",
+        "rarity": "uncommon",
+        "price": 80,
+        "text": "Whenever you fulfill the newest visitor while someone who came earlier still waits, the one who has waited longest gains +1 Patience."
+      },
+      "after": null,
+      "note": "",
+      "at": "2026-10-04T21:04:39.930Z"
     }
   ],
   "applied": [
@@ -3667,5 +3683,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:01:08.504Z"
+  "updatedAt": "2026-10-04T21:04:39.930Z"
 }
