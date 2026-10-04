@@ -316,6 +316,16 @@ function routeChecks(r) {
   for (const n of r.nodes) if (n.type !== 'encounter-boss' && !(n.next ?? []).length) warns.push(`${n.key} is a dead end`);
   const paths = routePaths(r);
   if (merchants.length === 1 && paths.some((p) => !p.some((n) => n.type === 'merchant'))) warns.push('Some paths skip the Merchant');
+  // Bookselling bands never step back along a walk (opening → mid → late).
+  const rank = { opening: 0, mid: 1, late: 2 };
+  for (const p of paths) {
+    const bands = p.filter((n) => n.type === 'encounter-normal' && n.band);
+    const back = bands.findIndex((n, i) => i > 0 && rank[n.band] < rank[bands[i - 1].band]);
+    if (back > 0) {
+      warns.push(`${bands[back].key} is ${bands[back].band} after ${bands[back - 1].band} ${bands[back - 1].key}: bands never step back`);
+      break;
+    }
+  }
   return { errs, warns, paths };
 }
 
