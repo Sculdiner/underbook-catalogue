@@ -1,6 +1,146 @@
 {
   "version": 1,
-  "edits": [],
+  "edits": [
+    {
+      "id": "muu31gp4ld8qy",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "funeral-procession",
+      "before": {
+        "id": "funeral-procession",
+        "name": "The Funeral Procession",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "Tend every Mourner or the Duchess runs out of Patience; she lends you an Action while she waits. 63 total.",
+        "intro": {
+          "title": "The Duchess",
+          "epithet": "In Mourning, Indefinitely",
+          "line": "Three husbands. Not one of them finished a book.",
+          "emblem": "cameo"
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Mourner",
+            "fulfillment": 9,
+            "patience": 6,
+            "abilityId": "unattended-grief",
+            "visitorDefId": "banshee"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Mourner",
+            "fulfillment": 9,
+            "patience": 6,
+            "abilityId": "unattended-grief",
+            "visitorDefId": "banshee"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Mourner",
+            "fulfillment": 9,
+            "patience": 6,
+            "abilityId": "unattended-grief",
+            "visitorDefId": "banshee"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Duchess",
+            "fulfillment": 22,
+            "patience": 6,
+            "abilityId": "noblesse-oblige",
+            "tag": "duchess",
+            "visitorDefId": "weeping-duchess",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Funeral Priest",
+            "fulfillment": 7,
+            "patience": 3,
+            "abilityId": "last-rites",
+            "visitorDefId": "choirbone"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Gravedigger",
+            "fulfillment": 7,
+            "patience": 2,
+            "abilityId": "turned-earth",
+            "visitorDefId": "mole-gravedigger"
+          }
+        ]
+      },
+      "after": {
+        "id": "funeral-procession",
+        "name": "The Funeral Procession",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "Tend every Mourner or the Duchess runs out of Patience; she lends you an Action while she waits. 63 total.",
+        "intro": {
+          "title": "The Duchess",
+          "epithet": "In Mourning, Indefinitely",
+          "line": "Three husbands. Not one of them finished a book.",
+          "emblem": "cameo"
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Mourner",
+            "fulfillment": 9,
+            "patience": 6,
+            "abilityId": "unattended-grief",
+            "visitorDefId": "banshee"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Mourner",
+            "fulfillment": 9,
+            "patience": 6,
+            "abilityId": "unattended-grief",
+            "visitorDefId": "banshee"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Mourner",
+            "fulfillment": 9,
+            "patience": 6,
+            "abilityId": "unattended-grief",
+            "visitorDefId": "banshee"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Duchess",
+            "fulfillment": 22,
+            "patience": 6,
+            "abilityId": "noblesse-oblige",
+            "tag": "duchess",
+            "visitorDefId": "weeping-duchess",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Funeral Priest",
+            "fulfillment": 7,
+            "patience": 3,
+            "abilityId": "last-rites",
+            "visitorDefId": "choirbone"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Gravedigger",
+            "fulfillment": 7,
+            "patience": 2,
+            "abilityId": "turned-earth",
+            "visitorDefId": "mole-gravedigger"
+          }
+        ],
+        "stage": 2
+      },
+      "note": "",
+      "at": "2026-10-04T17:16:12.616Z"
+    }
+  ],
   "applied": [
     {
       "id": "muszs8hhe8um8",
@@ -2183,5 +2323,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T10:25:48.658Z"
+  "updatedAt": "2026-10-04T17:16:12.616Z"
 }
