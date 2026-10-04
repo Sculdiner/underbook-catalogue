@@ -370,6 +370,22 @@
       "after": null,
       "note": "",
       "at": "2026-10-04T21:22:11.246Z"
+    },
+    {
+      "id": "muubv2zngmxy2",
+      "kind": "curios",
+      "op": "delete",
+      "targetId": "double-entry-catalogue",
+      "before": {
+        "id": "double-entry-catalogue",
+        "name": "Double-Entry Catalogue",
+        "rarity": "rare",
+        "price": 100,
+        "text": "Once a visitor holds a book of each of your two Traits, every further book assigned to them gains +2 Value."
+      },
+      "after": null,
+      "note": "",
+      "at": "2026-10-04T21:23:11.458Z"
     }
   ],
   "applied": [
@@ -3830,5 +3846,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:22:11.246Z"
+  "updatedAt": "2026-10-04T21:23:11.459Z"
 }
