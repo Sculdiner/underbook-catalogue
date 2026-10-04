@@ -161,8 +161,8 @@
             "key": "b",
             "type": "encounter-boss",
             "branch": "shared",
-            "depth": 3,
-            "lane": -1,
+            "depth": 2,
+            "lane": 0,
             "next": []
           }
         ],
@@ -171,7 +171,7 @@
         "id": "the-spiral"
       },
       "note": "",
-      "at": "2026-10-04T07:54:29.221Z"
+      "at": "2026-10-04T07:54:31.423Z"
     }
   ],
   "applied": [
@@ -266,5 +266,5 @@
       "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
     }
   ],
-  "updatedAt": "2026-10-04T07:54:29.221Z"
+  "updatedAt": "2026-10-04T07:54:31.423Z"
 }
