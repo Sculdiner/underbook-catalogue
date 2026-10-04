@@ -1,133 +1,6 @@
 {
   "version": 1,
-  "edits": [
-    {
-      "id": "mut0fxtueknyh",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "twin-spined-bookmark",
-      "before": {
-        "id": "twin-spined-bookmark",
-        "name": "Twin-Spined Bookmark",
-        "rarity": "common",
-        "price": 70,
-        "text": "When two paid assignments in a row use your two different Traits, the second book gains +1 Value. A neutral book breaks the sequence."
-      },
-      "after": {
-        "id": "twin-spined-bookmark",
-        "name": "Twin-Spined Bookmark",
-        "rarity": "common",
-        "price": 70,
-        "text": "When two actions in a row use different Traits, the third book gains +1 Value"
-      },
-      "note": "",
-      "at": "2026-10-03T23:15:42.974Z"
-    },
-    {
-      "id": "mut0j4ln9col6",
-      "kind": "curios",
-      "op": "add",
-      "targetId": "the-volume-ii",
-      "before": null,
-      "after": {
-        "id": "the-volume-ii",
-        "name": "The volume II'",
-        "rarity": "uncommon",
-        "text": "All basic books gain +1 value",
-        "price": 80
-      },
-      "note": "",
-      "at": "2026-10-03T23:19:04.283Z"
-    },
-    {
-      "id": "mut0ma0i9wq59",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "crowded-counter-sign",
-      "before": {
-        "id": "crowded-counter-sign",
-        "name": "Crowded Counter Sign",
-        "rarity": "common",
-        "price": 60,
-        "text": "While 4 or more visitors are waiting, Basic books gain +1 Value."
-      },
-      "after": {
-        "id": "crowded-counter-sign",
-        "name": "Crowded Counter Sign",
-        "rarity": "common",
-        "price": 60,
-        "text": "The first time each encounter, you are serving 4 visitors, draw1 and get +1 action this turn."
-      },
-      "note": "",
-      "at": "2026-10-03T23:20:38.705Z"
-    },
-    {
-      "id": "mut0oeukrfjbc",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "old-queue-number",
-      "before": {
-        "id": "old-queue-number",
-        "name": "Old Queue Number",
-        "rarity": "common",
-        "price": 65,
-        "text": "While 3 or more visitors are waiting, books assigned to the one who has waited longest gain +1 Value."
-      },
-      "after": {
-        "id": "old-queue-number",
-        "name": "Golden Scarab Coin",
-        "rarity": "common",
-        "text": "After serving 20 visitors, get 1 Rare and destroy this.",
-        "price": 75
-      },
-      "note": "",
-      "at": "2026-10-03T23:25:17.396Z"
-    },
-    {
-      "id": "mut0swzwsl4pu",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "exact-change-purse",
-      "before": {
-        "id": "exact-change-purse",
-        "name": "Exact Change Purse",
-        "rarity": "common",
-        "price": 60,
-        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold."
-      },
-      "after": {
-        "id": "exact-change-purse",
-        "name": "Exact Change Purse",
-        "rarity": "common",
-        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold.",
-        "price": 45
-      },
-      "note": "",
-      "at": "2026-10-03T23:25:48.428Z"
-    },
-    {
-      "id": "mut0ym57izfv3",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "long-job-spectacles",
-      "before": {
-        "id": "long-job-spectacles",
-        "name": "Long-Job Spectacles",
-        "rarity": "common",
-        "price": 65,
-        "text": "Books assigned to a visitor with 4 or more Patience gain +1 Value."
-      },
-      "after": {
-        "id": "long-job-spectacles",
-        "name": "Long-Job Spectacles",
-        "rarity": "common",
-        "price": 65,
-        "text": "The first time each encounter, that you fulfill a visitor at the round he arrives, get +1 action and draw 1 next turn."
-      },
-      "note": "",
-      "at": "2026-10-03T23:30:14.298Z"
-    }
-  ],
+  "edits": [],
   "applied": [
     {
       "id": "muszs8hhe8um8",
@@ -218,7 +91,145 @@
       "at": "2026-10-03T22:57:17.024Z",
       "appliedAt": "2026-10-03T22:59:51.850Z",
       "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
+    },
+    {
+      "id": "mut0fxtueknyh",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "twin-spined-bookmark",
+      "before": {
+        "id": "twin-spined-bookmark",
+        "name": "Twin-Spined Bookmark",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two paid assignments in a row use your two different Traits, the second book gains +1 Value. A neutral book breaks the sequence."
+      },
+      "after": {
+        "id": "twin-spined-bookmark",
+        "name": "Twin-Spined Bookmark",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two actions in a row use different Traits, the third book gains +1 Value"
+      },
+      "note": "",
+      "at": "2026-10-03T23:15:42.974Z",
+      "appliedAt": "2026-10-04T08:04:24.399Z",
+      "result": "Twin-Spined Bookmark now gives +1 Value to the third paid book after two of different Traits."
+    },
+    {
+      "id": "mut0j4ln9col6",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "the-volume-ii",
+      "before": null,
+      "after": {
+        "id": "the-volume-ii",
+        "name": "The volume II'",
+        "rarity": "uncommon",
+        "text": "All basic books gain +1 value",
+        "price": 80
+      },
+      "note": "",
+      "at": "2026-10-03T23:19:04.283Z",
+      "appliedAt": "2026-10-04T08:04:24.399Z",
+      "result": "Added The Volume II (Uncommon, 80G): Basic books gain +1 Value; named without the stray apostrophe."
+    },
+    {
+      "id": "mut0ma0i9wq59",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "crowded-counter-sign",
+      "before": {
+        "id": "crowded-counter-sign",
+        "name": "Crowded Counter Sign",
+        "rarity": "common",
+        "price": 60,
+        "text": "While 4 or more visitors are waiting, Basic books gain +1 Value."
+      },
+      "after": {
+        "id": "crowded-counter-sign",
+        "name": "Crowded Counter Sign",
+        "rarity": "common",
+        "price": 60,
+        "text": "The first time each encounter, you are serving 4 visitors, draw1 and get +1 action this turn."
+      },
+      "note": "",
+      "at": "2026-10-03T23:20:38.705Z",
+      "appliedAt": "2026-10-04T08:04:24.399Z",
+      "result": "Crowded Counter Sign: the first turn each Encounter that opens with 4+ visitors waiting draws 1 and gives +1 Action."
+    },
+    {
+      "id": "mut0oeukrfjbc",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "old-queue-number",
+      "before": {
+        "id": "old-queue-number",
+        "name": "Old Queue Number",
+        "rarity": "common",
+        "price": 65,
+        "text": "While 3 or more visitors are waiting, books assigned to the one who has waited longest gain +1 Value."
+      },
+      "after": {
+        "id": "old-queue-number",
+        "name": "Golden Scarab Coin",
+        "rarity": "common",
+        "text": "After serving 20 visitors, get 1 Rare and destroy this.",
+        "price": 75
+      },
+      "note": "",
+      "at": "2026-10-03T23:25:17.396Z",
+      "appliedAt": "2026-10-04T08:04:24.399Z",
+      "result": "Old Queue Number is now the Golden Scarab Coin (75G): after 20 visitors fulfilled while carried, a Rare Summon, then it is destroyed."
+    },
+    {
+      "id": "mut0swzwsl4pu",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "exact-change-purse",
+      "before": {
+        "id": "exact-change-purse",
+        "name": "Exact Change Purse",
+        "rarity": "common",
+        "price": 60,
+        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold."
+      },
+      "after": {
+        "id": "exact-change-purse",
+        "name": "Exact Change Purse",
+        "rarity": "common",
+        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold.",
+        "price": 45
+      },
+      "note": "",
+      "at": "2026-10-03T23:25:48.428Z",
+      "appliedAt": "2026-10-04T08:04:24.399Z",
+      "result": "Exact Change Purse now costs 45G."
+    },
+    {
+      "id": "mut0ym57izfv3",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "long-job-spectacles",
+      "before": {
+        "id": "long-job-spectacles",
+        "name": "Long-Job Spectacles",
+        "rarity": "common",
+        "price": 65,
+        "text": "Books assigned to a visitor with 4 or more Patience gain +1 Value."
+      },
+      "after": {
+        "id": "long-job-spectacles",
+        "name": "Long-Job Spectacles",
+        "rarity": "common",
+        "price": 65,
+        "text": "The first time each encounter, that you fulfill a visitor at the round he arrives, get +1 action and draw 1 next turn."
+      },
+      "note": "",
+      "at": "2026-10-03T23:30:14.298Z",
+      "appliedAt": "2026-10-04T08:04:24.399Z",
+      "result": "Long-Job Spectacles: the first visitor each Encounter fulfilled on their arrival turn gives +1 Action and a draw next turn."
     }
   ],
-  "updatedAt": "2026-10-04T07:55:16.924Z"
+  "updatedAt": "2026-10-04T08:04:24.400Z"
 }
