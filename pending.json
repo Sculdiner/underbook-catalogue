@@ -121,10 +121,11 @@
         "id": "test",
         "name": "Test",
         "rarity": "common",
-        "price": 65
+        "price": 65,
+        "text": "Whenever your discard is shuffled in your Deck, give a random Book +1 value (until the end of the encounter)"
       },
       "note": "",
-      "at": "2026-10-04T08:23:24.092Z"
+      "at": "2026-10-04T08:24:29.446Z"
     }
   ],
   "applied": [
@@ -357,5 +358,5 @@
       "result": "Long-Job Spectacles: the first visitor each Encounter fulfilled on their arrival turn gives +1 Action and a draw next turn."
     }
   ],
-  "updatedAt": "2026-10-04T08:23:24.093Z"
+  "updatedAt": "2026-10-04T08:24:29.446Z"
 }
