@@ -1,146 +1,6 @@
 {
   "version": 1,
-  "edits": [
-    {
-      "id": "muu31gp4ld8qy",
-      "kind": "encounters",
-      "op": "edit",
-      "targetId": "funeral-procession",
-      "before": {
-        "id": "funeral-procession",
-        "name": "The Funeral Procession",
-        "type": "boss",
-        "category": "elite-boss",
-        "purpose": "Tend every Mourner or the Duchess runs out of Patience; she lends you an Action while she waits. 63 total.",
-        "intro": {
-          "title": "The Duchess",
-          "epithet": "In Mourning, Indefinitely",
-          "line": "Three husbands. Not one of them finished a book.",
-          "emblem": "cameo"
-        },
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Mourner",
-            "fulfillment": 9,
-            "patience": 6,
-            "abilityId": "unattended-grief",
-            "visitorDefId": "banshee"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Mourner",
-            "fulfillment": 9,
-            "patience": 6,
-            "abilityId": "unattended-grief",
-            "visitorDefId": "banshee"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Mourner",
-            "fulfillment": 9,
-            "patience": 6,
-            "abilityId": "unattended-grief",
-            "visitorDefId": "banshee"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Duchess",
-            "fulfillment": 22,
-            "patience": 6,
-            "abilityId": "noblesse-oblige",
-            "tag": "duchess",
-            "visitorDefId": "weeping-duchess",
-            "headliner": true
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Funeral Priest",
-            "fulfillment": 7,
-            "patience": 3,
-            "abilityId": "last-rites",
-            "visitorDefId": "choirbone"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Gravedigger",
-            "fulfillment": 7,
-            "patience": 2,
-            "abilityId": "turned-earth",
-            "visitorDefId": "mole-gravedigger"
-          }
-        ]
-      },
-      "after": {
-        "id": "funeral-procession",
-        "name": "The Funeral Procession",
-        "type": "boss",
-        "category": "elite-boss",
-        "purpose": "Tend every Mourner or the Duchess runs out of Patience; she lends you an Action while she waits. 63 total.",
-        "intro": {
-          "title": "The Duchess",
-          "epithet": "In Mourning, Indefinitely",
-          "line": "Three husbands. Not one of them finished a book.",
-          "emblem": "cameo"
-        },
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Mourner",
-            "fulfillment": 9,
-            "patience": 6,
-            "abilityId": "unattended-grief",
-            "visitorDefId": "banshee"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Mourner",
-            "fulfillment": 9,
-            "patience": 6,
-            "abilityId": "unattended-grief",
-            "visitorDefId": "banshee"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Mourner",
-            "fulfillment": 9,
-            "patience": 6,
-            "abilityId": "unattended-grief",
-            "visitorDefId": "banshee"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Duchess",
-            "fulfillment": 22,
-            "patience": 6,
-            "abilityId": "noblesse-oblige",
-            "tag": "duchess",
-            "visitorDefId": "weeping-duchess",
-            "headliner": true
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Funeral Priest",
-            "fulfillment": 7,
-            "patience": 3,
-            "abilityId": "last-rites",
-            "visitorDefId": "choirbone"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Gravedigger",
-            "fulfillment": 7,
-            "patience": 2,
-            "abilityId": "turned-earth",
-            "visitorDefId": "mole-gravedigger"
-          }
-        ],
-        "stage": 2
-      },
-      "note": "",
-      "at": "2026-10-04T17:16:12.616Z"
-    }
-  ],
+  "edits": [],
   "applied": [
     {
       "id": "muszs8hhe8um8",
@@ -3456,7 +3316,148 @@
       "at": "2026-10-04T18:32:21.565Z",
       "appliedAt": "2026-10-04T18:40:04.217Z",
       "result": "Done: recast; Slow Reader moved to the Patient Skeleton."
+    },
+    {
+      "id": "muu31gp4ld8qy",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "funeral-procession",
+      "before": {
+        "id": "funeral-procession",
+        "name": "The Funeral Procession",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "Tend every Mourner or the Duchess runs out of Patience; she lends you an Action while she waits. 63 total.",
+        "intro": {
+          "title": "The Duchess",
+          "epithet": "In Mourning, Indefinitely",
+          "line": "Three husbands. Not one of them finished a book.",
+          "emblem": "cameo"
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Mourner",
+            "fulfillment": 9,
+            "patience": 6,
+            "abilityId": "unattended-grief",
+            "visitorDefId": "banshee"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Mourner",
+            "fulfillment": 9,
+            "patience": 6,
+            "abilityId": "unattended-grief",
+            "visitorDefId": "banshee"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Mourner",
+            "fulfillment": 9,
+            "patience": 6,
+            "abilityId": "unattended-grief",
+            "visitorDefId": "banshee"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Duchess",
+            "fulfillment": 22,
+            "patience": 6,
+            "abilityId": "noblesse-oblige",
+            "tag": "duchess",
+            "visitorDefId": "weeping-duchess",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Funeral Priest",
+            "fulfillment": 7,
+            "patience": 3,
+            "abilityId": "last-rites",
+            "visitorDefId": "choirbone"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Gravedigger",
+            "fulfillment": 7,
+            "patience": 2,
+            "abilityId": "turned-earth",
+            "visitorDefId": "mole-gravedigger"
+          }
+        ]
+      },
+      "after": {
+        "id": "funeral-procession",
+        "name": "The Funeral Procession",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "Tend every Mourner or the Duchess runs out of Patience; she lends you an Action while she waits. 63 total.",
+        "intro": {
+          "title": "The Duchess",
+          "epithet": "In Mourning, Indefinitely",
+          "line": "Three husbands. Not one of them finished a book.",
+          "emblem": "cameo"
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Mourner",
+            "fulfillment": 9,
+            "patience": 6,
+            "abilityId": "unattended-grief",
+            "visitorDefId": "banshee"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Mourner",
+            "fulfillment": 9,
+            "patience": 6,
+            "abilityId": "unattended-grief",
+            "visitorDefId": "banshee"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Mourner",
+            "fulfillment": 9,
+            "patience": 6,
+            "abilityId": "unattended-grief",
+            "visitorDefId": "banshee"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Duchess",
+            "fulfillment": 22,
+            "patience": 6,
+            "abilityId": "noblesse-oblige",
+            "tag": "duchess",
+            "visitorDefId": "weeping-duchess",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Funeral Priest",
+            "fulfillment": 7,
+            "patience": 3,
+            "abilityId": "last-rites",
+            "visitorDefId": "choirbone"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Gravedigger",
+            "fulfillment": 7,
+            "patience": 2,
+            "abilityId": "turned-earth",
+            "visitorDefId": "mole-gravedigger"
+          }
+        ],
+        "stage": 2
+      },
+      "note": "",
+      "at": "2026-10-04T17:16:12.616Z",
+      "appliedAt": "2026-10-04T18:42:45.833Z",
+      "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T18:40:04.218Z"
+  "updatedAt": "2026-10-04T18:42:45.834Z"
 }
