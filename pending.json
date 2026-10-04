@@ -641,16 +641,16 @@
           },
           {
             "arriveAfterTurn": 1,
-            "name": "Grave Digger's Assistant",
-            "fulfillment": 8,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 1,
             "name": "Skeleton",
             "fulfillment": 10,
             "patience": 3,
             "abilityId": "discard-value-plus"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Grave Digger's Assistant",
+            "fulfillment": 8,
+            "patience": 3
           },
           {
             "arriveAfterTurn": 2,
@@ -662,7 +662,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T17:45:48.834Z"
+      "at": "2026-10-04T17:45:53.483Z"
     },
     {
       "id": "muu3m7xye2on5",
@@ -2861,5 +2861,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:45:48.834Z"
+  "updatedAt": "2026-10-04T17:45:53.483Z"
 }
