@@ -747,7 +747,8 @@
             "name": "Bone Archivist",
             "fulfillment": 9,
             "patience": 3,
-            "abilityId": "bone-archivist"
+            "abilityId": "bone-archivist",
+            "visitorDefId": "ossuary-crypt-archivist"
           },
           {
             "arriveAfterTurn": 1,
@@ -771,7 +772,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T17:49:24.779Z"
+      "at": "2026-10-04T17:49:42.307Z"
     }
   ],
   "applied": [
@@ -2956,5 +2957,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:49:24.779Z"
+  "updatedAt": "2026-10-04T17:49:42.307Z"
 }
