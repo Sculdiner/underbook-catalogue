@@ -386,6 +386,22 @@
       "after": null,
       "note": "",
       "at": "2026-10-04T21:23:11.458Z"
+    },
+    {
+      "id": "muubvfbzkv3r0",
+      "kind": "curios",
+      "op": "delete",
+      "targetId": "retinue-ledger",
+      "before": {
+        "id": "retinue-ledger",
+        "name": "Retinue Ledger",
+        "rarity": "rare",
+        "price": 105,
+        "text": "Whenever you fulfill a visitor, every other waiting visitor from the same arrival wave gains +1 Fulfillment."
+      },
+      "after": null,
+      "note": "",
+      "at": "2026-10-04T21:23:27.455Z"
     }
   ],
   "applied": [
@@ -3846,5 +3862,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:23:11.459Z"
+  "updatedAt": "2026-10-04T21:23:27.455Z"
 }
