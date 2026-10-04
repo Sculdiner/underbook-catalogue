@@ -139,1113 +139,6 @@
       },
       "note": "",
       "at": "2026-10-04T17:16:12.616Z"
-    },
-    {
-      "id": "muu35bjsoejfe",
-      "kind": "encounters",
-      "op": "edit",
-      "targetId": "warlocks-retinue",
-      "before": {
-        "id": "warlocks-retinue",
-        "name": "The Warlock's Retinue",
-        "type": "boss",
-        "category": "elite-boss",
-        "purpose": "The Warlock eats your recurrent deck; his retinue gives it back. 65 total.",
-        "intro": {
-          "title": "The Warlock",
-          "epithet": "He Reads With His Mouth",
-          "line": "Don't worry. I only eat the good ones.",
-          "emblem": "sigil",
-          "light": {
-            "core": "226 196 255",
-            "ember": "200 160 255",
-            "halo": "140 76 232"
-          }
-        },
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Dockworker",
-            "fulfillment": 6,
-            "patience": 2
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Pilgrim",
-            "fulfillment": 7,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Warlock",
-            "fulfillment": 18,
-            "patience": 6,
-            "abilityId": "forbidden-offering",
-            "visitorDefId": "mindflayer",
-            "headliner": true
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Acolyte",
-            "fulfillment": 6,
-            "patience": 3,
-            "abilityId": "release-the-binding",
-            "visitorDefId": "cultist"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Acolyte",
-            "fulfillment": 6,
-            "patience": 3,
-            "abilityId": "release-the-binding",
-            "visitorDefId": "cultist"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Reader",
-            "fulfillment": 6,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Senior Acolyte",
-            "fulfillment": 10,
-            "patience": 4,
-            "abilityId": "broken-chain",
-            "visitorDefId": "senior-cultist"
-          },
-          {
-            "arriveAfterTurn": 4,
-            "name": "Reader",
-            "fulfillment": 6,
-            "patience": 3
-          }
-        ]
-      },
-      "after": {
-        "id": "warlocks-retinue",
-        "name": "The Warlock's Retinue",
-        "type": "boss",
-        "category": "elite-boss",
-        "purpose": "The Warlock eats your recurrent deck; his retinue gives it back. 65 total.",
-        "intro": {
-          "title": "The Warlock",
-          "epithet": "He Reads With His Mouth",
-          "line": "Don't worry. I only eat the good ones.",
-          "emblem": "sigil",
-          "light": {
-            "core": "226 196 255",
-            "ember": "200 160 255",
-            "halo": "140 76 232"
-          }
-        },
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Adventurer",
-            "fulfillment": 6,
-            "patience": 2,
-            "visitorDefId": "human-adventurer"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Pilgrim",
-            "fulfillment": 7,
-            "patience": 3,
-            "visitorDefId": "human-peddler"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Warlock",
-            "fulfillment": 18,
-            "patience": 6,
-            "abilityId": "forbidden-offering",
-            "visitorDefId": "mindflayer",
-            "headliner": true
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Acolyte",
-            "fulfillment": 6,
-            "patience": 3,
-            "abilityId": "release-the-binding",
-            "visitorDefId": "cultist"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Acolyte",
-            "fulfillment": 6,
-            "patience": 3,
-            "abilityId": "release-the-binding",
-            "visitorDefId": "cultist"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Reader",
-            "fulfillment": 6,
-            "patience": 3,
-            "visitorDefId": "grump"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Senior Acolyte",
-            "fulfillment": 10,
-            "patience": 4,
-            "abilityId": "broken-chain",
-            "visitorDefId": "senior-cultist"
-          },
-          {
-            "arriveAfterTurn": 4,
-            "name": "Reader",
-            "fulfillment": 6,
-            "patience": 3,
-            "visitorDefId": "beargrump-smuggler"
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-04T17:20:16.784Z"
-    },
-    {
-      "id": "muu37r4srd99o",
-      "kind": "encounters",
-      "op": "edit",
-      "targetId": "headless-academic",
-      "before": {
-        "id": "headless-academic",
-        "name": "The Headless Academic",
-        "type": "elite",
-        "category": "distinguished",
-        "purpose": "A long project that draws, against a stream of Assistants who cost you your hand. 50 total.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Student",
-            "fulfillment": 6,
-            "patience": 2
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Lecturer",
-            "fulfillment": 6,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Headless Academic",
-            "fulfillment": 14,
-            "patience": 5,
-            "abilityId": "where-did-i-put-that",
-            "tag": "academic",
-            "visitorDefId": "headless"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Irritated Assistant",
-            "fulfillment": 6,
-            "patience": 3,
-            "abilityId": "keep-up"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Irritated Assistant",
-            "fulfillment": 6,
-            "patience": 3,
-            "abilityId": "keep-up"
-          },
-          {
-            "arriveAfterTurn": 3,
-            "name": "Irritated Assistant",
-            "fulfillment": 6,
-            "patience": 3,
-            "abilityId": "keep-up"
-          },
-          {
-            "arriveAfterTurn": 4,
-            "name": "Irritated Assistant",
-            "fulfillment": 6,
-            "patience": 3,
-            "abilityId": "keep-up"
-          }
-        ]
-      },
-      "after": {
-        "id": "headless-academic",
-        "name": "The Headless Academic",
-        "type": "elite",
-        "category": "distinguished",
-        "purpose": "A long project that draws, against a stream of Assistants who cost you your hand. 50 total.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Student",
-            "fulfillment": 6,
-            "patience": 2,
-            "visitorDefId": "mushroom"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Student",
-            "fulfillment": 6,
-            "patience": 3,
-            "visitorDefId": "mushroom-assistant"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Headless Academic",
-            "fulfillment": 14,
-            "patience": 5,
-            "abilityId": "where-did-i-put-that",
-            "tag": "academic",
-            "visitorDefId": "headless"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Student",
-            "fulfillment": 5,
-            "patience": 2,
-            "visitorDefId": "mushroom-assistant"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Assistant",
-            "fulfillment": 6,
-            "patience": 3,
-            "abilityId": "keep-up",
-            "visitorDefId": "goat-elder-reader"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Assistant",
-            "fulfillment": 6,
-            "patience": 3,
-            "abilityId": "keep-up",
-            "visitorDefId": "goat-elder-reader"
-          },
-          {
-            "arriveAfterTurn": 3,
-            "name": "Assistant",
-            "fulfillment": 6,
-            "patience": 3,
-            "abilityId": "keep-up",
-            "visitorDefId": "goat-elder-reader"
-          },
-          {
-            "arriveAfterTurn": 4,
-            "name": "Assistant",
-            "fulfillment": 6,
-            "patience": 3,
-            "abilityId": "keep-up",
-            "visitorDefId": "goat-elder-reader"
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-04T18:29:26.509Z"
-    },
-    {
-      "id": "muu3biqg3ibz3",
-      "kind": "encounters",
-      "op": "edit",
-      "targetId": "occult-collector",
-      "before": {
-        "id": "occult-collector",
-        "name": "The Occult Collector",
-        "type": "elite",
-        "category": "distinguished",
-        "purpose": "An opportunity, not a punishment: the Collector doubles On Assign, while his Bodyguard takes the first book. 47 total.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Porter",
-            "fulfillment": 6,
-            "patience": 2
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Reader",
-            "fulfillment": 6,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Occult Collector",
-            "fulfillment": 15,
-            "patience": 4,
-            "abilityId": "insatiable-curiosity",
-            "visitorDefId": "occult-collector"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Bodyguard",
-            "fulfillment": 8,
-            "patience": 3,
-            "abilityId": "first-in-line"
-          },
-          {
-            "arriveAfterTurn": 3,
-            "name": "Antiquarian",
-            "fulfillment": 4,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 3,
-            "name": "Antiquarian",
-            "fulfillment": 4,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 4,
-            "name": "Antiquarian",
-            "fulfillment": 4,
-            "patience": 3
-          }
-        ]
-      },
-      "after": {
-        "id": "occult-collector",
-        "name": "The Occult Collector",
-        "type": "elite",
-        "category": "distinguished",
-        "purpose": "An opportunity, not a punishment: the Collector doubles On Assign, while his Bodyguard takes the first book. 47 total.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Porter",
-            "fulfillment": 6,
-            "patience": 2,
-            "visitorDefId": "human-adventurer"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Reader",
-            "fulfillment": 6,
-            "patience": 3,
-            "visitorDefId": "goat"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Occult Collector",
-            "fulfillment": 15,
-            "patience": 4,
-            "abilityId": "insatiable-curiosity",
-            "visitorDefId": "occult-collector"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Bodyguard",
-            "fulfillment": 8,
-            "patience": 3,
-            "abilityId": "first-in-line",
-            "visitorDefId": "human-highwaywoman"
-          },
-          {
-            "arriveAfterTurn": 3,
-            "name": "Antiquarian",
-            "fulfillment": 4,
-            "patience": 3,
-            "visitorDefId": "goat-priestess"
-          },
-          {
-            "arriveAfterTurn": 3,
-            "name": "Antiquarian",
-            "fulfillment": 4,
-            "patience": 3,
-            "visitorDefId": "goat-priestess"
-          },
-          {
-            "arriveAfterTurn": 4,
-            "name": "Antiquarian",
-            "fulfillment": 4,
-            "patience": 3,
-            "visitorDefId": "goat-priestess"
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-04T17:25:25.256Z"
-    },
-    {
-      "id": "muu3l7gb84y4v",
-      "kind": "encounters",
-      "op": "edit",
-      "targetId": "freshly-exhumed",
-      "before": {
-        "id": "freshly-exhumed",
-        "stage": 2,
-        "name": "Freshly Exhumed",
-        "type": "normal",
-        "category": "normal",
-        "purpose": "Introductory recycle and positive assignment modifiers. 22 / 31 / 41.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Newly Raised Skeleton",
-            "fulfillment": 7,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Fresh Zombie",
-            "fulfillment": 7,
-            "patience": 3,
-            "abilityId": "return-to-library"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Grave Digger's Assistant",
-            "fulfillment": 8,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Cheerful Skeleton",
-            "fulfillment": 9,
-            "patience": 3,
-            "abilityId": "discard-value-plus"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Old Corpse",
-            "fulfillment": 10,
-            "patience": 4
-          }
-        ]
-      },
-      "after": {
-        "id": "freshly-exhumed",
-        "stage": 2,
-        "name": "Freshly Exhumed",
-        "type": "normal",
-        "category": "normal",
-        "purpose": "Introductory recycle and positive assignment modifiers. 22 / 31 / 41.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Skeleton",
-            "fulfillment": 7,
-            "patience": 3,
-            "visitorDefId": "ossuary-slack-jawed-zombie"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Fresh Zombie",
-            "fulfillment": 10,
-            "patience": 3,
-            "abilityId": "braaaains",
-            "visitorDefId": "ossuary-drooling-zombie"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Old Corpse",
-            "fulfillment": 12,
-            "patience": 4,
-            "visitorDefId": "ossuary-yawning-skeleton"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Zombie",
-            "fulfillment": 10,
-            "patience": 3,
-            "abilityId": "discard-value-plus",
-            "visitorDefId": "ossuary-slack-jawed-zombie"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Eager Gravedigger",
-            "fulfillment": 7,
-            "patience": 2,
-            "visitorDefId": "ossuary-mole-gravedigger"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Fresh Zombie",
-            "fulfillment": 10,
-            "patience": 3,
-            "abilityId": "braaaains",
-            "visitorDefId": "ossuary-drooling-zombie"
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-04T18:09:30.398Z"
-    },
-    {
-      "id": "muu3m7xye2on5",
-      "kind": "abilities",
-      "op": "add",
-      "targetId": "braaaains",
-      "before": null,
-      "after": {
-        "id": "braaaains",
-        "name": "Braaaains",
-        "text": "At the start of the turn, gain 2 fulfillment if there are 3+ books in the discard pile"
-      },
-      "note": "",
-      "at": "2026-10-04T17:32:57.381Z"
-    },
-    {
-      "id": "muu45cgrdmil8",
-      "kind": "encounters",
-      "op": "edit",
-      "targetId": "bone-sorters",
-      "before": {
-        "id": "bone-sorters",
-        "stage": 2,
-        "name": "The Bone Sorters",
-        "type": "normal",
-        "category": "normal",
-        "purpose": "Discard growth and a tall slow project. 24 / 33 / 44.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Bone Sorter",
-            "fulfillment": 7,
-            "patience": 2
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Ossuary Porter",
-            "fulfillment": 8,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Bone Archivist",
-            "fulfillment": 9,
-            "patience": 3,
-            "abilityId": "bone-archivist"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Rib Counter",
-            "fulfillment": 9,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Ossuary Mason",
-            "fulfillment": 11,
-            "patience": 4,
-            "abilityId": "one-book-per-turn"
-          }
-        ]
-      },
-      "after": {
-        "id": "bone-sorters",
-        "stage": 2,
-        "name": "The Bone Sorters",
-        "type": "normal",
-        "category": "normal",
-        "purpose": "Discard growth and a tall slow project. 24 / 33 / 44.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Ossuary Mason",
-            "fulfillment": 11,
-            "patience": 4,
-            "abilityId": "one-book-per-turn",
-            "visitorDefId": "ossuary-bone-mason"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Wandering Shaman",
-            "fulfillment": 8,
-            "patience": 3,
-            "visitorDefId": "human-peddler"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Eager Gravedigger",
-            "fulfillment": 7,
-            "patience": 2,
-            "visitorDefId": "ossuary-mole-gravedigger"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Bone Archivist",
-            "fulfillment": 9,
-            "patience": 3,
-            "abilityId": "bone-archivist",
-            "visitorDefId": "ossuary-crypt-archivist"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Shroud Tailor",
-            "fulfillment": 9,
-            "patience": 3,
-            "visitorDefId": "ossuary-shroud-tailor"
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-04T17:53:13.781Z"
-    },
-    {
-      "id": "muu4fpynly8q4",
-      "kind": "encounters",
-      "op": "edit",
-      "targetId": "after-after-mass",
-      "before": {
-        "id": "after-after-mass",
-        "stage": 2,
-        "name": "After-After Mass",
-        "type": "normal",
-        "category": "normal",
-        "purpose": "A deliberately wider Ossuary Normal. 28 / 36 / 45.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Skeletal Parishioner",
-            "fulfillment": 6,
-            "patience": 2
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Skeletal Parishioner",
-            "fulfillment": 7,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Zombie Parishioner",
-            "fulfillment": 7,
-            "patience": 3,
-            "abilityId": "extra-patience-if-untended"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Ancient Parishioner",
-            "fulfillment": 8,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Devout Corpse",
-            "fulfillment": 8,
-            "patience": 3,
-            "abilityId": "return-to-library"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Bell-Ringer",
-            "fulfillment": 9,
-            "patience": 3
-          }
-        ]
-      },
-      "after": {
-        "id": "after-after-mass",
-        "stage": 2,
-        "name": "After-After Mass",
-        "type": "normal",
-        "category": "normal",
-        "purpose": "A deliberately wider Ossuary Normal. 28 / 36 / 45.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Accountant",
-            "fulfillment": 6,
-            "patience": 3,
-            "visitorDefId": "ossuary-eternal-queuer"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Accountant",
-            "fulfillment": 6,
-            "patience": 3,
-            "visitorDefId": "ossuary-eternal-queuer"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Landlord",
-            "fulfillment": 7,
-            "patience": 3,
-            "visitorDefId": "ossuary-crypt-landlord",
-            "abilityId": "eager"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Postman",
-            "fulfillment": 8,
-            "patience": 3,
-            "visitorDefId": "ossuary-dead-letter-postman"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Fresh Zombie",
-            "fulfillment": 10,
-            "patience": 3,
-            "abilityId": "braaaains",
-            "visitorDefId": "ossuary-drooling-zombie"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Lost Pilgrim",
-            "fulfillment": 8,
-            "patience": 3,
-            "visitorDefId": "ossuary-lost-pilgrim",
-            "abilityId": "lost"
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-04T18:21:44.381Z"
-    },
-    {
-      "id": "muu4jolg3cwfp",
-      "kind": "abilities",
-      "op": "add",
-      "targetId": "eager",
-      "before": null,
-      "after": {
-        "id": "eager",
-        "name": "Eager",
-        "text": "If no book was assigned here, lose 1 patience"
-      },
-      "note": "",
-      "at": "2026-10-04T17:58:22.276Z"
-    },
-    {
-      "id": "muu4kv8phfaai",
-      "kind": "abilities",
-      "op": "edit",
-      "targetId": "one-book-per-turn",
-      "before": {
-        "id": "one-book-per-turn",
-        "name": "Measured Work",
-        "text": "May receive at most 1 book each turn."
-      },
-      "after": {
-        "id": "one-book-per-turn",
-        "name": "Slow Reader",
-        "text": "May receive at most 1 book each turn."
-      },
-      "note": "",
-      "at": "2026-10-04T17:59:17.545Z"
-    },
-    {
-      "id": "muu4qijdu189g",
-      "kind": "abilities",
-      "op": "add",
-      "targetId": "lost",
-      "before": null,
-      "after": {
-        "id": "lost",
-        "name": "Lost!",
-        "text": "If there are 3 or more Visitors at the end of the turn, lose 1 additional Patience"
-      },
-      "note": "",
-      "at": "2026-10-04T18:03:41.017Z"
-    },
-    {
-      "id": "muu5c4s04qmfh",
-      "kind": "encounters",
-      "op": "edit",
-      "targetId": "hungry-dead",
-      "before": {
-        "id": "hungry-dead",
-        "stage": 2,
-        "name": "The Hungry Dead",
-        "type": "normal",
-        "category": "normal",
-        "purpose": "Recognisable discard-count zombie pressure. 25 / 35 / 46.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Hungry Zombie",
-            "fulfillment": 8,
-            "patience": 3,
-            "abilityId": "discard-value-minus"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Shambling Reader",
-            "fulfillment": 8,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Hungry Zombie",
-            "fulfillment": 9,
-            "patience": 3,
-            "abilityId": "discard-value-minus"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Bloated Corpse",
-            "fulfillment": 10,
-            "patience": 4
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Very Hungry Zombie",
-            "fulfillment": 11,
-            "patience": 3
-          }
-        ]
-      },
-      "after": {
-        "id": "hungry-dead",
-        "stage": 2,
-        "name": "The Hungry Dead",
-        "type": "normal",
-        "category": "normal",
-        "purpose": "Recognisable discard-count zombie pressure. 25 / 35 / 46.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Hungry Zombie",
-            "fulfillment": 8,
-            "patience": 3,
-            "abilityId": "discard-value-minus",
-            "visitorDefId": "ossuary-drooling-zombie"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Shambling Reader",
-            "fulfillment": 8,
-            "patience": 3,
-            "visitorDefId": "ossuary-yawning-skeleton"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Hungry Zombie",
-            "fulfillment": 8,
-            "patience": 3,
-            "abilityId": "discard-value-minus",
-            "visitorDefId": "ossuary-drooling-zombie"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Corpse",
-            "fulfillment": 10,
-            "patience": 4,
-            "visitorDefId": "ossuary-eternal-queuer"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Hopeful Groom",
-            "fulfillment": 11,
-            "patience": 3,
-            "visitorDefId": "ossuary-hopeful-groom"
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-04T18:21:56.581Z"
-    },
-    {
-      "id": "muu5fqk9ltebu",
-      "kind": "encounters",
-      "op": "edit",
-      "targetId": "parish-registry",
-      "before": {
-        "id": "parish-registry",
-        "stage": 2,
-        "name": "Parish Registry",
-        "type": "normal",
-        "category": "normal",
-        "purpose": "Urgency and a readable discard threshold. 24 / 34 / 44.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Dead Applicant",
-            "fulfillment": 7,
-            "patience": 2,
-            "abilityId": "extra-patience-if-untended"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Skeleton Clerk",
-            "fulfillment": 8,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Parish Registrar",
-            "fulfillment": 9,
-            "patience": 3,
-            "abilityId": "draw-if-discard-three"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Devout Applicant",
-            "fulfillment": 10,
-            "patience": 4
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Ancient Bureaucrat",
-            "fulfillment": 10,
-            "patience": 3
-          }
-        ]
-      },
-      "after": {
-        "id": "parish-registry",
-        "stage": 2,
-        "name": "Parish Registry",
-        "type": "normal",
-        "category": "normal",
-        "purpose": "Urgency and a readable discard threshold. 24 / 34 / 44.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Dead Applicant",
-            "fulfillment": 12,
-            "patience": 4,
-            "abilityId": "eager",
-            "visitorDefId": "ossuary-sneering-skeleton"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Skeleton Clerk",
-            "fulfillment": 8,
-            "patience": 3,
-            "visitorDefId": "ossuary-yawning-skeleton"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Register",
-            "fulfillment": 9,
-            "patience": 3,
-            "abilityId": "draw-if-discard-three",
-            "visitorDefId": "ossuary-grinning-skeleton"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Devout Applicant",
-            "fulfillment": 10,
-            "patience": 4,
-            "visitorDefId": "ossuary-scheming-zombie"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Judge Dead",
-            "fulfillment": 10,
-            "patience": 3,
-            "visitorDefId": "ossuary-hanging-judge"
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-04T18:25:17.650Z"
-    },
-    {
-      "id": "muu5gsmmawsqw",
-      "kind": "abilities",
-      "op": "edit",
-      "targetId": "draw-if-discard-three",
-      "before": {
-        "id": "draw-if-discard-three",
-        "name": "Registry Complete",
-        "text": "When fulfilled, if your discard has 3 or more books, draw 1."
-      },
-      "after": {
-        "id": "draw-if-discard-three",
-        "name": "Registry Complete",
-        "text": "When fulfilled, if your discard has 3 or more books, draw 1 and gain 1 action."
-      },
-      "note": "",
-      "at": "2026-10-04T18:24:07.150Z"
-    },
-    {
-      "id": "muu5iv9oryo0v",
-      "kind": "encounters",
-      "op": "edit",
-      "targetId": "long-reading",
-      "before": {
-        "id": "long-reading",
-        "stage": 2,
-        "name": "The Long Reading",
-        "type": "normal",
-        "category": "normal",
-        "purpose": "Tall, slow developed-deck normal. 23 / 33 / 45.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Patient Skeleton",
-            "fulfillment": 7,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Old Scholar",
-            "fulfillment": 8,
-            "patience": 3,
-            "abilityId": "discard-value-plus"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Jawless Reader",
-            "fulfillment": 8,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Ancient Scholar",
-            "fulfillment": 10,
-            "patience": 4
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Extremely Old Skeleton",
-            "fulfillment": 12,
-            "patience": 5,
-            "abilityId": "one-book-per-turn"
-          }
-        ]
-      },
-      "after": {
-        "id": "long-reading",
-        "stage": 2,
-        "name": "The Long Reading",
-        "type": "normal",
-        "category": "normal",
-        "purpose": "Tall, slow developed-deck normal. 23 / 33 / 45.",
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Patient Skeleton",
-            "fulfillment": 7,
-            "patience": 3,
-            "abilityId": "one-book-per-turn",
-            "visitorDefId": "ossuary-slack-jawed-zombie"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Old Scholar",
-            "fulfillment": 8,
-            "patience": 3,
-            "abilityId": "discard-value-plus",
-            "visitorDefId": "ossuary-sneering-skeleton"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Jawless Reader",
-            "fulfillment": 8,
-            "patience": 3,
-            "visitorDefId": "ossuary-dead-letter-postman"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Ancient Scholar",
-            "fulfillment": 10,
-            "patience": 4,
-            "visitorDefId": "ossuary-crypt-archivist"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Extremely Old Skeleton",
-            "fulfillment": 12,
-            "patience": 4,
-            "visitorDefId": "ossuary-eternal-queuer"
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-04T18:32:21.565Z"
     }
   ],
   "applied": [
@@ -3428,7 +2321,1142 @@
       "at": "2026-10-04T08:28:23.380Z",
       "appliedAt": "2026-10-04T10:25:48.656Z",
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
+    },
+    {
+      "id": "muu35bjsoejfe",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "warlocks-retinue",
+      "before": {
+        "id": "warlocks-retinue",
+        "name": "The Warlock's Retinue",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "The Warlock eats your recurrent deck; his retinue gives it back. 65 total.",
+        "intro": {
+          "title": "The Warlock",
+          "epithet": "He Reads With His Mouth",
+          "line": "Don't worry. I only eat the good ones.",
+          "emblem": "sigil",
+          "light": {
+            "core": "226 196 255",
+            "ember": "200 160 255",
+            "halo": "140 76 232"
+          }
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dockworker",
+            "fulfillment": 6,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Pilgrim",
+            "fulfillment": 7,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Warlock",
+            "fulfillment": 18,
+            "patience": 6,
+            "abilityId": "forbidden-offering",
+            "visitorDefId": "mindflayer",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Acolyte",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "release-the-binding",
+            "visitorDefId": "cultist"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Acolyte",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "release-the-binding",
+            "visitorDefId": "cultist"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Reader",
+            "fulfillment": 6,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Senior Acolyte",
+            "fulfillment": 10,
+            "patience": 4,
+            "abilityId": "broken-chain",
+            "visitorDefId": "senior-cultist"
+          },
+          {
+            "arriveAfterTurn": 4,
+            "name": "Reader",
+            "fulfillment": 6,
+            "patience": 3
+          }
+        ]
+      },
+      "after": {
+        "id": "warlocks-retinue",
+        "name": "The Warlock's Retinue",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "The Warlock eats your recurrent deck; his retinue gives it back. 65 total.",
+        "intro": {
+          "title": "The Warlock",
+          "epithet": "He Reads With His Mouth",
+          "line": "Don't worry. I only eat the good ones.",
+          "emblem": "sigil",
+          "light": {
+            "core": "226 196 255",
+            "ember": "200 160 255",
+            "halo": "140 76 232"
+          }
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Adventurer",
+            "fulfillment": 6,
+            "patience": 2,
+            "visitorDefId": "human-adventurer"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Pilgrim",
+            "fulfillment": 7,
+            "patience": 3,
+            "visitorDefId": "human-peddler"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Warlock",
+            "fulfillment": 18,
+            "patience": 6,
+            "abilityId": "forbidden-offering",
+            "visitorDefId": "mindflayer",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Acolyte",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "release-the-binding",
+            "visitorDefId": "cultist"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Acolyte",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "release-the-binding",
+            "visitorDefId": "cultist"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Reader",
+            "fulfillment": 6,
+            "patience": 3,
+            "visitorDefId": "grump"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Senior Acolyte",
+            "fulfillment": 10,
+            "patience": 4,
+            "abilityId": "broken-chain",
+            "visitorDefId": "senior-cultist"
+          },
+          {
+            "arriveAfterTurn": 4,
+            "name": "Reader",
+            "fulfillment": 6,
+            "patience": 3,
+            "visitorDefId": "beargrump-smuggler"
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T17:20:16.784Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Done: portraits given to the crowd visitors; Dockworker is now the Adventurer."
+    },
+    {
+      "id": "muu37r4srd99o",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "headless-academic",
+      "before": {
+        "id": "headless-academic",
+        "name": "The Headless Academic",
+        "type": "elite",
+        "category": "distinguished",
+        "purpose": "A long project that draws, against a stream of Assistants who cost you your hand. 50 total.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Student",
+            "fulfillment": 6,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Lecturer",
+            "fulfillment": 6,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Headless Academic",
+            "fulfillment": 14,
+            "patience": 5,
+            "abilityId": "where-did-i-put-that",
+            "tag": "academic",
+            "visitorDefId": "headless"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Irritated Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Irritated Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up"
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Irritated Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up"
+          },
+          {
+            "arriveAfterTurn": 4,
+            "name": "Irritated Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up"
+          }
+        ]
+      },
+      "after": {
+        "id": "headless-academic",
+        "name": "The Headless Academic",
+        "type": "elite",
+        "category": "distinguished",
+        "purpose": "A long project that draws, against a stream of Assistants who cost you your hand. 50 total.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Student",
+            "fulfillment": 6,
+            "patience": 2,
+            "visitorDefId": "mushroom"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Student",
+            "fulfillment": 6,
+            "patience": 3,
+            "visitorDefId": "mushroom-assistant"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Headless Academic",
+            "fulfillment": 14,
+            "patience": 5,
+            "abilityId": "where-did-i-put-that",
+            "tag": "academic",
+            "visitorDefId": "headless"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Student",
+            "fulfillment": 5,
+            "patience": 2,
+            "visitorDefId": "mushroom-assistant"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up",
+            "visitorDefId": "goat-elder-reader"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up",
+            "visitorDefId": "goat-elder-reader"
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up",
+            "visitorDefId": "goat-elder-reader"
+          },
+          {
+            "arriveAfterTurn": 4,
+            "name": "Assistant",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "keep-up",
+            "visitorDefId": "goat-elder-reader"
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T18:29:26.509Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Done: third Student added and Assistants renamed; now 55 total Need, eight visitors."
+    },
+    {
+      "id": "muu3biqg3ibz3",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "occult-collector",
+      "before": {
+        "id": "occult-collector",
+        "name": "The Occult Collector",
+        "type": "elite",
+        "category": "distinguished",
+        "purpose": "An opportunity, not a punishment: the Collector doubles On Assign, while his Bodyguard takes the first book. 47 total.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Porter",
+            "fulfillment": 6,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Reader",
+            "fulfillment": 6,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Occult Collector",
+            "fulfillment": 15,
+            "patience": 4,
+            "abilityId": "insatiable-curiosity",
+            "visitorDefId": "occult-collector"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Bodyguard",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "first-in-line"
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Antiquarian",
+            "fulfillment": 4,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Antiquarian",
+            "fulfillment": 4,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 4,
+            "name": "Antiquarian",
+            "fulfillment": 4,
+            "patience": 3
+          }
+        ]
+      },
+      "after": {
+        "id": "occult-collector",
+        "name": "The Occult Collector",
+        "type": "elite",
+        "category": "distinguished",
+        "purpose": "An opportunity, not a punishment: the Collector doubles On Assign, while his Bodyguard takes the first book. 47 total.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Porter",
+            "fulfillment": 6,
+            "patience": 2,
+            "visitorDefId": "human-adventurer"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Reader",
+            "fulfillment": 6,
+            "patience": 3,
+            "visitorDefId": "goat"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Occult Collector",
+            "fulfillment": 15,
+            "patience": 4,
+            "abilityId": "insatiable-curiosity",
+            "visitorDefId": "occult-collector"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Bodyguard",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "first-in-line",
+            "visitorDefId": "human-highwaywoman"
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Antiquarian",
+            "fulfillment": 4,
+            "patience": 3,
+            "visitorDefId": "goat-priestess"
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Antiquarian",
+            "fulfillment": 4,
+            "patience": 3,
+            "visitorDefId": "goat-priestess"
+          },
+          {
+            "arriveAfterTurn": 4,
+            "name": "Antiquarian",
+            "fulfillment": 4,
+            "patience": 3,
+            "visitorDefId": "goat-priestess"
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T17:25:25.256Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Done: portraits given to the crowd visitors."
+    },
+    {
+      "id": "muu3l7gb84y4v",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "freshly-exhumed",
+      "before": {
+        "id": "freshly-exhumed",
+        "stage": 2,
+        "name": "Freshly Exhumed",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Introductory recycle and positive assignment modifiers. 22 / 31 / 41.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Newly Raised Skeleton",
+            "fulfillment": 7,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Fresh Zombie",
+            "fulfillment": 7,
+            "patience": 3,
+            "abilityId": "return-to-library"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Grave Digger's Assistant",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Cheerful Skeleton",
+            "fulfillment": 9,
+            "patience": 3,
+            "abilityId": "discard-value-plus"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Old Corpse",
+            "fulfillment": 10,
+            "patience": 4
+          }
+        ]
+      },
+      "after": {
+        "id": "freshly-exhumed",
+        "stage": 2,
+        "name": "Freshly Exhumed",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Introductory recycle and positive assignment modifiers. 22 / 31 / 41.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Skeleton",
+            "fulfillment": 7,
+            "patience": 3,
+            "visitorDefId": "ossuary-slack-jawed-zombie"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Fresh Zombie",
+            "fulfillment": 10,
+            "patience": 3,
+            "abilityId": "braaaains",
+            "visitorDefId": "ossuary-drooling-zombie"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Old Corpse",
+            "fulfillment": 12,
+            "patience": 4,
+            "visitorDefId": "ossuary-yawning-skeleton"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Zombie",
+            "fulfillment": 10,
+            "patience": 3,
+            "abilityId": "discard-value-plus",
+            "visitorDefId": "ossuary-slack-jawed-zombie"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Eager Gravedigger",
+            "fulfillment": 7,
+            "patience": 2,
+            "visitorDefId": "ossuary-mole-gravedigger"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Fresh Zombie",
+            "fulfillment": 10,
+            "patience": 3,
+            "abilityId": "braaaains",
+            "visitorDefId": "ossuary-drooling-zombie"
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T18:09:30.398Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Done: recast with two Braaaains zombies; 34 / 44 / 56."
+    },
+    {
+      "id": "muu3m7xye2on5",
+      "kind": "abilities",
+      "op": "add",
+      "targetId": "braaaains",
+      "before": null,
+      "after": {
+        "id": "braaaains",
+        "name": "Braaaains",
+        "text": "At the start of the turn, gain 2 fulfillment if there are 3+ books in the discard pile"
+      },
+      "note": "",
+      "at": "2026-10-04T17:32:57.381Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Built: at each turn start, +2 Fulfillment while your discard pile holds 3+ books."
+    },
+    {
+      "id": "muu45cgrdmil8",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "bone-sorters",
+      "before": {
+        "id": "bone-sorters",
+        "stage": 2,
+        "name": "The Bone Sorters",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Discard growth and a tall slow project. 24 / 33 / 44.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Bone Sorter",
+            "fulfillment": 7,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Ossuary Porter",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Bone Archivist",
+            "fulfillment": 9,
+            "patience": 3,
+            "abilityId": "bone-archivist"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Rib Counter",
+            "fulfillment": 9,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Ossuary Mason",
+            "fulfillment": 11,
+            "patience": 4,
+            "abilityId": "one-book-per-turn"
+          }
+        ]
+      },
+      "after": {
+        "id": "bone-sorters",
+        "stage": 2,
+        "name": "The Bone Sorters",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Discard growth and a tall slow project. 24 / 33 / 44.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Ossuary Mason",
+            "fulfillment": 11,
+            "patience": 4,
+            "abilityId": "one-book-per-turn",
+            "visitorDefId": "ossuary-bone-mason"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Wandering Shaman",
+            "fulfillment": 8,
+            "patience": 3,
+            "visitorDefId": "human-peddler"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Eager Gravedigger",
+            "fulfillment": 7,
+            "patience": 2,
+            "visitorDefId": "ossuary-mole-gravedigger"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Bone Archivist",
+            "fulfillment": 9,
+            "patience": 3,
+            "abilityId": "bone-archivist",
+            "visitorDefId": "ossuary-crypt-archivist"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Shroud Tailor",
+            "fulfillment": 9,
+            "patience": 3,
+            "visitorDefId": "ossuary-shroud-tailor"
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T17:53:13.781Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Done: recast; still 24 / 33 / 44."
+    },
+    {
+      "id": "muu4fpynly8q4",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "after-after-mass",
+      "before": {
+        "id": "after-after-mass",
+        "stage": 2,
+        "name": "After-After Mass",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "A deliberately wider Ossuary Normal. 28 / 36 / 45.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Skeletal Parishioner",
+            "fulfillment": 6,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Skeletal Parishioner",
+            "fulfillment": 7,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Zombie Parishioner",
+            "fulfillment": 7,
+            "patience": 3,
+            "abilityId": "extra-patience-if-untended"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Ancient Parishioner",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Devout Corpse",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "return-to-library"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Bell-Ringer",
+            "fulfillment": 9,
+            "patience": 3
+          }
+        ]
+      },
+      "after": {
+        "id": "after-after-mass",
+        "stage": 2,
+        "name": "After-After Mass",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "A deliberately wider Ossuary Normal. 28 / 36 / 45.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Accountant",
+            "fulfillment": 6,
+            "patience": 3,
+            "visitorDefId": "ossuary-eternal-queuer"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Accountant",
+            "fulfillment": 6,
+            "patience": 3,
+            "visitorDefId": "ossuary-eternal-queuer"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Landlord",
+            "fulfillment": 7,
+            "patience": 3,
+            "visitorDefId": "ossuary-crypt-landlord",
+            "abilityId": "eager"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Postman",
+            "fulfillment": 8,
+            "patience": 3,
+            "visitorDefId": "ossuary-dead-letter-postman"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Fresh Zombie",
+            "fulfillment": 10,
+            "patience": 3,
+            "abilityId": "braaaains",
+            "visitorDefId": "ossuary-drooling-zombie"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Lost Pilgrim",
+            "fulfillment": 8,
+            "patience": 3,
+            "visitorDefId": "ossuary-lost-pilgrim",
+            "abilityId": "lost"
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T18:21:44.381Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Done: recast with Eager, Braaaains and Lost!; 27 / 35 / 45."
+    },
+    {
+      "id": "muu4jolg3cwfp",
+      "kind": "abilities",
+      "op": "add",
+      "targetId": "eager",
+      "before": null,
+      "after": {
+        "id": "eager",
+        "name": "Eager",
+        "text": "If no book was assigned here, lose 1 patience"
+      },
+      "note": "",
+      "at": "2026-10-04T17:58:22.276Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Built. It works exactly like the existing Restless: lose 1 extra Patience at End Turn if no book came this turn."
+    },
+    {
+      "id": "muu4kv8phfaai",
+      "kind": "abilities",
+      "op": "edit",
+      "targetId": "one-book-per-turn",
+      "before": {
+        "id": "one-book-per-turn",
+        "name": "Measured Work",
+        "text": "May receive at most 1 book each turn."
+      },
+      "after": {
+        "id": "one-book-per-turn",
+        "name": "Slow Reader",
+        "text": "May receive at most 1 book each turn."
+      },
+      "note": "",
+      "at": "2026-10-04T17:59:17.545Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Done: Measured Work is now Slow Reader."
+    },
+    {
+      "id": "muu4qijdu189g",
+      "kind": "abilities",
+      "op": "add",
+      "targetId": "lost",
+      "before": null,
+      "after": {
+        "id": "lost",
+        "name": "Lost!",
+        "text": "If there are 3 or more Visitors at the end of the turn, lose 1 additional Patience"
+      },
+      "note": "",
+      "at": "2026-10-04T18:03:41.017Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Built: at End Turn, while 3+ visitors are waiting (this one included), lose 1 extra Patience."
+    },
+    {
+      "id": "muu5c4s04qmfh",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "hungry-dead",
+      "before": {
+        "id": "hungry-dead",
+        "stage": 2,
+        "name": "The Hungry Dead",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Recognisable discard-count zombie pressure. 25 / 35 / 46.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Hungry Zombie",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "discard-value-minus"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Shambling Reader",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Hungry Zombie",
+            "fulfillment": 9,
+            "patience": 3,
+            "abilityId": "discard-value-minus"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Bloated Corpse",
+            "fulfillment": 10,
+            "patience": 4
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Very Hungry Zombie",
+            "fulfillment": 11,
+            "patience": 3
+          }
+        ]
+      },
+      "after": {
+        "id": "hungry-dead",
+        "stage": 2,
+        "name": "The Hungry Dead",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Recognisable discard-count zombie pressure. 25 / 35 / 46.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Hungry Zombie",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "discard-value-minus",
+            "visitorDefId": "ossuary-drooling-zombie"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Shambling Reader",
+            "fulfillment": 8,
+            "patience": 3,
+            "visitorDefId": "ossuary-yawning-skeleton"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Hungry Zombie",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "discard-value-minus",
+            "visitorDefId": "ossuary-drooling-zombie"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Corpse",
+            "fulfillment": 10,
+            "patience": 4,
+            "visitorDefId": "ossuary-eternal-queuer"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Hopeful Groom",
+            "fulfillment": 11,
+            "patience": 3,
+            "visitorDefId": "ossuary-hopeful-groom"
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T18:21:56.581Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Done: recast; 24 / 34 / 45."
+    },
+    {
+      "id": "muu5fqk9ltebu",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "parish-registry",
+      "before": {
+        "id": "parish-registry",
+        "stage": 2,
+        "name": "Parish Registry",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Urgency and a readable discard threshold. 24 / 34 / 44.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Applicant",
+            "fulfillment": 7,
+            "patience": 2,
+            "abilityId": "extra-patience-if-untended"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Skeleton Clerk",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Parish Registrar",
+            "fulfillment": 9,
+            "patience": 3,
+            "abilityId": "draw-if-discard-three"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Devout Applicant",
+            "fulfillment": 10,
+            "patience": 4
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Ancient Bureaucrat",
+            "fulfillment": 10,
+            "patience": 3
+          }
+        ]
+      },
+      "after": {
+        "id": "parish-registry",
+        "stage": 2,
+        "name": "Parish Registry",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Urgency and a readable discard threshold. 24 / 34 / 44.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Applicant",
+            "fulfillment": 12,
+            "patience": 4,
+            "abilityId": "eager",
+            "visitorDefId": "ossuary-sneering-skeleton"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Skeleton Clerk",
+            "fulfillment": 8,
+            "patience": 3,
+            "visitorDefId": "ossuary-yawning-skeleton"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Register",
+            "fulfillment": 9,
+            "patience": 3,
+            "abilityId": "draw-if-discard-three",
+            "visitorDefId": "ossuary-grinning-skeleton"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Devout Applicant",
+            "fulfillment": 10,
+            "patience": 4,
+            "visitorDefId": "ossuary-scheming-zombie"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Judge Dead",
+            "fulfillment": 10,
+            "patience": 3,
+            "visitorDefId": "ossuary-hanging-judge"
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T18:25:17.650Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Done: recast with Eager; 27 / 37 / 49."
+    },
+    {
+      "id": "muu5gsmmawsqw",
+      "kind": "abilities",
+      "op": "edit",
+      "targetId": "draw-if-discard-three",
+      "before": {
+        "id": "draw-if-discard-three",
+        "name": "Registry Complete",
+        "text": "When fulfilled, if your discard has 3 or more books, draw 1."
+      },
+      "after": {
+        "id": "draw-if-discard-three",
+        "name": "Registry Complete",
+        "text": "When fulfilled, if your discard has 3 or more books, draw 1 and gain 1 action."
+      },
+      "note": "",
+      "at": "2026-10-04T18:24:07.150Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Done: it now also gives +1 Action."
+    },
+    {
+      "id": "muu5iv9oryo0v",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "long-reading",
+      "before": {
+        "id": "long-reading",
+        "stage": 2,
+        "name": "The Long Reading",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Tall, slow developed-deck normal. 23 / 33 / 45.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Patient Skeleton",
+            "fulfillment": 7,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Old Scholar",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "discard-value-plus"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Jawless Reader",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Ancient Scholar",
+            "fulfillment": 10,
+            "patience": 4
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Extremely Old Skeleton",
+            "fulfillment": 12,
+            "patience": 5,
+            "abilityId": "one-book-per-turn"
+          }
+        ]
+      },
+      "after": {
+        "id": "long-reading",
+        "stage": 2,
+        "name": "The Long Reading",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Tall, slow developed-deck normal. 23 / 33 / 45.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Patient Skeleton",
+            "fulfillment": 7,
+            "patience": 3,
+            "abilityId": "one-book-per-turn",
+            "visitorDefId": "ossuary-slack-jawed-zombie"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Old Scholar",
+            "fulfillment": 8,
+            "patience": 3,
+            "abilityId": "discard-value-plus",
+            "visitorDefId": "ossuary-sneering-skeleton"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Jawless Reader",
+            "fulfillment": 8,
+            "patience": 3,
+            "visitorDefId": "ossuary-dead-letter-postman"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Ancient Scholar",
+            "fulfillment": 10,
+            "patience": 4,
+            "visitorDefId": "ossuary-crypt-archivist"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Extremely Old Skeleton",
+            "fulfillment": 12,
+            "patience": 4,
+            "visitorDefId": "ossuary-eternal-queuer"
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T18:32:21.565Z",
+      "appliedAt": "2026-10-04T18:40:04.217Z",
+      "result": "Done: recast; Slow Reader moved to the Patient Skeleton."
     }
   ],
-  "updatedAt": "2026-10-04T18:32:21.565Z"
+  "updatedAt": "2026-10-04T18:40:04.218Z"
 }
