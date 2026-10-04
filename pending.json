@@ -1116,7 +1116,8 @@
             "arriveAfterTurn": 1,
             "name": "Devout Applicant",
             "fulfillment": 10,
-            "patience": 4
+            "patience": 4,
+            "visitorDefId": "ossuary-scheming-zombie"
           },
           {
             "arriveAfterTurn": 2,
@@ -1127,7 +1128,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T18:23:51.490Z"
+      "at": "2026-10-04T18:23:54.442Z"
     }
   ],
   "applied": [
@@ -3312,5 +3313,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T18:23:51.490Z"
+  "updatedAt": "2026-10-04T18:23:54.442Z"
 }
