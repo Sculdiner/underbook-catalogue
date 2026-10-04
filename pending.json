@@ -750,7 +750,7 @@
           },
           {
             "arriveAfterTurn": 1,
-            "name": "Bone Sorter",
+            "name": "Fresh Zombie",
             "fulfillment": 7,
             "patience": 2
           },
@@ -769,7 +769,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T17:47:28.342Z"
+      "at": "2026-10-04T17:48:05.426Z"
     }
   ],
   "applied": [
@@ -2954,5 +2954,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:47:28.342Z"
+  "updatedAt": "2026-10-04T17:48:05.426Z"
 }
