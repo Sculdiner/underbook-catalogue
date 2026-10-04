@@ -87,10 +87,11 @@
         "name": "Timelock Amber",
         "rarity": "common",
         "price": 65,
-        "text": "The first time each Encounter that you fulfill a visitor on the turn they arrive, gain +1 Action and draw 1 next turn."
+        "text": "The first time each Encounter that you fulfill a visitor on the turn they arrive, gain +1 Action and draw 1 next turn.",
+        "icon": "ember_b_01"
       },
       "note": "",
-      "at": "2026-10-04T20:26:40.942Z"
+      "at": "2026-10-04T20:26:54.125Z"
     }
   ],
   "applied": [
@@ -3551,5 +3552,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T20:26:40.942Z"
+  "updatedAt": "2026-10-04T20:26:54.125Z"
 }
