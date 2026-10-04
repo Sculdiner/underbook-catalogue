@@ -139,6 +139,169 @@
       },
       "note": "",
       "at": "2026-10-04T17:16:12.616Z"
+    },
+    {
+      "id": "muu35bjsoejfe",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "warlocks-retinue",
+      "before": {
+        "id": "warlocks-retinue",
+        "name": "The Warlock's Retinue",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "The Warlock eats your recurrent deck; his retinue gives it back. 65 total.",
+        "intro": {
+          "title": "The Warlock",
+          "epithet": "He Reads With His Mouth",
+          "line": "Don't worry. I only eat the good ones.",
+          "emblem": "sigil",
+          "light": {
+            "core": "226 196 255",
+            "ember": "200 160 255",
+            "halo": "140 76 232"
+          }
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dockworker",
+            "fulfillment": 6,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Pilgrim",
+            "fulfillment": 7,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Warlock",
+            "fulfillment": 18,
+            "patience": 6,
+            "abilityId": "forbidden-offering",
+            "visitorDefId": "mindflayer",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Acolyte",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "release-the-binding",
+            "visitorDefId": "cultist"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Acolyte",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "release-the-binding",
+            "visitorDefId": "cultist"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Reader",
+            "fulfillment": 6,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Senior Acolyte",
+            "fulfillment": 10,
+            "patience": 4,
+            "abilityId": "broken-chain",
+            "visitorDefId": "senior-cultist"
+          },
+          {
+            "arriveAfterTurn": 4,
+            "name": "Reader",
+            "fulfillment": 6,
+            "patience": 3
+          }
+        ]
+      },
+      "after": {
+        "id": "warlocks-retinue",
+        "name": "The Warlock's Retinue",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "The Warlock eats your recurrent deck; his retinue gives it back. 65 total.",
+        "intro": {
+          "title": "The Warlock",
+          "epithet": "He Reads With His Mouth",
+          "line": "Don't worry. I only eat the good ones.",
+          "emblem": "sigil",
+          "light": {
+            "core": "226 196 255",
+            "ember": "200 160 255",
+            "halo": "140 76 232"
+          }
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dockworker",
+            "fulfillment": 6,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Pilgrim",
+            "fulfillment": 7,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Warlock",
+            "fulfillment": 18,
+            "patience": 6,
+            "abilityId": "forbidden-offering",
+            "visitorDefId": "mindflayer",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Acolyte",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "release-the-binding",
+            "visitorDefId": "cultist"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Acolyte",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "release-the-binding",
+            "visitorDefId": "cultist"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Reader",
+            "fulfillment": 6,
+            "patience": 3,
+            "visitorDefId": "grump"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Senior Acolyte",
+            "fulfillment": 10,
+            "patience": 4,
+            "abilityId": "broken-chain",
+            "visitorDefId": "senior-cultist"
+          },
+          {
+            "arriveAfterTurn": 4,
+            "name": "Reader",
+            "fulfillment": 6,
+            "patience": 3
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T17:19:12.568Z"
     }
   ],
   "applied": [
@@ -2323,5 +2486,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:18:43.161Z"
+  "updatedAt": "2026-10-04T17:19:12.568Z"
 }
