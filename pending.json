@@ -868,7 +868,8 @@
             "arriveAfterTurn": 1,
             "name": "Ancient Parishioner",
             "fulfillment": 8,
-            "patience": 3
+            "patience": 3,
+            "visitorDefId": "ossuary-dead-letter-postman"
           },
           {
             "arriveAfterTurn": 1,
@@ -889,7 +890,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T18:09:47.608Z"
+      "at": "2026-10-04T18:09:58.268Z"
     },
     {
       "id": "muu4jolg3cwfp",
@@ -3120,5 +3121,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T18:09:47.608Z"
+  "updatedAt": "2026-10-04T18:09:58.268Z"
 }
