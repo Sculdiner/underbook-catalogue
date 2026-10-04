@@ -42,10 +42,10 @@
         "rarity": "common",
         "price": 70,
         "text": "When two books in a row played from your hand use your two different Traits, the third book gains +1 Value.",
-        "icon": "NecromancerIcons_38_b"
+        "icon": "addons_12_b"
       },
       "note": "",
-      "at": "2026-10-04T20:35:26.057Z"
+      "at": "2026-10-04T20:35:34.340Z"
     },
     {
       "id": "muu9ov37ofe1p",
@@ -3598,5 +3598,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T20:35:26.058Z"
+  "updatedAt": "2026-10-04T20:35:34.340Z"
 }
