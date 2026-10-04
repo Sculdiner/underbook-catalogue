@@ -678,6 +678,98 @@
       },
       "note": "",
       "at": "2026-10-04T17:32:57.381Z"
+    },
+    {
+      "id": "muu45cgrdmil8",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "bone-sorters",
+      "before": {
+        "id": "bone-sorters",
+        "stage": 2,
+        "name": "The Bone Sorters",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Discard growth and a tall slow project. 24 / 33 / 44.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Bone Sorter",
+            "fulfillment": 7,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Ossuary Porter",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Bone Archivist",
+            "fulfillment": 9,
+            "patience": 3,
+            "abilityId": "bone-archivist"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Rib Counter",
+            "fulfillment": 9,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Ossuary Mason",
+            "fulfillment": 11,
+            "patience": 4,
+            "abilityId": "one-book-per-turn"
+          }
+        ]
+      },
+      "after": {
+        "id": "bone-sorters",
+        "stage": 2,
+        "name": "The Bone Sorters",
+        "type": "normal",
+        "category": "normal",
+        "purpose": "Discard growth and a tall slow project. 24 / 33 / 44.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Ossuary Mason",
+            "fulfillment": 11,
+            "patience": 4,
+            "abilityId": "one-book-per-turn"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Bone Sorter",
+            "fulfillment": 7,
+            "patience": 2
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Ossuary Porter",
+            "fulfillment": 8,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Bone Archivist",
+            "fulfillment": 9,
+            "patience": 3,
+            "abilityId": "bone-archivist"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Rib Counter",
+            "fulfillment": 9,
+            "patience": 3
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-04T17:47:13.371Z"
     }
   ],
   "applied": [
@@ -2862,5 +2954,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:46:32.137Z"
+  "updatedAt": "2026-10-04T17:47:13.371Z"
 }
