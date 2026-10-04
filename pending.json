@@ -895,6 +895,24 @@
       },
       "note": "",
       "at": "2026-10-04T17:58:22.276Z"
+    },
+    {
+      "id": "muu4kv8phfaai",
+      "kind": "abilities",
+      "op": "edit",
+      "targetId": "one-book-per-turn",
+      "before": {
+        "id": "one-book-per-turn",
+        "name": "Measured Work",
+        "text": "May receive at most 1 book each turn."
+      },
+      "after": {
+        "id": "one-book-per-turn",
+        "name": "Slow Reader",
+        "text": "May receive at most 1 book each turn."
+      },
+      "note": "",
+      "at": "2026-10-04T17:59:17.545Z"
     }
   ],
   "applied": [
@@ -3079,5 +3097,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:58:25.142Z"
+  "updatedAt": "2026-10-04T17:59:17.545Z"
 }
