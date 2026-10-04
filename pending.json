@@ -64,10 +64,11 @@
         "name": "Gold Ink",
         "rarity": "common",
         "price": 45,
-        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold."
+        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold.",
+        "icon": "NecromancerIcons_97_b"
       },
       "note": "",
-      "at": "2026-10-04T20:22:22.050Z"
+      "at": "2026-10-04T20:22:35.981Z"
     }
   ],
   "applied": [
@@ -3528,5 +3529,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T20:22:22.051Z"
+  "updatedAt": "2026-10-04T20:22:35.981Z"
 }
