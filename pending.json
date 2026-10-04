@@ -15,14 +15,14 @@
       },
       "after": {
         "id": "test",
-        "name": "Test",
+        "name": "Hypnotic Necklace",
         "rarity": "common",
         "price": 45,
         "text": "Merchants offer an additional Curio, and the first time you refresh their wares at each Merchant it is free.",
         "icon": "WitchCraftIcons_95_b"
       },
       "note": "",
-      "at": "2026-10-04T18:58:12.956Z"
+      "at": "2026-10-04T18:58:26.623Z"
     }
   ],
   "applied": [
@@ -3483,5 +3483,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T18:58:12.956Z"
+  "updatedAt": "2026-10-04T18:58:26.623Z"
 }
