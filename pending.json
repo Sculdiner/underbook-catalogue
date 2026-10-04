@@ -115,6 +115,29 @@
       },
       "note": "",
       "at": "2026-10-04T20:33:10.182Z"
+    },
+    {
+      "id": "muua3rpk6nqrb",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "golden-scarab-coin",
+      "before": {
+        "id": "golden-scarab-coin",
+        "name": "Golden Scarab Coin",
+        "rarity": "common",
+        "price": 75,
+        "text": "After you have fulfilled 20 visitors while carrying it, gain a Rare Summon and destroy this Curio."
+      },
+      "after": {
+        "id": "golden-scarab-coin",
+        "name": "Golden Scarab Coin",
+        "rarity": "common",
+        "price": 75,
+        "text": "After you have fulfilled 20 visitors while carrying it, gain a Rare Summon and destroy this Curio.",
+        "icon": "NecromancerIcons_34_b"
+      },
+      "note": "",
+      "at": "2026-10-04T20:33:57.512Z"
     }
   ],
   "applied": [
@@ -3575,5 +3598,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T20:33:10.182Z"
+  "updatedAt": "2026-10-04T20:33:57.512Z"
 }
