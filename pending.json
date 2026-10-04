@@ -743,6 +743,13 @@
           },
           {
             "arriveAfterTurn": 0,
+            "name": "Bone Archivist",
+            "fulfillment": 9,
+            "patience": 3,
+            "abilityId": "bone-archivist"
+          },
+          {
+            "arriveAfterTurn": 0,
             "name": "Bone Sorter",
             "fulfillment": 7,
             "patience": 2
@@ -754,13 +761,6 @@
             "patience": 3
           },
           {
-            "arriveAfterTurn": 1,
-            "name": "Bone Archivist",
-            "fulfillment": 9,
-            "patience": 3,
-            "abilityId": "bone-archivist"
-          },
-          {
             "arriveAfterTurn": 2,
             "name": "Rib Counter",
             "fulfillment": 9,
@@ -769,7 +769,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T17:47:20.202Z"
+      "at": "2026-10-04T17:47:23.123Z"
     }
   ],
   "applied": [
@@ -2954,5 +2954,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:47:20.203Z"
+  "updatedAt": "2026-10-04T17:47:23.123Z"
 }
