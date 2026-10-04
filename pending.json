@@ -176,14 +176,14 @@
       },
       "after": {
         "id": "standing-room-only",
-        "name": "Empyrian Wax",
+        "name": "Empyrean Wax",
         "rarity": "uncommon",
         "price": 85,
         "text": "While 4 or more visitors are waiting, every book gains +1 Value.",
         "icon": "addons_08_b"
       },
       "note": "",
-      "at": "2026-10-04T20:57:03.200Z"
+      "at": "2026-10-04T20:57:07.035Z"
     }
   ],
   "applied": [
@@ -3644,5 +3644,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T20:57:03.200Z"
+  "updatedAt": "2026-10-04T20:57:07.035Z"
 }
