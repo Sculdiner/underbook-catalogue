@@ -16,6 +16,374 @@
       },
       "note": "",
       "at": "2026-10-04T08:28:23.380Z"
+    }
+  ],
+  "applied": [
+    {
+      "id": "muszs8hhe8um8",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "the-spellbound-sea",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "the-spellbound-sea",
+        "title": "The Spellbound Sea",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 5,
+        "extension": true,
+        "shortText": "Discarded Magic books are randomly assigned, then DESTROYed.",
+        "rulesText": "On Assign: randomly assign each Magic book from your discard pile to visitors for 0 Actions. Their On Assign abilities resolve. Any options they require are chosen at random. DESTROY those books afterwards.",
+        "reminders": [
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "the-spellbound-sea:high-tide",
+            "name": "High Tide",
+            "before": "Discarded Magic books assigned",
+            "after": "Each gains +1 Value first",
+            "text": "On Assign: each Magic book in your discard pile gains +1 Value, then is randomly assigned to a visitor for 0 Actions. Their On Assign abilities resolve; options are chosen at random. DESTROY those books afterwards."
+          },
+          {
+            "id": "the-spellbound-sea:returning-tide",
+            "name": "Returning Tide",
+            "before": "All DESTROYed afterwards",
+            "after": "Then 1 random one returns to hand",
+            "text": "As The Spellbound Sea, then 1 random book it DESTROYed returns to your hand."
+          },
+          {
+            "id": "the-spellbound-sea:undertow",
+            "name": "Undertow",
+            "before": "No gain",
+            "after": "+1 Value per book DESTROYed, this Encounter",
+            "text": "As The Spellbound Sea, then it gains +1 Value for each book it DESTROYed, until the end of the Encounter."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "the-spellbound-sea",
+        "title": "The Spellbound Sea",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 2,
+        "extension": true,
+        "shortText": "Discarded Magic books are randomly assigned, then DESTROYed.",
+        "rulesText": "On Assign: randomly assign each Magic book from your discard pile to visitors for 0 Actions. Their On Assign abilities resolve. Any options they require are chosen at random. DESTROY those books afterwards.",
+        "reminders": [
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "the-spellbound-sea:high-tide",
+            "name": "High Tide",
+            "before": "Discarded Magic books assigned",
+            "after": "Each gains +1 Value first",
+            "text": "On Assign: each Magic book in your discard pile gains +1 Value, then is randomly assigned to a visitor for 0 Actions. Their On Assign abilities resolve; options are chosen at random. DESTROY those books afterwards."
+          },
+          {
+            "id": "the-spellbound-sea:returning-tide",
+            "name": "Returning Tide",
+            "before": "All DESTROYed afterwards",
+            "after": "Then 1 random one returns to hand",
+            "text": "As The Spellbound Sea, then 1 random book it DESTROYed returns to your hand."
+          },
+          {
+            "id": "the-spellbound-sea:undertow",
+            "name": "Undertow",
+            "before": "No gain",
+            "after": "+1 Value per book DESTROYed, this Encounter",
+            "text": "As The Spellbound Sea, then it gains +1 Value for each book it DESTROYed, until the end of the Encounter."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-03T22:57:17.024Z",
+      "appliedAt": "2026-10-03T22:59:51.850Z",
+      "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
+    },
+    {
+      "id": "mut0fxtueknyh",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "twin-spined-bookmark",
+      "before": {
+        "id": "twin-spined-bookmark",
+        "name": "Twin-Spined Bookmark",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two paid assignments in a row use your two different Traits, the second book gains +1 Value. A neutral book breaks the sequence."
+      },
+      "after": {
+        "id": "twin-spined-bookmark",
+        "name": "Twin-Spined Bookmark",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two actions in a row use different Traits, the third book gains +1 Value"
+      },
+      "note": "",
+      "at": "2026-10-03T23:15:42.974Z",
+      "appliedAt": "2026-10-04T08:04:24.399Z",
+      "result": "Twin-Spined Bookmark now gives +1 Value to the third paid book after two of different Traits."
+    },
+    {
+      "id": "mut0j4ln9col6",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "the-volume-ii",
+      "before": null,
+      "after": {
+        "id": "the-volume-ii",
+        "name": "The volume II'",
+        "rarity": "uncommon",
+        "text": "All basic books gain +1 value",
+        "price": 80
+      },
+      "note": "",
+      "at": "2026-10-03T23:19:04.283Z",
+      "appliedAt": "2026-10-04T08:04:24.399Z",
+      "result": "Added The Volume II (Uncommon, 80G): Basic books gain +1 Value; named without the stray apostrophe."
+    },
+    {
+      "id": "mut0ma0i9wq59",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "crowded-counter-sign",
+      "before": {
+        "id": "crowded-counter-sign",
+        "name": "Crowded Counter Sign",
+        "rarity": "common",
+        "price": 60,
+        "text": "While 4 or more visitors are waiting, Basic books gain +1 Value."
+      },
+      "after": {
+        "id": "crowded-counter-sign",
+        "name": "Crowded Counter Sign",
+        "rarity": "common",
+        "price": 60,
+        "text": "The first time each encounter, you are serving 4 visitors, draw1 and get +1 action this turn."
+      },
+      "note": "",
+      "at": "2026-10-03T23:20:38.705Z",
+      "appliedAt": "2026-10-04T08:04:24.399Z",
+      "result": "Crowded Counter Sign: the first turn each Encounter that opens with 4+ visitors waiting draws 1 and gives +1 Action."
+    },
+    {
+      "id": "mut0oeukrfjbc",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "old-queue-number",
+      "before": {
+        "id": "old-queue-number",
+        "name": "Old Queue Number",
+        "rarity": "common",
+        "price": 65,
+        "text": "While 3 or more visitors are waiting, books assigned to the one who has waited longest gain +1 Value."
+      },
+      "after": {
+        "id": "old-queue-number",
+        "name": "Golden Scarab Coin",
+        "rarity": "common",
+        "text": "After serving 20 visitors, get 1 Rare and destroy this.",
+        "price": 75
+      },
+      "note": "",
+      "at": "2026-10-03T23:25:17.396Z",
+      "appliedAt": "2026-10-04T08:04:24.399Z",
+      "result": "Old Queue Number is now the Golden Scarab Coin (75G): after 20 visitors fulfilled while carried, a Rare Summon, then it is destroyed."
+    },
+    {
+      "id": "mut0swzwsl4pu",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "exact-change-purse",
+      "before": {
+        "id": "exact-change-purse",
+        "name": "Exact Change Purse",
+        "rarity": "common",
+        "price": 60,
+        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold."
+      },
+      "after": {
+        "id": "exact-change-purse",
+        "name": "Exact Change Purse",
+        "rarity": "common",
+        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold.",
+        "price": 45
+      },
+      "note": "",
+      "at": "2026-10-03T23:25:48.428Z",
+      "appliedAt": "2026-10-04T08:04:24.399Z",
+      "result": "Exact Change Purse now costs 45G."
+    },
+    {
+      "id": "mut0ym57izfv3",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "long-job-spectacles",
+      "before": {
+        "id": "long-job-spectacles",
+        "name": "Long-Job Spectacles",
+        "rarity": "common",
+        "price": 65,
+        "text": "Books assigned to a visitor with 4 or more Patience gain +1 Value."
+      },
+      "after": {
+        "id": "long-job-spectacles",
+        "name": "Long-Job Spectacles",
+        "rarity": "common",
+        "price": 65,
+        "text": "The first time each encounter, that you fulfill a visitor at the round he arrives, get +1 action and draw 1 next turn."
+      },
+      "note": "",
+      "at": "2026-10-03T23:30:14.298Z",
+      "appliedAt": "2026-10-04T08:04:24.399Z",
+      "result": "Long-Job Spectacles: the first visitor each Encounter fulfilled on their arrival turn gives +1 Action and a draw next turn."
+    },
+    {
+      "id": "mutjpmns01y68",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "retinues-book-of-etiquette",
+      "before": {
+        "id": "retinues-book-of-etiquette",
+        "name": "The Retinue's Book of Etiquette",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Patience and every newcomer gains +1 Fulfillment."
+      },
+      "after": {
+        "id": "retinues-book-of-etiquette",
+        "name": "The Retinue's Book of Etiquette",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Fulfillment."
+      },
+      "note": "",
+      "at": "2026-10-04T08:15:07.767Z",
+      "appliedAt": "2026-10-04T09:56:08.759Z",
+      "result": "Done: those already waiting gain +1 Fulfillment when a new wave arrives; no Patience, nothing for newcomers."
+    },
+    {
+      "id": "mutjsfmlqdtax",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "crooked-queue-ticket",
+      "before": {
+        "id": "crooked-queue-ticket",
+        "name": "Crooked Queue Ticket",
+        "rarity": "common",
+        "price": 60,
+        "text": "Books assigned to a visitor on the turn that visitor arrives gain +1 Value."
+      },
+      "after": {
+        "id": "crooked-queue-ticket",
+        "name": "Crooked Queue Ticket",
+        "rarity": "rare",
+        "price": 60,
+        "text": "Books assigned to a visitor on the turn that visitor arrives gain +1 Value."
+      },
+      "note": "",
+      "at": "2026-10-04T08:17:18.621Z",
+      "appliedAt": "2026-10-04T09:56:08.759Z",
+      "result": "Done: now Rare, repriced to 95G to fit the Rare band."
+    },
+    {
+      "id": "mutjxbils9f0o",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "red-string-bookmark",
+      "before": {
+        "id": "red-string-bookmark",
+        "name": "Red String Bookmark",
+        "rarity": "common",
+        "price": 65,
+        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
+      },
+      "after": {
+        "id": "red-string-bookmark",
+        "name": "Red String Bookmark",
+        "rarity": "rare",
+        "price": 65,
+        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
+      },
+      "note": "",
+      "at": "2026-10-04T08:21:06.573Z",
+      "appliedAt": "2026-10-04T09:56:08.759Z",
+      "result": "Done: now Rare, repriced to 95G to fit the Rare band."
+    },
+    {
+      "id": "mutjymts9tr42",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "twin-spined-bookmark",
+      "before": {
+        "id": "twin-spined-bookmark",
+        "name": "Twin-Spined Bookmark",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two paid assignments in a row use your two different Traits, the third book gains +1 Value."
+      },
+      "after": {
+        "id": "twin-spined-bookmark",
+        "name": "Twin-Spined Bookmark",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two books played from your hand, use two different Traits, the third book gains +1 Value."
+      },
+      "note": "",
+      "at": "2026-10-04T08:22:07.887Z",
+      "appliedAt": "2026-10-04T09:56:08.759Z",
+      "result": "Done: every book played from your hand counts, free ones too; books placed by effects still don't."
+    },
+    {
+      "id": "mutjyue79g39h",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "unwelcome-critics-monocle",
+      "before": {
+        "id": "unwelcome-critics-monocle",
+        "name": "Unwelcome Critic's Monocle",
+        "rarity": "common",
+        "price": 65,
+        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
+      },
+      "after": {
+        "id": "unwelcome-critics-monocle",
+        "name": "Unwelcome Critic's Monocle",
+        "rarity": "uncommon",
+        "price": 65,
+        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
+      },
+      "note": "",
+      "at": "2026-10-04T08:22:17.694Z",
+      "appliedAt": "2026-10-04T09:56:08.759Z",
+      "result": "Done: now Uncommon, repriced to 75G to fit the Uncommon band."
+    },
+    {
+      "id": "mutk09mknhag2",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "test",
+      "before": null,
+      "after": {
+        "id": "test",
+        "name": "Talisman of the After-After Life",
+        "rarity": "common",
+        "text": "Whenever your discard is shuffled in your Deck, give a random Book +1 value (until the end of the encounter)",
+        "price": 70
+      },
+      "note": "",
+      "at": "2026-10-04T08:25:24.850Z",
+      "appliedAt": "2026-10-04T09:56:08.759Z",
+      "result": "Added (Common, 70G) with a skull-medallion icon. The +1 goes to one of the books just shuffled back in."
     },
     {
       "id": "mutmhyh0o6jma",
@@ -391,7 +759,9 @@
         "merchant": "m"
       },
       "note": "",
-      "at": "2026-10-04T09:36:43.606Z"
+      "at": "2026-10-04T09:36:43.606Z",
+      "appliedAt": "2026-10-04T10:22:47.071Z",
+      "result": "Applied as drawn, under the widened path rules."
     },
     {
       "id": "mutmnetv3qzw4",
@@ -872,7 +1242,9 @@
         "merchant": "m"
       },
       "note": "",
-      "at": "2026-10-04T09:46:20.572Z"
+      "at": "2026-10-04T09:46:20.572Z",
+      "appliedAt": "2026-10-04T10:22:47.071Z",
+      "result": "Applied as drawn, under the widened path rules."
     },
     {
       "id": "mutmt4givvl61",
@@ -1376,7 +1748,9 @@
         "merchant": "m"
       },
       "note": "",
-      "at": "2026-10-04T09:45:40.195Z"
+      "at": "2026-10-04T09:45:40.195Z",
+      "appliedAt": "2026-10-04T10:22:47.071Z",
+      "result": "Applied. n3 set to late (the editor defaulted it to mid, but bands can't step back after a late), and the map shifted one column left."
     },
     {
       "id": "mutmzcunrki36",
@@ -1803,376 +2177,10 @@
         "merchant": "m"
       },
       "note": "",
-      "at": "2026-10-04T09:49:25.887Z"
+      "at": "2026-10-04T09:49:25.887Z",
+      "appliedAt": "2026-10-04T10:22:47.071Z",
+      "result": "Applied as drawn. Path rules widened to fit (Normal 2-5, Distinguished 0-3, Event 0-4, Finding 0-3); the Treasure just needs a hard Distinguished before it."
     }
   ],
-  "applied": [
-    {
-      "id": "muszs8hhe8um8",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "the-spellbound-sea",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "the-spellbound-sea",
-        "title": "The Spellbound Sea",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "uncommon",
-        "value": 5,
-        "extension": true,
-        "shortText": "Discarded Magic books are randomly assigned, then DESTROYed.",
-        "rulesText": "On Assign: randomly assign each Magic book from your discard pile to visitors for 0 Actions. Their On Assign abilities resolve. Any options they require are chosen at random. DESTROY those books afterwards.",
-        "reminders": [
-          "destroy"
-        ],
-        "rebinds": [
-          {
-            "id": "the-spellbound-sea:high-tide",
-            "name": "High Tide",
-            "before": "Discarded Magic books assigned",
-            "after": "Each gains +1 Value first",
-            "text": "On Assign: each Magic book in your discard pile gains +1 Value, then is randomly assigned to a visitor for 0 Actions. Their On Assign abilities resolve; options are chosen at random. DESTROY those books afterwards."
-          },
-          {
-            "id": "the-spellbound-sea:returning-tide",
-            "name": "Returning Tide",
-            "before": "All DESTROYed afterwards",
-            "after": "Then 1 random one returns to hand",
-            "text": "As The Spellbound Sea, then 1 random book it DESTROYed returns to your hand."
-          },
-          {
-            "id": "the-spellbound-sea:undertow",
-            "name": "Undertow",
-            "before": "No gain",
-            "after": "+1 Value per book DESTROYed, this Encounter",
-            "text": "As The Spellbound Sea, then it gains +1 Value for each book it DESTROYed, until the end of the Encounter."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "the-spellbound-sea",
-        "title": "The Spellbound Sea",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "rare",
-        "value": 2,
-        "extension": true,
-        "shortText": "Discarded Magic books are randomly assigned, then DESTROYed.",
-        "rulesText": "On Assign: randomly assign each Magic book from your discard pile to visitors for 0 Actions. Their On Assign abilities resolve. Any options they require are chosen at random. DESTROY those books afterwards.",
-        "reminders": [
-          "destroy"
-        ],
-        "rebinds": [
-          {
-            "id": "the-spellbound-sea:high-tide",
-            "name": "High Tide",
-            "before": "Discarded Magic books assigned",
-            "after": "Each gains +1 Value first",
-            "text": "On Assign: each Magic book in your discard pile gains +1 Value, then is randomly assigned to a visitor for 0 Actions. Their On Assign abilities resolve; options are chosen at random. DESTROY those books afterwards."
-          },
-          {
-            "id": "the-spellbound-sea:returning-tide",
-            "name": "Returning Tide",
-            "before": "All DESTROYed afterwards",
-            "after": "Then 1 random one returns to hand",
-            "text": "As The Spellbound Sea, then 1 random book it DESTROYed returns to your hand."
-          },
-          {
-            "id": "the-spellbound-sea:undertow",
-            "name": "Undertow",
-            "before": "No gain",
-            "after": "+1 Value per book DESTROYed, this Encounter",
-            "text": "As The Spellbound Sea, then it gains +1 Value for each book it DESTROYed, until the end of the Encounter."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-03T22:57:17.024Z",
-      "appliedAt": "2026-10-03T22:59:51.850Z",
-      "result": "Done: The Spellbound Sea is now Rare, Value 2. Magic's pool is 8 Common / 3 Uncommon / 4 Rare; docs and tests updated."
-    },
-    {
-      "id": "mut0fxtueknyh",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "twin-spined-bookmark",
-      "before": {
-        "id": "twin-spined-bookmark",
-        "name": "Twin-Spined Bookmark",
-        "rarity": "common",
-        "price": 70,
-        "text": "When two paid assignments in a row use your two different Traits, the second book gains +1 Value. A neutral book breaks the sequence."
-      },
-      "after": {
-        "id": "twin-spined-bookmark",
-        "name": "Twin-Spined Bookmark",
-        "rarity": "common",
-        "price": 70,
-        "text": "When two actions in a row use different Traits, the third book gains +1 Value"
-      },
-      "note": "",
-      "at": "2026-10-03T23:15:42.974Z",
-      "appliedAt": "2026-10-04T08:04:24.399Z",
-      "result": "Twin-Spined Bookmark now gives +1 Value to the third paid book after two of different Traits."
-    },
-    {
-      "id": "mut0j4ln9col6",
-      "kind": "curios",
-      "op": "add",
-      "targetId": "the-volume-ii",
-      "before": null,
-      "after": {
-        "id": "the-volume-ii",
-        "name": "The volume II'",
-        "rarity": "uncommon",
-        "text": "All basic books gain +1 value",
-        "price": 80
-      },
-      "note": "",
-      "at": "2026-10-03T23:19:04.283Z",
-      "appliedAt": "2026-10-04T08:04:24.399Z",
-      "result": "Added The Volume II (Uncommon, 80G): Basic books gain +1 Value; named without the stray apostrophe."
-    },
-    {
-      "id": "mut0ma0i9wq59",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "crowded-counter-sign",
-      "before": {
-        "id": "crowded-counter-sign",
-        "name": "Crowded Counter Sign",
-        "rarity": "common",
-        "price": 60,
-        "text": "While 4 or more visitors are waiting, Basic books gain +1 Value."
-      },
-      "after": {
-        "id": "crowded-counter-sign",
-        "name": "Crowded Counter Sign",
-        "rarity": "common",
-        "price": 60,
-        "text": "The first time each encounter, you are serving 4 visitors, draw1 and get +1 action this turn."
-      },
-      "note": "",
-      "at": "2026-10-03T23:20:38.705Z",
-      "appliedAt": "2026-10-04T08:04:24.399Z",
-      "result": "Crowded Counter Sign: the first turn each Encounter that opens with 4+ visitors waiting draws 1 and gives +1 Action."
-    },
-    {
-      "id": "mut0oeukrfjbc",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "old-queue-number",
-      "before": {
-        "id": "old-queue-number",
-        "name": "Old Queue Number",
-        "rarity": "common",
-        "price": 65,
-        "text": "While 3 or more visitors are waiting, books assigned to the one who has waited longest gain +1 Value."
-      },
-      "after": {
-        "id": "old-queue-number",
-        "name": "Golden Scarab Coin",
-        "rarity": "common",
-        "text": "After serving 20 visitors, get 1 Rare and destroy this.",
-        "price": 75
-      },
-      "note": "",
-      "at": "2026-10-03T23:25:17.396Z",
-      "appliedAt": "2026-10-04T08:04:24.399Z",
-      "result": "Old Queue Number is now the Golden Scarab Coin (75G): after 20 visitors fulfilled while carried, a Rare Summon, then it is destroyed."
-    },
-    {
-      "id": "mut0swzwsl4pu",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "exact-change-purse",
-      "before": {
-        "id": "exact-change-purse",
-        "name": "Exact Change Purse",
-        "rarity": "common",
-        "price": 60,
-        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold."
-      },
-      "after": {
-        "id": "exact-change-purse",
-        "name": "Exact Change Purse",
-        "rarity": "common",
-        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold.",
-        "price": 45
-      },
-      "note": "",
-      "at": "2026-10-03T23:25:48.428Z",
-      "appliedAt": "2026-10-04T08:04:24.399Z",
-      "result": "Exact Change Purse now costs 45G."
-    },
-    {
-      "id": "mut0ym57izfv3",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "long-job-spectacles",
-      "before": {
-        "id": "long-job-spectacles",
-        "name": "Long-Job Spectacles",
-        "rarity": "common",
-        "price": 65,
-        "text": "Books assigned to a visitor with 4 or more Patience gain +1 Value."
-      },
-      "after": {
-        "id": "long-job-spectacles",
-        "name": "Long-Job Spectacles",
-        "rarity": "common",
-        "price": 65,
-        "text": "The first time each encounter, that you fulfill a visitor at the round he arrives, get +1 action and draw 1 next turn."
-      },
-      "note": "",
-      "at": "2026-10-03T23:30:14.298Z",
-      "appliedAt": "2026-10-04T08:04:24.399Z",
-      "result": "Long-Job Spectacles: the first visitor each Encounter fulfilled on their arrival turn gives +1 Action and a draw next turn."
-    },
-    {
-      "id": "mutjpmns01y68",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "retinues-book-of-etiquette",
-      "before": {
-        "id": "retinues-book-of-etiquette",
-        "name": "The Retinue's Book of Etiquette",
-        "rarity": "legendary",
-        "price": 115,
-        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Patience and every newcomer gains +1 Fulfillment."
-      },
-      "after": {
-        "id": "retinues-book-of-etiquette",
-        "name": "The Retinue's Book of Etiquette",
-        "rarity": "legendary",
-        "price": 115,
-        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Fulfillment."
-      },
-      "note": "",
-      "at": "2026-10-04T08:15:07.767Z",
-      "appliedAt": "2026-10-04T09:56:08.759Z",
-      "result": "Done: those already waiting gain +1 Fulfillment when a new wave arrives; no Patience, nothing for newcomers."
-    },
-    {
-      "id": "mutjsfmlqdtax",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "crooked-queue-ticket",
-      "before": {
-        "id": "crooked-queue-ticket",
-        "name": "Crooked Queue Ticket",
-        "rarity": "common",
-        "price": 60,
-        "text": "Books assigned to a visitor on the turn that visitor arrives gain +1 Value."
-      },
-      "after": {
-        "id": "crooked-queue-ticket",
-        "name": "Crooked Queue Ticket",
-        "rarity": "rare",
-        "price": 60,
-        "text": "Books assigned to a visitor on the turn that visitor arrives gain +1 Value."
-      },
-      "note": "",
-      "at": "2026-10-04T08:17:18.621Z",
-      "appliedAt": "2026-10-04T09:56:08.759Z",
-      "result": "Done: now Rare, repriced to 95G to fit the Rare band."
-    },
-    {
-      "id": "mutjxbils9f0o",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "red-string-bookmark",
-      "before": {
-        "id": "red-string-bookmark",
-        "name": "Red String Bookmark",
-        "rarity": "common",
-        "price": 65,
-        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
-      },
-      "after": {
-        "id": "red-string-bookmark",
-        "name": "Red String Bookmark",
-        "rarity": "rare",
-        "price": 65,
-        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
-      },
-      "note": "",
-      "at": "2026-10-04T08:21:06.573Z",
-      "appliedAt": "2026-10-04T09:56:08.759Z",
-      "result": "Done: now Rare, repriced to 95G to fit the Rare band."
-    },
-    {
-      "id": "mutjymts9tr42",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "twin-spined-bookmark",
-      "before": {
-        "id": "twin-spined-bookmark",
-        "name": "Twin-Spined Bookmark",
-        "rarity": "common",
-        "price": 70,
-        "text": "When two paid assignments in a row use your two different Traits, the third book gains +1 Value."
-      },
-      "after": {
-        "id": "twin-spined-bookmark",
-        "name": "Twin-Spined Bookmark",
-        "rarity": "common",
-        "price": 70,
-        "text": "When two books played from your hand, use two different Traits, the third book gains +1 Value."
-      },
-      "note": "",
-      "at": "2026-10-04T08:22:07.887Z",
-      "appliedAt": "2026-10-04T09:56:08.759Z",
-      "result": "Done: every book played from your hand counts, free ones too; books placed by effects still don't."
-    },
-    {
-      "id": "mutjyue79g39h",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "unwelcome-critics-monocle",
-      "before": {
-        "id": "unwelcome-critics-monocle",
-        "name": "Unwelcome Critic's Monocle",
-        "rarity": "common",
-        "price": 65,
-        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
-      },
-      "after": {
-        "id": "unwelcome-critics-monocle",
-        "name": "Unwelcome Critic's Monocle",
-        "rarity": "uncommon",
-        "price": 65,
-        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
-      },
-      "note": "",
-      "at": "2026-10-04T08:22:17.694Z",
-      "appliedAt": "2026-10-04T09:56:08.759Z",
-      "result": "Done: now Uncommon, repriced to 75G to fit the Uncommon band."
-    },
-    {
-      "id": "mutk09mknhag2",
-      "kind": "curios",
-      "op": "add",
-      "targetId": "test",
-      "before": null,
-      "after": {
-        "id": "test",
-        "name": "Talisman of the After-After Life",
-        "rarity": "common",
-        "text": "Whenever your discard is shuffled in your Deck, give a random Book +1 value (until the end of the encounter)",
-        "price": 70
-      },
-      "note": "",
-      "at": "2026-10-04T08:25:24.850Z",
-      "appliedAt": "2026-10-04T09:56:08.759Z",
-      "result": "Added (Common, 70G) with a skull-medallion icon. The +1 goes to one of the books just shuffled back in."
-    }
-  ],
-  "updatedAt": "2026-10-04T09:56:08.761Z"
+  "updatedAt": "2026-10-04T10:22:47.072Z"
 }
