@@ -417,13 +417,13 @@
       },
       "after": {
         "id": "night-clerks-ledger",
-        "name": "Night Clerk's Ledger",
+        "name": "Sleepless Lantern",
         "rarity": "rare",
         "price": 100,
         "text": "Once per encounter: If you fulfill 2 or more visitors in a turn, nobody loses Patience at the end of that turn."
       },
       "note": "",
-      "at": "2026-10-04T21:24:19.566Z"
+      "at": "2026-10-04T21:25:36.209Z"
     }
   ],
   "applied": [
@@ -3884,5 +3884,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:24:19.566Z"
+  "updatedAt": "2026-10-04T21:25:36.209Z"
 }
