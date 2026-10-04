@@ -262,6 +262,28 @@
       },
       "note": "",
       "at": "2026-10-04T21:07:04.031Z"
+    },
+    {
+      "id": "muubbau6z9bh0",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "overbooking-ledger",
+      "before": {
+        "id": "overbooking-ledger",
+        "name": "Overbooking Ledger",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "Whenever you fulfill a visitor while 4 or more others are still waiting, gain 4 Gold."
+      },
+      "after": {
+        "id": "overbooking-ledger",
+        "name": "Overbooking Ledger",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "Whenever you fulfill a visitor while 4 or more others are still waiting, gain 5 Gold."
+      },
+      "note": "",
+      "at": "2026-10-04T21:07:48.510Z"
     }
   ],
   "applied": [
@@ -3722,5 +3744,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:07:04.031Z"
+  "updatedAt": "2026-10-04T21:07:48.510Z"
 }
