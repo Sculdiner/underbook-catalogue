@@ -518,6 +518,507 @@
       },
       "note": "",
       "at": "2026-10-04T09:36:43.606Z"
+    },
+    {
+      "id": "mutmnetv3qzw4",
+      "kind": "routes",
+      "op": "edit",
+      "targetId": "explorer",
+      "before": {
+        "id": "explorer",
+        "name": "The Explorer",
+        "nodes": [
+          {
+            "key": "n1",
+            "type": "encounter-normal",
+            "band": "opening",
+            "branch": "shared",
+            "depth": 0,
+            "lane": 0,
+            "next": [
+              "e1"
+            ]
+          },
+          {
+            "key": "e1",
+            "type": "event",
+            "branch": "shared",
+            "depth": 1,
+            "lane": 0,
+            "next": [
+              "n2"
+            ]
+          },
+          {
+            "key": "n2",
+            "type": "encounter-normal",
+            "band": "mid",
+            "branch": "shared",
+            "depth": 2,
+            "lane": 0,
+            "next": [
+              "fa",
+              "fb"
+            ]
+          },
+          {
+            "key": "fa",
+            "type": "reward",
+            "branch": "shared",
+            "depth": 3,
+            "lane": -2,
+            "next": [
+              "da"
+            ]
+          },
+          {
+            "key": "da",
+            "type": "encounter-elite",
+            "branch": "shared",
+            "depth": 4,
+            "lane": -2,
+            "next": [
+              "m"
+            ]
+          },
+          {
+            "key": "fb",
+            "type": "reward",
+            "branch": "shared",
+            "depth": 3,
+            "lane": 2,
+            "next": [
+              "nb"
+            ]
+          },
+          {
+            "key": "nb",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "shared",
+            "depth": 4,
+            "lane": 2,
+            "next": [
+              "db"
+            ]
+          },
+          {
+            "key": "db",
+            "type": "encounter-elite",
+            "branch": "shared",
+            "depth": 5,
+            "lane": 2,
+            "next": [
+              "m"
+            ]
+          },
+          {
+            "key": "m",
+            "type": "merchant",
+            "branch": "shared",
+            "depth": 6,
+            "lane": 0,
+            "next": [
+              "s",
+              "xn1",
+              "hn"
+            ]
+          },
+          {
+            "key": "s",
+            "type": "shrine",
+            "branch": "shrine",
+            "depth": 7,
+            "lane": -3,
+            "next": [
+              "cn"
+            ]
+          },
+          {
+            "key": "cn",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "shrine",
+            "depth": 8,
+            "lane": -3,
+            "next": [
+              "ce"
+            ]
+          },
+          {
+            "key": "ce",
+            "type": "event",
+            "branch": "shrine",
+            "depth": 9,
+            "lane": -3,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "xn1",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "explorer",
+            "depth": 7,
+            "lane": 0,
+            "next": [
+              "xf1"
+            ]
+          },
+          {
+            "key": "xf1",
+            "type": "reward",
+            "branch": "explorer",
+            "depth": 8,
+            "lane": 0,
+            "next": [
+              "xe1"
+            ]
+          },
+          {
+            "key": "xe1",
+            "type": "event",
+            "branch": "explorer",
+            "depth": 9,
+            "lane": 0,
+            "next": [
+              "xn2"
+            ]
+          },
+          {
+            "key": "xn2",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "explorer",
+            "depth": 10,
+            "lane": 0,
+            "next": [
+              "xf2"
+            ]
+          },
+          {
+            "key": "xf2",
+            "type": "reward",
+            "branch": "explorer",
+            "depth": 11,
+            "lane": 0,
+            "next": [
+              "xe2"
+            ]
+          },
+          {
+            "key": "xe2",
+            "type": "event",
+            "branch": "explorer",
+            "depth": 12,
+            "lane": 0,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "hn",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "hard",
+            "depth": 7,
+            "lane": 3,
+            "next": [
+              "hd"
+            ]
+          },
+          {
+            "key": "hd",
+            "type": "encounter-elite",
+            "branch": "hard",
+            "depth": 8,
+            "lane": 3,
+            "next": [
+              "ht"
+            ]
+          },
+          {
+            "key": "ht",
+            "type": "treasure",
+            "branch": "hard",
+            "depth": 9,
+            "lane": 3,
+            "next": [
+              "he"
+            ]
+          },
+          {
+            "key": "he",
+            "type": "event",
+            "branch": "hard",
+            "depth": 10,
+            "lane": 3,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "b",
+            "type": "encounter-boss",
+            "branch": "shared",
+            "depth": 13,
+            "lane": 0,
+            "next": []
+          }
+        ],
+        "boss": "b",
+        "merchant": "m"
+      },
+      "after": {
+        "id": "explorer",
+        "name": "The Explorer",
+        "nodes": [
+          {
+            "key": "n1",
+            "type": "encounter-normal",
+            "band": "opening",
+            "branch": "shared",
+            "depth": 0,
+            "lane": 0,
+            "next": [
+              "e1"
+            ]
+          },
+          {
+            "key": "e1",
+            "type": "event",
+            "branch": "shared",
+            "depth": 1,
+            "lane": 0,
+            "next": [
+              "n2"
+            ]
+          },
+          {
+            "key": "n2",
+            "type": "encounter-normal",
+            "band": "mid",
+            "branch": "shared",
+            "depth": 2,
+            "lane": 0,
+            "next": [
+              "fa",
+              "fb"
+            ]
+          },
+          {
+            "key": "fa",
+            "type": "reward",
+            "branch": "shared",
+            "depth": 3,
+            "lane": -2,
+            "next": [
+              "da"
+            ]
+          },
+          {
+            "key": "da",
+            "type": "encounter-normal",
+            "branch": "shared",
+            "depth": 4,
+            "lane": -2,
+            "next": [
+              "m"
+            ],
+            "band": "mid"
+          },
+          {
+            "key": "fb",
+            "type": "reward",
+            "branch": "shared",
+            "depth": 3,
+            "lane": 2,
+            "next": [
+              "nb"
+            ]
+          },
+          {
+            "key": "nb",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "shared",
+            "depth": 4,
+            "lane": 2,
+            "next": [
+              "db"
+            ]
+          },
+          {
+            "key": "db",
+            "type": "encounter-elite",
+            "branch": "shared",
+            "depth": 5,
+            "lane": 2,
+            "next": [
+              "m"
+            ]
+          },
+          {
+            "key": "m",
+            "type": "merchant",
+            "branch": "shared",
+            "depth": 6,
+            "lane": 0,
+            "next": [
+              "s",
+              "xn1",
+              "hn"
+            ]
+          },
+          {
+            "key": "s",
+            "type": "shrine",
+            "branch": "shrine",
+            "depth": 7,
+            "lane": -3,
+            "next": [
+              "cn"
+            ]
+          },
+          {
+            "key": "cn",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "shrine",
+            "depth": 8,
+            "lane": -3,
+            "next": [
+              "ce"
+            ]
+          },
+          {
+            "key": "ce",
+            "type": "event",
+            "branch": "shrine",
+            "depth": 9,
+            "lane": -3,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "xn1",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "explorer",
+            "depth": 7,
+            "lane": 0,
+            "next": [
+              "xf1"
+            ]
+          },
+          {
+            "key": "xf1",
+            "type": "reward",
+            "branch": "explorer",
+            "depth": 8,
+            "lane": 0,
+            "next": [
+              "xe1"
+            ]
+          },
+          {
+            "key": "xe1",
+            "type": "event",
+            "branch": "explorer",
+            "depth": 9,
+            "lane": 0,
+            "next": [
+              "xn2"
+            ]
+          },
+          {
+            "key": "xn2",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "explorer",
+            "depth": 10,
+            "lane": 0,
+            "next": [
+              "xf2"
+            ]
+          },
+          {
+            "key": "xf2",
+            "type": "reward",
+            "branch": "explorer",
+            "depth": 11,
+            "lane": 0,
+            "next": [
+              "xe2"
+            ]
+          },
+          {
+            "key": "xe2",
+            "type": "event",
+            "branch": "explorer",
+            "depth": 12,
+            "lane": 0,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "hn",
+            "type": "encounter-normal",
+            "band": "late",
+            "branch": "hard",
+            "depth": 7,
+            "lane": 3,
+            "next": [
+              "hd"
+            ]
+          },
+          {
+            "key": "hd",
+            "type": "encounter-elite",
+            "branch": "hard",
+            "depth": 8,
+            "lane": 3,
+            "next": [
+              "ht"
+            ]
+          },
+          {
+            "key": "ht",
+            "type": "treasure",
+            "branch": "hard",
+            "depth": 9,
+            "lane": 3,
+            "next": [
+              "he"
+            ]
+          },
+          {
+            "key": "he",
+            "type": "event",
+            "branch": "hard",
+            "depth": 10,
+            "lane": 3,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "b",
+            "type": "encounter-boss",
+            "branch": "shared",
+            "depth": 13,
+            "lane": 0,
+            "next": []
+          }
+        ],
+        "boss": "b",
+        "merchant": "m"
+      },
+      "note": "",
+      "at": "2026-10-04T09:37:23.155Z"
     }
   ],
   "applied": [
@@ -750,5 +1251,5 @@
       "result": "Long-Job Spectacles: the first visitor each Encounter fulfilled on their arrival turn gives +1 Action and a draw next turn."
     }
   ],
-  "updatedAt": "2026-10-04T09:36:43.606Z"
+  "updatedAt": "2026-10-04T09:37:23.155Z"
 }
