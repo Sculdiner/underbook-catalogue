@@ -350,10 +350,10 @@
         "rarity": "rare",
         "price": 95,
         "text": "Books assigned to a visitor at 1 Patience gain +1 Value.",
-        "icon": "TradingIcons_108"
+        "icon": "addons_34_b"
       },
       "note": "",
-      "at": "2026-10-04T21:20:24.077Z"
+      "at": "2026-10-04T21:20:28.108Z"
     }
   ],
   "applied": [
@@ -3814,5 +3814,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T21:20:24.077Z"
+  "updatedAt": "2026-10-04T21:20:28.108Z"
 }
