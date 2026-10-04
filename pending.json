@@ -69,6 +69,28 @@
       },
       "note": "",
       "at": "2026-10-04T20:22:35.981Z"
+    },
+    {
+      "id": "muu9ueumd1pom",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "long-job-spectacles",
+      "before": {
+        "id": "long-job-spectacles",
+        "name": "Long-Job Spectacles",
+        "rarity": "common",
+        "price": 65,
+        "text": "The first time each Encounter that you fulfill a visitor on the turn they arrive, gain +1 Action and draw 1 next turn."
+      },
+      "after": {
+        "id": "long-job-spectacles",
+        "name": "Timelock Amber",
+        "rarity": "common",
+        "price": 65,
+        "text": "The first time each Encounter that you fulfill a visitor on the turn they arrive, gain +1 Action and draw 1 next turn."
+      },
+      "note": "",
+      "at": "2026-10-04T20:26:40.942Z"
     }
   ],
   "applied": [
@@ -3529,5 +3551,5 @@
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
     }
   ],
-  "updatedAt": "2026-10-04T20:26:29.958Z"
+  "updatedAt": "2026-10-04T20:26:40.942Z"
 }
