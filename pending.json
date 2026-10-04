@@ -548,7 +548,8 @@
             "arriveAfterTurn": 3,
             "name": "Antiquarian",
             "fulfillment": 4,
-            "patience": 3
+            "patience": 3,
+            "visitorDefId": "goat-priestess"
           },
           {
             "arriveAfterTurn": 4,
@@ -559,7 +560,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-04T17:24:55.407Z"
+      "at": "2026-10-04T17:24:57.794Z"
     }
   ],
   "applied": [
@@ -2744,5 +2745,5 @@
       "result": "Added as asked (Common, 45G, coin-pouch icon): each Merchant lays out one more Curio, and your first Refresh at each Merchant is free. Rename it on the site whenever you like."
     }
   ],
-  "updatedAt": "2026-10-04T17:24:55.407Z"
+  "updatedAt": "2026-10-04T17:24:57.794Z"
 }
