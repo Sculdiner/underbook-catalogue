@@ -461,7 +461,7 @@
         "merchant": "m"
       },
       "note": "",
-      "at": "2026-10-05T14:18:09.243Z"
+      "at": "2026-10-05T14:18:11.266Z"
     }
   ],
   "applied": [
@@ -4386,5 +4386,5 @@
       "result": "Renamed to Sleepless Lantern; it now works once per Encounter."
     }
   ],
-  "updatedAt": "2026-10-05T14:18:09.243Z"
+  "updatedAt": "2026-10-05T14:18:11.267Z"
 }
