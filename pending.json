@@ -391,7 +391,7 @@
             "type": "encounter-elite",
             "branch": "hard",
             "depth": 8,
-            "lane": 1,
+            "lane": 2,
             "next": [
               "ht"
             ]
@@ -423,7 +423,7 @@
             "type": "treasure",
             "branch": "hard",
             "depth": 9,
-            "lane": 1,
+            "lane": 2,
             "next": [
               "ce"
             ]
@@ -461,7 +461,7 @@
         "merchant": "m"
       },
       "note": "",
-      "at": "2026-10-05T14:17:42.726Z"
+      "at": "2026-10-05T14:17:45.024Z"
     }
   ],
   "applied": [
@@ -4386,5 +4386,5 @@
       "result": "Renamed to Sleepless Lantern; it now works once per Encounter."
     }
   ],
-  "updatedAt": "2026-10-05T14:17:42.726Z"
+  "updatedAt": "2026-10-05T14:17:45.024Z"
 }
