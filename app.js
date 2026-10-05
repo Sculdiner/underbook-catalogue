@@ -33,6 +33,7 @@ import {
   S,
   ability,
   ago,
+  artLargeUrl,
   artUrl,
   b64dec,
   b64enc,
@@ -237,7 +238,8 @@ const matches = (q, ...fields) => !q || fields.some((s) => String(s ?? '').toLow
 
 function bookCover(b, extra = '') {
   const v = `<span class="vbadge">V${b.value ?? '?'} · ${b.actionCost ?? 1}A</span>`;
-  if (hasArt('books', b.id)) return `<div class="cover ${extra}" style="background-image:url('${artUrl('books', b.id)}')">${v}</div>`;
+  if (hasArt('books', b.id))
+    return `<div class="cover zoomable ${extra}" ${zoomAttrs('books', b.id, b.title)} style="background-image:url('${artUrl('books', b.id)}')">${v}${ZOOM_BADGE}</div>`;
   return `<div class="cover placeholder ${extra}">${esc(b.title || b.id)}${v}</div>`;
 }
 
@@ -251,6 +253,77 @@ function curioIconUrl(c) {
   if (c.icon) return artUrl('library', c.icon);
   return hasArt('curios', c.id) ? artUrl('curios', c.id) : null;
 }
+
+/** The art a Curio's icon is drawn from, as [kind, id], or null when it has none. */
+function curioArt(c) {
+  if (c.icon) return ['library', c.icon];
+  return hasArt('curios', c.id) ? ['curios', c.id] : null;
+}
+
+// ------------------------------------------------------------------ enlarge view
+
+const ZOOM_BADGE = `<span class="zoom-badge" aria-hidden="true"><svg viewBox="0 0 24 24" width="14" height="14"><path d="M14 4h6v6M10 20H4v-6M20 4l-7 7M4 20l7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>`;
+
+/** Marks an image as tappable to enlarge: the viewer loads its large cut. */
+const zoomAttrs = (kind, id, title) => `data-zoom="${esc(kind)}" data-zoom-id="${esc(id)}" data-zoom-title="${esc(title ?? '')}" role="button" tabindex="0" aria-label="Enlarge"`;
+
+/** Full-screen view of one image: the thumbnail at once, swapped for the large cut once it loads. */
+function openZoom(kind, id, title) {
+  closeZoom(true);
+  const z = document.createElement('div');
+  z.className = 'zoom';
+  z.id = 'zoom';
+  z.setAttribute('role', 'dialog');
+  z.setAttribute('aria-modal', 'true');
+  z.innerHTML = `<button type="button" class="icon-btn zoom-close" aria-label="Close"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
+    <div class="zoom-frame ${kind}"><img class="zoom-img" src="${artUrl(kind, id)}" alt="${esc(title ?? '')}"></div>
+    ${title ? `<div class="zoom-title">${esc(title)}</div>` : ''}`;
+  document.body.append(z);
+  const big = artLargeUrl(kind, id);
+  if (big !== artUrl(kind, id)) {
+    const pre = new Image();
+    pre.onload = () => {
+      const img = z.querySelector('.zoom-img');
+      if (img) img.src = big;
+    };
+    pre.src = big;
+  }
+  z.addEventListener('click', () => closeZoom());
+  // Android's Back closes the view instead of leaving the page.
+  history.pushState({ zoom: true }, '');
+  requestAnimationFrame(() => z.classList.add('on'));
+  z.querySelector('.zoom-close').focus({ preventScroll: true });
+}
+
+/** Close the enlarge view; `quiet` skips the history step (Back already took it). */
+function closeZoom(quiet = false) {
+  const z = $('#zoom');
+  if (!z) return;
+  z.remove();
+  if (!quiet && history.state?.zoom) history.back();
+}
+
+window.addEventListener('popstate', () => closeZoom(true));
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && $('#zoom')) return closeZoom();
+  const t = e.target.closest?.('[data-zoom]');
+  if (t && (e.key === 'Enter' || e.key === ' ')) {
+    e.preventDefault();
+    openZoom(t.dataset.zoom, t.dataset.zoomId, t.dataset.zoomTitle);
+  }
+});
+// Capture, so a tap on an enlargeable image never reaches the card or sheet beneath it.
+document.addEventListener(
+  'click',
+  (e) => {
+    const t = e.target.closest?.('[data-zoom]');
+    if (!t) return;
+    e.preventDefault();
+    e.stopPropagation();
+    openZoom(t.dataset.zoom, t.dataset.zoomId, t.dataset.zoomTitle);
+  },
+  true,
+);
 
 /** The full icon set in a tall sheet, grouped by set; tapping one picks it for the open Curio. */
 function pickIcon() {
@@ -584,11 +657,12 @@ views.detail = {
     const curse = c.curse != null;
     const cls = curse ? 'curse' : c.rarity;
     const src = curioIconUrl(c);
+    const art = curioArt(c);
     const icon = src ? `style="background-image:url('${src}')"` : '';
     const opts = (list, cur) => list.map(([v, l]) => `<option value="${esc(v)}" ${String(cur ?? '') === String(v) ? 'selected' : ''}>${esc(l)}</option>`).join('');
     return `<div id="pending-slot">${pendingNotice(it)}</div>
       <fieldset class="inl-wrap" ${live ? '' : 'disabled'}>
-      <div class="hero"><button type="button" class="curio-icon big ${cls} pick-icon" ${icon} data-act="pick-icon" aria-label="Change the icon">${live ? '<span class="pick-badge">Change</span>' : ''}</button>
+      <div class="hero"><div class="icon-hold"><button type="button" class="curio-icon big ${cls} pick-icon" ${icon} data-act="pick-icon" aria-label="Change the icon">${live ? '<span class="pick-badge">Change</span>' : ''}</button>${art ? `<span class="zoom-btn" ${zoomAttrs(art[0], art[1], c.name)}>${ZOOM_BADGE}</span>` : ''}</div>
         <div class="info">
           <textarea class="inl inl-title" rows="1" data-ipath="name" placeholder="Name">${esc(c.name)}</textarea>
           <div class="tags">
@@ -655,17 +729,18 @@ views.detail = {
 };
 
 function portrait(id) {
-  if (id && hasArt('visitors', id)) return `<div class="portrait" style="background-image:url('${artUrl('visitors', id)}')"></div>`;
+  if (id && hasArt('visitors', id))
+    return `<div class="portrait zoomable" ${zoomAttrs('visitors', id, visitorDef(id)?.name)} style="background-image:url('${artUrl('visitors', id)}')">${ZOOM_BADGE}</div>`;
   return `<div class="portrait" title="Drawn from the crowd">?</div>`;
 }
 
 function visitorCard(v, edit = null) {
   const a = ability(v.abilityId);
   const attrs = edit ? `type="button" data-act="visitor-edit" data-key="${esc(edit.key)}" data-i="${edit.i}"` : 'type="button" disabled';
-  return `<button class="visitor ${v.headliner ? 'head' : ''}" ${attrs}>${portrait(v.visitorDefId)}
-    <div class="vb"><div class="vn">${esc(v.name || visitorDef(v.visitorDefId)?.name || 'Visitor')} ${v.headliner ? '<span class="tag legendary">Headliner</span>' : ''}</div>
+  // The portrait sits beside the button, not in it, so tapping it can enlarge it.
+  return `<div class="visitor ${v.headliner ? 'head' : ''}">${portrait(v.visitorDefId)}<button class="vb" ${attrs}><div class="vn">${esc(v.name || visitorDef(v.visitorDefId)?.name || 'Visitor')} ${v.headliner ? '<span class="tag legendary">Headliner</span>' : ''}</div>
     <div class="np"><span>Need <b>${v.fulfillment}</b></span><span>Patience <b>${v.patience}</b></span>${v.tag ? `<span>tag: ${esc(v.tag)}</span>` : ''}</div>
-    ${a ? `<div class="ab"><b>${esc(a.name)}.</b> ${esc(a.text)}</div>` : v.abilityId ? `<div class="ab"><b>${esc(v.abilityId)}</b> <span class="muted">(new ability — describe it in the note)</span></div>` : ''}</div></button>`;
+    ${a ? `<div class="ab"><b>${esc(a.name)}.</b> ${esc(a.text)}</div>` : v.abilityId ? `<div class="ab"><b>${esc(v.abilityId)}</b> <span class="muted">(new ability — describe it in the note)</span></div>` : ''}</button></div>`;
 }
 
 // ------------------------------------------------------------------ sheets (inline encounter editing)

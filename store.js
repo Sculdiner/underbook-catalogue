@@ -123,6 +123,8 @@ const ability = (id) => (id ? allAbilities().find((a) => a.id === id) : undefine
 const allAbilities = () => (S.cat ? items('abilities').filter((x) => x.pending?.op !== 'delete').map((x) => x.data) : []);
 const hasArt = (kind, id) => S.cat?.art?.[kind]?.includes(id);
 const artUrl = (kind, id) => `art/${kind}/${encodeURIComponent(id)}.webp`;
+/** The large cut behind the enlarge view; only books, Curios and visitors have one. */
+const artLargeUrl = (kind, id) => (['books', 'curios', 'visitors'].includes(kind) ? `art/${kind}-lg/${encodeURIComponent(id)}.webp` : artUrl(kind, id));
 
 async function loadCatalogue() {
   const r = await fetch(`data/catalogue.json?t=${Date.now()}`, { cache: 'no-store' });
@@ -411,6 +413,7 @@ export {
   S,
   ability,
   ago,
+  artLargeUrl,
   artUrl,
   b64dec,
   b64enc,
