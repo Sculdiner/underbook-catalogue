@@ -257,3 +257,11 @@ kbd { padding: 1px 6px; border-radius: 5px; background: rgba(255, 255, 255, .08)
 .ab-text { margin-top: 4px; font-size: .8rem; line-height: 1.4; color: var(--ink2); }
 .ab-shared { margin-top: 5px; font-size: .68rem; color: var(--ink3); }
 .pop-item.new b { color: var(--accent); }
+
+/* ---- enlarging a portrait: a corner ⤢ on hover (the view itself is in zoom.css) */
+.portrait { position: relative; }
+.zoom-hit { position: absolute; top: 2px; right: 2px; width: 22px; height: 22px; display: grid; place-items: center; pointer-events: auto; cursor: zoom-in; opacity: 0; transition: opacity .12s; }
+.zoom-hit .zoom-badge { position: static; width: 20px; height: 20px; border-radius: 6px; background: rgba(10, 8, 6, .8); }
+.zoom-hit .zoom-badge svg { width: 12px; height: 12px; }
+.portrait:hover .zoom-hit, .cast-item:hover .zoom-hit, .pop-item:hover .zoom-hit, .zoom-hit:focus-visible { opacity: 1; }
+.zoom-hit:hover .zoom-badge { background: var(--accent); color: #1a120b; }

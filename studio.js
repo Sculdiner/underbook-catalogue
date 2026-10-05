@@ -48,6 +48,7 @@ import {
   hasArt,
   artUrl,
 } from './store.js';
+import { ZOOM_BADGE, zoomAttrs } from './zoom.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
@@ -310,8 +311,11 @@ const STAGES = [0, 1, 2, 3, 4, 5];
 const opt = (list, cur) => list.map(([v, l]) => `<option value="${esc(v)}" ${String(cur ?? '') === String(v) ? 'selected' : ''}>${esc(l)}</option>`).join('');
 
 function portraitHtml(id, attrs = '') {
-  const bg = id && hasArt('visitors', id) ? `style="background-image:url('${artUrl('visitors', id)}')"` : '';
-  return `<button type="button" class="portrait" ${bg} ${attrs}>${bg ? '' : '?'}</button>`;
+  const art = id && hasArt('visitors', id);
+  const bg = art ? `style="background-image:url('${artUrl('visitors', id)}')"` : '';
+  // The corner ⤢ (shown on hover) enlarges it; a click anywhere else keeps the portrait's own action.
+  const zoom = art ? `<span class="zoom-hit" ${zoomAttrs('visitors', id, visitorDef(id)?.name)}>${ZOOM_BADGE}</span>` : '';
+  return `<button type="button" class="portrait" ${bg} ${attrs}>${art ? zoom : '?'}</button>`;
 }
 
 function encounterMain() {
