@@ -1,431 +1,6 @@
 {
   "version": 1,
-  "edits": [
-    {
-      "id": "muu6on6k2ul79",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "test",
-      "before": {
-        "id": "test",
-        "name": "Test",
-        "rarity": "common",
-        "price": 45,
-        "text": "Merchants offer an additional Curio, and the first time you refresh their wares at each Merchant it is free."
-      },
-      "after": {
-        "id": "test",
-        "name": "Hypnotic Necklace",
-        "rarity": "common",
-        "price": 45,
-        "text": "Merchants offer an additional Curio, and the first time you refresh their wares at each Merchant it is free.",
-        "icon": "WitchCraftIcons_95_b"
-      },
-      "note": "",
-      "at": "2026-10-04T18:58:26.623Z"
-    },
-    {
-      "id": "muu6rcg6uje7q",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "twin-spined-bookmark",
-      "before": {
-        "id": "twin-spined-bookmark",
-        "name": "Twin-Spined Bookmark",
-        "rarity": "common",
-        "price": 70,
-        "text": "When two books in a row played from your hand use your two different Traits, the third book gains +1 Value."
-      },
-      "after": {
-        "id": "twin-spined-bookmark",
-        "name": "Lost Tome",
-        "rarity": "common",
-        "price": 70,
-        "text": "When two books in a row played from your hand use your two different Traits, the third book gains +1 Value.",
-        "icon": "addons_12_b"
-      },
-      "note": "",
-      "at": "2026-10-04T20:35:34.340Z"
-    },
-    {
-      "id": "muu9ov37ofe1p",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "exact-change-purse",
-      "before": {
-        "id": "exact-change-purse",
-        "name": "Exact Change Purse",
-        "rarity": "common",
-        "price": 45,
-        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold."
-      },
-      "after": {
-        "id": "exact-change-purse",
-        "name": "Gold Ink",
-        "rarity": "common",
-        "price": 45,
-        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold.",
-        "icon": "NecromancerIcons_97_b"
-      },
-      "note": "",
-      "at": "2026-10-04T20:22:35.981Z"
-    },
-    {
-      "id": "muu9ueumd1pom",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "long-job-spectacles",
-      "before": {
-        "id": "long-job-spectacles",
-        "name": "Long-Job Spectacles",
-        "rarity": "common",
-        "price": 65,
-        "text": "The first time each Encounter that you fulfill a visitor on the turn they arrive, gain +1 Action and draw 1 next turn."
-      },
-      "after": {
-        "id": "long-job-spectacles",
-        "name": "Timelock Amber",
-        "rarity": "common",
-        "price": 65,
-        "text": "The first time each Encounter that you fulfill a visitor on the turn they arrive, gain +1 Action and draw 1 next turn.",
-        "icon": "ember_b_01"
-      },
-      "note": "",
-      "at": "2026-10-04T20:26:54.125Z"
-    },
-    {
-      "id": "muu9wpmpe4l7c",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "crowded-counter-sign",
-      "before": {
-        "id": "crowded-counter-sign",
-        "name": "Crowded Counter Sign",
-        "rarity": "common",
-        "price": 60,
-        "text": "The first time each Encounter that 4 or more visitors are waiting at the start of a turn, draw 1 and gain +1 Action that turn."
-      },
-      "after": {
-        "id": "crowded-counter-sign",
-        "name": "Lovely Waiting Stew",
-        "rarity": "common",
-        "price": 60,
-        "text": "The first time each Encounter that 4 or more visitors are waiting at the start of a turn, they all gain 1 fulfillment",
-        "icon": "NecromancerIcons_84_b"
-      },
-      "note": "",
-      "at": "2026-10-04T20:33:10.182Z"
-    },
-    {
-      "id": "muua3rpk6nqrb",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "golden-scarab-coin",
-      "before": {
-        "id": "golden-scarab-coin",
-        "name": "Golden Scarab Coin",
-        "rarity": "common",
-        "price": 75,
-        "text": "After you have fulfilled 20 visitors while carrying it, gain a Rare Summon and destroy this Curio."
-      },
-      "after": {
-        "id": "golden-scarab-coin",
-        "name": "Occult Riddle",
-        "rarity": "common",
-        "price": 75,
-        "text": "After you have fulfilled 20 visitors while carrying it, gain a Rare Summon and destroy this Curio.",
-        "icon": "NecromancerIcons_34_b"
-      },
-      "note": "",
-      "at": "2026-10-04T20:34:33.450Z"
-    },
-    {
-      "id": "muuavmm3dmevv",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "unwelcome-critics-monocle",
-      "before": {
-        "id": "unwelcome-critics-monocle",
-        "name": "Unwelcome Critic's Monocle",
-        "rarity": "uncommon",
-        "price": 75,
-        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
-      },
-      "after": {
-        "id": "unwelcome-critics-monocle",
-        "name": "Special Crown",
-        "rarity": "uncommon",
-        "price": 75,
-        "text": "Books assigned to visitors who have a visitor ability gain +1 Value.",
-        "icon": "addons_27_b"
-      },
-      "note": "",
-      "at": "2026-10-04T20:55:51.564Z"
-    },
-    {
-      "id": "muuaww0fz0kg3",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "standing-room-only",
-      "before": {
-        "id": "standing-room-only",
-        "name": "Standing Room Only",
-        "rarity": "uncommon",
-        "price": 85,
-        "text": "While 4 or more visitors are waiting, every book gains +1 Value."
-      },
-      "after": {
-        "id": "standing-room-only",
-        "name": "Empyrean Wax",
-        "rarity": "uncommon",
-        "price": 85,
-        "text": "While 4 or more visitors are waiting, every book gains +1 Value.",
-        "icon": "addons_08_b"
-      },
-      "note": "",
-      "at": "2026-10-04T20:57:07.035Z"
-    },
-    {
-      "id": "muub2q6whamdj",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "mixed-recommendations-ledger",
-      "before": {
-        "id": "mixed-recommendations-ledger",
-        "name": "Mixed Recommendations Ledger",
-        "rarity": "uncommon",
-        "price": 80,
-        "text": "Once a visitor holds a book of each of your two Traits, every further book assigned to them gives +1 Fulfillment more."
-      },
-      "after": {
-        "id": "mixed-recommendations-ledger",
-        "name": "Animating Chains",
-        "rarity": "uncommon",
-        "price": 80,
-        "text": "Once a visitor holds a book of each of your two Traits, every further book assigned to them gives +1 Fulfillment more.",
-        "icon": "rings_b_02"
-      },
-      "note": "",
-      "at": "2026-10-04T21:01:08.504Z"
-    },
-    {
-      "id": "muub79bu2lngx",
-      "kind": "curios",
-      "op": "delete",
-      "targetId": "queuemasters-chalk",
-      "before": {
-        "id": "queuemasters-chalk",
-        "name": "Queuemaster's Chalk",
-        "rarity": "uncommon",
-        "price": 80,
-        "text": "Whenever you fulfill the newest visitor while someone who came earlier still waits, the one who has waited longest gains +1 Patience."
-      },
-      "after": null,
-      "note": "",
-      "at": "2026-10-04T21:04:39.930Z"
-    },
-    {
-      "id": "muub7q3w9t2o5",
-      "kind": "curios",
-      "op": "delete",
-      "targetId": "wave-receipt",
-      "before": {
-        "id": "wave-receipt",
-        "name": "Wave Receipt",
-        "rarity": "uncommon",
-        "price": 75,
-        "text": "Books assigned to visitors of the latest arrival wave gain +1 Value, until the next wave arrives."
-      },
-      "after": null,
-      "note": "",
-      "at": "2026-10-04T21:05:01.675Z"
-    },
-    {
-      "id": "muub9eh7ijola",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "complaint-department-stamp",
-      "before": {
-        "id": "complaint-department-stamp",
-        "name": "Complaint Department Stamp",
-        "rarity": "uncommon",
-        "price": 75,
-        "text": "When a visitor's ability lowers a book's Value, or discards or DESTROYs one of your books, books you assign to that visitor gain +1 Value for the rest of the Encounter."
-      },
-      "after": {
-        "id": "complaint-department-stamp",
-        "name": "Orb of Remorse",
-        "rarity": "uncommon",
-        "price": 75,
-        "text": "When a visitor's ability lowers a book's Value, or discards or DESTROYs one of your books, books you assign to that visitor gain +1 Value for the rest of the Encounter.",
-        "icon": "BlueLootBox_61_b"
-      },
-      "note": "",
-      "at": "2026-10-04T21:07:04.031Z"
-    },
-    {
-      "id": "muubbau6z9bh0",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "overbooking-ledger",
-      "before": {
-        "id": "overbooking-ledger",
-        "name": "Overbooking Ledger",
-        "rarity": "uncommon",
-        "price": 75,
-        "text": "Whenever you fulfill a visitor while 4 or more others are still waiting, gain 4 Gold."
-      },
-      "after": {
-        "id": "overbooking-ledger",
-        "name": "Queue Delicacies",
-        "rarity": "uncommon",
-        "price": 75,
-        "text": "Whenever you fulfill a visitor while 4 or more others are still waiting, gain 5 Gold.",
-        "icon": "NecromancerIcons_33_b"
-      },
-      "note": "",
-      "at": "2026-10-04T21:08:55.351Z"
-    },
-    {
-      "id": "muubhhrrsqaoh",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "patrons-pocket-watch",
-      "before": {
-        "id": "patrons-pocket-watch",
-        "name": "Patron's Pocket Watch",
-        "rarity": "uncommon",
-        "price": 85,
-        "text": "Books assigned to a visitor whose Patience is above what they arrived with gain +2 Value."
-      },
-      "after": {
-        "id": "patrons-pocket-watch",
-        "name": "Lost Epochs Ring",
-        "rarity": "uncommon",
-        "price": 85,
-        "text": "Once per encounter: if all visitors have a book assigned, draw 1 extra book at random from your discard pile next turn.",
-        "icon": "NecromancerIcons_48_b"
-      },
-      "note": "",
-      "at": "2026-10-04T21:15:27.547Z"
-    },
-    {
-      "id": "muubnxcjwo13k",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "crooked-queue-ticket",
-      "before": {
-        "id": "crooked-queue-ticket",
-        "name": "Crooked Queue Ticket",
-        "rarity": "rare",
-        "price": 95,
-        "text": "Books assigned to a visitor on the turn that visitor arrives gain +1 Value."
-      },
-      "after": {
-        "id": "crooked-queue-ticket",
-        "name": "Underjade Colorings",
-        "rarity": "rare",
-        "price": 95,
-        "text": "Books assigned to a visitor on the turn that visitor arrives gain +1 Value.",
-        "icon": "artifact_02_b"
-      },
-      "note": "",
-      "at": "2026-10-04T21:17:57.780Z"
-    },
-    {
-      "id": "muubrb8j103pd",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "red-string-bookmark",
-      "before": {
-        "id": "red-string-bookmark",
-        "name": "Red String Bookmark",
-        "rarity": "rare",
-        "price": 95,
-        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
-      },
-      "after": {
-        "id": "red-string-bookmark",
-        "name": "Talisman of the Anger",
-        "rarity": "rare",
-        "price": 95,
-        "text": "Books assigned to a visitor at 1 Patience gain +1 Value.",
-        "icon": "addons_34_b"
-      },
-      "note": "",
-      "at": "2026-10-04T21:20:34.843Z"
-    },
-    {
-      "id": "muubtsj2hk4b9",
-      "kind": "curios",
-      "op": "delete",
-      "targetId": "balanced-shelves",
-      "before": {
-        "id": "balanced-shelves",
-        "name": "Balanced Shelves",
-        "rarity": "rare",
-        "price": 100,
-        "text": "While your deck holds within 1 as many books of one of your Traits as of the other, books of either Trait gain +1 Value. Neutral books are not counted."
-      },
-      "after": null,
-      "note": "",
-      "at": "2026-10-04T21:22:11.246Z"
-    },
-    {
-      "id": "muubv2zngmxy2",
-      "kind": "curios",
-      "op": "delete",
-      "targetId": "double-entry-catalogue",
-      "before": {
-        "id": "double-entry-catalogue",
-        "name": "Double-Entry Catalogue",
-        "rarity": "rare",
-        "price": 100,
-        "text": "Once a visitor holds a book of each of your two Traits, every further book assigned to them gains +2 Value."
-      },
-      "after": null,
-      "note": "",
-      "at": "2026-10-04T21:23:11.458Z"
-    },
-    {
-      "id": "muubvfbzkv3r0",
-      "kind": "curios",
-      "op": "delete",
-      "targetId": "retinue-ledger",
-      "before": {
-        "id": "retinue-ledger",
-        "name": "Retinue Ledger",
-        "rarity": "rare",
-        "price": 105,
-        "text": "Whenever you fulfill a visitor, every other waiting visitor from the same arrival wave gains +1 Fulfillment."
-      },
-      "after": null,
-      "note": "",
-      "at": "2026-10-04T21:23:27.455Z"
-    },
-    {
-      "id": "muubwjji6mr0e",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "night-clerks-ledger",
-      "before": {
-        "id": "night-clerks-ledger",
-        "name": "Night Clerk's Ledger",
-        "rarity": "rare",
-        "price": 100,
-        "text": "If you fulfill 2 or more visitors in a turn, nobody loses Patience at the end of that turn."
-      },
-      "after": {
-        "id": "night-clerks-ledger",
-        "name": "Sleepless Lantern",
-        "rarity": "rare",
-        "price": 100,
-        "text": "Once per encounter: If you fulfill 2 or more visitors in a turn, nobody loses Patience at the end of that turn."
-      },
-      "note": "",
-      "at": "2026-10-04T21:25:36.209Z"
-    }
-  ],
+  "edits": [],
   "applied": [
     {
       "id": "muszs8hhe8um8",
@@ -3882,7 +3457,471 @@
       "at": "2026-10-04T17:16:12.616Z",
       "appliedAt": "2026-10-04T18:42:45.833Z",
       "result": "Done: the Duchess is now a Stage 2 Boss; Stage 1 always ends on the Warlock."
+    },
+    {
+      "id": "muu6on6k2ul79",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "test",
+      "before": {
+        "id": "test",
+        "name": "Test",
+        "rarity": "common",
+        "price": 45,
+        "text": "Merchants offer an additional Curio, and the first time you refresh their wares at each Merchant it is free."
+      },
+      "after": {
+        "id": "test",
+        "name": "Hypnotic Necklace",
+        "rarity": "common",
+        "price": 45,
+        "text": "Merchants offer an additional Curio, and the first time you refresh their wares at each Merchant it is free.",
+        "icon": "WitchCraftIcons_95_b"
+      },
+      "note": "",
+      "at": "2026-10-04T18:58:26.623Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Hypnotic Necklace with the new icon."
+    },
+    {
+      "id": "muu6rcg6uje7q",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "twin-spined-bookmark",
+      "before": {
+        "id": "twin-spined-bookmark",
+        "name": "Twin-Spined Bookmark",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two books in a row played from your hand use your two different Traits, the third book gains +1 Value."
+      },
+      "after": {
+        "id": "twin-spined-bookmark",
+        "name": "Lost Tome",
+        "rarity": "common",
+        "price": 70,
+        "text": "When two books in a row played from your hand use your two different Traits, the third book gains +1 Value.",
+        "icon": "addons_12_b"
+      },
+      "note": "",
+      "at": "2026-10-04T20:35:34.340Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Lost Tome with the new icon."
+    },
+    {
+      "id": "muu9ov37ofe1p",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "exact-change-purse",
+      "before": {
+        "id": "exact-change-purse",
+        "name": "Exact Change Purse",
+        "rarity": "common",
+        "price": 45,
+        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold."
+      },
+      "after": {
+        "id": "exact-change-purse",
+        "name": "Gold Ink",
+        "rarity": "common",
+        "price": 45,
+        "text": "Whenever you fulfill a visitor exactly at their Need, gain 3 Gold.",
+        "icon": "NecromancerIcons_97_b"
+      },
+      "note": "",
+      "at": "2026-10-04T20:22:35.981Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Gold Ink with the new icon."
+    },
+    {
+      "id": "muu9ueumd1pom",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "long-job-spectacles",
+      "before": {
+        "id": "long-job-spectacles",
+        "name": "Long-Job Spectacles",
+        "rarity": "common",
+        "price": 65,
+        "text": "The first time each Encounter that you fulfill a visitor on the turn they arrive, gain +1 Action and draw 1 next turn."
+      },
+      "after": {
+        "id": "long-job-spectacles",
+        "name": "Timelock Amber",
+        "rarity": "common",
+        "price": 65,
+        "text": "The first time each Encounter that you fulfill a visitor on the turn they arrive, gain +1 Action and draw 1 next turn.",
+        "icon": "ember_b_01"
+      },
+      "note": "",
+      "at": "2026-10-04T20:26:54.125Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Timelock Amber with the new icon."
+    },
+    {
+      "id": "muu9wpmpe4l7c",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "crowded-counter-sign",
+      "before": {
+        "id": "crowded-counter-sign",
+        "name": "Crowded Counter Sign",
+        "rarity": "common",
+        "price": 60,
+        "text": "The first time each Encounter that 4 or more visitors are waiting at the start of a turn, draw 1 and gain +1 Action that turn."
+      },
+      "after": {
+        "id": "crowded-counter-sign",
+        "name": "Lovely Waiting Stew",
+        "rarity": "common",
+        "price": 60,
+        "text": "The first time each Encounter that 4 or more visitors are waiting at the start of a turn, they all gain 1 fulfillment",
+        "icon": "NecromancerIcons_84_b"
+      },
+      "note": "",
+      "at": "2026-10-04T20:33:10.182Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Lovely Waiting Stew; it now gives everyone waiting +1 Fulfillment, with the new icon."
+    },
+    {
+      "id": "muua3rpk6nqrb",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "golden-scarab-coin",
+      "before": {
+        "id": "golden-scarab-coin",
+        "name": "Golden Scarab Coin",
+        "rarity": "common",
+        "price": 75,
+        "text": "After you have fulfilled 20 visitors while carrying it, gain a Rare Summon and destroy this Curio."
+      },
+      "after": {
+        "id": "golden-scarab-coin",
+        "name": "Occult Riddle",
+        "rarity": "common",
+        "price": 75,
+        "text": "After you have fulfilled 20 visitors while carrying it, gain a Rare Summon and destroy this Curio.",
+        "icon": "NecromancerIcons_34_b"
+      },
+      "note": "",
+      "at": "2026-10-04T20:34:33.450Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Occult Riddle with the new icon."
+    },
+    {
+      "id": "muuavmm3dmevv",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "unwelcome-critics-monocle",
+      "before": {
+        "id": "unwelcome-critics-monocle",
+        "name": "Unwelcome Critic's Monocle",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
+      },
+      "after": {
+        "id": "unwelcome-critics-monocle",
+        "name": "Special Crown",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "Books assigned to visitors who have a visitor ability gain +1 Value.",
+        "icon": "addons_27_b"
+      },
+      "note": "",
+      "at": "2026-10-04T20:55:51.564Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Special Crown with the new icon."
+    },
+    {
+      "id": "muuaww0fz0kg3",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "standing-room-only",
+      "before": {
+        "id": "standing-room-only",
+        "name": "Standing Room Only",
+        "rarity": "uncommon",
+        "price": 85,
+        "text": "While 4 or more visitors are waiting, every book gains +1 Value."
+      },
+      "after": {
+        "id": "standing-room-only",
+        "name": "Empyrean Wax",
+        "rarity": "uncommon",
+        "price": 85,
+        "text": "While 4 or more visitors are waiting, every book gains +1 Value.",
+        "icon": "addons_08_b"
+      },
+      "note": "",
+      "at": "2026-10-04T20:57:07.035Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Empyrean Wax with the new icon."
+    },
+    {
+      "id": "muub2q6whamdj",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "mixed-recommendations-ledger",
+      "before": {
+        "id": "mixed-recommendations-ledger",
+        "name": "Mixed Recommendations Ledger",
+        "rarity": "uncommon",
+        "price": 80,
+        "text": "Once a visitor holds a book of each of your two Traits, every further book assigned to them gives +1 Fulfillment more."
+      },
+      "after": {
+        "id": "mixed-recommendations-ledger",
+        "name": "Animating Chains",
+        "rarity": "uncommon",
+        "price": 80,
+        "text": "Once a visitor holds a book of each of your two Traits, every further book assigned to them gives +1 Fulfillment more.",
+        "icon": "rings_b_02"
+      },
+      "note": "",
+      "at": "2026-10-04T21:01:08.504Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Animating Chains with the new icon."
+    },
+    {
+      "id": "muub79bu2lngx",
+      "kind": "curios",
+      "op": "delete",
+      "targetId": "queuemasters-chalk",
+      "before": {
+        "id": "queuemasters-chalk",
+        "name": "Queuemaster's Chalk",
+        "rarity": "uncommon",
+        "price": 80,
+        "text": "Whenever you fulfill the newest visitor while someone who came earlier still waits, the one who has waited longest gains +1 Patience."
+      },
+      "after": null,
+      "note": "",
+      "at": "2026-10-04T21:04:39.930Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Queuemaster's Chalk deleted."
+    },
+    {
+      "id": "muub7q3w9t2o5",
+      "kind": "curios",
+      "op": "delete",
+      "targetId": "wave-receipt",
+      "before": {
+        "id": "wave-receipt",
+        "name": "Wave Receipt",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "Books assigned to visitors of the latest arrival wave gain +1 Value, until the next wave arrives."
+      },
+      "after": null,
+      "note": "",
+      "at": "2026-10-04T21:05:01.675Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Wave Receipt deleted."
+    },
+    {
+      "id": "muub9eh7ijola",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "complaint-department-stamp",
+      "before": {
+        "id": "complaint-department-stamp",
+        "name": "Complaint Department Stamp",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "When a visitor's ability lowers a book's Value, or discards or DESTROYs one of your books, books you assign to that visitor gain +1 Value for the rest of the Encounter."
+      },
+      "after": {
+        "id": "complaint-department-stamp",
+        "name": "Orb of Remorse",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "When a visitor's ability lowers a book's Value, or discards or DESTROYs one of your books, books you assign to that visitor gain +1 Value for the rest of the Encounter.",
+        "icon": "BlueLootBox_61_b"
+      },
+      "note": "",
+      "at": "2026-10-04T21:07:04.031Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Orb of Remorse with the new icon."
+    },
+    {
+      "id": "muubbau6z9bh0",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "overbooking-ledger",
+      "before": {
+        "id": "overbooking-ledger",
+        "name": "Overbooking Ledger",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "Whenever you fulfill a visitor while 4 or more others are still waiting, gain 4 Gold."
+      },
+      "after": {
+        "id": "overbooking-ledger",
+        "name": "Queue Delicacies",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "Whenever you fulfill a visitor while 4 or more others are still waiting, gain 5 Gold.",
+        "icon": "NecromancerIcons_33_b"
+      },
+      "note": "",
+      "at": "2026-10-04T21:08:55.351Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Queue Delicacies, now 5 Gold, with the new icon."
+    },
+    {
+      "id": "muubhhrrsqaoh",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "patrons-pocket-watch",
+      "before": {
+        "id": "patrons-pocket-watch",
+        "name": "Patron's Pocket Watch",
+        "rarity": "uncommon",
+        "price": 85,
+        "text": "Books assigned to a visitor whose Patience is above what they arrived with gain +2 Value."
+      },
+      "after": {
+        "id": "patrons-pocket-watch",
+        "name": "Lost Epochs Ring",
+        "rarity": "uncommon",
+        "price": 85,
+        "text": "Once per encounter: if all visitors have a book assigned, draw 1 extra book at random from your discard pile next turn.",
+        "icon": "NecromancerIcons_48_b"
+      },
+      "note": "",
+      "at": "2026-10-04T21:15:27.547Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Now the Lost Epochs Ring: once per Encounter, the moment every waiting visitor holds a book, draw 1 random book from the discard next turn."
+    },
+    {
+      "id": "muubnxcjwo13k",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "crooked-queue-ticket",
+      "before": {
+        "id": "crooked-queue-ticket",
+        "name": "Crooked Queue Ticket",
+        "rarity": "rare",
+        "price": 95,
+        "text": "Books assigned to a visitor on the turn that visitor arrives gain +1 Value."
+      },
+      "after": {
+        "id": "crooked-queue-ticket",
+        "name": "Underjade Colorings",
+        "rarity": "rare",
+        "price": 95,
+        "text": "Books assigned to a visitor on the turn that visitor arrives gain +1 Value.",
+        "icon": "artifact_02_b"
+      },
+      "note": "",
+      "at": "2026-10-04T21:17:57.780Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Underjade Colorings with the new icon."
+    },
+    {
+      "id": "muubrb8j103pd",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "red-string-bookmark",
+      "before": {
+        "id": "red-string-bookmark",
+        "name": "Red String Bookmark",
+        "rarity": "rare",
+        "price": 95,
+        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
+      },
+      "after": {
+        "id": "red-string-bookmark",
+        "name": "Talisman of the Anger",
+        "rarity": "rare",
+        "price": 95,
+        "text": "Books assigned to a visitor at 1 Patience gain +1 Value.",
+        "icon": "addons_34_b"
+      },
+      "note": "",
+      "at": "2026-10-04T21:20:34.843Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Talisman of the Anger with the new icon."
+    },
+    {
+      "id": "muubtsj2hk4b9",
+      "kind": "curios",
+      "op": "delete",
+      "targetId": "balanced-shelves",
+      "before": {
+        "id": "balanced-shelves",
+        "name": "Balanced Shelves",
+        "rarity": "rare",
+        "price": 100,
+        "text": "While your deck holds within 1 as many books of one of your Traits as of the other, books of either Trait gain +1 Value. Neutral books are not counted."
+      },
+      "after": null,
+      "note": "",
+      "at": "2026-10-04T21:22:11.246Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Balanced Shelves deleted."
+    },
+    {
+      "id": "muubv2zngmxy2",
+      "kind": "curios",
+      "op": "delete",
+      "targetId": "double-entry-catalogue",
+      "before": {
+        "id": "double-entry-catalogue",
+        "name": "Double-Entry Catalogue",
+        "rarity": "rare",
+        "price": 100,
+        "text": "Once a visitor holds a book of each of your two Traits, every further book assigned to them gains +2 Value."
+      },
+      "after": null,
+      "note": "",
+      "at": "2026-10-04T21:23:11.458Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Double-Entry Catalogue deleted."
+    },
+    {
+      "id": "muubvfbzkv3r0",
+      "kind": "curios",
+      "op": "delete",
+      "targetId": "retinue-ledger",
+      "before": {
+        "id": "retinue-ledger",
+        "name": "Retinue Ledger",
+        "rarity": "rare",
+        "price": 105,
+        "text": "Whenever you fulfill a visitor, every other waiting visitor from the same arrival wave gains +1 Fulfillment."
+      },
+      "after": null,
+      "note": "",
+      "at": "2026-10-04T21:23:27.455Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Retinue Ledger deleted."
+    },
+    {
+      "id": "muubwjji6mr0e",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "night-clerks-ledger",
+      "before": {
+        "id": "night-clerks-ledger",
+        "name": "Night Clerk's Ledger",
+        "rarity": "rare",
+        "price": 100,
+        "text": "If you fulfill 2 or more visitors in a turn, nobody loses Patience at the end of that turn."
+      },
+      "after": {
+        "id": "night-clerks-ledger",
+        "name": "Sleepless Lantern",
+        "rarity": "rare",
+        "price": 100,
+        "text": "Once per encounter: If you fulfill 2 or more visitors in a turn, nobody loses Patience at the end of that turn."
+      },
+      "note": "",
+      "at": "2026-10-04T21:25:36.209Z",
+      "appliedAt": "2026-10-05T07:11:29.235Z",
+      "result": "Renamed to Sleepless Lantern; it now works once per Encounter."
     }
   ],
-  "updatedAt": "2026-10-04T21:25:36.209Z"
+  "updatedAt": "2026-10-05T07:11:29.236Z"
 }
