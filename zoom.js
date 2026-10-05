@@ -36,7 +36,11 @@ export function openZoom(kind, id, title) {
     };
     pre.src = big;
   }
-  z.addEventListener('click', () => closeZoom());
+  // A click that closes the view stays here, so it never closes a popover beneath it.
+  z.addEventListener('click', (e) => {
+    e.stopPropagation();
+    closeZoom();
+  });
   // Back closes the view instead of leaving the page.
   history.pushState({ zoom: true }, '');
   requestAnimationFrame(() => z.classList.add('on'));
