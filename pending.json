@@ -719,6 +719,29 @@
       },
       "note": "",
       "at": "2026-10-06T21:39:50.284Z"
+    },
+    {
+      "id": "mux7dg2pb3bj9",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "great-queue-ledger",
+      "before": {
+        "id": "great-queue-ledger",
+        "name": "The Great Queue Ledger",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Every 5th visitor you fulfill gains you +1 Action at once. The count carries across the Stage and resets when a new Stage begins."
+      },
+      "after": {
+        "id": "great-queue-ledger",
+        "name": "The Great Queue Ledger",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Every 5th visitor you fulfill gains you +1 Action at once. The count carries across the Stage and resets when a new Stage begins.",
+        "icon": "PrehistoricIcon_115_b"
+      },
+      "note": "",
+      "at": "2026-10-06T21:40:48.673Z"
     }
   ],
   "applied": [
@@ -5361,5 +5384,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:39:50.284Z"
+  "updatedAt": "2026-10-06T21:40:48.673Z"
 }
