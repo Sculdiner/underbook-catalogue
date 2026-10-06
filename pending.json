@@ -650,6 +650,29 @@
       },
       "note": "",
       "at": "2026-10-06T21:37:50.809Z"
+    },
+    {
+      "id": "mux7aqc92yqmd",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "perfectly-balanced-inventory",
+      "before": {
+        "id": "perfectly-balanced-inventory",
+        "name": "Perfectly Balanced Inventory",
+        "rarity": "legendary",
+        "price": 110,
+        "text": "While your deck holds exactly as many books of one of your Traits as of the other, books of either Trait gain +2 Value. Neutral books are not counted."
+      },
+      "after": {
+        "id": "perfectly-balanced-inventory",
+        "name": "Perfectly Balanced Inventory",
+        "rarity": "legendary",
+        "price": 110,
+        "text": "While your deck holds exactly as many books of one of your Traits as of the other, books of either Trait gain +2 Value. Neutral books are not counted.",
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-06T21:38:42.008Z"
     }
   ],
   "applied": [
@@ -5292,5 +5315,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:37:50.809Z"
+  "updatedAt": "2026-10-06T21:38:42.009Z"
 }
