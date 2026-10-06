@@ -1,6 +1,87 @@
 {
   "version": 1,
-  "edits": [],
+  "edits": [
+    {
+      "id": "muwxdxdt1eu5n",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "megatome-of-dinosaurs",
+      "before": {
+        "actionCost": 2,
+        "copies": 1,
+        "id": "megatome-of-dinosaurs",
+        "title": "Megatome of Dinosaurs",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "value": 6,
+        "shortText": "Costs 2 Actions. Neighbours get half its Value.",
+        "rulesText": "Assigning this costs 2 Actions. On Assign: adjacent visitors gain Fulfillment equal to half this book's current Value, rounded down.",
+        "rebinds": [
+          {
+            "id": "megatome-of-dinosaurs:bigger-dinosaurs",
+            "name": "Bigger Dinosaurs",
+            "before": "Value 6",
+            "after": "Value 8",
+            "text": "Printed Value 8. Still 2 Actions; neighbours get half its current Value."
+          },
+          {
+            "id": "megatome-of-dinosaurs:abridged-megatome",
+            "name": "Abridged Megatome",
+            "before": "Action Cost 2",
+            "after": "Action Cost 1",
+            "text": "Assigning this copy costs 1 Action. Still Value 6; neighbours get half its current Value."
+          },
+          {
+            "id": "megatome-of-dinosaurs:gentle-giants",
+            "name": "Gentle Giants",
+            "before": "Neighbours +half Value",
+            "after": "Neighbours +half Value and +1 Patience",
+            "text": "On Assign: adjacent visitors gain Fulfillment equal to half this book's current Value, rounded down, and +1 Patience."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 2,
+        "copies": 1,
+        "id": "megatome-of-dinosaurs",
+        "title": "Megatome of Dinosaurs",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "value": 4,
+        "shortText": "Costs 2 Actions. Neighbours get half its Value.",
+        "rulesText": "Assigning this costs 2 Actions. On Assign: adjacent visitors gain Fulfillment equal to half this book's current Value, rounded down.",
+        "rebinds": [
+          {
+            "id": "megatome-of-dinosaurs:bigger-dinosaurs",
+            "name": "Bigger Dinosaurs",
+            "before": "Value 6",
+            "after": "Value 8",
+            "text": "Printed Value 8. Still 2 Actions; neighbours get half its current Value."
+          },
+          {
+            "id": "megatome-of-dinosaurs:abridged-megatome",
+            "name": "Abridged Megatome",
+            "before": "Action Cost 2",
+            "after": "Action Cost 1",
+            "text": "Assigning this copy costs 1 Action. Still Value 6; neighbours get half its current Value."
+          },
+          {
+            "id": "megatome-of-dinosaurs:gentle-giants",
+            "name": "Gentle Giants",
+            "before": "Neighbours +half Value",
+            "after": "Neighbours +half Value and +1 Patience",
+            "text": "On Assign: adjacent visitors gain Fulfillment equal to half this book's current Value, rounded down, and +1 Patience."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-06T17:01:14.945Z"
+    }
+  ],
   "applied": [
     {
       "id": "muszs8hhe8um8",
@@ -4387,5 +4468,5 @@
       "result": "The Explorer's Shrine and hard branches now sit on lanes −2 and 2 in the game."
     }
   ],
-  "updatedAt": "2026-10-05T19:09:29.341Z"
+  "updatedAt": "2026-10-06T17:01:14.945Z"
 }
