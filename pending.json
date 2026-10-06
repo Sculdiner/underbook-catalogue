@@ -244,7 +244,7 @@
             "name": "More Tentacles",
             "before": "1 book",
             "after": "2 books",
-            "text": "On Assign: tentacles take 3 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve."
+            "text": "On Assign: tentacles take 2 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve. Then destroy them"
           },
           {
             "id": "monsters-of-the-deep:crushing-tentacles",
@@ -256,7 +256,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-06T20:41:04.703Z"
+      "at": "2026-10-06T20:41:16.579Z"
     }
   ],
   "applied": [
@@ -4899,5 +4899,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:41:04.703Z"
+  "updatedAt": "2026-10-06T20:41:16.580Z"
 }
