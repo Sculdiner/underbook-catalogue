@@ -673,6 +673,29 @@
       },
       "note": "",
       "at": "2026-10-06T21:38:42.008Z"
+    },
+    {
+      "id": "mux7avwx0fcmf",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "retinues-book-of-etiquette",
+      "before": {
+        "id": "retinues-book-of-etiquette",
+        "name": "The Retinue's Book of Etiquette",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Fulfillment."
+      },
+      "after": {
+        "id": "retinues-book-of-etiquette",
+        "name": "The Retinue's Book of Etiquette",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Fulfillment.",
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-06T21:38:49.233Z"
     }
   ],
   "applied": [
@@ -5315,5 +5338,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:38:42.009Z"
+  "updatedAt": "2026-10-06T21:38:49.233Z"
 }
