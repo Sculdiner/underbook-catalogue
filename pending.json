@@ -581,6 +581,28 @@
       },
       "note": "",
       "at": "2026-10-06T21:34:15.201Z"
+    },
+    {
+      "id": "mux76m7eaews2",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "hostile-readers-seal",
+      "before": {
+        "id": "hostile-readers-seal",
+        "name": "Hostile Reader's Seal",
+        "rarity": "rare",
+        "price": 95,
+        "text": "Books assigned to visitors who have a visitor ability gain +2 Value. Ordinary visitors get nothing."
+      },
+      "after": {
+        "id": "hostile-readers-seal",
+        "name": "Hostile Reader's Seal",
+        "rarity": "legendary",
+        "price": 95,
+        "text": "Books assigned to visitors who have a visitor ability gain +2 Value. Ordinary visitors get nothing."
+      },
+      "note": "",
+      "at": "2026-10-06T21:35:30.026Z"
     }
   ],
   "applied": [
@@ -5223,5 +5245,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:34:15.201Z"
+  "updatedAt": "2026-10-06T21:35:30.027Z"
 }
