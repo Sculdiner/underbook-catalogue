@@ -60,7 +60,7 @@
             "name": "Bigger Dinosaurs",
             "before": "Value 4",
             "after": "Value 6",
-            "text": "Printed Value 8. Still 2 Actions; neighbours get half its current Value."
+            "text": "Printed Value 6. Still 2 Actions; neighbours get half its current Value."
           },
           {
             "id": "megatome-of-dinosaurs:abridged-megatome",
@@ -79,7 +79,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-06T17:01:37.375Z"
+      "at": "2026-10-06T17:01:47.551Z"
     }
   ],
   "applied": [
@@ -4468,5 +4468,5 @@
       "result": "The Explorer's Shrine and hard branches now sit on lanes −2 and 2 in the game."
     }
   ],
-  "updatedAt": "2026-10-06T17:01:37.375Z"
+  "updatedAt": "2026-10-06T17:01:47.551Z"
 }
