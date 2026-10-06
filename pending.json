@@ -248,7 +248,7 @@
           },
           {
             "id": "monsters-of-the-deep:crushing-tentacles",
-            "name": "Crushing Tentacles",
+            "name": "Softer Tentacles",
             "before": "2 hand books",
             "after": "2 hand books, each +1 Value",
             "text": "On Assign: tentacles take 2 random books from your hand; each gains +1 Value, then is assigned to a randomly chosen valid visitor for 0 Actions."
@@ -256,7 +256,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-06T20:41:16.579Z"
+      "at": "2026-10-06T20:42:11.865Z"
     }
   ],
   "applied": [
@@ -4899,5 +4899,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:41:16.580Z"
+  "updatedAt": "2026-10-06T20:42:11.871Z"
 }
