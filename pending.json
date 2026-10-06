@@ -242,7 +242,7 @@
           {
             "id": "monsters-of-the-deep:more-tentacles",
             "name": "More Tentacles",
-            "before": "2 hand books",
+            "before": "1 book",
             "after": "3 hand books",
             "text": "On Assign: tentacles take 3 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve."
           },
@@ -256,7 +256,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-06T20:40:48.705Z"
+      "at": "2026-10-06T20:40:58.102Z"
     }
   ],
   "applied": [
@@ -4899,5 +4899,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:40:48.705Z"
+  "updatedAt": "2026-10-06T20:40:58.102Z"
 }
