@@ -627,6 +627,29 @@
       },
       "note": "",
       "at": "2026-10-06T21:37:44.781Z"
+    },
+    {
+      "id": "mux79mu1aiwhz",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "endless-waiting-room",
+      "before": {
+        "id": "endless-waiting-room",
+        "name": "The Endless Waiting Room",
+        "rarity": "legendary",
+        "price": 120,
+        "text": "If you fulfill 2 or more visitors in a turn, everyone still waiting gains +1 Patience at the end of that turn instead of losing 1."
+      },
+      "after": {
+        "id": "endless-waiting-room",
+        "name": "The Endless Waiting Room",
+        "rarity": "legendary",
+        "price": 120,
+        "text": "If you fulfill 2 or more visitors in a turn, everyone still waiting gains +1 Patience at the end of that turn instead of losing 1.",
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-06T21:37:50.809Z"
     }
   ],
   "applied": [
@@ -5269,5 +5292,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:37:44.781Z"
+  "updatedAt": "2026-10-06T21:37:50.809Z"
 }
