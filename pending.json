@@ -163,7 +163,7 @@
             "name": "Blood in the Water",
             "before": "No On Assign",
             "after": "On Assign: at Value 4, draw 1",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 5. On Assign: if The Tide of Teeth has Value 5, draw 1 book."
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4. On Assign: if The Tide of Teeth has Value 4, draw 1 book."
           },
           {
             "id": "the-tide-of-teeth:endless-teeth",
@@ -175,7 +175,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-06T20:35:48.115Z"
+      "at": "2026-10-06T20:36:05.052Z"
     }
   ],
   "applied": [
@@ -4818,5 +4818,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:35:48.115Z"
+  "updatedAt": "2026-10-06T20:36:05.053Z"
 }
