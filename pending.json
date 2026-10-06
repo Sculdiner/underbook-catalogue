@@ -713,12 +713,12 @@
         "id": "difficult-customer-society",
         "name": "Idol of Sacrifice",
         "rarity": "legendary",
-        "price": 110,
         "text": "Whenever a visitor's ability lowers a book's Value, or discards or DESTROYs one of your books, that book first gains +2 Value.",
-        "icon": "NecromancerIcons_77_b"
+        "icon": "NecromancerIcons_77_b",
+        "price": 125
       },
       "note": "",
-      "at": "2026-10-06T21:39:43.935Z"
+      "at": "2026-10-06T21:39:50.284Z"
     }
   ],
   "applied": [
@@ -5361,5 +5361,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:39:43.935Z"
+  "updatedAt": "2026-10-06T21:39:50.284Z"
 }
