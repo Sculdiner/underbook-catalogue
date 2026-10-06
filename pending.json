@@ -419,11 +419,11 @@
       "after": {
         "id": "pastlife-relic",
         "name": "Pastlife Relic",
-        "rarity": "common",
+        "rarity": "uncommon",
         "price": 65
       },
       "note": "",
-      "at": "2026-10-06T20:53:37.189Z"
+      "at": "2026-10-06T20:53:42.367Z"
     }
   ],
   "applied": [
@@ -5066,5 +5066,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:53:37.189Z"
+  "updatedAt": "2026-10-06T20:53:42.367Z"
 }
