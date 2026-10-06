@@ -251,12 +251,12 @@
             "name": "Softer Tentacles",
             "before": "Book is destroyed",
             "after": "Book remains",
-            "text": "On Assign: tentacles take 2 random books from your hand; each gains +1 Value, then is assigned to a randomly chosen valid visitor for 0 Actions."
+            "text": "On Assign: tentacles take 1 random books from your hand,hen is assigned to a randomly chosen valid visitor for 0 Actions."
           }
         ]
       },
       "note": "",
-      "at": "2026-10-06T20:42:42.668Z"
+      "at": "2026-10-06T20:42:54.873Z"
     }
   ],
   "applied": [
@@ -4899,5 +4899,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:42:42.668Z"
+  "updatedAt": "2026-10-06T20:42:54.873Z"
 }
