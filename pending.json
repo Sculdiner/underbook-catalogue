@@ -403,12 +403,12 @@
         "id": "euphoric-salts",
         "name": "Euphoric Salts",
         "rarity": "common",
-        "price": 65,
         "icon": "essence_02_b",
-        "text": "At the start of the turn, 1 Visitor randomly gets 1 fulfillment"
+        "text": "At the start of the turn, 1 Visitor randomly gets 1 fulfillment",
+        "price": 70
       },
       "note": "",
-      "at": "2026-10-06T20:52:47.686Z"
+      "at": "2026-10-06T20:52:54.258Z"
     }
   ],
   "applied": [
@@ -5051,5 +5051,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:52:47.686Z"
+  "updatedAt": "2026-10-06T20:52:54.258Z"
 }
