@@ -67,7 +67,7 @@
             "name": "Abridged Megatome",
             "before": "Action Cost 2",
             "after": "Action Cost 1",
-            "text": "Assigning this copy costs 1 Action. Still Value 6; neighbours get half its current Value."
+            "text": "Assigning this copy costs 1 Action. Still Value 4; neighbours get half its current Value."
           },
           {
             "id": "megatome-of-dinosaurs:gentle-giants",
@@ -79,7 +79,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-06T17:01:47.551Z"
+      "at": "2026-10-06T17:02:01.297Z"
     }
   ],
   "applied": [
@@ -4468,5 +4468,5 @@
       "result": "The Explorer's Shrine and hard branches now sit on lanes −2 and 2 in the game."
     }
   ],
-  "updatedAt": "2026-10-06T17:01:47.551Z"
+  "updatedAt": "2026-10-06T17:02:01.297Z"
 }
