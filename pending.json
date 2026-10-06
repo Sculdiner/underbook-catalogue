@@ -156,7 +156,7 @@
             "name": "Feeding Frenzy",
             "before": "Max 4",
             "after": "Max 7",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 8."
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 7."
           },
           {
             "id": "the-tide-of-teeth:blood-in-the-water",
@@ -175,7 +175,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-06T20:35:00.615Z"
+      "at": "2026-10-06T20:35:18.213Z"
     }
   ],
   "applied": [
@@ -4818,5 +4818,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:35:00.615Z"
+  "updatedAt": "2026-10-06T20:35:18.213Z"
 }
