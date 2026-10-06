@@ -696,6 +696,29 @@
       },
       "note": "",
       "at": "2026-10-06T21:38:49.233Z"
+    },
+    {
+      "id": "mux7bokn9gkx5",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "difficult-customer-society",
+      "before": {
+        "id": "difficult-customer-society",
+        "name": "The Difficult Customer Society",
+        "rarity": "legendary",
+        "price": 110,
+        "text": "Whenever a visitor's ability lowers a book's Value, or discards or DESTROYs one of your books, that book first gains +2 Value."
+      },
+      "after": {
+        "id": "difficult-customer-society",
+        "name": "The Difficult Customer Society",
+        "rarity": "legendary",
+        "price": 110,
+        "text": "Whenever a visitor's ability lowers a book's Value, or discards or DESTROYs one of your books, that book first gains +2 Value.",
+        "icon": "NecromancerIcons_77_b"
+      },
+      "note": "",
+      "at": "2026-10-06T21:39:26.375Z"
     }
   ],
   "applied": [
@@ -5338,5 +5361,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:38:49.233Z"
+  "updatedAt": "2026-10-06T21:39:26.375Z"
 }
