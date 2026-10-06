@@ -598,12 +598,12 @@
         "id": "hostile-readers-seal",
         "name": "Crown of Command",
         "rarity": "legendary",
-        "price": 95,
         "text": "Books assigned to visitors who have a visitor ability gain +2 Value. Ordinary visitors get nothing.",
-        "icon": "TradingIcons_118_b"
+        "icon": "TradingIcons_118_b",
+        "price": 145
       },
       "note": "",
-      "at": "2026-10-06T21:37:20.899Z"
+      "at": "2026-10-06T21:37:28.161Z"
     }
   ],
   "applied": [
@@ -5246,5 +5246,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:37:20.899Z"
+  "updatedAt": "2026-10-06T21:37:28.161Z"
 }
