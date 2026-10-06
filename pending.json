@@ -426,6 +426,29 @@
       },
       "note": "",
       "at": "2026-10-06T20:55:26.668Z"
+    },
+    {
+      "id": "mux5sxbdkc6mn",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "second-opinion",
+      "before": {
+        "id": "second-opinion",
+        "name": "Second Opinion",
+        "rarity": "rare",
+        "price": 100,
+        "text": "If the last book assigned to a visitor was of your other Trait, the book you assign them now gains +2 Value. It can alternate again and again; a neutral book breaks that visitor's chain."
+      },
+      "after": {
+        "id": "second-opinion",
+        "name": "Second Opinion",
+        "rarity": "rare",
+        "price": 100,
+        "text": "If the last book assigned to a visitor was of your other Trait, the book you assign them now gains +2 Value. It can alternate again and again; a neutral book breaks that visitor's chain.",
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-06T20:56:51.625Z"
     }
   ],
   "applied": [
@@ -5068,5 +5091,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:55:26.668Z"
+  "updatedAt": "2026-10-06T20:56:51.625Z"
 }
