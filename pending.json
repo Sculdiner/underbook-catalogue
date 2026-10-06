@@ -362,14 +362,14 @@
       },
       "after": {
         "id": "unwelcome-critics-monocle",
-        "name": "Special Crown",
+        "name": "Staff of Dominance",
         "rarity": "rare",
         "text": "Books assigned to visitors who have a visitor ability gain +1 Value.",
         "price": 105,
         "icon": "addons_42_b"
       },
       "note": "",
-      "at": "2026-10-06T21:33:30.662Z"
+      "at": "2026-10-06T21:33:43.479Z"
     },
     {
       "id": "mux5h0s477ox8",
@@ -5201,5 +5201,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:33:30.662Z"
+  "updatedAt": "2026-10-06T21:33:43.479Z"
 }
