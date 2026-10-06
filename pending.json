@@ -420,10 +420,11 @@
         "id": "pastlife-relic",
         "name": "Pastlife Relic",
         "rarity": "uncommon",
-        "price": 65
+        "price": 65,
+        "icon": "NecromancerIcons_49_b"
       },
       "note": "",
-      "at": "2026-10-06T20:53:42.367Z"
+      "at": "2026-10-06T20:54:51.298Z"
     }
   ],
   "applied": [
@@ -5066,5 +5067,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:53:42.367Z"
+  "updatedAt": "2026-10-06T20:54:51.298Z"
 }
