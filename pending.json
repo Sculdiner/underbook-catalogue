@@ -347,6 +347,28 @@
       },
       "note": "",
       "at": "2026-10-06T20:44:08.061Z"
+    },
+    {
+      "id": "mux5di0z298hl",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "unwelcome-critics-monocle",
+      "before": {
+        "id": "unwelcome-critics-monocle",
+        "name": "Special Crown",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
+      },
+      "after": {
+        "id": "unwelcome-critics-monocle",
+        "name": "Special Crown",
+        "rarity": "rare",
+        "price": 75,
+        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
+      },
+      "note": "",
+      "at": "2026-10-06T20:44:51.971Z"
     }
   ],
   "applied": [
@@ -4989,5 +5011,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:44:08.061Z"
+  "updatedAt": "2026-10-06T20:44:51.971Z"
 }
