@@ -775,11 +775,11 @@
       "after": {
         "id": "wks",
         "name": "Wks",
-        "rarity": "common",
+        "rarity": "legendary",
         "price": 65
       },
       "note": "",
-      "at": "2026-10-06T21:47:42.717Z"
+      "at": "2026-10-06T21:47:50.063Z"
     }
   ],
   "applied": [
@@ -5422,5 +5422,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:47:42.718Z"
+  "updatedAt": "2026-10-06T21:47:50.063Z"
 }
