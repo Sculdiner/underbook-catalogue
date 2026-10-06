@@ -403,10 +403,11 @@
         "id": "euphoric-salts",
         "name": "Euphoric Salts",
         "rarity": "common",
-        "price": 65
+        "price": 65,
+        "icon": "essence_02_b"
       },
       "note": "",
-      "at": "2026-10-06T20:51:35.607Z"
+      "at": "2026-10-06T20:52:20.604Z"
     }
   ],
   "applied": [
@@ -5049,5 +5050,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:51:35.607Z"
+  "updatedAt": "2026-10-06T20:52:20.604Z"
 }
