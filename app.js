@@ -67,6 +67,9 @@ import {
   traitName,
   uid,
   visitorDef,
+  isOff,
+  offTag,
+  withActive,
 } from './store.js';
 import { ZOOM_BADGE, zoomAttrs } from './zoom.js';
 
@@ -310,10 +313,10 @@ function bookRow(it) {
     ? `<span class="deck-thumb"><i style="background-image:url('${artUrl('books', b.id)}')"></i></span>`
     : `<span class="deck-thumb blank">${esc((b.title || '?')[0])}</span>`;
   const sub = [(b.actionCost ?? 1) !== 1 ? `${b.actionCost} Actions` : '', b.extension ? 'Extension' : '', ...(b.flags ?? [])].filter(Boolean);
-  return `<a class="deck-row ${b.rarity} ${it.pending?.op === 'delete' ? 'deleted' : ''}" href="#/books/${encodeURIComponent(it.key)}">
+  return `<a class="deck-row ${b.rarity} ${it.pending?.op === 'delete' ? 'deleted' : ''} ${isOff(b) ? 'off' : ''}" href="#/books/${encodeURIComponent(it.key)}">
     ${thumb}
     <span class="deck-name"><span class="deck-title name">${esc(b.title)}</span>${sub.length ? `<span class="deck-sub">${esc(sub.join(' · '))}</span>` : ''}</span>
-    ${pendingTag(it)}<span class="deck-value">${b.value ?? '?'}</span></a>`;
+    ${offTag(b)}${pendingTag(it)}<span class="deck-value">${b.value ?? '?'}</span></a>`;
 }
 
 function bookGroup(b) {
@@ -387,8 +390,8 @@ views.list = {
       (all.length
         ? all
             .map(
-              (it) => `<a class="route-card ${it.pending?.op === 'delete' ? 'deleted' : ''}" href="#/routes/${encodeURIComponent(it.key)}">
-          <div class="name"><span>${esc(it.data.name)}</span>${pendingTag(it)}<span class="small muted" style="margin-left:auto">${it.data.nodes.length} nodes</span></div>
+              (it) => `<a class="route-card ${it.pending?.op === 'delete' ? 'deleted' : ''} ${isOff(it.data) ? 'off' : ''}" href="#/routes/${encodeURIComponent(it.key)}">
+          <div class="name"><span>${esc(it.data.name)}</span>${offTag(it.data)}${pendingTag(it)}<span class="small muted" style="margin-left:auto">${it.data.nodes.length} nodes</span></div>
           <div class="map-wrap" style="margin:0">${routeSvg(it.data, { mini: true })}</div></a>`,
             )
             .join('')
@@ -424,8 +427,8 @@ views.list = {
                 .map((it) => {
                   const e = it.data;
                   const t = thresholds(e);
-                  return `<a class="row-item ${it.pending?.op === 'delete' ? 'deleted' : ''}" href="#/encounters/${encodeURIComponent(it.key)}">
-                  <div class="body"><div class="name">${esc(e.name)} ${pendingTag(it)}</div>
+                  return `<a class="row-item ${it.pending?.op === 'delete' ? 'deleted' : ''} ${isOff(e) ? 'off' : ''}" href="#/encounters/${encodeURIComponent(it.key)}">
+                  <div class="body"><div class="name">${esc(e.name)} ${offTag(e)} ${pendingTag(it)}</div>
                   <div class="tags" style="margin:4px 0 0"><span class="tag">${CATEGORY_LABEL[e.category] ?? e.category}</span>${e.band ? `<span class="tag">${cap(e.band)}</span>` : ''}${e.type !== 'normal' ? `<span class="tag">${cap(e.type)}</span>` : ''}</div></div>
                   <div class="meta">${e.visitors.length} visitors<br>${t.survival} / ${t.strong} / ${t.perfect}</div></a>`;
                 })
@@ -443,9 +446,9 @@ function curioRow(it) {
   const cls = c.curse ? 'curse' : c.rarity;
   const src = curioIconUrl(c);
   const icon = src ? `style="background-image:url('${src}')"` : '';
-  return `<a class="row-item ${it.pending?.op === 'delete' ? 'deleted' : ''}" href="#/curios/${encodeURIComponent(it.key)}">
+  return `<a class="row-item ${it.pending?.op === 'delete' ? 'deleted' : ''} ${isOff(c) ? 'off' : ''}" href="#/curios/${encodeURIComponent(it.key)}">
     <div class="curio-icon ${cls}" ${icon}></div>
-    <div class="body"><div class="name">${esc(c.name)} ${pendingTag(it)}</div><div class="sub">${esc(c.text)}</div></div>
+    <div class="body"><div class="name">${esc(c.name)} ${offTag(c)} ${pendingTag(it)}</div><div class="sub">${esc(c.text)}</div></div>
     <div class="meta">${c.curse ? esc(cap(c.curse)) : c.price != null ? `${c.price}G` : ''}</div></a>`;
 }
 
@@ -527,6 +530,22 @@ function pendingNotice(it) {
   return `<div class="notice warn">${pendingTag(it)} ${what}${p.note ? `<div class="change" style="margin:8px 0 0;padding:0;border:0;background:none"><div class="note">${esc(p.note)}</div></div>` : ''}</div>`;
 }
 
+/** What switching each kind off does in the game, for the switch's caption. */
+const OFF_MEANS = {
+  books: 'never Summoned, sold or found',
+  curios: 'never offered, sold, found or sealed',
+  routes: 'never drawn for a Stage',
+  encounters: 'never rolled on the route',
+};
+
+/** The Active / Off switch at the top of every detail page. Everything starts active. */
+function activeSwitch(kind, it, d = it.data) {
+  if (it.pending?.op === 'delete') return '';
+  const on = !isOff(d);
+  return `<button type="button" class="active-switch ${on ? 'on' : ''}" role="switch" aria-checked="${on}" data-act="toggle-active" data-kind="${kind}" data-key="${esc(it.key)}">
+    <span class="knob"></span><span class="lbl"><b>${on ? 'Active' : 'Off'}</b><small>${on ? 'In the game' : `Kept, but ${OFF_MEANS[kind]}`}</small></span></button>`;
+}
+
 /** Kinds edited in place on their own page; only routes keep the popup editor. */
 const INLINE_KINDS = ['books', 'curios', 'encounters'];
 
@@ -545,7 +564,7 @@ function detailActions(kind, it) {
   </div>`;
 }
 
-const ENGINE_SKIP = new Set(['id', 'title', 'traits', 'rarity', 'value', 'actionCost', 'copies', 'shortText', 'rulesText', 'flavor', 'flags', 'extension', 'rebinds', 'reminders']);
+const ENGINE_SKIP = new Set(['id', 'disabled', 'title', 'traits', 'rarity', 'value', 'actionCost', 'copies', 'shortText', 'rulesText', 'flavor', 'flags', 'extension', 'rebinds', 'reminders']);
 
 views.detail = {
   books(it) {
@@ -554,7 +573,7 @@ views.detail = {
     const engine = Object.entries(b).filter(([k]) => !ENGINE_SKIP.has(k));
     const rebinds = b.rebinds ?? [];
     const tr = trait(b.traits?.[0]);
-    return `<div id="pending-slot">${pendingNotice(it)}</div>
+    return `<div id="pending-slot">${pendingNotice(it)}</div><div id="active-slot">${activeSwitch('books', it, b)}</div>
       <fieldset class="inl-wrap" ${live ? '' : 'disabled'}>
       <div class="hero">${bookCover(b)}
         <div class="info">
@@ -595,7 +614,7 @@ views.detail = {
     const art = curioArt(c);
     const icon = src ? `style="background-image:url('${src}')"` : '';
     const opts = (list, cur) => list.map(([v, l]) => `<option value="${esc(v)}" ${String(cur ?? '') === String(v) ? 'selected' : ''}>${esc(l)}</option>`).join('');
-    return `<div id="pending-slot">${pendingNotice(it)}</div>
+    return `<div id="pending-slot">${pendingNotice(it)}</div><div id="active-slot">${activeSwitch('curios', it, c)}</div>
       <fieldset class="inl-wrap" ${live ? '' : 'disabled'}>
       <div class="hero"><div class="icon-hold"><button type="button" class="curio-icon big ${cls} pick-icon" ${icon} data-act="pick-icon" aria-label="Change the icon">${live ? '<span class="pick-badge">Change</span>' : ''}</button>${art ? `<span class="zoom-btn" ${zoomAttrs(art[0], art[1], c.name)}>${ZOOM_BADGE}</span>` : ''}</div>
         <div class="info">
@@ -621,7 +640,7 @@ views.detail = {
   routes(it) {
     const r = it.data;
     const { errs, warns } = routeChecks(r);
-    return `${pendingNotice(it)}<h2>${esc(r.name)}</h2>
+    return `${pendingNotice(it)}${activeSwitch('routes', it)}<h2>${esc(r.name)}</h2>
       ${errs.map((e) => `<div class="notice err">${esc(e)}</div>`).join('')}${warns.map((e) => `<div class="notice warn">${esc(e)}</div>`).join('')}
       <div class="map-wrap">${routeSvg(r)}</div>${legend()}
       <h3>Paths</h3>${routePathTable(r)}
@@ -639,7 +658,7 @@ views.detail = {
     const live = it.pending?.op !== 'delete';
     const key = esc(it.key);
     const waves = [...new Set(e.visitors.map((v) => v.arriveAfterTurn))].sort((a, b) => a - b);
-    return `${pendingNotice(it)}
+    return `${pendingNotice(it)}${activeSwitch('encounters', it)}
       <button type="button" class="tap-edit" ${live ? `data-act="enc-details" data-key="${key}"` : 'disabled'}>
         <h2>${esc(e.name)}${live ? ' <span class="pencil">✎</span>' : ''}</h2>
         <div class="tags"><span class="tag">${e.stage === 0 ? 'Tutorial' : `Stage ${e.stage ?? 1}`}</span><span class="tag">${CATEGORY_LABEL[e.category] ?? e.category}</span>${e.band ? `<span class="tag">${cap(e.band)} band</span>` : ''}<span class="tag">${cap(e.type)} reward</span></div>
@@ -940,6 +959,8 @@ function refreshSlots(I) {
   if (p) p.innerHTML = pendingNotice(it);
   const a = $('#actions-slot');
   if (a) a.innerHTML = detailActions(I.kind, it);
+  const o = $('#active-slot');
+  if (o) o.innerHTML = activeSwitch(I.kind, it, I.draft);
 }
 
 /** Redraw the page from its working copy (after a choice that changes how it looks). */
@@ -1020,6 +1041,7 @@ function diffHtml(e) {
   return `<div class="diff">${keys
     .filter((k) => !same(e.before[k], e.after[k]))
     .map((k) => {
+      if (k === 'disabled') return `<div class="dk">in the game</div><div class="${e.after.disabled ? 'minus' : 'plus'}">${e.after.disabled ? 'Switched off' : 'Switched back on'}</div>`;
       if (k === 'icon' && e.after.icon) return `<div class="dk">icon</div><img class="diff-icon" src="${artUrl('library', e.after.icon)}" alt="">`;
       const a = summarize(e.kind, k, e.before[k]) || [];
       const b = summarize(e.kind, k, e.after[k]) || [];
@@ -1474,6 +1496,27 @@ document.addEventListener('click', async (e) => {
         toast(it.pending?.op === 'add' ? 'Proposal removed' : 'Marked for deletion');
         if (it.pending?.op === 'add') location.hash = `#/${b.dataset.kind}`;
         else render();
+      }
+      return;
+    }
+    case 'toggle-active': {
+      const kind = b.dataset.kind;
+      const I = S.inline;
+      if (I && I.kind === kind && I.key === b.dataset.key) {
+        // Books and Curios: the switch is one more in-place edit, saved at once.
+        I.draft = withActive(I.draft, isOff(I.draft));
+        $('#active-slot').innerHTML = activeSwitch(kind, findItem(kind, I.key), I.draft);
+        I.dirty = true;
+        return flushInline(I);
+      }
+      const it = findItem(kind, b.dataset.key);
+      const after = withActive(it.pending?.after ?? it.orig ?? it.data, isOff(it.data));
+      const op = it.pending?.op === 'add' ? 'add' : 'edit';
+      const note = it.pending?.note ?? '';
+      const what = isOff(after) ? 'Switch off' : 'Switch on';
+      if (await commitPending((d) => stage(d, { kind, key: it.key, op, before: clone(it.orig), after: tidy(after), note }), `${what} ${kind.slice(0, -1)} ${it.key}`)) {
+        toast(isOff(after) ? 'Switched off' : 'Active again');
+        render();
       }
       return;
     }

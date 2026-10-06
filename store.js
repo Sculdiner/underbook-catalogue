@@ -273,6 +273,21 @@ function items(kind) {
   return list;
 }
 
+/**
+ * Switched off: kept in the game's data, but never rolled, shown, bought or
+ * found (`disabled: true`; absent means active, so everything starts active).
+ */
+const isOff = (d) => !!d?.disabled;
+const offTag = (d) => (isOff(d) ? '<span class="tag off">Off</span>' : '');
+
+/** A copy of `draft` switched on or off. Active drops the field rather than storing `false`. */
+function withActive(draft, active) {
+  const d = clone(draft);
+  if (active) delete d.disabled;
+  else d.disabled = true;
+  return d;
+}
+
 const findItem = (kind, key) => items(kind).find((x) => x.key === key) ?? items(kind).find((x) => x.data.id === key);
 
 /** Mirrors `needThresholds` in content/encounters.ts. */
@@ -429,6 +444,7 @@ export {
   gh,
   hasArt,
   hooks,
+  isOff,
   items,
   loadCatalogue,
   refreshPending,
@@ -448,4 +464,6 @@ export {
   traitName,
   uid,
   visitorDef,
+  withActive,
+  offTag,
 };

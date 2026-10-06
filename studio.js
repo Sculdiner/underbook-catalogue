@@ -47,6 +47,9 @@ import {
   ability,
   hasArt,
   artUrl,
+  isOff,
+  offTag,
+  withActive,
 } from './store.js';
 import { ZOOM_BADGE, zoomAttrs } from './zoom.js';
 
@@ -238,7 +241,7 @@ function drawSide() {
   const tag = (it) =>
     it.pending ? `<span class="tag p-${it.pending.op}">${{ add: 'New', edit: 'Edited', delete: 'Delete' }[it.pending.op]}</span>` : '';
   const row = (it, sub) =>
-    `<a class="side-item ${it.key === key ? 'on' : ''} ${it.pending?.op === 'delete' ? 'deleted' : ''}" href="#/${mode}/${encodeURIComponent(it.key)}"><span class="nm">${esc(it.data.name || 'Untitled')}</span>${tag(it)}<span class="sub">${esc(sub)}</span></a>`;
+    `<a class="side-item ${it.key === key ? 'on' : ''} ${it.pending?.op === 'delete' ? 'deleted' : ''} ${isOff(it.data) ? 'off' : ''}" href="#/${mode}/${encodeURIComponent(it.key)}"><span class="nm">${esc(it.data.name || 'Untitled')}</span>${offTag(it.data)}${tag(it)}<span class="sub">${esc(sub)}</span></a>`;
   let html = `<div class="side-head"><input class="search" id="side-search" placeholder="Search ${mode}…" value="${esc(filterText)}"><button class="btn primary" data-act="new" title="New">+ New</button></div>`;
   if (mode === 'encounters') {
     const stages = [...new Set(all.map((x) => x.data.stage ?? 1))].sort((a, b) => a - b);
@@ -288,6 +291,7 @@ function headActions() {
   return `<div class="ed-actions">
     <button class="icon" data-act="undo" title="Undo (Ctrl+Z)" ${ED.undo.length ? '' : 'disabled'}>↶</button>
     <button class="icon" data-act="redo" title="Redo (Ctrl+Y)" ${ED.redo.length ? '' : 'disabled'}>↷</button>
+    <button class="btn sm active-toggle ${isOff(ED.draft) ? '' : 'on'}" data-act="toggle-active" role="switch" aria-checked="${!isOff(ED.draft)}" title="${isOff(ED.draft) ? `Off: kept, but ${ED.mode === 'routes' ? 'never drawn for a Stage' : 'never rolled on the route'}. Click to switch it back on.` : 'In the game. Click to switch it off.'}"><span class="knob"></span>${isOff(ED.draft) ? 'Off' : 'Active'}</button>
     <button class="btn sm" data-act="dup">Duplicate</button>
     <button class="btn sm danger" data-act="delete">${it?.pending?.op === 'add' ? 'Remove proposal' : 'Delete'}</button>
   </div>`;
@@ -980,6 +984,13 @@ document.addEventListener('click', async (e) => {
   }
   if (!ED.live) return;
   switch (act) {
+    case 'toggle-active':
+      // One more edit: it saves by itself and Ctrl+Z takes it back.
+      return edit((d) => {
+        const next = withActive(d, isOff(d));
+        for (const k of Object.keys(d)) delete d[k];
+        Object.assign(d, next);
+      });
     case 'add-visitor':
       return edit((d) => placeVisitor(d, { arriveAfterTurn: 0, name: '', fulfillment: 5, patience: 2 }, Number(b.dataset.wave), null));
     case 'step':
