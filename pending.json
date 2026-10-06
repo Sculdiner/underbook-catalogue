@@ -168,13 +168,13 @@
           {
             "id": "the-tide-of-teeth:endless-teeth",
             "name": "Endless Teeth",
-            "after": "Value = discard +2, max 5",
+            "after": "Create a Temporary Endless Teeth to your hand",
             "text": "This book's Value is equal to the number of books in your discard pile +2, to a maximum of 5."
           }
         ]
       },
       "note": "",
-      "at": "2026-10-06T20:36:33.299Z"
+      "at": "2026-10-06T20:37:26.857Z"
     }
   ],
   "applied": [
@@ -4817,5 +4817,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:36:33.299Z"
+  "updatedAt": "2026-10-06T20:37:26.858Z"
 }
