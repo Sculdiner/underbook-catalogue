@@ -604,6 +604,29 @@
       },
       "note": "",
       "at": "2026-10-06T21:37:28.161Z"
+    },
+    {
+      "id": "mux79i6la92f9",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "great-alternating-index",
+      "before": {
+        "id": "great-alternating-index",
+        "name": "The Great Alternating Index",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Every 3rd alternation in a row between your two Traits on paid assignments refunds 1 Action, and that book gains +2 Value. A neutral book breaks the chain."
+      },
+      "after": {
+        "id": "great-alternating-index",
+        "name": "The Great Alternating Index",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Every 3rd alternation in a row between your two Traits on paid assignments refunds 1 Action, and that book gains +2 Value. A neutral book breaks the chain.",
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-06T21:37:44.781Z"
     }
   ],
   "applied": [
@@ -5246,5 +5269,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:37:28.161Z"
+  "updatedAt": "2026-10-06T21:37:44.781Z"
 }
