@@ -1,6 +1,87 @@
 {
   "version": 1,
-  "edits": [],
+  "edits": [
+    {
+      "id": "mux4z21nedvku",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "chronomancy",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "chronomancy",
+        "title": "Chronomancy",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 1,
+        "shortText": "Next turn: +2 Actions, draw 2 more.",
+        "rulesText": "On Assign: next turn, gain +2 Actions and draw 2 additional books.",
+        "rebinds": [
+          {
+            "id": "chronomancy:accelerated-future",
+            "name": "Accelerated Future",
+            "before": "Next turn +2 Actions",
+            "after": "Next turn +3 Actions",
+            "text": "On Assign: next turn, gain +3 Actions and draw 2 additional books."
+          },
+          {
+            "id": "chronomancy:expanded-future",
+            "name": "Expanded Future",
+            "before": "Next turn draw 2 more",
+            "after": "Next turn draw 3 more",
+            "text": "On Assign: next turn, gain +2 Actions and draw 3 additional books."
+          },
+          {
+            "id": "chronomancy:borrowed-moment",
+            "name": "Borrowed Moment",
+            "before": "Next turn +2 Actions, draw 2 more",
+            "after": "Next turn +2 Actions, draw 2 more; first book free",
+            "text": "On Assign: next turn, gain +2 Actions and draw 2 additional books. The first book you assign next turn costs 0 Actions."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "chronomancy",
+        "title": "Chronomancy",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 1,
+        "shortText": "Next turn: +2 Actions, draw 2 more.",
+        "rulesText": "On Assign: next turn, gain +1 Actions and draw 2 additional books.",
+        "rebinds": [
+          {
+            "id": "chronomancy:accelerated-future",
+            "name": "Accelerated Future",
+            "before": "Next turn +2 Actions",
+            "after": "Next turn +3 Actions",
+            "text": "On Assign: next turn, gain +3 Actions and draw 2 additional books."
+          },
+          {
+            "id": "chronomancy:expanded-future",
+            "name": "Expanded Future",
+            "before": "Next turn draw 2 more",
+            "after": "Next turn draw 3 more",
+            "text": "On Assign: next turn, gain +2 Actions and draw 3 additional books."
+          },
+          {
+            "id": "chronomancy:borrowed-moment",
+            "name": "Borrowed Moment",
+            "before": "Next turn +2 Actions, draw 2 more",
+            "after": "Next turn +2 Actions, draw 2 more; first book free",
+            "text": "On Assign: next turn, gain +2 Actions and draw 2 additional books. The first book you assign next turn costs 0 Actions."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-06T20:33:38.074Z"
+    }
+  ],
   "applied": [
     {
       "id": "muszs8hhe8um8",
@@ -4641,5 +4722,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T17:18:26.546Z"
+  "updatedAt": "2026-10-06T20:33:38.075Z"
 }
