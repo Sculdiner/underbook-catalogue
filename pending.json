@@ -765,6 +765,21 @@
       },
       "note": "",
       "at": "2026-10-06T21:45:52.750Z"
+    },
+    {
+      "id": "mux7mbjygs1aw",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "wks",
+      "before": null,
+      "after": {
+        "id": "wks",
+        "name": "Wks",
+        "rarity": "common",
+        "price": 65
+      },
+      "note": "",
+      "at": "2026-10-06T21:47:42.717Z"
     }
   ],
   "applied": [
@@ -5407,5 +5422,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:45:52.751Z"
+  "updatedAt": "2026-10-06T21:47:42.718Z"
 }
