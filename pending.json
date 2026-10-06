@@ -776,10 +776,11 @@
         "id": "wks",
         "name": "Wks",
         "rarity": "legendary",
-        "price": 65
+        "price": 65,
+        "icon": "BlueLootBox_50_b"
       },
       "note": "",
-      "at": "2026-10-06T21:47:50.063Z"
+      "at": "2026-10-06T21:48:20.803Z"
     }
   ],
   "applied": [
@@ -5422,5 +5423,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:47:50.063Z"
+  "updatedAt": "2026-10-06T21:48:20.803Z"
 }
