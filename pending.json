@@ -392,6 +392,21 @@
       },
       "note": "",
       "at": "2026-10-06T20:48:28.197Z"
+    },
+    {
+      "id": "mux5jzu8cebiq",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "euphoric-salts",
+      "before": null,
+      "after": {
+        "id": "euphoric-salts",
+        "name": "Euphoric Salts",
+        "rarity": "common",
+        "price": 65
+      },
+      "note": "",
+      "at": "2026-10-06T20:49:54.992Z"
     }
   ],
   "applied": [
@@ -5034,5 +5049,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:48:28.197Z"
+  "updatedAt": "2026-10-06T20:49:54.992Z"
 }
