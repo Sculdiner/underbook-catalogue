@@ -449,6 +449,29 @@
       },
       "note": "",
       "at": "2026-10-06T20:56:51.625Z"
+    },
+    {
+      "id": "mux5t590rkbdv",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "deep-waiting-room-clock",
+      "before": {
+        "id": "deep-waiting-room-clock",
+        "name": "Deep Waiting-Room Clock",
+        "rarity": "rare",
+        "price": 100,
+        "text": "The first book assigned to a visitor each turn gains +1 Value for every 2 Patience they have, up to +2."
+      },
+      "after": {
+        "id": "deep-waiting-room-clock",
+        "name": "Deep Waiting-Room Clock",
+        "rarity": "rare",
+        "price": 100,
+        "text": "The first book assigned to a visitor each turn gains +1 Value for every 2 Patience they have, up to +2.",
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-06T20:57:01.908Z"
     }
   ],
   "applied": [
@@ -5091,5 +5114,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:56:51.625Z"
+  "updatedAt": "2026-10-06T20:57:01.908Z"
 }
