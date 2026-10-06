@@ -80,6 +80,102 @@
       },
       "note": "",
       "at": "2026-10-06T20:33:38.074Z"
+    },
+    {
+      "id": "mux50izbhjrth",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "the-tide-of-teeth",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "the-tide-of-teeth",
+        "title": "The Tide of Teeth",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "value": 0,
+        "extension": true,
+        "dynamicValue": {
+          "source": "discard",
+          "max": 5
+        },
+        "shortText": "Value = books in discard, max 5.",
+        "rulesText": "This book's Value is equal to the number of books in your discard pile, to a maximum of 5.",
+        "reminders": [
+          "dynamic-value"
+        ],
+        "rebinds": [
+          {
+            "id": "the-tide-of-teeth:feeding-frenzy",
+            "name": "Feeding Frenzy",
+            "before": "Max 5",
+            "after": "Max 8",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 8."
+          },
+          {
+            "id": "the-tide-of-teeth:blood-in-the-water",
+            "name": "Blood in the Water",
+            "before": "No On Assign",
+            "after": "On Assign: at Value 5, draw 1",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 5. On Assign: if The Tide of Teeth has Value 5, draw 1 book."
+          },
+          {
+            "id": "the-tide-of-teeth:endless-teeth",
+            "name": "Endless Teeth",
+            "before": "Value = discard, max 5",
+            "after": "Value = discard +2, max 5",
+            "text": "This book's Value is equal to the number of books in your discard pile +2, to a maximum of 5."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "the-tide-of-teeth",
+        "title": "The Tide of Teeth",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "value": 0,
+        "extension": true,
+        "dynamicValue": {
+          "source": "discard",
+          "max": 5
+        },
+        "shortText": "Value = books in discard, max 5.",
+        "rulesText": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4.",
+        "reminders": [
+          "dynamic-value"
+        ],
+        "rebinds": [
+          {
+            "id": "the-tide-of-teeth:feeding-frenzy",
+            "name": "Feeding Frenzy",
+            "before": "Max 5",
+            "after": "Max 8",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 8."
+          },
+          {
+            "id": "the-tide-of-teeth:blood-in-the-water",
+            "name": "Blood in the Water",
+            "before": "No On Assign",
+            "after": "On Assign: at Value 5, draw 1",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 5. On Assign: if The Tide of Teeth has Value 5, draw 1 book."
+          },
+          {
+            "id": "the-tide-of-teeth:endless-teeth",
+            "name": "Endless Teeth",
+            "before": "Value = discard, max 5",
+            "after": "Value = discard +2, max 5",
+            "text": "This book's Value is equal to the number of books in your discard pile +2, to a maximum of 5."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-06T20:34:46.679Z"
     }
   ],
   "applied": [
@@ -4722,5 +4818,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:33:38.075Z"
+  "updatedAt": "2026-10-06T20:34:46.679Z"
 }
