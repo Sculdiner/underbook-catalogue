@@ -365,10 +365,11 @@
         "name": "Special Crown",
         "rarity": "rare",
         "text": "Books assigned to visitors who have a visitor ability gain +1 Value.",
-        "price": 105
+        "price": 105,
+        "icon": "addons_42_b"
       },
       "note": "",
-      "at": "2026-10-06T21:28:01.241Z"
+      "at": "2026-10-06T21:33:30.662Z"
     },
     {
       "id": "mux5h0s477ox8",
@@ -5200,5 +5201,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:28:01.243Z"
+  "updatedAt": "2026-10-06T21:33:30.662Z"
 }
