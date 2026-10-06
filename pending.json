@@ -1,255 +1,6 @@
 {
   "version": 1,
-  "edits": [
-    {
-      "id": "muwxdxdt1eu5n",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "megatome-of-dinosaurs",
-      "before": {
-        "actionCost": 2,
-        "copies": 1,
-        "id": "megatome-of-dinosaurs",
-        "title": "Megatome of Dinosaurs",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "common",
-        "value": 6,
-        "shortText": "Costs 2 Actions. Neighbours get half its Value.",
-        "rulesText": "Assigning this costs 2 Actions. On Assign: adjacent visitors gain Fulfillment equal to half this book's current Value, rounded down.",
-        "rebinds": [
-          {
-            "id": "megatome-of-dinosaurs:bigger-dinosaurs",
-            "name": "Bigger Dinosaurs",
-            "before": "Value 6",
-            "after": "Value 8",
-            "text": "Printed Value 8. Still 2 Actions; neighbours get half its current Value."
-          },
-          {
-            "id": "megatome-of-dinosaurs:abridged-megatome",
-            "name": "Abridged Megatome",
-            "before": "Action Cost 2",
-            "after": "Action Cost 1",
-            "text": "Assigning this copy costs 1 Action. Still Value 6; neighbours get half its current Value."
-          },
-          {
-            "id": "megatome-of-dinosaurs:gentle-giants",
-            "name": "Gentle Giants",
-            "before": "Neighbours +half Value",
-            "after": "Neighbours +half Value and +1 Patience",
-            "text": "On Assign: adjacent visitors gain Fulfillment equal to half this book's current Value, rounded down, and +1 Patience."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 2,
-        "copies": 1,
-        "id": "megatome-of-dinosaurs",
-        "title": "Megatome of Dinosaurs",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "common",
-        "value": 4,
-        "shortText": "Costs 2 Actions. Neighbours get half its Value.",
-        "rulesText": "Assigning this costs 2 Actions. On Assign: adjacent visitors gain Fulfillment equal to half this book's current Value, rounded down.",
-        "rebinds": [
-          {
-            "id": "megatome-of-dinosaurs:bigger-dinosaurs",
-            "name": "Bigger Dinosaurs",
-            "before": "Value 4",
-            "after": "Value 6",
-            "text": "Printed Value 6. Still 2 Actions; neighbours get half its current Value."
-          },
-          {
-            "id": "megatome-of-dinosaurs:abridged-megatome",
-            "name": "Abridged Megatome",
-            "before": "Action Cost 2",
-            "after": "Action Cost 1",
-            "text": "Assigning this copy costs 1 Action. Still Value 4; neighbours get half its current Value."
-          },
-          {
-            "id": "megatome-of-dinosaurs:gentle-giants",
-            "name": "Gentle Giants",
-            "before": "Neighbours +half Value",
-            "after": "Neighbours +half Value and +1 Patience",
-            "text": "On Assign: adjacent visitors gain Fulfillment equal to half this book's current Value, rounded down, and +1 Patience."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-06T17:02:01.297Z"
-    },
-    {
-      "id": "muwxh0s1fs0dj",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "the-rune-knight",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "the-rune-knight",
-        "title": "The Rune Knight",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "uncommon",
-        "value": 5,
-        "extension": true,
-        "shortText": "Draw 1.",
-        "rulesText": "On Assign: draw 1 book.",
-        "reminders": [
-          "recycle"
-        ],
-        "rebinds": [
-          {
-            "id": "the-rune-knight:greater-rune",
-            "name": "Greater Rune",
-            "before": "Value 5",
-            "after": "Value 7",
-            "text": "Printed Value 7. Still 1 Action; still draws 1."
-          },
-          {
-            "id": "the-rune-knight:runic-study",
-            "name": "Runic Study",
-            "before": "Draw 1",
-            "after": "Draw 2",
-            "text": "On Assign: draw 2 books."
-          },
-          {
-            "id": "the-rune-knight:inscribed-blade",
-            "name": "Inscribed Blade",
-            "before": "Draw 1",
-            "after": "Draw 1; it gains +2 Value",
-            "text": "On Assign: draw 1 book. That book gains +2 Value."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "the-rune-knight",
-        "title": "The Rune Knight",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "uncommon",
-        "value": 4,
-        "extension": true,
-        "shortText": "Draw 1.",
-        "rulesText": "On Assign: draw 1 book.",
-        "reminders": [
-          "recycle"
-        ],
-        "rebinds": [
-          {
-            "id": "the-rune-knight:greater-rune",
-            "name": "Greater Rune",
-            "before": "Value 5",
-            "after": "Value 7",
-            "text": "Printed Value 7. Still 1 Action; still draws 1."
-          },
-          {
-            "id": "the-rune-knight:runic-study",
-            "name": "Runic Study",
-            "before": "Draw 1",
-            "after": "Draw 2",
-            "text": "On Assign: draw 2 books."
-          },
-          {
-            "id": "the-rune-knight:inscribed-blade",
-            "name": "Inscribed Blade",
-            "before": "Draw 1",
-            "after": "Draw 1; it gains +2 Value",
-            "text": "On Assign: draw 1 book. That book gains +2 Value."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-06T17:03:39.313Z"
-    },
-    {
-      "id": "muwxhnx6n4dmv",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "chronomancy",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "chronomancy",
-        "title": "Chronomancy",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "rare",
-        "value": 2,
-        "shortText": "Next turn: +2 Actions, draw 2 more.",
-        "rulesText": "On Assign: next turn, gain +2 Actions and draw 2 additional books.",
-        "rebinds": [
-          {
-            "id": "chronomancy:accelerated-future",
-            "name": "Accelerated Future",
-            "before": "Next turn +2 Actions",
-            "after": "Next turn +3 Actions",
-            "text": "On Assign: next turn, gain +3 Actions and draw 2 additional books."
-          },
-          {
-            "id": "chronomancy:expanded-future",
-            "name": "Expanded Future",
-            "before": "Next turn draw 2 more",
-            "after": "Next turn draw 3 more",
-            "text": "On Assign: next turn, gain +2 Actions and draw 3 additional books."
-          },
-          {
-            "id": "chronomancy:borrowed-moment",
-            "name": "Borrowed Moment",
-            "before": "Next turn +2 Actions, draw 2 more",
-            "after": "Next turn +2 Actions, draw 2 more; first book free",
-            "text": "On Assign: next turn, gain +2 Actions and draw 2 additional books. The first book you assign next turn costs 0 Actions."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "chronomancy",
-        "title": "Chronomancy",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "rare",
-        "value": 1,
-        "shortText": "Next turn: +2 Actions, draw 2 more.",
-        "rulesText": "On Assign: next turn, gain +2 Actions and draw 2 additional books.",
-        "rebinds": [
-          {
-            "id": "chronomancy:accelerated-future",
-            "name": "Accelerated Future",
-            "before": "Next turn +2 Actions",
-            "after": "Next turn +3 Actions",
-            "text": "On Assign: next turn, gain +3 Actions and draw 2 additional books."
-          },
-          {
-            "id": "chronomancy:expanded-future",
-            "name": "Expanded Future",
-            "before": "Next turn draw 2 more",
-            "after": "Next turn draw 3 more",
-            "text": "On Assign: next turn, gain +2 Actions and draw 3 additional books."
-          },
-          {
-            "id": "chronomancy:borrowed-moment",
-            "name": "Borrowed Moment",
-            "before": "Next turn +2 Actions, draw 2 more",
-            "after": "Next turn +2 Actions, draw 2 more; first book free",
-            "text": "On Assign: next turn, gain +2 Actions and draw 2 additional books. The first book you assign next turn costs 0 Actions."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-06T17:04:09.306Z"
-    }
-  ],
+  "edits": [],
   "applied": [
     {
       "id": "muszs8hhe8um8",
@@ -4634,7 +4385,261 @@
       "at": "2026-10-05T14:18:11.266Z",
       "appliedAt": "2026-10-05T14:19:53.350Z",
       "result": "The Explorer's Shrine and hard branches now sit on lanes −2 and 2 in the game."
+    },
+    {
+      "id": "muwxdxdt1eu5n",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "megatome-of-dinosaurs",
+      "before": {
+        "actionCost": 2,
+        "copies": 1,
+        "id": "megatome-of-dinosaurs",
+        "title": "Megatome of Dinosaurs",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "value": 6,
+        "shortText": "Costs 2 Actions. Neighbours get half its Value.",
+        "rulesText": "Assigning this costs 2 Actions. On Assign: adjacent visitors gain Fulfillment equal to half this book's current Value, rounded down.",
+        "rebinds": [
+          {
+            "id": "megatome-of-dinosaurs:bigger-dinosaurs",
+            "name": "Bigger Dinosaurs",
+            "before": "Value 6",
+            "after": "Value 8",
+            "text": "Printed Value 8. Still 2 Actions; neighbours get half its current Value."
+          },
+          {
+            "id": "megatome-of-dinosaurs:abridged-megatome",
+            "name": "Abridged Megatome",
+            "before": "Action Cost 2",
+            "after": "Action Cost 1",
+            "text": "Assigning this copy costs 1 Action. Still Value 6; neighbours get half its current Value."
+          },
+          {
+            "id": "megatome-of-dinosaurs:gentle-giants",
+            "name": "Gentle Giants",
+            "before": "Neighbours +half Value",
+            "after": "Neighbours +half Value and +1 Patience",
+            "text": "On Assign: adjacent visitors gain Fulfillment equal to half this book's current Value, rounded down, and +1 Patience."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 2,
+        "copies": 1,
+        "id": "megatome-of-dinosaurs",
+        "title": "Megatome of Dinosaurs",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "value": 4,
+        "shortText": "Costs 2 Actions. Neighbours get half its Value.",
+        "rulesText": "Assigning this costs 2 Actions. On Assign: adjacent visitors gain Fulfillment equal to half this book's current Value, rounded down.",
+        "rebinds": [
+          {
+            "id": "megatome-of-dinosaurs:bigger-dinosaurs",
+            "name": "Bigger Dinosaurs",
+            "before": "Value 4",
+            "after": "Value 6",
+            "text": "Printed Value 6. Still 2 Actions; neighbours get half its current Value."
+          },
+          {
+            "id": "megatome-of-dinosaurs:abridged-megatome",
+            "name": "Abridged Megatome",
+            "before": "Action Cost 2",
+            "after": "Action Cost 1",
+            "text": "Assigning this copy costs 1 Action. Still Value 4; neighbours get half its current Value."
+          },
+          {
+            "id": "megatome-of-dinosaurs:gentle-giants",
+            "name": "Gentle Giants",
+            "before": "Neighbours +half Value",
+            "after": "Neighbours +half Value and +1 Patience",
+            "text": "On Assign: adjacent visitors gain Fulfillment equal to half this book's current Value, rounded down, and +1 Patience."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-06T17:02:01.297Z",
+      "appliedAt": "2026-10-06T17:18:26.543Z",
+      "result": "Megatome of Dinosaurs is now Value 4; Bigger Dinosaurs reads Value 4 → 6 and Abridged Megatome reads Still Value 4."
+    },
+    {
+      "id": "muwxh0s1fs0dj",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "the-rune-knight",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "the-rune-knight",
+        "title": "The Rune Knight",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 5,
+        "extension": true,
+        "shortText": "Draw 1.",
+        "rulesText": "On Assign: draw 1 book.",
+        "reminders": [
+          "recycle"
+        ],
+        "rebinds": [
+          {
+            "id": "the-rune-knight:greater-rune",
+            "name": "Greater Rune",
+            "before": "Value 5",
+            "after": "Value 7",
+            "text": "Printed Value 7. Still 1 Action; still draws 1."
+          },
+          {
+            "id": "the-rune-knight:runic-study",
+            "name": "Runic Study",
+            "before": "Draw 1",
+            "after": "Draw 2",
+            "text": "On Assign: draw 2 books."
+          },
+          {
+            "id": "the-rune-knight:inscribed-blade",
+            "name": "Inscribed Blade",
+            "before": "Draw 1",
+            "after": "Draw 1; it gains +2 Value",
+            "text": "On Assign: draw 1 book. That book gains +2 Value."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "the-rune-knight",
+        "title": "The Rune Knight",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 4,
+        "extension": true,
+        "shortText": "Draw 1.",
+        "rulesText": "On Assign: draw 1 book.",
+        "reminders": [
+          "recycle"
+        ],
+        "rebinds": [
+          {
+            "id": "the-rune-knight:greater-rune",
+            "name": "Greater Rune",
+            "before": "Value 5",
+            "after": "Value 7",
+            "text": "Printed Value 7. Still 1 Action; still draws 1."
+          },
+          {
+            "id": "the-rune-knight:runic-study",
+            "name": "Runic Study",
+            "before": "Draw 1",
+            "after": "Draw 2",
+            "text": "On Assign: draw 2 books."
+          },
+          {
+            "id": "the-rune-knight:inscribed-blade",
+            "name": "Inscribed Blade",
+            "before": "Draw 1",
+            "after": "Draw 1; it gains +2 Value",
+            "text": "On Assign: draw 1 book. That book gains +2 Value."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-06T17:03:39.313Z",
+      "appliedAt": "2026-10-06T17:18:26.543Z",
+      "result": "The Rune Knight is now Value 4; its Greater Rune Rebind became Value 4 → 6 to keep the +2 step."
+    },
+    {
+      "id": "muwxhnx6n4dmv",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "chronomancy",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "chronomancy",
+        "title": "Chronomancy",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 2,
+        "shortText": "Next turn: +2 Actions, draw 2 more.",
+        "rulesText": "On Assign: next turn, gain +2 Actions and draw 2 additional books.",
+        "rebinds": [
+          {
+            "id": "chronomancy:accelerated-future",
+            "name": "Accelerated Future",
+            "before": "Next turn +2 Actions",
+            "after": "Next turn +3 Actions",
+            "text": "On Assign: next turn, gain +3 Actions and draw 2 additional books."
+          },
+          {
+            "id": "chronomancy:expanded-future",
+            "name": "Expanded Future",
+            "before": "Next turn draw 2 more",
+            "after": "Next turn draw 3 more",
+            "text": "On Assign: next turn, gain +2 Actions and draw 3 additional books."
+          },
+          {
+            "id": "chronomancy:borrowed-moment",
+            "name": "Borrowed Moment",
+            "before": "Next turn +2 Actions, draw 2 more",
+            "after": "Next turn +2 Actions, draw 2 more; first book free",
+            "text": "On Assign: next turn, gain +2 Actions and draw 2 additional books. The first book you assign next turn costs 0 Actions."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "chronomancy",
+        "title": "Chronomancy",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 1,
+        "shortText": "Next turn: +2 Actions, draw 2 more.",
+        "rulesText": "On Assign: next turn, gain +2 Actions and draw 2 additional books.",
+        "rebinds": [
+          {
+            "id": "chronomancy:accelerated-future",
+            "name": "Accelerated Future",
+            "before": "Next turn +2 Actions",
+            "after": "Next turn +3 Actions",
+            "text": "On Assign: next turn, gain +3 Actions and draw 2 additional books."
+          },
+          {
+            "id": "chronomancy:expanded-future",
+            "name": "Expanded Future",
+            "before": "Next turn draw 2 more",
+            "after": "Next turn draw 3 more",
+            "text": "On Assign: next turn, gain +2 Actions and draw 3 additional books."
+          },
+          {
+            "id": "chronomancy:borrowed-moment",
+            "name": "Borrowed Moment",
+            "before": "Next turn +2 Actions, draw 2 more",
+            "after": "Next turn +2 Actions, draw 2 more; first book free",
+            "text": "On Assign: next turn, gain +2 Actions and draw 2 additional books. The first book you assign next turn costs 0 Actions."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-06T17:04:09.306Z",
+      "appliedAt": "2026-10-06T17:18:26.543Z",
+      "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T17:04:09.306Z"
+  "updatedAt": "2026-10-06T17:18:26.546Z"
 }
