@@ -236,7 +236,7 @@
             "id": "monsters-of-the-deep:deeper-still",
             "name": "Deeper Still",
             "before": "Value 1",
-            "after": "Value 3",
+            "after": "Value 4",
             "text": "Printed Value 3. Tentacles still assign 2 hand books."
           },
           {
@@ -256,7 +256,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-06T20:40:17.185Z"
+      "at": "2026-10-06T20:40:36.687Z"
     }
   ],
   "applied": [
@@ -4899,5 +4899,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:40:17.185Z"
+  "updatedAt": "2026-10-06T20:40:36.688Z"
 }
