@@ -409,6 +409,21 @@
       },
       "note": "",
       "at": "2026-10-06T20:52:54.258Z"
+    },
+    {
+      "id": "mux5orad96ncl",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "pastlife-relic",
+      "before": null,
+      "after": {
+        "id": "pastlife-relic",
+        "name": "Pastlife Relic",
+        "rarity": "common",
+        "price": 65
+      },
+      "note": "",
+      "at": "2026-10-06T20:53:37.189Z"
     }
   ],
   "applied": [
@@ -5051,5 +5066,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:52:54.258Z"
+  "updatedAt": "2026-10-06T20:53:37.189Z"
 }
