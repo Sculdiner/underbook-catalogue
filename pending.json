@@ -169,12 +169,12 @@
             "id": "the-tide-of-teeth:endless-teeth",
             "name": "Endless Teeth",
             "after": "Create a Temporary Endless Teeth to your hand",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4. Cr"
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4. Create a Temporary Endless Teeth to your hand."
           }
         ]
       },
       "note": "",
-      "at": "2026-10-06T20:37:45.071Z"
+      "at": "2026-10-06T20:38:04.359Z"
     }
   ],
   "applied": [
@@ -4817,5 +4817,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:37:45.071Z"
+  "updatedAt": "2026-10-06T20:38:04.359Z"
 }
