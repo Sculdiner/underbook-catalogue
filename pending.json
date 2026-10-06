@@ -155,7 +155,7 @@
             "id": "the-tide-of-teeth:feeding-frenzy",
             "name": "Feeding Frenzy",
             "before": "Max 5",
-            "after": "Max 8",
+            "after": "Max",
             "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 8."
           },
           {
@@ -175,7 +175,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-06T20:34:46.679Z"
+      "at": "2026-10-06T20:34:50.607Z"
     }
   ],
   "applied": [
@@ -4818,5 +4818,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:34:46.679Z"
+  "updatedAt": "2026-10-06T20:34:50.607Z"
 }
