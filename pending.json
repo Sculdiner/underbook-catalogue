@@ -472,6 +472,92 @@
       },
       "note": "",
       "at": "2026-10-06T20:57:01.908Z"
+    },
+    {
+      "id": "mux5x8hase3hf",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "summoning-theorems",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "summoning-theorems",
+        "title": "Summoning Theorems",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 0,
+        "shortText": "2 Library books assigned here, free.",
+        "rulesText": "On Assign: take 2 random books directly from your Library and assign them to this visitor for 0 Actions. Their On Assign abilities resolve.",
+        "reminders": [
+          "recycle"
+        ],
+        "rebinds": [
+          {
+            "id": "summoning-theorems:greater-theorems",
+            "name": "Greater Theorems",
+            "before": "2 Library books",
+            "after": "3 Library books",
+            "text": "On Assign: take 3 random books directly from your Library and assign them to this visitor for 0 Actions. Their On Assign abilities resolve."
+          },
+          {
+            "id": "summoning-theorems:empowered-theorems",
+            "name": "Empowered Theorems",
+            "before": "2 Library books",
+            "after": "2 Library books, each +1 Value",
+            "text": "On Assign: take 2 random books directly from your Library; each gains +1 Value, then is assigned to this visitor for 0 Actions."
+          },
+          {
+            "id": "summoning-theorems:selective-theorems",
+            "name": "Selective Theorems",
+            "before": "2 random Library books",
+            "after": "The 2 highest-Value Library books",
+            "text": "On Assign: take the 2 highest-Value books in your Library (ties at random) and assign them to this visitor for 0 Actions."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "summoning-theorems",
+        "title": "Summoning Theorems",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 0,
+        "shortText": "2 Library books assigned here, free.",
+        "rulesText": "On Assign: Discard up to 2 books at random from your hand. Summon that many random books from your Library, on this visitor (their On Assign abilities resolve)",
+        "reminders": [
+          "recycle"
+        ],
+        "rebinds": [
+          {
+            "id": "summoning-theorems:greater-theorems",
+            "name": "Greater Theorems",
+            "before": "2 Library books",
+            "after": "3 Library books",
+            "text": "On Assign: take 3 random books directly from your Library and assign them to this visitor for 0 Actions. Their On Assign abilities resolve."
+          },
+          {
+            "id": "summoning-theorems:empowered-theorems",
+            "name": "Empowered Theorems",
+            "before": "2 Library books",
+            "after": "2 Library books, each +1 Value",
+            "text": "On Assign: take 2 random books directly from your Library; each gains +1 Value, then is assigned to this visitor for 0 Actions."
+          },
+          {
+            "id": "summoning-theorems:selective-theorems",
+            "name": "Selective Theorems",
+            "before": "2 random Library books",
+            "after": "The 2 highest-Value Library books",
+            "text": "On Assign: take the 2 highest-Value books in your Library (ties at random) and assign them to this visitor for 0 Actions."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-06T21:00:12.718Z"
     }
   ],
   "applied": [
@@ -5114,5 +5200,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:57:01.908Z"
+  "updatedAt": "2026-10-06T21:00:12.718Z"
 }
