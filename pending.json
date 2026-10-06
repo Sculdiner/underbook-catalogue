@@ -559,6 +559,28 @@
       },
       "note": "",
       "at": "2026-10-06T21:00:12.718Z"
+    },
+    {
+      "id": "mux750gx4effv",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "red-string-bookmark",
+      "before": {
+        "id": "red-string-bookmark",
+        "name": "Talisman of the Anger",
+        "rarity": "rare",
+        "price": 95,
+        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
+      },
+      "after": {
+        "id": "red-string-bookmark",
+        "name": "Talisman of Anger",
+        "rarity": "rare",
+        "price": 95,
+        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
+      },
+      "note": "",
+      "at": "2026-10-06T21:34:15.201Z"
     }
   ],
   "applied": [
@@ -5201,5 +5223,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:33:43.479Z"
+  "updatedAt": "2026-10-06T21:34:15.201Z"
 }
