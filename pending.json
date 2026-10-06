@@ -229,7 +229,7 @@
         "rarity": "rare",
         "value": 1,
         "shortText": "Tentacles assign 2 hand books, free.",
-        "rulesText": "On Assign: tentacles take 2 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve. Destroy 1 of them at random.",
+        "rulesText": "On Assign: tentacles take a random book from your hand and assign it to a random chosen valid visitors for 0 Actions. Its On Assign abilities resolve. Then, destroy it.",
         "flavor": "A lavish bestiary documenting krakens, leviathans, and other colossal creatures said to inhabit the deepest and least-charted seas.",
         "rebinds": [
           {
@@ -256,7 +256,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-06T20:39:07.967Z"
+      "at": "2026-10-06T20:40:17.185Z"
     }
   ],
   "applied": [
@@ -4899,5 +4899,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:39:07.967Z"
+  "updatedAt": "2026-10-06T20:40:17.185Z"
 }
