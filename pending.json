@@ -736,12 +736,12 @@
         "id": "great-queue-ledger",
         "name": "Starweaved Dreamcatcher",
         "rarity": "legendary",
-        "price": 115,
+        "price": 150,
         "text": "Every 5th visitor you fulfill gains you +1 Action at once. The count carries across the Stage and resets when a new Stage begins.",
         "icon": "PrehistoricIcon_115_b"
       },
       "note": "",
-      "at": "2026-10-06T21:41:14.736Z"
+      "at": "2026-10-06T21:41:17.294Z"
     }
   ],
   "applied": [
@@ -5384,5 +5384,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T21:41:14.737Z"
+  "updatedAt": "2026-10-06T21:41:17.294Z"
 }
