@@ -175,6 +175,88 @@
       },
       "note": "",
       "at": "2026-10-06T20:38:04.359Z"
+    },
+    {
+      "id": "mux564lbteu5o",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "monsters-of-the-deep",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "monsters-of-the-deep",
+        "title": "Monsters of the Deep",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 1,
+        "shortText": "Tentacles assign 2 hand books, free.",
+        "rulesText": "On Assign: tentacles take 2 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve.",
+        "flavor": "A lavish bestiary documenting krakens, leviathans, and other colossal creatures said to inhabit the deepest and least-charted seas.",
+        "rebinds": [
+          {
+            "id": "monsters-of-the-deep:deeper-still",
+            "name": "Deeper Still",
+            "before": "Value 1",
+            "after": "Value 3",
+            "text": "Printed Value 3. Tentacles still assign 2 hand books."
+          },
+          {
+            "id": "monsters-of-the-deep:more-tentacles",
+            "name": "More Tentacles",
+            "before": "2 hand books",
+            "after": "3 hand books",
+            "text": "On Assign: tentacles take 3 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve."
+          },
+          {
+            "id": "monsters-of-the-deep:crushing-tentacles",
+            "name": "Crushing Tentacles",
+            "before": "2 hand books",
+            "after": "2 hand books, each +1 Value",
+            "text": "On Assign: tentacles take 2 random books from your hand; each gains +1 Value, then is assigned to a randomly chosen valid visitor for 0 Actions."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "monsters-of-the-deep",
+        "title": "Monsters of the Deep",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 1,
+        "shortText": "Tentacles assign 2 hand books, free.",
+        "rulesText": "On Assign: tentacles take 2 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve. Destroy 1 of them at random.",
+        "flavor": "A lavish bestiary documenting krakens, leviathans, and other colossal creatures said to inhabit the deepest and least-charted seas.",
+        "rebinds": [
+          {
+            "id": "monsters-of-the-deep:deeper-still",
+            "name": "Deeper Still",
+            "before": "Value 1",
+            "after": "Value 3",
+            "text": "Printed Value 3. Tentacles still assign 2 hand books."
+          },
+          {
+            "id": "monsters-of-the-deep:more-tentacles",
+            "name": "More Tentacles",
+            "before": "2 hand books",
+            "after": "3 hand books",
+            "text": "On Assign: tentacles take 3 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve."
+          },
+          {
+            "id": "monsters-of-the-deep:crushing-tentacles",
+            "name": "Crushing Tentacles",
+            "before": "2 hand books",
+            "after": "2 hand books, each +1 Value",
+            "text": "On Assign: tentacles take 2 random books from your hand; each gains +1 Value, then is assigned to a randomly chosen valid visitor for 0 Actions."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-06T20:39:07.967Z"
     }
   ],
   "applied": [
@@ -4817,5 +4899,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-06T20:38:04.359Z"
+  "updatedAt": "2026-10-06T20:39:07.967Z"
 }
