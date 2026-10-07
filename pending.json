@@ -776,12 +776,12 @@
         "id": "wks",
         "name": "Eye of the Beholder",
         "rarity": "rare",
-        "price": 65,
+        "price": 95,
         "icon": "NecromancerIcons_12_b",
         "text": "You can see the order of books in your Library."
       },
       "note": "",
-      "at": "2026-10-07T13:45:27.990Z"
+      "at": "2026-10-07T13:45:33.226Z"
     },
     {
       "id": "muy2j5corp0b3",
@@ -5447,5 +5447,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T13:45:27.990Z"
+  "updatedAt": "2026-10-07T13:45:33.226Z"
 }
