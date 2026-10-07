@@ -817,10 +817,10 @@
         "name": "multiple curios",
         "rarity": "common",
         "price": 65,
-        "text": "Duplicate a book when you obtain this\nRandomly get a Rare book that belongs to another trait.\nWhenever a distinguished Visitor is encountered, gain 1 extra action and draw 1 book more.\nAfter you have shuffled 100 books into your deck, gain 1 Reputation (number is retained between encounters)\nThe first 3 turns of all encounters, draw +1books - you can't select your summoned books any longer.\nGain 1 Cursed Book and 2 Rare summons. (cursed books are new - they are books that start in your Deck and you cant remove them by Merchants)\nRemove a non-Cursed book from your Library\nWhenever you lose a Visitor, all other Visitors gain 2 fulfillment\nWhenever you play a Book from hand, draw 1 book. Shuffle 3 Cursed Books into your Library."
+        "text": "Randomly get a Rare book that belongs to another trait.\nWhenever a distinguished Visitor is encountered, gain 1 extra action and draw 1 book more.\nAfter you have shuffled 100 books into your deck, gain 1 Reputation (number is retained between encounters)\nThe first 3 turns of all encounters, draw +1books - you can't select your summoned books any longer.\nGain 1 Cursed Book and 2 Rare summons. (cursed books are new - they are books that start in your Deck and you cant remove them by Merchants)\nRemove a non-Cursed book from your Library\nWhenever you lose a Visitor, all other Visitors gain 2 fulfillment\nWhenever you play a Book from hand, draw 1 book. Shuffle 3 Cursed Books into your Library."
       },
       "note": "",
-      "at": "2026-10-07T14:00:07.517Z"
+      "at": "2026-10-07T17:00:46.036Z"
     }
   ],
   "applied": [
@@ -5463,5 +5463,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T14:00:07.517Z"
+  "updatedAt": "2026-10-07T17:00:46.042Z"
 }
