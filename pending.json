@@ -855,6 +855,21 @@
       },
       "note": "",
       "at": "2026-10-07T17:47:12.413Z"
+    },
+    {
+      "id": "muyeieptp7kkp",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "distinguished",
+      "before": null,
+      "after": {
+        "id": "distinguished",
+        "name": "Distinguished",
+        "rarity": "common",
+        "price": 65
+      },
+      "note": "",
+      "at": "2026-10-07T17:48:23.681Z"
     }
   ],
   "applied": [
@@ -5497,5 +5512,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T17:48:05.382Z"
+  "updatedAt": "2026-10-07T17:48:23.681Z"
 }
