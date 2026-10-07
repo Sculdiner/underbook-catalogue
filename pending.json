@@ -831,13 +831,13 @@
       "after": {
         "id": "mirror",
         "name": "Mirror",
-        "rarity": "common",
+        "rarity": "rare",
         "price": 65,
         "text": "Duplicate a book when you obtain this",
         "upload": "uploads/curios/mirror-muye8i7nsrqvn.png"
       },
       "note": "",
-      "at": "2026-10-07T17:40:44.940Z"
+      "at": "2026-10-07T17:44:19.044Z"
     }
   ],
   "applied": [
@@ -5480,5 +5480,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T17:40:44.940Z"
+  "updatedAt": "2026-10-07T17:44:19.044Z"
 }
