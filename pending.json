@@ -796,14 +796,14 @@
       },
       "after": {
         "id": "peoples-catalogue",
-        "name": "The People's Catalogue",
+        "name": "Idol of the Pleased Patron",
         "rarity": "legendary",
         "price": 120,
         "text": "Whenever you fulfill a visitor, every other waiting visitor gains +1 Fulfillment.",
         "icon": "TradingIcons_56"
       },
       "note": "",
-      "at": "2026-10-07T12:13:02.808Z"
+      "at": "2026-10-07T12:13:21.824Z"
     }
   ],
   "applied": [
@@ -5446,5 +5446,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T12:13:02.809Z"
+  "updatedAt": "2026-10-07T12:13:21.824Z"
 }
