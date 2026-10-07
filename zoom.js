@@ -18,17 +18,19 @@ const current = () => document.getElementById('zoom');
 
 export function openZoom(kind, id, title) {
   closeZoom(true);
+  // kind 'url': an image with no cut of its own (an upload), shown from `id` as is.
+  const src = kind === 'url' ? id : artUrl(kind, id);
   const z = document.createElement('div');
   z.className = 'zoom';
   z.id = 'zoom';
   z.setAttribute('role', 'dialog');
   z.setAttribute('aria-modal', 'true');
   z.innerHTML = `<button type="button" class="zoom-close" aria-label="Close"><svg viewBox="0 0 24 24" width="24" height="24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button>
-    <div class="zoom-frame ${kind}"><img class="zoom-img" src="${artUrl(kind, id)}" alt="${esc(title ?? '')}"></div>
+    <div class="zoom-frame ${kind}"><img class="zoom-img" src="${src}" alt="${esc(title ?? '')}"></div>
     ${title ? `<div class="zoom-title">${esc(title)}</div>` : ''}`;
   document.body.append(z);
-  const big = artLargeUrl(kind, id);
-  if (big !== artUrl(kind, id)) {
+  const big = kind === 'url' ? src : artLargeUrl(kind, id);
+  if (big !== src) {
     const pre = new Image();
     pre.onload = () => {
       const img = z.querySelector('.zoom-img');

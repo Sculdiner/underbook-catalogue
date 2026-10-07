@@ -66,12 +66,15 @@ import {
   trait,
   traitName,
   uid,
+  uploadImage,
+  uploadUrl,
   visitorDef,
   isOff,
   offTag,
   withActive,
 } from './store.js';
 import { ZOOM_BADGE, zoomAttrs } from './zoom.js';
+import { uploadAndFrame } from './upload.js';
 
 Object.assign(S, {
   proposed: LS.get('proposed', true),
@@ -241,6 +244,8 @@ const matches = (q, ...fields) => !q || fields.some((s) => String(s ?? '').toLow
 
 function bookCover(b, extra = '') {
   const v = `<span class="vbadge">V${b.value ?? '?'} · ${b.actionCost ?? 1}A</span>`;
+  if (b.upload)
+    return `<div class="cover zoomable ${extra}" ${zoomAttrs('url', uploadUrl(b.upload), b.title)} style="background-image:url('${uploadUrl(b.upload)}')">${v}${ZOOM_BADGE}</div>`;
   if (hasArt('books', b.id))
     return `<div class="cover zoomable ${extra}" ${zoomAttrs('books', b.id, b.title)} style="background-image:url('${artUrl('books', b.id)}')">${v}${ZOOM_BADGE}</div>`;
   return `<div class="cover placeholder ${extra}">${esc(b.title || b.id)}${v}</div>`;
@@ -251,14 +256,16 @@ const rarityRank = (r) => {
   return i === -1 ? RARITIES.length : i;
 };
 
-/** A Curio's icon: the one picked from the set if the queue changes it, else its own. */
+/** A Curio's icon: the one uploaded or picked from the set if the queue changes it, else its own. */
 function curioIconUrl(c) {
+  if (c.upload) return uploadUrl(c.upload);
   if (c.icon) return artUrl('library', c.icon);
   return hasArt('curios', c.id) ? artUrl('curios', c.id) : null;
 }
 
 /** The art a Curio's icon is drawn from, as [kind, id], or null when it has none. */
 function curioArt(c) {
+  if (c.upload) return ['url', uploadUrl(c.upload)];
   if (c.icon) return ['library', c.icon];
   return hasArt('curios', c.id) ? ['curios', c.id] : null;
 }
@@ -272,9 +279,11 @@ function pickIcon() {
   const sets = [...new Set(lib.map((x) => x.set))].sort((a, b) => (a === 'Assorted') - (b === 'Assorted') || a.localeCompare(b));
   const m = $('#modal');
   const own = hasArt('curios', I.draft.id) ? artUrl('curios', I.draft.id) : null;
+  const changed = I.draft.icon || I.draft.upload;
   m.innerHTML = `<div class="sheet tall icon-sheet" role="dialog" aria-modal="true">
     <div class="icon-head"><h3>Choose an icon</h3><button type="button" class="btn sm ghost" data-close>Close</button></div>
-    ${I.draft.icon && own ? `<button type="button" class="keep-icon" data-icon=""><span style="background-image:url('${own}')"></span>Keep the current icon</button>` : ''}
+    <button type="button" class="keep-icon upload-own" data-upload><span>${UPLOAD_GLYPH}</span>Upload your own image</button>
+    ${changed ? `<button type="button" class="keep-icon" data-icon=""><span ${own ? `style="background-image:url('${own}')"` : ''}></span>${own ? 'Keep the current icon' : 'No icon'}</button>` : ''}
     <div class="chips icon-sets">${sets.map((s) => `<button type="button" class="chip" data-jump="${esc(slug(s))}">${esc(s)}</button>`).join('')}</div>
     ${sets
       .map(
@@ -296,21 +305,88 @@ function pickIcon() {
     if (e.target === m || e.target.closest('[data-close]')) return close();
     const jump = e.target.closest('[data-jump]');
     if (jump) return $(`#iconset-${jump.dataset.jump}`, m)?.scrollIntoView({ block: 'start', behavior: 'smooth' });
+    if (e.target.closest('[data-upload]')) {
+      close();
+      return uploadArt('curios');
+    }
     const pick = e.target.closest('[data-icon]');
     if (!pick) return;
     if (pick.dataset.icon) I.draft.icon = pick.dataset.icon;
     else delete I.draft.icon;
+    delete I.draft.upload;
     close();
     inlineChanged();
     rerenderInline();
   };
 }
 
+const UPLOAD_GLYPH = `<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 15v4h14v-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+/**
+ * Upload your own image for the open book (its cover) or Curio (its icon):
+ * choose a file, frame it, and it goes to the site repo's `uploads/` with the
+ * draft pointing at it (`upload`). Replaces an icon picked from the set.
+ */
+async function uploadArt(kind) {
+  const I = S.inline;
+  if (!I || I.kind !== kind) return;
+  let blob;
+  try {
+    blob = await uploadAndFrame(
+      kind === 'books' ? { title: 'Frame the cover', size: [620, 900], shape: 'cover' } : { title: 'Frame the icon', size: [512, 512], shape: 'icon' },
+    );
+  } catch (e) {
+    return toast(e.message, true);
+  }
+  if (!blob) return;
+  toast('Uploading…');
+  const path = await uploadImage(kind, I.draft.id || I.key, blob);
+  if (!path) return;
+  I.draft.upload = path;
+  delete I.draft.icon;
+  if (S.inline !== I) {
+    I.dirty = true;
+    return flushInline(I);
+  }
+  inlineChanged();
+  rerenderInline();
+}
+
+/** "Change cover": straight to the file chooser, or a choice once an upload is waiting. */
+function pickCover() {
+  const I = S.inline;
+  if (!I || I.kind !== 'books') return;
+  if (!I.draft.upload) return uploadArt('books');
+  const m = $('#modal');
+  m.innerHTML = `<div class="sheet" role="dialog" aria-modal="true">
+    <h3 style="margin-top:0">Cover</h3>
+    <div class="cover-choices">
+      <button type="button" class="btn primary" data-c="new">Upload another image</button>
+      <button type="button" class="btn" data-c="drop">${hasArt('books', I.draft.id) ? 'Back to the current cover' : 'Remove the uploaded image'}</button>
+      <button type="button" class="btn ghost" data-c="">Cancel</button>
+    </div></div>`;
+  m.hidden = false;
+  m.onclick = (e) => {
+    const c = e.target.closest('[data-c]');
+    if (e.target !== m && !c) return;
+    m.hidden = true;
+    m.innerHTML = '';
+    m.onclick = null;
+    if (c?.dataset.c === 'new') return uploadArt('books');
+    if (c?.dataset.c === 'drop') {
+      delete I.draft.upload;
+      inlineChanged();
+      rerenderInline();
+    }
+  };
+}
+
 /** One book as the game's deck list draws it: rarity stripe, cropped cover, title, Value. */
 function bookRow(it) {
   const b = it.data;
-  const thumb = hasArt('books', b.id)
-    ? `<span class="deck-thumb"><i style="background-image:url('${artUrl('books', b.id)}')"></i></span>`
+  const art = b.upload ? uploadUrl(b.upload) : hasArt('books', b.id) ? artUrl('books', b.id) : null;
+  const thumb = art
+    ? `<span class="deck-thumb"><i style="background-image:url('${art}')"></i></span>`
     : `<span class="deck-thumb blank">${esc((b.title || '?')[0])}</span>`;
   const sub = [(b.actionCost ?? 1) !== 1 ? `${b.actionCost} Actions` : '', b.extension ? 'Extension' : '', ...(b.flags ?? [])].filter(Boolean);
   return `<a class="deck-row ${b.rarity} ${it.pending?.op === 'delete' ? 'deleted' : ''} ${isOff(b) ? 'off' : ''}" href="#/books/${encodeURIComponent(it.key)}">
@@ -564,7 +640,7 @@ function detailActions(kind, it) {
   </div>`;
 }
 
-const ENGINE_SKIP = new Set(['id', 'disabled', 'title', 'traits', 'rarity', 'value', 'actionCost', 'copies', 'shortText', 'rulesText', 'flavor', 'flags', 'extension', 'rebinds', 'reminders']);
+const ENGINE_SKIP = new Set(['id', 'disabled', 'upload', 'title', 'traits', 'rarity', 'value', 'actionCost', 'copies', 'shortText', 'rulesText', 'flavor', 'flags', 'extension', 'rebinds', 'reminders']);
 
 views.detail = {
   books(it) {
@@ -575,7 +651,7 @@ views.detail = {
     const tr = trait(b.traits?.[0]);
     return `<div id="pending-slot">${pendingNotice(it)}</div><div id="active-slot">${activeSwitch('books', it, b)}</div>
       <fieldset class="inl-wrap" ${live ? '' : 'disabled'}>
-      <div class="hero">${bookCover(b)}
+      <div class="hero"><div class="cover-col">${bookCover(b)}${live ? `<button type="button" class="cover-change" data-act="pick-cover">${UPLOAD_GLYPH}${b.upload ? 'Change' : 'Upload cover'}</button>` : ''}</div>
         <div class="info">
           <textarea class="inl inl-title" rows="1" data-ipath="title" placeholder="Title">${esc(b.title)}</textarea>
           <div class="tags">
@@ -1029,12 +1105,15 @@ function lineOf(kind, key, x) {
   return JSON.stringify(x);
 }
 
+/** An uploaded cover or icon, as the Changes tab shows it. */
+const uploadDiff = (e) => `<div class="dk">${e.kind === 'books' ? 'cover' : 'icon'}</div><img class="${e.kind === 'books' ? 'diff-cover' : 'diff-icon'}" src="${uploadUrl(e.after.upload)}" alt="">`;
+
 function diffHtml(e) {
   if (e.op === 'delete') return '';
   if (e.op === 'add' || !e.before) {
     return `<div class="diff">${Object.entries(e.after ?? {})
       .filter(([, v]) => v !== '' && v != null && !(Array.isArray(v) && !v.length))
-      .map(([k, v]) => `<div class="dk">${esc(k)}</div>${summarize(e.kind, k, v).map((l) => `<div class="plus">${esc(l)}</div>`).join('')}`)
+      .map(([k, v]) => (k === 'upload' ? uploadDiff(e) : `<div class="dk">${esc(k)}</div>${summarize(e.kind, k, v).map((l) => `<div class="plus">${esc(l)}</div>`).join('')}`))
       .join('')}</div>`;
   }
   const keys = [...new Set([...Object.keys(e.before), ...Object.keys(e.after)])];
@@ -1042,6 +1121,7 @@ function diffHtml(e) {
     .filter((k) => !same(e.before[k], e.after[k]))
     .map((k) => {
       if (k === 'disabled') return `<div class="dk">in the game</div><div class="${e.after.disabled ? 'minus' : 'plus'}">${e.after.disabled ? 'Switched off' : 'Switched back on'}</div>`;
+      if (k === 'upload') return e.after.upload ? uploadDiff(e) : `<div class="dk">image</div><div class="minus">Uploaded image removed</div>`;
       if (k === 'icon' && e.after.icon) return `<div class="dk">icon</div><img class="diff-icon" src="${artUrl('library', e.after.icon)}" alt="">`;
       const a = summarize(e.kind, k, e.before[k]) || [];
       const b = summarize(e.kind, k, e.after[k]) || [];
@@ -1460,6 +1540,8 @@ document.addEventListener('click', async (e) => {
       return openCard();
     case 'pick-icon':
       return pickIcon();
+    case 'pick-cover':
+      return pickCover();
     case 'dup':
       return duplicateItem(b.dataset.kind, b.dataset.key);
     case 'add-visitor': {

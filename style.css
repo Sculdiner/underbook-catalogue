@@ -413,6 +413,7 @@ button.pick-icon { position: relative; padding: 0; cursor: pointer; font: inheri
 button.pick-icon:disabled { cursor: default; }
 .pick-badge { position: absolute; left: 50%; bottom: 6px; transform: translateX(-50%); padding: 2px 8px; border-radius: 999px; background: rgba(0, 0, 0, .7); color: var(--ink); font-size: .7rem; font-weight: 600; }
 .icon-sheet { gap: 10px; }
+.icon-sheet > * { flex-shrink: 0; }
 .icon-head { display: flex; align-items: center; justify-content: space-between; }
 .icon-head h3 { margin: 0; }
 .icon-sets { position: sticky; top: -18px; z-index: 2; margin: 0 -18px; padding: 10px 18px; background: var(--bg2); }
@@ -448,3 +449,15 @@ button.pick-icon:disabled { cursor: default; }
 .active-switch .lbl { display: flex; flex-direction: column; min-width: 0; }
 .active-switch .lbl b { color: var(--ink); }
 .active-switch .lbl small { font-size: .8rem; }
+
+/* ---------------------------------------------------------------- your own image (framing is in upload.css) */
+.cover-col { flex: none; width: 120px; display: flex; flex-direction: column; gap: 8px; }
+.hero .cover-col .cover { width: 100%; }
+.cover-change { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 36px; padding: 0 8px; border: 0; border-radius: 10px; background: rgba(255, 255, 255, .06); color: var(--ink2); font: 600 .8rem var(--sans); cursor: pointer; }
+.cover-change svg { width: 16px; height: 16px; }
+.upload-own span { display: grid; place-items: center; background: rgba(255, 255, 255, .06); color: var(--accent); }
+.cover-choices { display: flex; flex-direction: column; gap: 8px; }
+.diff-cover { width: 72px; aspect-ratio: .69; object-fit: contain; border-radius: 6px; margin-top: 4px; }
+@media (min-width: 700px) {
+  .cover-col { width: 170px; }
+}

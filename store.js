@@ -238,6 +238,52 @@ async function commitPending(mutate, message) {
   }
 }
 
+// ------------------------------------------------------------------ uploaded images
+
+/** Images uploaded from this browser, shown from memory until the page reloads. */
+const UPLOADS = new Map();
+
+/** Where an uploaded image (a path on the `edits` branch) is shown from. */
+const uploadUrl = (path) =>
+  UPLOADS.get(path) ?? `https://raw.githubusercontent.com/${repo()}/${EDITS_BRANCH}/${path.split('/').map(encodeURIComponent).join('/')}`;
+
+async function blobB64(blob) {
+  const buf = new Uint8Array(await blob.arrayBuffer());
+  let bin = '';
+  for (let i = 0; i < buf.length; i += 0x8000) bin += String.fromCharCode.apply(null, buf.subarray(i, i + 0x8000));
+  return btoa(bin);
+}
+
+/**
+ * Put an image on the `edits` branch under `uploads/` (its own file, beside
+ * the queue). Returns its path, or null when it could not be saved.
+ */
+async function uploadImage(kind, id, blob) {
+  if (!token()) {
+    hooks.toast('Add a GitHub token in Settings first', true);
+    hooks.needToken();
+    return null;
+  }
+  const path = `uploads/${kind}/${id}-${uid()}.png`;
+  hooks.sync('busy');
+  try {
+    const body = JSON.stringify({ message: `Upload an image for ${kind.slice(0, -1)} ${id}`, content: await blobB64(blob), branch: EDITS_BRANCH });
+    let r = await gh(`/repos/${repo()}/contents/${path}`, { method: 'PUT', body });
+    if (r.status === 404 || r.status === 422) {
+      await ensureBranch();
+      r = await gh(`/repos/${repo()}/contents/${path}`, { method: 'PUT', body });
+    }
+    if (!r.ok) throw new Error(r.status === 401 || r.status === 403 ? `GitHub refused the upload (${r.status}) — check the token's Contents permission` : `Upload failed: HTTP ${r.status}`);
+    UPLOADS.set(path, URL.createObjectURL(blob));
+    hooks.sync('ok', 'Uploaded to GitHub');
+    return path;
+  } catch (e) {
+    hooks.sync('err', e.message);
+    hooks.toast(e.message, true);
+    return null;
+  }
+}
+
 /** Fold a new change into the queue, merging with any change already pending on the same item. */
 function stage(data, { kind, key, op, before, after, note }) {
   const edits = data.edits;
@@ -460,6 +506,8 @@ export {
   thresholds,
   tidy,
   token,
+  uploadImage,
+  uploadUrl,
   trait,
   traitName,
   uid,
