@@ -2,811 +2,6 @@
   "version": 1,
   "edits": [
     {
-      "id": "mux4z21nedvku",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "chronomancy",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "chronomancy",
-        "title": "Chronomancy",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "rare",
-        "value": 1,
-        "shortText": "Next turn: +2 Actions, draw 2 more.",
-        "rulesText": "On Assign: next turn, gain +2 Actions and draw 2 additional books.",
-        "rebinds": [
-          {
-            "id": "chronomancy:accelerated-future",
-            "name": "Accelerated Future",
-            "before": "Next turn +2 Actions",
-            "after": "Next turn +3 Actions",
-            "text": "On Assign: next turn, gain +3 Actions and draw 2 additional books."
-          },
-          {
-            "id": "chronomancy:expanded-future",
-            "name": "Expanded Future",
-            "before": "Next turn draw 2 more",
-            "after": "Next turn draw 3 more",
-            "text": "On Assign: next turn, gain +2 Actions and draw 3 additional books."
-          },
-          {
-            "id": "chronomancy:borrowed-moment",
-            "name": "Borrowed Moment",
-            "before": "Next turn +2 Actions, draw 2 more",
-            "after": "Next turn +2 Actions, draw 2 more; first book free",
-            "text": "On Assign: next turn, gain +2 Actions and draw 2 additional books. The first book you assign next turn costs 0 Actions."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "chronomancy",
-        "title": "Chronomancy",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "rare",
-        "value": 1,
-        "shortText": "Next turn: +2 Actions, draw 2 more.",
-        "rulesText": "On Assign: next turn, gain +1 Actions and draw 2 additional books.",
-        "rebinds": [
-          {
-            "id": "chronomancy:accelerated-future",
-            "name": "Accelerated Future",
-            "before": "Next turn +2 Actions",
-            "after": "Next turn +3 Actions",
-            "text": "On Assign: next turn, gain +3 Actions and draw 2 additional books."
-          },
-          {
-            "id": "chronomancy:expanded-future",
-            "name": "Expanded Future",
-            "before": "Next turn draw 2 more",
-            "after": "Next turn draw 3 more",
-            "text": "On Assign: next turn, gain +2 Actions and draw 3 additional books."
-          },
-          {
-            "id": "chronomancy:borrowed-moment",
-            "name": "Borrowed Moment",
-            "before": "Next turn +2 Actions, draw 2 more",
-            "after": "Next turn +2 Actions, draw 2 more; first book free",
-            "text": "On Assign: next turn, gain +2 Actions and draw 2 additional books. The first book you assign next turn costs 0 Actions."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-06T20:33:38.074Z"
-    },
-    {
-      "id": "mux50izbhjrth",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "the-tide-of-teeth",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "the-tide-of-teeth",
-        "title": "The Tide of Teeth",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "common",
-        "value": 0,
-        "extension": true,
-        "dynamicValue": {
-          "source": "discard",
-          "max": 5
-        },
-        "shortText": "Value = books in discard, max 5.",
-        "rulesText": "This book's Value is equal to the number of books in your discard pile, to a maximum of 5.",
-        "reminders": [
-          "dynamic-value"
-        ],
-        "rebinds": [
-          {
-            "id": "the-tide-of-teeth:feeding-frenzy",
-            "name": "Feeding Frenzy",
-            "before": "Max 5",
-            "after": "Max 8",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 8."
-          },
-          {
-            "id": "the-tide-of-teeth:blood-in-the-water",
-            "name": "Blood in the Water",
-            "before": "No On Assign",
-            "after": "On Assign: at Value 5, draw 1",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 5. On Assign: if The Tide of Teeth has Value 5, draw 1 book."
-          },
-          {
-            "id": "the-tide-of-teeth:endless-teeth",
-            "name": "Endless Teeth",
-            "before": "Value = discard, max 5",
-            "after": "Value = discard +2, max 5",
-            "text": "This book's Value is equal to the number of books in your discard pile +2, to a maximum of 5."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "the-tide-of-teeth",
-        "title": "The Tide of Teeth",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "common",
-        "value": 0,
-        "extension": true,
-        "dynamicValue": {
-          "source": "discard",
-          "max": 5
-        },
-        "shortText": "Value = books in discard, max 5.",
-        "rulesText": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4.",
-        "reminders": [
-          "dynamic-value"
-        ],
-        "rebinds": [
-          {
-            "id": "the-tide-of-teeth:feeding-frenzy",
-            "name": "Feeding Frenzy",
-            "before": "Max 4",
-            "after": "Max 7",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 7."
-          },
-          {
-            "id": "the-tide-of-teeth:blood-in-the-water",
-            "name": "Blood in the Water",
-            "before": "No On Assign",
-            "after": "On Assign: at Value 4, draw 1",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4. On Assign: if The Tide of Teeth has Value 4, draw 1 book."
-          },
-          {
-            "id": "the-tide-of-teeth:endless-teeth",
-            "name": "Endless Teeth",
-            "after": "Create a Temporary Endless Teeth to your hand",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4. Create a Temporary Endless Teeth to your hand."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-06T20:38:04.359Z"
-    },
-    {
-      "id": "mux564lbteu5o",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "monsters-of-the-deep",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "monsters-of-the-deep",
-        "title": "Monsters of the Deep",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "rare",
-        "value": 1,
-        "shortText": "Tentacles assign 2 hand books, free.",
-        "rulesText": "On Assign: tentacles take 2 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve.",
-        "flavor": "A lavish bestiary documenting krakens, leviathans, and other colossal creatures said to inhabit the deepest and least-charted seas.",
-        "rebinds": [
-          {
-            "id": "monsters-of-the-deep:deeper-still",
-            "name": "Deeper Still",
-            "before": "Value 1",
-            "after": "Value 3",
-            "text": "Printed Value 3. Tentacles still assign 2 hand books."
-          },
-          {
-            "id": "monsters-of-the-deep:more-tentacles",
-            "name": "More Tentacles",
-            "before": "2 hand books",
-            "after": "3 hand books",
-            "text": "On Assign: tentacles take 3 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve."
-          },
-          {
-            "id": "monsters-of-the-deep:crushing-tentacles",
-            "name": "Crushing Tentacles",
-            "before": "2 hand books",
-            "after": "2 hand books, each +1 Value",
-            "text": "On Assign: tentacles take 2 random books from your hand; each gains +1 Value, then is assigned to a randomly chosen valid visitor for 0 Actions."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "monsters-of-the-deep",
-        "title": "Monsters of the Deep",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "rare",
-        "value": 1,
-        "shortText": "Tentacles assign 2 hand books, free.",
-        "rulesText": "On Assign: tentacles take a random book from your hand and assign it to a random chosen valid visitors for 0 Actions. Its On Assign abilities resolve. Then, destroy it.",
-        "flavor": "A lavish bestiary documenting krakens, leviathans, and other colossal creatures said to inhabit the deepest and least-charted seas.",
-        "rebinds": [
-          {
-            "id": "monsters-of-the-deep:deeper-still",
-            "name": "Deeper Still",
-            "before": "Value 1",
-            "after": "Value 4",
-            "text": "Printed Value 4. Tentacles still assign 1 book."
-          },
-          {
-            "id": "monsters-of-the-deep:more-tentacles",
-            "name": "More Tentacles",
-            "before": "1 book",
-            "after": "2 books",
-            "text": "On Assign: tentacles take 2 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve. Then destroy them"
-          },
-          {
-            "id": "monsters-of-the-deep:crushing-tentacles",
-            "name": "Softer Tentacles",
-            "before": "Book is destroyed",
-            "after": "Book remains",
-            "text": "On Assign: tentacles take a random book from your hand and assign it to a random chosen valid visitors for 0 Actions. Its On Assign abilities resolve."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-06T20:43:33.109Z"
-    },
-    {
-      "id": "mux5ck5952cbr",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "the-starless-sea",
-      "before": {
-        "actionCost": 0,
-        "copies": 1,
-        "id": "the-starless-sea",
-        "title": "The Starless Sea",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "rare",
-        "value": 2,
-        "extension": true,
-        "shortText": "Ignore visitor abilities this turn. DESTROY at End Turn.",
-        "rulesText": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn.",
-        "reminders": [
-          "ignore-abilities",
-          "destroy"
-        ],
-        "rebinds": [
-          {
-            "id": "the-starless-sea:black-horizon",
-            "name": "Black Horizon",
-            "before": "Value 2",
-            "after": "Value 5",
-            "text": "Printed Value 5. Still costs 0, ignores visitor abilities this turn and is DESTROYed at End Turn."
-          },
-          {
-            "id": "the-starless-sea:depthless-silence",
-            "name": "Depthless Silence",
-            "before": "No draw",
-            "after": "Then draw 1",
-            "text": "On Assign: ignore all visitor abilities for the rest of this turn, then draw 1 book. DESTROY this at End Turn."
-          },
-          {
-            "id": "the-starless-sea:after-the-darkness",
-            "name": "After the Darkness",
-            "before": "DESTROYed at End Turn",
-            "after": "DESTROYed at End Turn: +1 Action next turn",
-            "text": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn; when it is, gain +1 Action next turn."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 0,
-        "copies": 1,
-        "id": "the-starless-sea",
-        "title": "The Starless Sea",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "rare",
-        "value": 2,
-        "extension": true,
-        "shortText": "Ignore visitor abilities this turn. DESTROY at End Turn.",
-        "rulesText": "Cost 0 actions.\nOn Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn.",
-        "reminders": [
-          "ignore-abilities",
-          "destroy"
-        ],
-        "rebinds": [
-          {
-            "id": "the-starless-sea:black-horizon",
-            "name": "Black Horizon",
-            "before": "Value 2",
-            "after": "Value 5",
-            "text": "Printed Value 5. Still costs 0, ignores visitor abilities this turn and is DESTROYed at End Turn."
-          },
-          {
-            "id": "the-starless-sea:depthless-silence",
-            "name": "Depthless Silence",
-            "before": "No draw",
-            "after": "Then draw 1",
-            "text": "On Assign: ignore all visitor abilities for the rest of this turn, then draw 1 book. DESTROY this at End Turn."
-          },
-          {
-            "id": "the-starless-sea:after-the-darkness",
-            "name": "After the Darkness",
-            "before": "DESTROYed at End Turn",
-            "after": "DESTROYed at End Turn: +1 Action next turn",
-            "text": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn; when it is, gain +1 Action next turn."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-06T20:44:08.061Z"
-    },
-    {
-      "id": "mux5di0z298hl",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "unwelcome-critics-monocle",
-      "before": {
-        "id": "unwelcome-critics-monocle",
-        "name": "Special Crown",
-        "rarity": "uncommon",
-        "price": 75,
-        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
-      },
-      "after": {
-        "id": "unwelcome-critics-monocle",
-        "name": "Staff of Dominance",
-        "rarity": "rare",
-        "text": "Books assigned to visitors who have a visitor ability gain +1 Value.",
-        "price": 105,
-        "icon": "addons_42_b"
-      },
-      "note": "",
-      "at": "2026-10-06T21:33:43.479Z"
-    },
-    {
-      "id": "mux5h0s477ox8",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "braided-catalogue",
-      "before": {
-        "id": "braided-catalogue",
-        "name": "Braided Catalogue",
-        "rarity": "uncommon",
-        "price": 90,
-        "text": "Every 3rd alternation in a row between your two Traits on paid assignments gains you +1 Action. A neutral book breaks the chain; it resets each Encounter."
-      },
-      "after": {
-        "id": "braided-catalogue",
-        "name": "Orb of the Storms",
-        "rarity": "uncommon",
-        "price": 90,
-        "text": "Every 3rd alternation in a row between your two Traits on paid assignments gains you +1 Action. A neutral book breaks the chain; it resets each Encounter.",
-        "icon": "element(air)_b_01"
-      },
-      "note": "",
-      "at": "2026-10-07T11:30:39.151Z"
-    },
-    {
-      "id": "mux5jzu8cebiq",
-      "kind": "curios",
-      "op": "add",
-      "targetId": "euphoric-salts",
-      "before": null,
-      "after": {
-        "id": "euphoric-salts",
-        "name": "Euphoric Salts",
-        "rarity": "common",
-        "icon": "essence_02_b",
-        "text": "At the start of the turn, 1 Visitor randomly gets 1 fulfillment",
-        "price": 70
-      },
-      "note": "",
-      "at": "2026-10-06T20:52:54.258Z"
-    },
-    {
-      "id": "mux5orad96ncl",
-      "kind": "curios",
-      "op": "add",
-      "targetId": "pastlife-relic",
-      "before": null,
-      "after": {
-        "id": "pastlife-relic",
-        "name": "Pastlife Relic",
-        "rarity": "uncommon",
-        "icon": "NecromancerIcons_49_b",
-        "text": "Whenever your discard pile is shuffled into your deck, add 2 fulfillment to a random Visitor.",
-        "price": 90
-      },
-      "note": "",
-      "at": "2026-10-06T20:55:26.668Z"
-    },
-    {
-      "id": "mux5sxbdkc6mn",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "second-opinion",
-      "before": {
-        "id": "second-opinion",
-        "name": "Second Opinion",
-        "rarity": "rare",
-        "price": 100,
-        "text": "If the last book assigned to a visitor was of your other Trait, the book you assign them now gains +2 Value. It can alternate again and again; a neutral book breaks that visitor's chain."
-      },
-      "after": {
-        "id": "second-opinion",
-        "name": "Second Opinion",
-        "rarity": "rare",
-        "price": 100,
-        "text": "If the last book assigned to a visitor was of your other Trait, the book you assign them now gains +2 Value. It can alternate again and again; a neutral book breaks that visitor's chain.",
-        "disabled": true
-      },
-      "note": "",
-      "at": "2026-10-07T11:29:45.655Z"
-    },
-    {
-      "id": "mux5t590rkbdv",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "deep-waiting-room-clock",
-      "before": {
-        "id": "deep-waiting-room-clock",
-        "name": "Deep Waiting-Room Clock",
-        "rarity": "rare",
-        "price": 100,
-        "text": "The first book assigned to a visitor each turn gains +1 Value for every 2 Patience they have, up to +2."
-      },
-      "after": {
-        "id": "deep-waiting-room-clock",
-        "name": "Deep Waiting-Room Clock",
-        "rarity": "rare",
-        "price": 100,
-        "text": "The first book assigned to a visitor each turn gains +1 Value for every 2 Patience they have, up to +2.",
-        "disabled": true
-      },
-      "note": "",
-      "at": "2026-10-06T20:57:01.908Z"
-    },
-    {
-      "id": "mux5x8hase3hf",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "summoning-theorems",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "summoning-theorems",
-        "title": "Summoning Theorems",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "rare",
-        "value": 0,
-        "shortText": "2 Library books assigned here, free.",
-        "rulesText": "On Assign: take 2 random books directly from your Library and assign them to this visitor for 0 Actions. Their On Assign abilities resolve.",
-        "reminders": [
-          "recycle"
-        ],
-        "rebinds": [
-          {
-            "id": "summoning-theorems:greater-theorems",
-            "name": "Greater Theorems",
-            "before": "2 Library books",
-            "after": "3 Library books",
-            "text": "On Assign: take 3 random books directly from your Library and assign them to this visitor for 0 Actions. Their On Assign abilities resolve."
-          },
-          {
-            "id": "summoning-theorems:empowered-theorems",
-            "name": "Empowered Theorems",
-            "before": "2 Library books",
-            "after": "2 Library books, each +1 Value",
-            "text": "On Assign: take 2 random books directly from your Library; each gains +1 Value, then is assigned to this visitor for 0 Actions."
-          },
-          {
-            "id": "summoning-theorems:selective-theorems",
-            "name": "Selective Theorems",
-            "before": "2 random Library books",
-            "after": "The 2 highest-Value Library books",
-            "text": "On Assign: take the 2 highest-Value books in your Library (ties at random) and assign them to this visitor for 0 Actions."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "summoning-theorems",
-        "title": "Summoning Theorems",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "rare",
-        "value": 0,
-        "shortText": "2 Library books assigned here, free.",
-        "rulesText": "On Assign: Discard up to 2 books at random from your hand. Summon that many random books from your Library, on this visitor (their On Assign abilities resolve)",
-        "reminders": [
-          "recycle"
-        ],
-        "rebinds": [
-          {
-            "id": "summoning-theorems:greater-theorems",
-            "name": "Greater Theorems",
-            "before": "2 Library books",
-            "after": "3 Library books",
-            "text": "On Assign: take 3 random books directly from your Library and assign them to this visitor for 0 Actions. Their On Assign abilities resolve."
-          },
-          {
-            "id": "summoning-theorems:empowered-theorems",
-            "name": "Empowered Theorems",
-            "before": "2 Library books",
-            "after": "2 Library books, each +1 Value",
-            "text": "On Assign: take 2 random books directly from your Library; each gains +1 Value, then is assigned to this visitor for 0 Actions."
-          },
-          {
-            "id": "summoning-theorems:selective-theorems",
-            "name": "Selective Theorems",
-            "before": "2 random Library books",
-            "after": "The 2 highest-Value Library books",
-            "text": "On Assign: take the 2 highest-Value books in your Library (ties at random) and assign them to this visitor for 0 Actions."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-06T21:00:12.718Z"
-    },
-    {
-      "id": "mux750gx4effv",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "red-string-bookmark",
-      "before": {
-        "id": "red-string-bookmark",
-        "name": "Talisman of the Anger",
-        "rarity": "rare",
-        "price": 95,
-        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
-      },
-      "after": {
-        "id": "red-string-bookmark",
-        "name": "Talisman of Anger",
-        "rarity": "rare",
-        "price": 95,
-        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
-      },
-      "note": "",
-      "at": "2026-10-06T21:34:15.201Z"
-    },
-    {
-      "id": "mux76m7eaews2",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "hostile-readers-seal",
-      "before": {
-        "id": "hostile-readers-seal",
-        "name": "Hostile Reader's Seal",
-        "rarity": "rare",
-        "price": 95,
-        "text": "Books assigned to visitors who have a visitor ability gain +2 Value. Ordinary visitors get nothing."
-      },
-      "after": {
-        "id": "hostile-readers-seal",
-        "name": "Crown of Command",
-        "rarity": "legendary",
-        "text": "Books assigned to visitors who have a visitor ability gain +2 Value. Ordinary visitors get nothing.",
-        "icon": "TradingIcons_118_b",
-        "price": 145
-      },
-      "note": "",
-      "at": "2026-10-06T21:37:28.161Z"
-    },
-    {
-      "id": "mux79i6la92f9",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "great-alternating-index",
-      "before": {
-        "id": "great-alternating-index",
-        "name": "The Great Alternating Index",
-        "rarity": "legendary",
-        "price": 115,
-        "text": "Every 3rd alternation in a row between your two Traits on paid assignments refunds 1 Action, and that book gains +2 Value. A neutral book breaks the chain."
-      },
-      "after": {
-        "id": "great-alternating-index",
-        "name": "The Great Alternating Index",
-        "rarity": "legendary",
-        "price": 115,
-        "text": "Every 3rd alternation in a row between your two Traits on paid assignments refunds 1 Action, and that book gains +2 Value. A neutral book breaks the chain.",
-        "disabled": true
-      },
-      "note": "",
-      "at": "2026-10-06T21:37:44.781Z"
-    },
-    {
-      "id": "mux79mu1aiwhz",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "endless-waiting-room",
-      "before": {
-        "id": "endless-waiting-room",
-        "name": "The Endless Waiting Room",
-        "rarity": "legendary",
-        "price": 120,
-        "text": "If you fulfill 2 or more visitors in a turn, everyone still waiting gains +1 Patience at the end of that turn instead of losing 1."
-      },
-      "after": {
-        "id": "endless-waiting-room",
-        "name": "The Endless Waiting Room",
-        "rarity": "legendary",
-        "price": 120,
-        "text": "If you fulfill 2 or more visitors in a turn, everyone still waiting gains +1 Patience at the end of that turn instead of losing 1.",
-        "disabled": true
-      },
-      "note": "",
-      "at": "2026-10-06T21:37:50.809Z"
-    },
-    {
-      "id": "mux7aqc92yqmd",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "perfectly-balanced-inventory",
-      "before": {
-        "id": "perfectly-balanced-inventory",
-        "name": "Perfectly Balanced Inventory",
-        "rarity": "legendary",
-        "price": 110,
-        "text": "While your deck holds exactly as many books of one of your Traits as of the other, books of either Trait gain +2 Value. Neutral books are not counted."
-      },
-      "after": {
-        "id": "perfectly-balanced-inventory",
-        "name": "Perfectly Balanced Inventory",
-        "rarity": "legendary",
-        "price": 110,
-        "text": "While your deck holds exactly as many books of one of your Traits as of the other, books of either Trait gain +2 Value. Neutral books are not counted.",
-        "disabled": true
-      },
-      "note": "",
-      "at": "2026-10-06T21:38:42.008Z"
-    },
-    {
-      "id": "mux7avwx0fcmf",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "retinues-book-of-etiquette",
-      "before": {
-        "id": "retinues-book-of-etiquette",
-        "name": "The Retinue's Book of Etiquette",
-        "rarity": "legendary",
-        "price": 115,
-        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Fulfillment."
-      },
-      "after": {
-        "id": "retinues-book-of-etiquette",
-        "name": "The Retinue's Book of Etiquette",
-        "rarity": "legendary",
-        "price": 115,
-        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Fulfillment.",
-        "disabled": true
-      },
-      "note": "",
-      "at": "2026-10-06T21:38:49.233Z"
-    },
-    {
-      "id": "mux7bokn9gkx5",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "difficult-customer-society",
-      "before": {
-        "id": "difficult-customer-society",
-        "name": "The Difficult Customer Society",
-        "rarity": "legendary",
-        "price": 110,
-        "text": "Whenever a visitor's ability lowers a book's Value, or discards or DESTROYs one of your books, that book first gains +2 Value."
-      },
-      "after": {
-        "id": "difficult-customer-society",
-        "name": "Idol of Sacrifice",
-        "rarity": "legendary",
-        "text": "Whenever a visitor's ability lowers a book's Value, or discards or DESTROYs one of your books, that book first gains +2 Value.",
-        "icon": "NecromancerIcons_77_b",
-        "price": 125
-      },
-      "note": "",
-      "at": "2026-10-06T21:39:50.284Z"
-    },
-    {
-      "id": "mux7dg2pb3bj9",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "great-queue-ledger",
-      "before": {
-        "id": "great-queue-ledger",
-        "name": "The Great Queue Ledger",
-        "rarity": "legendary",
-        "price": 115,
-        "text": "Every 5th visitor you fulfill gains you +1 Action at once. The count carries across the Stage and resets when a new Stage begins."
-      },
-      "after": {
-        "id": "great-queue-ledger",
-        "name": "Starweaved Dreamcatcher",
-        "rarity": "legendary",
-        "price": 150,
-        "text": "Every 5th visitor you fulfill gains you +1 Action at once. The count carries across the Stage and resets when a new Stage begins.",
-        "icon": "PrehistoricIcon_115_b"
-      },
-      "note": "",
-      "at": "2026-10-06T21:41:17.294Z"
-    },
-    {
-      "id": "mux7hqr8w93iz",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "two-schools-one-library",
-      "before": {
-        "id": "two-schools-one-library",
-        "name": "Two Schools, One Library",
-        "rarity": "legendary",
-        "price": 115,
-        "text": "Whenever a paid assignment alternates from one of your Traits to the other, that book gains +1 Value; every 4th alternation in a row also draws 1 book, if your hand has room. A neutral book breaks the chain."
-      },
-      "after": {
-        "id": "two-schools-one-library",
-        "name": "Twilight Key",
-        "rarity": "rare",
-        "text": "Treasure nodes give you 3 choises. You still select 1 only.",
-        "icon": "NecromancerIcons_23_b",
-        "price": 100
-      },
-      "note": "",
-      "at": "2026-10-06T21:45:52.750Z"
-    },
-    {
-      "id": "mux7mbjygs1aw",
-      "kind": "curios",
-      "op": "add",
-      "targetId": "wks",
-      "before": null,
-      "after": {
-        "id": "wks",
-        "name": "Eye of the Beholder",
-        "rarity": "rare",
-        "price": 95,
-        "icon": "NecromancerIcons_12_b",
-        "text": "You can see the order of books in your Library."
-      },
-      "note": "",
-      "at": "2026-10-07T13:45:33.226Z"
-    },
-    {
-      "id": "muy2j5corp0b3",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "peoples-catalogue",
-      "before": {
-        "id": "peoples-catalogue",
-        "name": "The People's Catalogue",
-        "rarity": "legendary",
-        "price": 120,
-        "text": "Whenever you fulfill a visitor, every other waiting visitor gains +1 Fulfillment."
-      },
-      "after": {
-        "id": "peoples-catalogue",
-        "name": "Idol of the Pleased Patron",
-        "rarity": "legendary",
-        "price": 120,
-        "text": "Whenever you fulfill a visitor, every other waiting visitor gains +1 Fulfillment.",
-        "icon": "TradingIcons_56"
-      },
-      "note": "",
-      "at": "2026-10-07T12:13:21.824Z"
-    },
-    {
       "id": "muy6cp93g7sl0",
       "kind": "curios",
       "op": "add",
@@ -822,97 +17,6 @@
       },
       "note": "",
       "at": "2026-10-07T18:10:20.980Z"
-    },
-    {
-      "id": "muyctfw718t10",
-      "kind": "curios",
-      "op": "add",
-      "targetId": "mirror",
-      "before": null,
-      "after": {
-        "id": "mirror",
-        "name": "Mirror",
-        "rarity": "rare",
-        "price": 95,
-        "text": "Select a book to duplicate when you obtain this.",
-        "upload": "uploads/curios/mirror-muye8i7nsrqvn.png"
-      },
-      "note": "",
-      "at": "2026-10-07T17:45:06.356Z"
-    },
-    {
-      "id": "muyeezepoyl36",
-      "kind": "curios",
-      "op": "add",
-      "targetId": "otherwordly-gift",
-      "before": null,
-      "after": {
-        "id": "otherwordly-gift",
-        "name": "Otherwordly Gift",
-        "rarity": "rare",
-        "price": 105,
-        "text": "Randomly get a Rare book that belongs to another trait",
-        "icon": "larva_b_01"
-      },
-      "note": "",
-      "at": "2026-10-07T17:47:12.413Z"
-    },
-    {
-      "id": "muyeieptp7kkp",
-      "kind": "curios",
-      "op": "add",
-      "targetId": "distinguished",
-      "before": null,
-      "after": {
-        "id": "distinguished",
-        "name": "Royal Goblet",
-        "rarity": "uncommon",
-        "price": 85,
-        "text": "If a distinguished visitor is active, gain 1 extra action and draw 1 book more at the start of the turn.",
-        "icon": "NecromancerIcons_35_b"
-      },
-      "note": "",
-      "at": "2026-10-07T17:54:08.963Z"
-    },
-    {
-      "id": "muyf1smps829x",
-      "kind": "curios",
-      "op": "add",
-      "targetId": "the-100th-rule",
-      "before": null,
-      "after": {
-        "id": "the-100th-rule",
-        "name": "Dreamscythes",
-        "rarity": "common",
-        "price": 65,
-        "text": "After you have shuffled 100 books into your deck, gain 1 Reputation (number is retained between encounters)",
-        "icon": "BlueLootBox_59_b"
-      },
-      "note": "",
-      "at": "2026-10-07T18:08:50.424Z"
-    },
-    {
-      "id": "muyfbg98yhtla",
-      "kind": "curios",
-      "op": "edit",
-      "targetId": "talisman-of-the-after-after-life",
-      "before": {
-        "id": "talisman-of-the-after-after-life",
-        "name": "Talisman of the After-After Life",
-        "rarity": "common",
-        "price": 70,
-        "text": "Whenever your discard pile is shuffled into your Library, a random book shuffled in gains +1 Value until the end of the Encounter."
-      },
-      "after": {
-        "id": "talisman-of-the-after-after-life",
-        "name": "Talisman of the After-After Life",
-        "rarity": "common",
-        "price": 70,
-        "text": "Whenever your discard pile is shuffled into your Library, a random book shuffled in gains +1 Value until the end of the Encounter.",
-        "icon": "NecromancerIcons_21_b"
-      },
-      "note": "",
-      "at": "2026-10-07T18:10:58.700Z"
     }
   ],
   "applied": [
@@ -5553,7 +4657,957 @@
       "at": "2026-10-06T17:04:09.306Z",
       "appliedAt": "2026-10-06T17:18:26.543Z",
       "result": "Chronomancy is now Value 1."
+    },
+    {
+      "id": "mux4z21nedvku",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "chronomancy",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "chronomancy",
+        "title": "Chronomancy",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 1,
+        "shortText": "Next turn: +2 Actions, draw 2 more.",
+        "rulesText": "On Assign: next turn, gain +2 Actions and draw 2 additional books.",
+        "rebinds": [
+          {
+            "id": "chronomancy:accelerated-future",
+            "name": "Accelerated Future",
+            "before": "Next turn +2 Actions",
+            "after": "Next turn +3 Actions",
+            "text": "On Assign: next turn, gain +3 Actions and draw 2 additional books."
+          },
+          {
+            "id": "chronomancy:expanded-future",
+            "name": "Expanded Future",
+            "before": "Next turn draw 2 more",
+            "after": "Next turn draw 3 more",
+            "text": "On Assign: next turn, gain +2 Actions and draw 3 additional books."
+          },
+          {
+            "id": "chronomancy:borrowed-moment",
+            "name": "Borrowed Moment",
+            "before": "Next turn +2 Actions, draw 2 more",
+            "after": "Next turn +2 Actions, draw 2 more; first book free",
+            "text": "On Assign: next turn, gain +2 Actions and draw 2 additional books. The first book you assign next turn costs 0 Actions."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "chronomancy",
+        "title": "Chronomancy",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 1,
+        "shortText": "Next turn: +2 Actions, draw 2 more.",
+        "rulesText": "On Assign: next turn, gain +1 Actions and draw 2 additional books.",
+        "rebinds": [
+          {
+            "id": "chronomancy:accelerated-future",
+            "name": "Accelerated Future",
+            "before": "Next turn +2 Actions",
+            "after": "Next turn +3 Actions",
+            "text": "On Assign: next turn, gain +3 Actions and draw 2 additional books."
+          },
+          {
+            "id": "chronomancy:expanded-future",
+            "name": "Expanded Future",
+            "before": "Next turn draw 2 more",
+            "after": "Next turn draw 3 more",
+            "text": "On Assign: next turn, gain +2 Actions and draw 3 additional books."
+          },
+          {
+            "id": "chronomancy:borrowed-moment",
+            "name": "Borrowed Moment",
+            "before": "Next turn +2 Actions, draw 2 more",
+            "after": "Next turn +2 Actions, draw 2 more; first book free",
+            "text": "On Assign: next turn, gain +2 Actions and draw 2 additional books. The first book you assign next turn costs 0 Actions."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-06T20:33:38.074Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Chronomancy now gives +1 Action next turn (still draws 2); Accelerated Future gives +2, one above the base."
+    },
+    {
+      "id": "mux50izbhjrth",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "the-tide-of-teeth",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "the-tide-of-teeth",
+        "title": "The Tide of Teeth",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "value": 0,
+        "extension": true,
+        "dynamicValue": {
+          "source": "discard",
+          "max": 5
+        },
+        "shortText": "Value = books in discard, max 5.",
+        "rulesText": "This book's Value is equal to the number of books in your discard pile, to a maximum of 5.",
+        "reminders": [
+          "dynamic-value"
+        ],
+        "rebinds": [
+          {
+            "id": "the-tide-of-teeth:feeding-frenzy",
+            "name": "Feeding Frenzy",
+            "before": "Max 5",
+            "after": "Max 8",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 8."
+          },
+          {
+            "id": "the-tide-of-teeth:blood-in-the-water",
+            "name": "Blood in the Water",
+            "before": "No On Assign",
+            "after": "On Assign: at Value 5, draw 1",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 5. On Assign: if The Tide of Teeth has Value 5, draw 1 book."
+          },
+          {
+            "id": "the-tide-of-teeth:endless-teeth",
+            "name": "Endless Teeth",
+            "before": "Value = discard, max 5",
+            "after": "Value = discard +2, max 5",
+            "text": "This book's Value is equal to the number of books in your discard pile +2, to a maximum of 5."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "the-tide-of-teeth",
+        "title": "The Tide of Teeth",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "value": 0,
+        "extension": true,
+        "dynamicValue": {
+          "source": "discard",
+          "max": 5
+        },
+        "shortText": "Value = books in discard, max 5.",
+        "rulesText": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4.",
+        "reminders": [
+          "dynamic-value"
+        ],
+        "rebinds": [
+          {
+            "id": "the-tide-of-teeth:feeding-frenzy",
+            "name": "Feeding Frenzy",
+            "before": "Max 4",
+            "after": "Max 7",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 7."
+          },
+          {
+            "id": "the-tide-of-teeth:blood-in-the-water",
+            "name": "Blood in the Water",
+            "before": "No On Assign",
+            "after": "On Assign: at Value 4, draw 1",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4. On Assign: if The Tide of Teeth has Value 4, draw 1 book."
+          },
+          {
+            "id": "the-tide-of-teeth:endless-teeth",
+            "name": "Endless Teeth",
+            "after": "Create a Temporary Endless Teeth to your hand",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4. Create a Temporary Endless Teeth to your hand."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-06T20:38:04.359Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "The Tide of Teeth now caps at 4; Feeding Frenzy caps at 7, Blood in the Water draws at Value 4, and Endless Teeth puts a Temporary copy of the Tide in your hand."
+    },
+    {
+      "id": "mux564lbteu5o",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "monsters-of-the-deep",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "monsters-of-the-deep",
+        "title": "Monsters of the Deep",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 1,
+        "shortText": "Tentacles assign 2 hand books, free.",
+        "rulesText": "On Assign: tentacles take 2 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve.",
+        "flavor": "A lavish bestiary documenting krakens, leviathans, and other colossal creatures said to inhabit the deepest and least-charted seas.",
+        "rebinds": [
+          {
+            "id": "monsters-of-the-deep:deeper-still",
+            "name": "Deeper Still",
+            "before": "Value 1",
+            "after": "Value 3",
+            "text": "Printed Value 3. Tentacles still assign 2 hand books."
+          },
+          {
+            "id": "monsters-of-the-deep:more-tentacles",
+            "name": "More Tentacles",
+            "before": "2 hand books",
+            "after": "3 hand books",
+            "text": "On Assign: tentacles take 3 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve."
+          },
+          {
+            "id": "monsters-of-the-deep:crushing-tentacles",
+            "name": "Crushing Tentacles",
+            "before": "2 hand books",
+            "after": "2 hand books, each +1 Value",
+            "text": "On Assign: tentacles take 2 random books from your hand; each gains +1 Value, then is assigned to a randomly chosen valid visitor for 0 Actions."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "monsters-of-the-deep",
+        "title": "Monsters of the Deep",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 1,
+        "shortText": "Tentacles assign 2 hand books, free.",
+        "rulesText": "On Assign: tentacles take a random book from your hand and assign it to a random chosen valid visitors for 0 Actions. Its On Assign abilities resolve. Then, destroy it.",
+        "flavor": "A lavish bestiary documenting krakens, leviathans, and other colossal creatures said to inhabit the deepest and least-charted seas.",
+        "rebinds": [
+          {
+            "id": "monsters-of-the-deep:deeper-still",
+            "name": "Deeper Still",
+            "before": "Value 1",
+            "after": "Value 4",
+            "text": "Printed Value 4. Tentacles still assign 1 book."
+          },
+          {
+            "id": "monsters-of-the-deep:more-tentacles",
+            "name": "More Tentacles",
+            "before": "1 book",
+            "after": "2 books",
+            "text": "On Assign: tentacles take 2 random books from your hand and assign them to randomly chosen valid visitors for 0 Actions. Their On Assign abilities resolve. Then destroy them"
+          },
+          {
+            "id": "monsters-of-the-deep:crushing-tentacles",
+            "name": "Softer Tentacles",
+            "before": "Book is destroyed",
+            "after": "Book remains",
+            "text": "On Assign: tentacles take a random book from your hand and assign it to a random chosen valid visitors for 0 Actions. Its On Assign abilities resolve."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-06T20:43:33.109Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Monsters of the Deep now flings 1 hand book and DESTROYs it after it lands; Deeper Still is Value 4, More Tentacles flings and DESTROYs 2, and Softer Tentacles keeps the book."
+    },
+    {
+      "id": "mux5ck5952cbr",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "the-starless-sea",
+      "before": {
+        "actionCost": 0,
+        "copies": 1,
+        "id": "the-starless-sea",
+        "title": "The Starless Sea",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 2,
+        "extension": true,
+        "shortText": "Ignore visitor abilities this turn. DESTROY at End Turn.",
+        "rulesText": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn.",
+        "reminders": [
+          "ignore-abilities",
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "the-starless-sea:black-horizon",
+            "name": "Black Horizon",
+            "before": "Value 2",
+            "after": "Value 5",
+            "text": "Printed Value 5. Still costs 0, ignores visitor abilities this turn and is DESTROYed at End Turn."
+          },
+          {
+            "id": "the-starless-sea:depthless-silence",
+            "name": "Depthless Silence",
+            "before": "No draw",
+            "after": "Then draw 1",
+            "text": "On Assign: ignore all visitor abilities for the rest of this turn, then draw 1 book. DESTROY this at End Turn."
+          },
+          {
+            "id": "the-starless-sea:after-the-darkness",
+            "name": "After the Darkness",
+            "before": "DESTROYed at End Turn",
+            "after": "DESTROYed at End Turn: +1 Action next turn",
+            "text": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn; when it is, gain +1 Action next turn."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 0,
+        "copies": 1,
+        "id": "the-starless-sea",
+        "title": "The Starless Sea",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 2,
+        "extension": true,
+        "shortText": "Ignore visitor abilities this turn. DESTROY at End Turn.",
+        "rulesText": "Cost 0 actions.\nOn Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn.",
+        "reminders": [
+          "ignore-abilities",
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "the-starless-sea:black-horizon",
+            "name": "Black Horizon",
+            "before": "Value 2",
+            "after": "Value 5",
+            "text": "Printed Value 5. Still costs 0, ignores visitor abilities this turn and is DESTROYed at End Turn."
+          },
+          {
+            "id": "the-starless-sea:depthless-silence",
+            "name": "Depthless Silence",
+            "before": "No draw",
+            "after": "Then draw 1",
+            "text": "On Assign: ignore all visitor abilities for the rest of this turn, then draw 1 book. DESTROY this at End Turn."
+          },
+          {
+            "id": "the-starless-sea:after-the-darkness",
+            "name": "After the Darkness",
+            "before": "DESTROYed at End Turn",
+            "after": "DESTROYed at End Turn: +1 Action next turn",
+            "text": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn; when it is, gain +1 Action next turn."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-06T20:44:08.061Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "The Starless Sea already costs 0 Actions, so only the rules text was kept as it was (the card shows the cost)."
+    },
+    {
+      "id": "mux5di0z298hl",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "unwelcome-critics-monocle",
+      "before": {
+        "id": "unwelcome-critics-monocle",
+        "name": "Special Crown",
+        "rarity": "uncommon",
+        "price": 75,
+        "text": "Books assigned to visitors who have a visitor ability gain +1 Value."
+      },
+      "after": {
+        "id": "unwelcome-critics-monocle",
+        "name": "Staff of Dominance",
+        "rarity": "rare",
+        "text": "Books assigned to visitors who have a visitor ability gain +1 Value.",
+        "price": 105,
+        "icon": "addons_42_b"
+      },
+      "note": "",
+      "at": "2026-10-06T21:33:43.479Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Renamed Staff of Dominance, now Rare at 105G, with the new icon."
+    },
+    {
+      "id": "mux5h0s477ox8",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "braided-catalogue",
+      "before": {
+        "id": "braided-catalogue",
+        "name": "Braided Catalogue",
+        "rarity": "uncommon",
+        "price": 90,
+        "text": "Every 3rd alternation in a row between your two Traits on paid assignments gains you +1 Action. A neutral book breaks the chain; it resets each Encounter."
+      },
+      "after": {
+        "id": "braided-catalogue",
+        "name": "Orb of the Storms",
+        "rarity": "uncommon",
+        "price": 90,
+        "text": "Every 3rd alternation in a row between your two Traits on paid assignments gains you +1 Action. A neutral book breaks the chain; it resets each Encounter.",
+        "icon": "element(air)_b_01"
+      },
+      "note": "",
+      "at": "2026-10-07T11:30:39.151Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Renamed Orb of the Storms, with the new icon."
+    },
+    {
+      "id": "mux5jzu8cebiq",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "euphoric-salts",
+      "before": null,
+      "after": {
+        "id": "euphoric-salts",
+        "name": "Euphoric Salts",
+        "rarity": "common",
+        "icon": "essence_02_b",
+        "text": "At the start of the turn, 1 Visitor randomly gets 1 fulfillment",
+        "price": 70
+      },
+      "note": "",
+      "at": "2026-10-06T20:52:54.258Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Added Euphoric Salts (Common, 70G): one random waiting visitor gains +1 Fulfillment at the start of each turn."
+    },
+    {
+      "id": "mux5orad96ncl",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "pastlife-relic",
+      "before": null,
+      "after": {
+        "id": "pastlife-relic",
+        "name": "Pastlife Relic",
+        "rarity": "uncommon",
+        "icon": "NecromancerIcons_49_b",
+        "text": "Whenever your discard pile is shuffled into your deck, add 2 fulfillment to a random Visitor.",
+        "price": 90
+      },
+      "note": "",
+      "at": "2026-10-06T20:55:26.668Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Added Pastlife Relic (Uncommon, 90G): each reshuffle gives a random waiting visitor +2 Fulfillment."
+    },
+    {
+      "id": "mux5sxbdkc6mn",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "second-opinion",
+      "before": {
+        "id": "second-opinion",
+        "name": "Second Opinion",
+        "rarity": "rare",
+        "price": 100,
+        "text": "If the last book assigned to a visitor was of your other Trait, the book you assign them now gains +2 Value. It can alternate again and again; a neutral book breaks that visitor's chain."
+      },
+      "after": {
+        "id": "second-opinion",
+        "name": "Second Opinion",
+        "rarity": "rare",
+        "price": 100,
+        "text": "If the last book assigned to a visitor was of your other Trait, the book you assign them now gains +2 Value. It can alternate again and again; a neutral book breaks that visitor's chain.",
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-07T11:29:45.655Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Switched off."
+    },
+    {
+      "id": "mux5t590rkbdv",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "deep-waiting-room-clock",
+      "before": {
+        "id": "deep-waiting-room-clock",
+        "name": "Deep Waiting-Room Clock",
+        "rarity": "rare",
+        "price": 100,
+        "text": "The first book assigned to a visitor each turn gains +1 Value for every 2 Patience they have, up to +2."
+      },
+      "after": {
+        "id": "deep-waiting-room-clock",
+        "name": "Deep Waiting-Room Clock",
+        "rarity": "rare",
+        "price": 100,
+        "text": "The first book assigned to a visitor each turn gains +1 Value for every 2 Patience they have, up to +2.",
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-06T20:57:01.908Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Switched off."
+    },
+    {
+      "id": "mux5x8hase3hf",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "summoning-theorems",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "summoning-theorems",
+        "title": "Summoning Theorems",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 0,
+        "shortText": "2 Library books assigned here, free.",
+        "rulesText": "On Assign: take 2 random books directly from your Library and assign them to this visitor for 0 Actions. Their On Assign abilities resolve.",
+        "reminders": [
+          "recycle"
+        ],
+        "rebinds": [
+          {
+            "id": "summoning-theorems:greater-theorems",
+            "name": "Greater Theorems",
+            "before": "2 Library books",
+            "after": "3 Library books",
+            "text": "On Assign: take 3 random books directly from your Library and assign them to this visitor for 0 Actions. Their On Assign abilities resolve."
+          },
+          {
+            "id": "summoning-theorems:empowered-theorems",
+            "name": "Empowered Theorems",
+            "before": "2 Library books",
+            "after": "2 Library books, each +1 Value",
+            "text": "On Assign: take 2 random books directly from your Library; each gains +1 Value, then is assigned to this visitor for 0 Actions."
+          },
+          {
+            "id": "summoning-theorems:selective-theorems",
+            "name": "Selective Theorems",
+            "before": "2 random Library books",
+            "after": "The 2 highest-Value Library books",
+            "text": "On Assign: take the 2 highest-Value books in your Library (ties at random) and assign them to this visitor for 0 Actions."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "summoning-theorems",
+        "title": "Summoning Theorems",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 0,
+        "shortText": "2 Library books assigned here, free.",
+        "rulesText": "On Assign: Discard up to 2 books at random from your hand. Summon that many random books from your Library, on this visitor (their On Assign abilities resolve)",
+        "reminders": [
+          "recycle"
+        ],
+        "rebinds": [
+          {
+            "id": "summoning-theorems:greater-theorems",
+            "name": "Greater Theorems",
+            "before": "2 Library books",
+            "after": "3 Library books",
+            "text": "On Assign: take 3 random books directly from your Library and assign them to this visitor for 0 Actions. Their On Assign abilities resolve."
+          },
+          {
+            "id": "summoning-theorems:empowered-theorems",
+            "name": "Empowered Theorems",
+            "before": "2 Library books",
+            "after": "2 Library books, each +1 Value",
+            "text": "On Assign: take 2 random books directly from your Library; each gains +1 Value, then is assigned to this visitor for 0 Actions."
+          },
+          {
+            "id": "summoning-theorems:selective-theorems",
+            "name": "Selective Theorems",
+            "before": "2 random Library books",
+            "after": "The 2 highest-Value Library books",
+            "text": "On Assign: take the 2 highest-Value books in your Library (ties at random) and assign them to this visitor for 0 Actions."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-06T21:00:12.718Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Summoning Theorems now discards up to 2 random hand books and summons that many from your Library onto the visitor; its Rebinds follow the same rule."
+    },
+    {
+      "id": "mux750gx4effv",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "red-string-bookmark",
+      "before": {
+        "id": "red-string-bookmark",
+        "name": "Talisman of the Anger",
+        "rarity": "rare",
+        "price": 95,
+        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
+      },
+      "after": {
+        "id": "red-string-bookmark",
+        "name": "Talisman of Anger",
+        "rarity": "rare",
+        "price": 95,
+        "text": "Books assigned to a visitor at 1 Patience gain +1 Value."
+      },
+      "note": "",
+      "at": "2026-10-06T21:34:15.201Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Renamed Talisman of Anger."
+    },
+    {
+      "id": "mux76m7eaews2",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "hostile-readers-seal",
+      "before": {
+        "id": "hostile-readers-seal",
+        "name": "Hostile Reader's Seal",
+        "rarity": "rare",
+        "price": 95,
+        "text": "Books assigned to visitors who have a visitor ability gain +2 Value. Ordinary visitors get nothing."
+      },
+      "after": {
+        "id": "hostile-readers-seal",
+        "name": "Crown of Command",
+        "rarity": "legendary",
+        "text": "Books assigned to visitors who have a visitor ability gain +2 Value. Ordinary visitors get nothing.",
+        "icon": "TradingIcons_118_b",
+        "price": 145
+      },
+      "note": "",
+      "at": "2026-10-06T21:37:28.161Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Renamed Crown of Command, now Legendary at 145G, with the new icon."
+    },
+    {
+      "id": "mux79i6la92f9",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "great-alternating-index",
+      "before": {
+        "id": "great-alternating-index",
+        "name": "The Great Alternating Index",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Every 3rd alternation in a row between your two Traits on paid assignments refunds 1 Action, and that book gains +2 Value. A neutral book breaks the chain."
+      },
+      "after": {
+        "id": "great-alternating-index",
+        "name": "The Great Alternating Index",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Every 3rd alternation in a row between your two Traits on paid assignments refunds 1 Action, and that book gains +2 Value. A neutral book breaks the chain.",
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-06T21:37:44.781Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Switched off."
+    },
+    {
+      "id": "mux79mu1aiwhz",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "endless-waiting-room",
+      "before": {
+        "id": "endless-waiting-room",
+        "name": "The Endless Waiting Room",
+        "rarity": "legendary",
+        "price": 120,
+        "text": "If you fulfill 2 or more visitors in a turn, everyone still waiting gains +1 Patience at the end of that turn instead of losing 1."
+      },
+      "after": {
+        "id": "endless-waiting-room",
+        "name": "The Endless Waiting Room",
+        "rarity": "legendary",
+        "price": 120,
+        "text": "If you fulfill 2 or more visitors in a turn, everyone still waiting gains +1 Patience at the end of that turn instead of losing 1.",
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-06T21:37:50.809Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Switched off."
+    },
+    {
+      "id": "mux7aqc92yqmd",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "perfectly-balanced-inventory",
+      "before": {
+        "id": "perfectly-balanced-inventory",
+        "name": "Perfectly Balanced Inventory",
+        "rarity": "legendary",
+        "price": 110,
+        "text": "While your deck holds exactly as many books of one of your Traits as of the other, books of either Trait gain +2 Value. Neutral books are not counted."
+      },
+      "after": {
+        "id": "perfectly-balanced-inventory",
+        "name": "Perfectly Balanced Inventory",
+        "rarity": "legendary",
+        "price": 110,
+        "text": "While your deck holds exactly as many books of one of your Traits as of the other, books of either Trait gain +2 Value. Neutral books are not counted.",
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-06T21:38:42.008Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Switched off."
+    },
+    {
+      "id": "mux7avwx0fcmf",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "retinues-book-of-etiquette",
+      "before": {
+        "id": "retinues-book-of-etiquette",
+        "name": "The Retinue's Book of Etiquette",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Fulfillment."
+      },
+      "after": {
+        "id": "retinues-book-of-etiquette",
+        "name": "The Retinue's Book of Etiquette",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Whenever a new wave of visitors arrives, everyone already waiting gains +1 Fulfillment.",
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-06T21:38:49.233Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Switched off."
+    },
+    {
+      "id": "mux7bokn9gkx5",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "difficult-customer-society",
+      "before": {
+        "id": "difficult-customer-society",
+        "name": "The Difficult Customer Society",
+        "rarity": "legendary",
+        "price": 110,
+        "text": "Whenever a visitor's ability lowers a book's Value, or discards or DESTROYs one of your books, that book first gains +2 Value."
+      },
+      "after": {
+        "id": "difficult-customer-society",
+        "name": "Idol of Sacrifice",
+        "rarity": "legendary",
+        "text": "Whenever a visitor's ability lowers a book's Value, or discards or DESTROYs one of your books, that book first gains +2 Value.",
+        "icon": "NecromancerIcons_77_b",
+        "price": 125
+      },
+      "note": "",
+      "at": "2026-10-06T21:39:50.284Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Renamed Idol of Sacrifice, now 125G, with the new icon."
+    },
+    {
+      "id": "mux7dg2pb3bj9",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "great-queue-ledger",
+      "before": {
+        "id": "great-queue-ledger",
+        "name": "The Great Queue Ledger",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Every 5th visitor you fulfill gains you +1 Action at once. The count carries across the Stage and resets when a new Stage begins."
+      },
+      "after": {
+        "id": "great-queue-ledger",
+        "name": "Starweaved Dreamcatcher",
+        "rarity": "legendary",
+        "price": 150,
+        "text": "Every 5th visitor you fulfill gains you +1 Action at once. The count carries across the Stage and resets when a new Stage begins.",
+        "icon": "PrehistoricIcon_115_b"
+      },
+      "note": "",
+      "at": "2026-10-06T21:41:17.294Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Renamed Starweaved Dreamcatcher, now 150G, with the new icon."
+    },
+    {
+      "id": "mux7hqr8w93iz",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "two-schools-one-library",
+      "before": {
+        "id": "two-schools-one-library",
+        "name": "Two Schools, One Library",
+        "rarity": "legendary",
+        "price": 115,
+        "text": "Whenever a paid assignment alternates from one of your Traits to the other, that book gains +1 Value; every 4th alternation in a row also draws 1 book, if your hand has room. A neutral book breaks the chain."
+      },
+      "after": {
+        "id": "two-schools-one-library",
+        "name": "Twilight Key",
+        "rarity": "rare",
+        "text": "Treasure nodes give you 3 choises. You still select 1 only.",
+        "icon": "NecromancerIcons_23_b",
+        "price": 100
+      },
+      "note": "",
+      "at": "2026-10-06T21:45:52.750Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Now the Twilight Key (Rare, 100G): Treasures lay out 3 spoils and you take 1; its old alternation rule is gone."
+    },
+    {
+      "id": "mux7mbjygs1aw",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "wks",
+      "before": null,
+      "after": {
+        "id": "wks",
+        "name": "Eye of the Beholder",
+        "rarity": "rare",
+        "price": 95,
+        "icon": "NecromancerIcons_12_b",
+        "text": "You can see the order of books in your Library."
+      },
+      "note": "",
+      "at": "2026-10-07T13:45:33.226Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Added Eye of the Beholder (Rare, 95G): the Library viewer shows the real order, next draw first."
+    },
+    {
+      "id": "muy2j5corp0b3",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "peoples-catalogue",
+      "before": {
+        "id": "peoples-catalogue",
+        "name": "The People's Catalogue",
+        "rarity": "legendary",
+        "price": 120,
+        "text": "Whenever you fulfill a visitor, every other waiting visitor gains +1 Fulfillment."
+      },
+      "after": {
+        "id": "peoples-catalogue",
+        "name": "Idol of the Pleased Patron",
+        "rarity": "legendary",
+        "price": 120,
+        "text": "Whenever you fulfill a visitor, every other waiting visitor gains +1 Fulfillment.",
+        "icon": "TradingIcons_56"
+      },
+      "note": "",
+      "at": "2026-10-07T12:13:21.824Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Renamed Idol of the Pleased Patron, with the new icon."
+    },
+    {
+      "id": "muyctfw718t10",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "mirror",
+      "before": null,
+      "after": {
+        "id": "mirror",
+        "name": "Mirror",
+        "rarity": "rare",
+        "price": 95,
+        "text": "Select a book to duplicate when you obtain this.",
+        "upload": "uploads/curios/mirror-muye8i7nsrqvn.png"
+      },
+      "note": "",
+      "at": "2026-10-07T17:45:06.356Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Added Mirror (Rare, 95G) with your uploaded icon: when gained, you pick a book and a copy joins your deck."
+    },
+    {
+      "id": "muyeezepoyl36",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "otherwordly-gift",
+      "before": null,
+      "after": {
+        "id": "otherwordly-gift",
+        "name": "Otherwordly Gift",
+        "rarity": "rare",
+        "price": 105,
+        "text": "Randomly get a Rare book that belongs to another trait",
+        "icon": "larva_b_01"
+      },
+      "note": "",
+      "at": "2026-10-07T17:47:12.413Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Added as Otherworldly Gift (Rare, 105G): when gained, a random Rare book of a Trait outside the run joins your deck."
+    },
+    {
+      "id": "muyeieptp7kkp",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "distinguished",
+      "before": null,
+      "after": {
+        "id": "distinguished",
+        "name": "Royal Goblet",
+        "rarity": "uncommon",
+        "price": 85,
+        "text": "If a distinguished visitor is active, gain 1 extra action and draw 1 book more at the start of the turn.",
+        "icon": "NecromancerIcons_35_b"
+      },
+      "note": "",
+      "at": "2026-10-07T17:54:08.963Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Added Royal Goblet (Uncommon, 85G): +1 Action and +1 draw each turn while a Distinguished Encounter's main visitor (now marked ♛ in the Studio) waits."
+    },
+    {
+      "id": "muyf1smps829x",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "the-100th-rule",
+      "before": null,
+      "after": {
+        "id": "the-100th-rule",
+        "name": "Dreamscythes",
+        "rarity": "common",
+        "price": 65,
+        "text": "After you have shuffled 100 books into your deck, gain 1 Reputation (number is retained between encounters)",
+        "icon": "BlueLootBox_59_b"
+      },
+      "note": "",
+      "at": "2026-10-07T18:08:50.424Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "Added Dreamscythes (Common, 65G): +1 Reputation for every 100 books shuffled back into your Library, counted across the run."
+    },
+    {
+      "id": "muyfbg98yhtla",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "talisman-of-the-after-after-life",
+      "before": {
+        "id": "talisman-of-the-after-after-life",
+        "name": "Talisman of the After-After Life",
+        "rarity": "common",
+        "price": 70,
+        "text": "Whenever your discard pile is shuffled into your Library, a random book shuffled in gains +1 Value until the end of the Encounter."
+      },
+      "after": {
+        "id": "talisman-of-the-after-after-life",
+        "name": "Talisman of the After-After Life",
+        "rarity": "common",
+        "price": 70,
+        "text": "Whenever your discard pile is shuffled into your Library, a random book shuffled in gains +1 Value until the end of the Encounter.",
+        "icon": "NecromancerIcons_21_b"
+      },
+      "note": "",
+      "at": "2026-10-07T18:10:58.700Z",
+      "appliedAt": "2026-10-07T18:33:06.151Z",
+      "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-07T18:10:58.700Z"
+  "updatedAt": "2026-10-07T18:33:06.153Z"
 }
