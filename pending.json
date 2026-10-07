@@ -866,10 +866,11 @@
         "id": "distinguished",
         "name": "Distinguished",
         "rarity": "common",
-        "price": 65
+        "price": 65,
+        "text": "Whenever a distinguished Visitor is encountered, gain 1 extra action and draw 1 book more"
       },
       "note": "",
-      "at": "2026-10-07T17:48:23.681Z"
+      "at": "2026-10-07T17:48:31.439Z"
     }
   ],
   "applied": [
@@ -5512,5 +5513,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T17:48:23.681Z"
+  "updatedAt": "2026-10-07T17:48:31.439Z"
 }
