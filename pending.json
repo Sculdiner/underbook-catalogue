@@ -821,6 +821,21 @@
       },
       "note": "",
       "at": "2026-10-07T17:00:46.036Z"
+    },
+    {
+      "id": "muyctfw718t10",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "mirror",
+      "before": null,
+      "after": {
+        "id": "mirror",
+        "name": "Mirror",
+        "rarity": "common",
+        "price": 65
+      },
+      "note": "",
+      "at": "2026-10-07T17:00:59.191Z"
     }
   ],
   "applied": [
@@ -5463,5 +5478,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T17:00:46.042Z"
+  "updatedAt": "2026-10-07T17:00:59.191Z"
 }
