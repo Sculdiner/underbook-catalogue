@@ -848,13 +848,13 @@
       "after": {
         "id": "otherwordly-gift",
         "name": "Otherwordly Gift",
-        "rarity": "common",
+        "rarity": "rare",
         "price": 65,
         "text": "Randomly get a Rare book that belongs to another trait",
         "icon": "larva_b_01"
       },
       "note": "",
-      "at": "2026-10-07T17:46:59.069Z"
+      "at": "2026-10-07T17:47:02.687Z"
     }
   ],
   "applied": [
@@ -5497,5 +5497,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T17:46:59.069Z"
+  "updatedAt": "2026-10-07T17:47:02.688Z"
 }
