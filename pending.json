@@ -833,11 +833,11 @@
         "name": "Mirror",
         "rarity": "rare",
         "price": 65,
-        "text": "Duplicate a book when you obtain this",
+        "text": "Select a book to duplicate when you obtain this.",
         "upload": "uploads/curios/mirror-muye8i7nsrqvn.png"
       },
       "note": "",
-      "at": "2026-10-07T17:44:19.044Z"
+      "at": "2026-10-07T17:45:00.661Z"
     }
   ],
   "applied": [
@@ -5480,5 +5480,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T17:44:19.044Z"
+  "updatedAt": "2026-10-07T17:45:00.661Z"
 }
