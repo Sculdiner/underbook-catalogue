@@ -838,6 +838,21 @@
       },
       "note": "",
       "at": "2026-10-07T17:45:06.356Z"
+    },
+    {
+      "id": "muyeezepoyl36",
+      "kind": "curios",
+      "op": "add",
+      "targetId": "otherwordly-gift",
+      "before": null,
+      "after": {
+        "id": "otherwordly-gift",
+        "name": "Otherwordly Gift",
+        "rarity": "common",
+        "price": 65
+      },
+      "note": "",
+      "at": "2026-10-07T17:45:43.873Z"
     }
   ],
   "applied": [
@@ -5480,5 +5495,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T17:45:24.804Z"
+  "updatedAt": "2026-10-07T17:45:43.873Z"
 }
