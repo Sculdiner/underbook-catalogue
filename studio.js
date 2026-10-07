@@ -384,7 +384,7 @@ function visitorCard(v, i) {
         <div class="idn">${id ? esc(id.name) : 'Random from the crowd'}</div></div></div>
     <div class="steppers">${stepper(i, 'fulfillment', 'Need', v.fulfillment)}${stepper(i, 'patience', 'Patience', v.patience)}</div>
     ${abilitySlot(v, i, a)}
-    <div class="vfoot"><button type="button" class="star ${v.headliner ? 'on' : ''}" data-act="v-head" data-i="${i}" title="Headliner: if they walk out, the run ends">★</button>
+    <div class="vfoot"><button type="button" class="star ${v.headliner ? 'on' : ''}" data-act="v-head" data-i="${i}" title="Headliner: if they walk out, the run ends">★</button><button type="button" class="star main ${v.main ? 'on' : ''}" data-act="v-main" data-i="${i}" title="Main visitor of a Distinguished Encounter (Royal Goblet reads it). One per Encounter.">♛</button>
       <input class="inl" data-bind="visitors.${i}.tag" value="${esc(v.tag ?? '')}" placeholder="cast tag"></div>
   </div>`;
 }
@@ -1006,6 +1006,13 @@ document.addEventListener('click', async (e) => {
       return edit((d) => {
         if (d.visitors[i].headliner) delete d.visitors[i].headliner;
         else d.visitors[i].headliner = true;
+      });
+    case 'v-main':
+      // One main visitor per Encounter: marking one unmarks the rest.
+      return edit((d) => {
+        const on = !d.visitors[i].main;
+        for (const x of d.visitors) delete x.main;
+        if (on) d.visitors[i].main = true;
       });
     case 'pick-id':
       e.stopPropagation();

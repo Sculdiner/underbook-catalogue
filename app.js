@@ -768,7 +768,7 @@ function visitorCard(v, edit = null) {
   const a = ability(v.abilityId);
   const attrs = edit ? `type="button" data-act="visitor-edit" data-key="${esc(edit.key)}" data-i="${edit.i}"` : 'type="button" disabled';
   // The portrait sits beside the button, not in it, so tapping it can enlarge it.
-  return `<div class="visitor ${v.headliner ? 'head' : ''}">${portrait(v.visitorDefId)}<button class="vb" ${attrs}><div class="vn">${esc(v.name || visitorDef(v.visitorDefId)?.name || 'Visitor')} ${v.headliner ? '<span class="tag gold">Headliner</span>' : ''}</div>
+  return `<div class="visitor ${v.headliner ? 'head' : ''}">${portrait(v.visitorDefId)}<button class="vb" ${attrs}><div class="vn">${esc(v.name || visitorDef(v.visitorDefId)?.name || 'Visitor')} ${v.headliner ? '<span class="tag gold">Headliner</span>' : ''}${v.main ? '<span class="tag legendary">Main</span>' : ''}</div>
     <div class="np"><span>Need <b>${v.fulfillment}</b></span><span>Patience <b>${v.patience}</b></span>${v.tag ? `<span>tag: ${esc(v.tag)}</span>` : ''}</div>
     ${a ? `<div class="ab"><b>${esc(a.name)}.</b> ${esc(a.text)}</div>` : v.abilityId ? `<div class="ab"><b>${esc(v.abilityId)}</b> <span class="muted">(new ability — describe it in the note)</span></div>` : ''}</button></div>`;
 }
@@ -1099,7 +1099,7 @@ function summarize(kind, key, v) {
 
 function lineOf(kind, key, x) {
   if (x == null || typeof x !== 'object') return String(x);
-  if (key === 'visitors') return `T${x.arriveAfterTurn} ${x.name || x.visitorDefId || '?'} · Need ${x.fulfillment} · P${x.patience}${x.abilityId ? ` · ${x.abilityId}` : ''}${x.tag ? ` · #${x.tag}` : ''}${x.headliner ? ' · headliner' : ''}`;
+  if (key === 'visitors') return `T${x.arriveAfterTurn} ${x.name || x.visitorDefId || '?'} · Need ${x.fulfillment} · P${x.patience}${x.abilityId ? ` · ${x.abilityId}` : ''}${x.tag ? ` · #${x.tag}` : ''}${x.headliner ? ' · headliner' : ''}${x.main ? ' · main' : ''}`;
   if (key === 'nodes') return `${x.key} ${NODE_STYLE[x.type]?.l ?? x.type}${x.band ? `(${x.band})` : ''} ${x.branch} d${x.depth} l${x.lane} → ${(x.next ?? []).join(',') || '∅'}`;
   if (key === 'rebinds') return `${x.name}: ${x.before} → ${x.after} — ${x.text}`;
   return JSON.stringify(x);

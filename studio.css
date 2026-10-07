@@ -144,6 +144,7 @@ textarea.inl { resize: none; field-sizing: content; overflow: hidden; display: b
 .vfoot { display: flex; align-items: center; gap: 6px; margin-top: 8px; }
 .vfoot .star { border: 0; background: transparent; cursor: pointer; color: var(--ink3); font-size: 1rem; padding: 0 2px; }
 .vfoot .star.on { color: var(--accent); }
+.vfoot .star.main.on { color: var(--legendary, #d678e8); }
 .vfoot input { flex: 1; font-size: .78rem; color: var(--ink2); }
 
 /* ---------------------------------------------------------------- rail */
