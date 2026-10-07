@@ -661,7 +661,7 @@ views.detail = {
             <select class="inl-chip tag ${b.rarity}" data-ipath="rarity" aria-label="Rarity">
               ${RARITIES.map((r) => `<option value="${r}" ${r === b.rarity ? 'selected' : ''}>${cap(r)}</option>`).join('')}
             </select>
-            ${b.extension ? '<span class="tag">Extension</span>' : ''}${sig ? `<span class="tag legendary">${esc(sig.name)} signature</span>` : ''}
+            ${b.extension ? '<span class="tag">Extension</span>' : ''}${sig ? `<span class="tag gold">${esc(sig.name)} signature</span>` : ''}
           </div>
           <div class="stats">
             <label class="stat"><input type="number" class="inl inl-num" data-ipath="value" value="${b.value ?? 0}"><span>Value</span></label>
@@ -768,7 +768,7 @@ function visitorCard(v, edit = null) {
   const a = ability(v.abilityId);
   const attrs = edit ? `type="button" data-act="visitor-edit" data-key="${esc(edit.key)}" data-i="${edit.i}"` : 'type="button" disabled';
   // The portrait sits beside the button, not in it, so tapping it can enlarge it.
-  return `<div class="visitor ${v.headliner ? 'head' : ''}">${portrait(v.visitorDefId)}<button class="vb" ${attrs}><div class="vn">${esc(v.name || visitorDef(v.visitorDefId)?.name || 'Visitor')} ${v.headliner ? '<span class="tag legendary">Headliner</span>' : ''}</div>
+  return `<div class="visitor ${v.headliner ? 'head' : ''}">${portrait(v.visitorDefId)}<button class="vb" ${attrs}><div class="vn">${esc(v.name || visitorDef(v.visitorDefId)?.name || 'Visitor')} ${v.headliner ? '<span class="tag gold">Headliner</span>' : ''}</div>
     <div class="np"><span>Need <b>${v.fulfillment}</b></span><span>Patience <b>${v.patience}</b></span>${v.tag ? `<span>tag: ${esc(v.tag)}</span>` : ''}</div>
     ${a ? `<div class="ab"><b>${esc(a.name)}.</b> ${esc(a.text)}</div>` : v.abilityId ? `<div class="ab"><b>${esc(v.abilityId)}</b> <span class="muted">(new ability — describe it in the note)</span></div>` : ''}</button></div>`;
 }

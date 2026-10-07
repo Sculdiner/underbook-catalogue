@@ -14,10 +14,10 @@
   --add: #6fae7c;
   --edit: #d8a54a;
   --del: #c4554a;
-  --common: #a99c86;
-  --uncommon: #6fae8f;
-  --rare: #7d9be0;
-  --legendary: #e2b04f;
+  --common: #aaa08c;
+  --uncommon: #48aaff;
+  --rare: #ffc430;
+  --legendary: #d678e8;
   --mythic: #c77dd8;
   --curse: #b24a52;
   --serif: 'Cormorant Garamond', Georgia, serif;
@@ -113,7 +113,7 @@ main { padding: calc(var(--top) + 12px) 16px calc(var(--bottom) + 88px); max-wid
 
 .tag { display: inline-flex; align-items: center; gap: 4px; padding: 2px 8px; border-radius: 999px; font-size: .75rem; font-weight: 600; background: var(--card2); color: var(--ink2); border: 1px solid var(--line); white-space: nowrap; }
 .tag.common { color: var(--common); } .tag.uncommon { color: var(--uncommon); } .tag.rare { color: var(--rare); }
-.tag.legendary { color: var(--legendary); } .tag.mythic { color: var(--mythic); } .tag.curse { color: var(--curse); }
+.tag.legendary { color: var(--legendary); } .tag.gold { color: var(--accent); } .tag.mythic { color: var(--mythic); } .tag.curse { color: var(--curse); }
 .tag.p-add { background: var(--add); color: #0f1a10; border-color: transparent; }
 .tag.p-edit { background: var(--edit); color: var(--accent-ink); border-color: transparent; }
 .tag.p-delete { background: var(--del); color: #fff; border-color: transparent; }
