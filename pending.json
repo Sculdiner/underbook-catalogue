@@ -385,14 +385,14 @@
       },
       "after": {
         "id": "braided-catalogue",
-        "name": "Swifthand Orb",
+        "name": "Storm Orb",
         "rarity": "uncommon",
         "price": 90,
         "text": "Every 3rd alternation in a row between your two Traits on paid assignments gains you +1 Action. A neutral book breaks the chain; it resets each Encounter.",
         "icon": "element(air)_b_01"
       },
       "note": "",
-      "at": "2026-10-07T11:30:26.546Z"
+      "at": "2026-10-07T11:30:32.210Z"
     },
     {
       "id": "mux5jzu8cebiq",
@@ -5423,5 +5423,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T11:30:26.546Z"
+  "updatedAt": "2026-10-07T11:30:32.210Z"
 }
