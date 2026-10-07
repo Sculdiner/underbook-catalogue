@@ -881,14 +881,14 @@
       "before": null,
       "after": {
         "id": "the-100th-rule",
-        "name": "The 100th Rule",
+        "name": "Scythes of",
         "rarity": "common",
         "price": 65,
         "text": "After you have shuffled 100 books into your deck, gain 1 Reputation (number is retained between encounters)",
         "icon": "BlueLootBox_59_b"
       },
       "note": "",
-      "at": "2026-10-07T18:07:39.608Z"
+      "at": "2026-10-07T18:08:00.113Z"
     }
   ],
   "applied": [
@@ -5531,5 +5531,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T18:07:39.608Z"
+  "updatedAt": "2026-10-07T18:08:00.113Z"
 }
