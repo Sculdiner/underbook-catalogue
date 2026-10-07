@@ -865,13 +865,13 @@
       "after": {
         "id": "distinguished",
         "name": "Royal Goblet",
-        "rarity": "common",
+        "rarity": "uncommon",
         "price": 65,
         "text": "Whenever a distinguished Visitor is encountered, gain 1 extra action and draw 1 book more",
         "icon": "NecromancerIcons_35_b"
       },
       "note": "",
-      "at": "2026-10-07T17:53:23.094Z"
+      "at": "2026-10-07T17:53:31.636Z"
     }
   ],
   "applied": [
@@ -5514,5 +5514,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T17:53:23.094Z"
+  "updatedAt": "2026-10-07T17:53:31.636Z"
 }
