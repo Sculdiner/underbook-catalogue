@@ -890,6 +890,29 @@
       },
       "note": "",
       "at": "2026-10-07T18:08:50.424Z"
+    },
+    {
+      "id": "muyfbg98yhtla",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "talisman-of-the-after-after-life",
+      "before": {
+        "id": "talisman-of-the-after-after-life",
+        "name": "Talisman of the After-After Life",
+        "rarity": "common",
+        "price": 70,
+        "text": "Whenever your discard pile is shuffled into your Library, a random book shuffled in gains +1 Value until the end of the Encounter."
+      },
+      "after": {
+        "id": "talisman-of-the-after-after-life",
+        "name": "Talisman of the After-After Life",
+        "rarity": "common",
+        "price": 70,
+        "text": "Whenever your discard pile is shuffled into your Library, a random book shuffled in gains +1 Value until the end of the Encounter.",
+        "icon": "NecromancerIcons_21_b"
+      },
+      "note": "",
+      "at": "2026-10-07T18:10:58.700Z"
     }
   ],
   "applied": [
@@ -5532,5 +5555,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T18:10:20.980Z"
+  "updatedAt": "2026-10-07T18:10:58.700Z"
 }
