@@ -781,6 +781,29 @@
       },
       "note": "",
       "at": "2026-10-06T21:48:20.803Z"
+    },
+    {
+      "id": "muy2j5corp0b3",
+      "kind": "curios",
+      "op": "edit",
+      "targetId": "peoples-catalogue",
+      "before": {
+        "id": "peoples-catalogue",
+        "name": "The People's Catalogue",
+        "rarity": "legendary",
+        "price": 120,
+        "text": "Whenever you fulfill a visitor, every other waiting visitor gains +1 Fulfillment."
+      },
+      "after": {
+        "id": "peoples-catalogue",
+        "name": "The People's Catalogue",
+        "rarity": "legendary",
+        "price": 120,
+        "text": "Whenever you fulfill a visitor, every other waiting visitor gains +1 Fulfillment.",
+        "icon": "TradingIcons_56"
+      },
+      "note": "",
+      "at": "2026-10-07T12:13:02.808Z"
     }
   ],
   "applied": [
@@ -5423,5 +5446,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T12:12:43.960Z"
+  "updatedAt": "2026-10-07T12:13:02.809Z"
 }
