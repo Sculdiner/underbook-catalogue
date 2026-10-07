@@ -832,10 +832,11 @@
         "id": "mirror",
         "name": "Mirror",
         "rarity": "common",
-        "price": 65
+        "price": 65,
+        "text": "Duplicate a book when you obtain this"
       },
       "note": "",
-      "at": "2026-10-07T17:00:59.191Z"
+      "at": "2026-10-07T17:01:07.056Z"
     }
   ],
   "applied": [
@@ -5478,5 +5479,5 @@
       "result": "Chronomancy is now Value 1."
     }
   ],
-  "updatedAt": "2026-10-07T17:00:59.191Z"
+  "updatedAt": "2026-10-07T17:01:07.056Z"
 }
