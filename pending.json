@@ -144,6 +144,145 @@
       },
       "note": "",
       "at": "2026-10-08T19:20:15.639Z"
+    },
+    {
+      "id": "muzx8ik8soijy",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "mass-of-the-after-after-life",
+      "before": {
+        "id": "mass-of-the-after-after-life",
+        "stage": 2,
+        "name": "Mass of the After-After-Life",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "The recycle-event centerpiece. 56 / 70 / 101.",
+        "intro": {
+          "title": "The Archbishop",
+          "epithet": "Twice Risen, Still Unimpressed",
+          "line": "We've died twice. We'd like something lighter this time.",
+          "emblem": "rose-window"
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Parishioner",
+            "fulfillment": 10,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Parishioner",
+            "fulfillment": 10,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Enthusiastic Convert",
+            "fulfillment": 11,
+            "patience": 3,
+            "abilityId": "bonus-three-if-discard-three"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Archbishop of the After-After-Life",
+            "fulfillment": 31,
+            "patience": 7,
+            "abilityId": "recycle-blessing",
+            "visitorDefId": "ossuary-vicar",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Resurrection Deacon",
+            "fulfillment": 13,
+            "patience": 4,
+            "abilityId": "return-to-hand"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Skeleton Choir",
+            "fulfillment": 12,
+            "patience": 3,
+            "abilityId": "return-to-library"
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Church Sexton",
+            "fulfillment": 14,
+            "patience": 3,
+            "abilityId": "discard-random-on-arrival"
+          }
+        ]
+      },
+      "after": {
+        "id": "mass-of-the-after-after-life",
+        "stage": 2,
+        "name": "Mass of the After-After-Life",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "The recycle-event centerpiece. 56 / 70 / 101.",
+        "intro": {
+          "title": "The Archbishop",
+          "epithet": "Twice Risen, Still Unimpressed",
+          "line": "We've died twice. We'd like something lighter this time.",
+          "emblem": "rose-window"
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Parishioner",
+            "fulfillment": 10,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Parishioner",
+            "fulfillment": 10,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Enthusiastic Convert",
+            "fulfillment": 11,
+            "patience": 3,
+            "abilityId": "bonus-three-if-discard-three"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Archbishop of the After-After-Life",
+            "fulfillment": 31,
+            "patience": 7,
+            "abilityId": "recycle-blessing",
+            "visitorDefId": "ossuary-vicar",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Resurrection Deacon",
+            "fulfillment": 13,
+            "patience": 4,
+            "abilityId": "return-to-hand"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Skeleton Choir",
+            "fulfillment": 12,
+            "patience": 3,
+            "abilityId": "return-to-library"
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Church Sexton",
+            "fulfillment": 14,
+            "patience": 3,
+            "abilityId": "discard-random-on-arrival"
+          }
+        ],
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-08T19:20:20.984Z"
     }
   ],
   "applied": [
@@ -5736,5 +5875,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-08T19:20:15.639Z"
+  "updatedAt": "2026-10-08T19:20:20.984Z"
 }
