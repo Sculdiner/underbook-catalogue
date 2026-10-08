@@ -17,6 +17,133 @@
       },
       "note": "",
       "at": "2026-10-07T18:10:20.980Z"
+    },
+    {
+      "id": "muzx8efr2znl1",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "charnel-kings-audience",
+      "before": {
+        "id": "charnel-kings-audience",
+        "stage": 2,
+        "name": "The Charnel King's Audience",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "Create low-discard attack windows against the King. 47 / 62 / 90.",
+        "intro": {
+          "title": "The Charnel King",
+          "epithet": "Sovereign of the Lower Shelves",
+          "line": "Kneel. Or don't. The knees go first anyway.",
+          "emblem": "bone-rosette"
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Bone Steward",
+            "fulfillment": 11,
+            "patience": 3,
+            "abilityId": "return-to-library"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Noble",
+            "fulfillment": 12,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Restless Knight",
+            "fulfillment": 11,
+            "patience": 2,
+            "abilityId": "extra-patience-if-untended"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "The Charnel King",
+            "fulfillment": 28,
+            "patience": 6,
+            "abilityId": "discard-value-minus",
+            "visitorDefId": "ossuary-sexton",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Mummified Advisor",
+            "fulfillment": 13,
+            "patience": 4,
+            "abilityId": "discard-value-plus"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Royal Exhumer",
+            "fulfillment": 15,
+            "patience": 4,
+            "abilityId": "return-to-library"
+          }
+        ]
+      },
+      "after": {
+        "id": "charnel-kings-audience",
+        "stage": 2,
+        "name": "The Charnel King's Audience",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "Create low-discard attack windows against the King. 47 / 62 / 90.",
+        "intro": {
+          "title": "The Charnel King",
+          "epithet": "Sovereign of the Lower Shelves",
+          "line": "Kneel. Or don't. The knees go first anyway.",
+          "emblem": "bone-rosette"
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Bone Steward",
+            "fulfillment": 11,
+            "patience": 3,
+            "abilityId": "return-to-library"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Noble",
+            "fulfillment": 12,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Restless Knight",
+            "fulfillment": 11,
+            "patience": 2,
+            "abilityId": "extra-patience-if-untended"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "The Charnel King",
+            "fulfillment": 28,
+            "patience": 6,
+            "abilityId": "discard-value-minus",
+            "visitorDefId": "ossuary-sexton",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Mummified Advisor",
+            "fulfillment": 13,
+            "patience": 4,
+            "abilityId": "discard-value-plus"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Royal Exhumer",
+            "fulfillment": 15,
+            "patience": 4,
+            "abilityId": "return-to-library"
+          }
+        ],
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-08T19:20:15.639Z"
     }
   ],
   "applied": [
@@ -5609,5 +5736,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-07T18:33:06.153Z"
+  "updatedAt": "2026-10-08T19:20:15.639Z"
 }
