@@ -209,7 +209,7 @@
           {
             "id": "apex-predator:perfect-predator",
             "name": "Perfect Predator",
-            "before": "Value 6",
+            "before": "Value 5",
             "after": "Value 8",
             "text": "Printed Value 9. Still ignores visitor abilities."
           },
@@ -230,7 +230,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-09T21:45:39.788Z"
+      "at": "2026-10-09T21:49:33.201Z"
     },
     {
       "id": "mv182aly5v6la",
@@ -5913,5 +5913,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T21:45:39.788Z"
+  "updatedAt": "2026-10-09T21:49:33.201Z"
 }
