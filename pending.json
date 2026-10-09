@@ -461,7 +461,7 @@
           "magic"
         ],
         "rarity": "rare",
-        "value": 0,
+        "value": 1,
         "shortText": "Discard up to 2; that many Library books here, free.",
         "rulesText": "On Assign: Summon a random book from your deck, for 0 actions. Its on assign ability resolves.",
         "reminders": [
@@ -492,7 +492,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-09T22:07:33.456Z"
+      "at": "2026-10-09T22:07:45.390Z"
     }
   ],
   "applied": [
@@ -6085,5 +6085,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T22:07:33.457Z"
+  "updatedAt": "2026-10-09T22:07:45.390Z"
 }
