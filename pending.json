@@ -215,7 +215,7 @@
           },
           {
             "id": "apex-predator:unstoppable-predator",
-            "name": "Unstoppable Predator",
+            "name": "Pack Leader",
             "before": "Action Cost 1",
             "after": "Action Cost 0",
             "text": "Assigning this copy costs 0 Actions. Still Value 6; still ignores visitor abilities."
@@ -230,7 +230,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-09T21:42:20.904Z"
+      "at": "2026-10-09T21:44:59.673Z"
     },
     {
       "id": "mv182aly5v6la",
@@ -5913,5 +5913,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T21:42:20.904Z"
+  "updatedAt": "2026-10-09T21:44:59.673Z"
 }
