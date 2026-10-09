@@ -66,6 +66,8 @@ function shown(list) {
   return [...fresh, ...saved].sort((a, b) => String(b.at ?? '').localeCompare(String(a.at ?? '')));
 }
 
+const count = (list) => shown(list).filter((n) => n.text.trim()).length;
+
 function card(n, list) {
   return `<div class="idea" data-idea="${esc(n.id)}">
     <textarea class="inl idea-text" data-idea-text="${esc(n.id)}" data-idea-of="${list}" rows="3" placeholder="${esc(LABEL[list].ph)}" aria-label="${esc(LABEL[list].one)}">${esc(n.text)}</textarea>
@@ -88,7 +90,7 @@ export function notesView() {
   const notes = shown(list);
   return `${N.error ? `<div class="notice err">${esc(N.error)}</div>` : ''}
     <div class="chips notes-tabs">${NOTE_LISTS.map(
-      (k) => `<button class="chip ${k === list ? 'on' : ''}" data-idea-list="${k}">${LABEL[k].tab} <span class="n">${shown(k).filter((n) => n.text.trim()).length}</span></button>`,
+      (k) => `<button class="chip ${k === list ? 'on' : ''}" data-idea-list="${k}">${LABEL[k].tab} <span class="n">${count(k)}</span></button>`,
     ).join('')}</div>
     <p class="notes-intro">Ideas to think about later. Notes never change the game and are not sent to Claude as changes; ask Claude to read them when you want.</p>
     <button class="btn notes-add" data-idea-add="${list}">+ ${LABEL[list].add}</button>
@@ -142,6 +144,10 @@ async function saveNote(id) {
   if (saved && d.text.trim() === text && N.drafts.get(id) === d) {
     N.drafts.delete(id);
     app.toast?.(isNew ? 'Note added' : 'Saved');
+  }
+  for (const k of NOTE_LISTS) {
+    const c = $(`[data-idea-list="${k}"] .n`);
+    if (c) c.textContent = count(k);
   }
   const el = $(`[data-idea-date="${CSS.escape(id)}"]`);
   const n = N.data[d.list].find((x) => x.id === id);
