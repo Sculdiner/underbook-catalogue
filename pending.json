@@ -407,6 +407,92 @@
       },
       "note": "",
       "at": "2026-10-09T21:54:16.113Z"
+    },
+    {
+      "id": "mv1inec1a39j1",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "summoning-theorems",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "summoning-theorems",
+        "title": "Summoning Theorems",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 0,
+        "shortText": "Discard up to 2; that many Library books here, free.",
+        "rulesText": "On Assign: discard up to 2 random books from your hand. Take that many random books from your Library and assign them to this visitor for 0 Actions. Their On Assign abilities resolve.",
+        "reminders": [
+          "recycle"
+        ],
+        "rebinds": [
+          {
+            "id": "summoning-theorems:greater-theorems",
+            "name": "Greater Theorems",
+            "before": "Discard up to 2",
+            "after": "Discard up to 3",
+            "text": "On Assign: discard up to 3 random books from your hand. Take that many random books from your Library and assign them to this visitor for 0 Actions. Their On Assign abilities resolve."
+          },
+          {
+            "id": "summoning-theorems:empowered-theorems",
+            "name": "Empowered Theorems",
+            "before": "Library books as they are",
+            "after": "Library books each +1 Value",
+            "text": "On Assign: discard up to 2 random books from your hand. Take that many random books from your Library; each gains +1 Value, then is assigned to this visitor for 0 Actions."
+          },
+          {
+            "id": "summoning-theorems:selective-theorems",
+            "name": "Selective Theorems",
+            "before": "Random Library books",
+            "after": "The highest-Value Library books",
+            "text": "On Assign: discard up to 2 random books from your hand. Take that many of the highest-Value books in your Library (ties at random) and assign them to this visitor for 0 Actions."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "summoning-theorems",
+        "title": "Summoning Theorems",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 0,
+        "shortText": "Discard up to 2; that many Library books here, free.",
+        "rulesText": "On Assign: Summon a random book from your deck, for 0 actions. Its on assign ability resolves.",
+        "reminders": [
+          "recycle"
+        ],
+        "rebinds": [
+          {
+            "id": "summoning-theorems:greater-theorems",
+            "name": "Greater Theorems",
+            "before": "Discard up to 2",
+            "after": "Discard up to 3",
+            "text": "On Assign: discard up to 3 random books from your hand. Take that many random books from your Library and assign them to this visitor for 0 Actions. Their On Assign abilities resolve."
+          },
+          {
+            "id": "summoning-theorems:empowered-theorems",
+            "name": "Empowered Theorems",
+            "before": "Library books as they are",
+            "after": "Library books each +1 Value",
+            "text": "On Assign: discard up to 2 random books from your hand. Take that many random books from your Library; each gains +1 Value, then is assigned to this visitor for 0 Actions."
+          },
+          {
+            "id": "summoning-theorems:selective-theorems",
+            "name": "Selective Theorems",
+            "before": "Random Library books",
+            "after": "The highest-Value Library books",
+            "text": "On Assign: discard up to 2 random books from your hand. Take that many of the highest-Value books in your Library (ties at random) and assign them to this visitor for 0 Actions."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-09T22:07:33.456Z"
     }
   ],
   "applied": [
@@ -5999,5 +6085,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T21:54:16.113Z"
+  "updatedAt": "2026-10-09T22:07:33.457Z"
 }
