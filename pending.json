@@ -400,13 +400,13 @@
             "id": "pyromancers-handbook:from-the-ashes",
             "name": "From the Ashes",
             "before": "DESTROY 1 hand book",
-            "after": "DESTROY 2 hand books, then draw 2",
+            "after": "Return a destroyed book to your discard pile. Them, DESTROY 1 hand book.",
             "text": "On Assign: DESTROY 2 random other books from your hand. Then draw 2 books."
           }
         ]
       },
       "note": "",
-      "at": "2026-10-09T21:53:25.053Z"
+      "at": "2026-10-09T21:53:57.602Z"
     }
   ],
   "applied": [
@@ -5999,5 +5999,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T21:53:25.053Z"
+  "updatedAt": "2026-10-09T21:53:57.602Z"
 }
