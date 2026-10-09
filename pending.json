@@ -218,7 +218,7 @@
             "name": "Pack Leader",
             "before": "ignores visitor abilities.",
             "after": "all books ignore visitor abilities.",
-            "text": "Assigning this copy costs 0 Actions. Still Value 6; still ignores visitor abilities."
+            "text": "Assigning this copy costs 0 Actions. Still Value 6; all books assigned to the same visitor this turn, ignore abilities"
           },
           {
             "id": "apex-predator:predators-instinct",
@@ -230,7 +230,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-09T21:45:24.702Z"
+      "at": "2026-10-09T21:45:39.788Z"
     },
     {
       "id": "mv182aly5v6la",
@@ -5913,5 +5913,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T21:45:24.702Z"
+  "updatedAt": "2026-10-09T21:45:39.788Z"
 }
