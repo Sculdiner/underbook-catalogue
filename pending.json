@@ -377,7 +377,7 @@
         "rarity": "common",
         "value": 5,
         "shortText": "DESTROY 2 random hand books.",
-        "rulesText": "On Assign: DESTROY 1 random books from your hand.",
+        "rulesText": "On Assign: DESTROY 1 random book from your hand.",
         "reminders": [
           "destroy"
         ],
@@ -406,7 +406,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-09T21:52:12.628Z"
+      "at": "2026-10-09T21:52:17.122Z"
     }
   ],
   "applied": [
@@ -5999,5 +5999,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T21:52:12.628Z"
+  "updatedAt": "2026-10-09T21:52:17.122Z"
 }
