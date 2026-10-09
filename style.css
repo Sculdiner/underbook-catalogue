@@ -62,7 +62,7 @@ main { padding: calc(var(--top) + 12px) 16px calc(var(--bottom) + 88px); max-wid
 .tabbar {
   position: fixed; inset: auto 0 0 0; z-index: 20;
   height: var(--bottom); padding-bottom: env(safe-area-inset-bottom);
-  display: grid; grid-template-columns: repeat(5, 1fr);
+  display: grid; grid-template-columns: repeat(6, 1fr);
   background: rgba(21, 17, 14, .96); backdrop-filter: blur(10px);
   border-top: 1px solid var(--line);
 }
@@ -461,3 +461,16 @@ button.pick-icon:disabled { cursor: default; }
 @media (min-width: 700px) {
   .cover-col { width: 170px; }
 }
+
+/* ---------------------------------------------------------------- notes (Curio and book ideas; notes.js) */
+.notes-tabs { padding-top: 0; }
+.notes-tabs .chip { padding: 8px 14px; font-size: .92rem; }
+.notes-tabs .chip .n { margin-left: 4px; font-size: .8rem; opacity: .7; }
+.notes-intro { margin: 10px 2px 12px; font-size: .84rem; color: var(--ink3); }
+.notes-add { width: 100%; margin-bottom: 14px; }
+.idea-list { display: flex; flex-direction: column; gap: 10px; }
+.idea { padding: 4px 4px 2px; border-radius: 16px; background: rgba(255, 255, 255, .045); }
+.idea textarea.idea-text { min-height: 4.6em; padding: 12px; font-size: 16px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+.idea-foot { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 0 2px 0 12px; font-size: .78rem; color: var(--ink3); }
+.idea-del { min-height: 38px; padding: 0 12px; border: 0; border-radius: 10px; background: none; color: var(--danger); font: 600 .82rem var(--sans); cursor: pointer; }
+.idea-del:active { background: rgba(196, 85, 74, .12); }

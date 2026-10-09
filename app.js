@@ -75,6 +75,7 @@ import {
 } from './store.js';
 import { ZOOM_BADGE, zoomAttrs } from './zoom.js';
 import { uploadAndFrame } from './upload.js';
+import { flushNotes, initNotes, loadNotes, notesView } from './notes.js';
 
 Object.assign(S, {
   proposed: LS.get('proposed', true),
@@ -166,6 +167,7 @@ function render() {
   let title = 'Underbook';
   if (r.tab === 'settings') title = 'Settings';
   else if (r.tab === 'changes') title = 'Changes';
+  else if (r.tab === 'notes') title = 'Notes';
   else if (listTab && !r.id) title = cap(r.tab);
   if (INLINE_KINDS.includes(r.tab) && isForm) {
     location.replace(r.id === 'new' ? `#/${r.tab}` : `#/${r.tab}/${encodeURIComponent(r.id)}`);
@@ -211,6 +213,7 @@ function render() {
     view.innerHTML = views.list[r.tab]();
   } else if (views[r.tab]) {
     view.innerHTML = views[r.tab]();
+    if (r.tab === 'notes') autosize(view);
   } else {
     location.hash = '#/books';
     return;
@@ -1162,6 +1165,11 @@ views.changes = () => {
     ${applied.length ? `<h3>Applied by Claude</h3>${applied.map((e) => changeCard(e, true)).join('')}` : ''}`;
 };
 
+// ------------------------------------------------------------------ notes (notes.js)
+
+views.notes = notesView;
+initNotes({ toast, ask, render: () => render(), autosize });
+
 // ------------------------------------------------------------------ settings
 
 views.settings = () => `
@@ -1643,6 +1651,7 @@ document.addEventListener('click', async (e) => {
     case 'quick-token':
       LS.set('token', $('#quick-token').value.trim());
       await refreshPending();
+      await loadNotes();
       if (token() && !S.pendingError) toast('Connected — changes will save to GitHub');
       return render();
     case 'refresh':
@@ -1654,6 +1663,7 @@ document.addEventListener('click', async (e) => {
       S.proposed = $('#set-proposed').checked;
       LS.set('proposed', S.proposed);
       await refreshPending();
+      await loadNotes();
       if (token() && !S.pendingError) toast('Connected — changes will save to GitHub');
       return render();
     }
@@ -1679,17 +1689,22 @@ $('#back').addEventListener('click', () => {
 window.addEventListener('hashchange', () => {
   S.hops = (S.hops ?? 0) + 1;
   flushInline();
+  flushNotes();
   render();
   if (!S.form) window.scrollTo(0, 0);
 });
 
 // Pick up Claude's applied changes when the phone comes back to the tab.
 document.addEventListener('visibilitychange', async () => {
-  if (document.visibilityState === 'hidden') return void flushInline();
+  if (document.visibilityState === 'hidden') {
+    flushNotes();
+    return void flushInline();
+  }
   const typing = document.activeElement?.matches?.('input, textarea, select');
   if (document.visibilityState === 'visible' && S.cat && !S.form && !typing && !S.inline?.dirty) {
     await loadCatalogue().catch(() => {});
     await refreshPending({ quiet: true });
+    await loadNotes();
     render();
   }
 });

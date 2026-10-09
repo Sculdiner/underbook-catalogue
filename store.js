@@ -238,6 +238,68 @@ async function commitPending(mutate, message) {
   }
 }
 
+// ------------------------------------------------------------------ idea notes
+
+/*
+ * The user's free notes (Curio ideas, Book ideas): `notes.json` on the same
+ * `edits` branch, beside the queue but never in it. They are not game changes,
+ * so `pending.mjs` and the catalogue sync never see them as queued work.
+ */
+const NOTES_FILE = 'notes.json';
+const NOTE_LISTS = ['curios', 'books'];
+const emptyNotes = () => ({ version: 1, curios: [], books: [] });
+
+/** Read the notes fresh. A missing file is no notes yet. */
+async function fetchNotes() {
+  const r = await gh(`/repos/${repo()}/contents/${NOTES_FILE}?ref=${EDITS_BRANCH}&t=${Date.now()}`);
+  if (r.status === 404) return { data: emptyNotes(), sha: null };
+  if (!r.ok) throw new Error(r.status === 401 ? 'GitHub token rejected (401)' : `GitHub: HTTP ${r.status}`);
+  const j = await r.json();
+  const data = { ...emptyNotes(), ...JSON.parse(b64dec(j.content)) };
+  for (const k of NOTE_LISTS) data[k] ??= [];
+  return { data, sha: j.sha };
+}
+
+/**
+ * Apply `mutate` to the freshest notes and write them back, retrying on a
+ * stale sha (another device, or another note saving at the same moment).
+ * Resolves to the saved notes, or null when it could not save.
+ */
+async function commitNotes(mutate, message) {
+  if (!token()) {
+    hooks.toast('Add a GitHub token in Settings first', true);
+    hooks.needToken();
+    return null;
+  }
+  hooks.sync('busy');
+  try {
+    for (let attempt = 0; attempt < 4; attempt++) {
+      const fresh = await fetchNotes();
+      const next = clone(fresh.data);
+      mutate(next);
+      next.updatedAt = new Date().toISOString();
+      const body = { message, content: b64enc(JSON.stringify(next, null, 2) + '\n'), branch: EDITS_BRANCH };
+      if (fresh.sha) body.sha = fresh.sha;
+      let r = await gh(`/repos/${repo()}/contents/${NOTES_FILE}`, { method: 'PUT', body: JSON.stringify(body) });
+      if (r.status === 404) {
+        await ensureBranch();
+        r = await gh(`/repos/${repo()}/contents/${NOTES_FILE}`, { method: 'PUT', body: JSON.stringify(body) });
+      }
+      if (r.ok) {
+        hooks.sync('ok', 'Saved to GitHub');
+        return next;
+      }
+      if (r.status === 409 || r.status === 422) continue;
+      throw new Error(r.status === 401 || r.status === 403 ? `GitHub refused the write (${r.status}) — check the token's Contents permission` : `GitHub: HTTP ${r.status}`);
+    }
+    throw new Error('Could not save the note: the notes kept changing underneath. Try again.');
+  } catch (e) {
+    hooks.sync('err', e.message);
+    hooks.toast(e.message, true);
+    return null;
+  }
+}
+
 // ------------------------------------------------------------------ uploaded images
 
 /** Images uploaded from this browser, shown from memory until the page reloads. */
@@ -480,8 +542,13 @@ export {
   b64enc,
   cap,
   clone,
+  commitNotes,
   commitPending,
+  emptyNotes,
   ensureBranch,
+  fetchNotes,
+  NOTE_LISTS,
+  NOTES_FILE,
   esc,
   fetchPending,
   findItem,
