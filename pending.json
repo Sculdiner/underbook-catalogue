@@ -111,9 +111,9 @@
           },
           {
             "arriveAfterTurn": 0,
+            "fulfillment": 14,
+            "patience": 3,
             "name": "Restless Knight",
-            "fulfillment": 11,
-            "patience": 2,
             "abilityId": "extra-patience-if-untended"
           },
           {
@@ -143,7 +143,7 @@
         "disabled": true
       },
       "note": "",
-      "at": "2026-10-08T19:20:15.639Z"
+      "at": "2026-10-09T17:16:59.461Z"
     },
     {
       "id": "mv180n0v2pydv",
@@ -5906,5 +5906,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T17:11:15.922Z"
+  "updatedAt": "2026-10-09T17:16:59.461Z"
 }
