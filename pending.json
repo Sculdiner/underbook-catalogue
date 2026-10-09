@@ -393,7 +393,7 @@
             "id": "pyromancers-handbook:controlled-burn",
             "name": "Controlled Burn",
             "before": "DESTROY 1 hand books",
-            "after": "DESTROY 1 hand book",
+            "after": "Discard 1 hand book",
             "text": "On Assign: DESTROY 1 random other book from your hand."
           },
           {
@@ -406,7 +406,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-09T21:53:01.906Z"
+      "at": "2026-10-09T21:53:05.327Z"
     }
   ],
   "applied": [
@@ -5999,5 +5999,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T21:53:01.906Z"
+  "updatedAt": "2026-10-09T21:53:05.328Z"
 }
