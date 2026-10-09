@@ -118,11 +118,11 @@
           },
           {
             "arriveAfterTurn": 1,
-            "name": "The Charnel King",
-            "fulfillment": 28,
+            "fulfillment": 29,
             "patience": 6,
-            "abilityId": "discard-value-minus",
+            "name": "The Charnel King",
             "visitorDefId": "ossuary-sexton",
+            "abilityId": "discard-value-minus",
             "headliner": true
           },
           {
@@ -143,7 +143,7 @@
         "disabled": true
       },
       "note": "",
-      "at": "2026-10-09T17:21:36.120Z"
+      "at": "2026-10-09T17:21:48.533Z"
     },
     {
       "id": "mv180n0v2pydv",
@@ -5906,5 +5906,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T17:21:36.120Z"
+  "updatedAt": "2026-10-09T17:21:48.533Z"
 }
