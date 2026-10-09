@@ -211,7 +211,7 @@
             "name": "Unstoppable Predator",
             "before": "Action Cost 1",
             "after": "Action Cost 0",
-            "text": "Assigning this copy costs 0 Actions. Still Value 7; still ignores visitor abilities."
+            "text": "Assigning this copy costs 0 Actions. Still Value 6; still ignores visitor abilities."
           },
           {
             "id": "apex-predator:predators-instinct",
@@ -223,7 +223,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-09T17:10:11.937Z"
+      "at": "2026-10-09T17:10:22.329Z"
     }
   ],
   "applied": [
@@ -5816,5 +5816,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T17:10:11.937Z"
+  "updatedAt": "2026-10-09T17:10:22.330Z"
 }
