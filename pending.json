@@ -385,7 +385,7 @@
           {
             "id": "pyromancers-handbook:greater-pyromancy",
             "name": "Greater Pyromancy",
-            "before": "Value 6",
+            "before": "Value 5",
             "after": "Value 7",
             "text": "Printed Value 9. Still DESTROYs 2 random hand books."
           },
@@ -406,7 +406,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-09T21:52:25.981Z"
+      "at": "2026-10-09T21:52:32.465Z"
     }
   ],
   "applied": [
@@ -5999,5 +5999,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T21:52:25.981Z"
+  "updatedAt": "2026-10-09T21:52:32.465Z"
 }
