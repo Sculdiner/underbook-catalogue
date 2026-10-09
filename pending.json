@@ -300,7 +300,7 @@
             "id": "the-starless-sea:black-horizon",
             "name": "Black Horizon",
             "before": "Value 2",
-            "after": "Value 5",
+            "after": "Value 3",
             "text": "Printed Value 5. Still costs 0, ignores visitor abilities this turn and is DESTROYed at End Turn."
           },
           {
@@ -320,7 +320,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-09T17:11:15.922Z"
+      "at": "2026-10-09T21:40:44.877Z"
     }
   ],
   "applied": [
@@ -5913,5 +5913,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T17:22:15.177Z"
+  "updatedAt": "2026-10-09T21:40:44.878Z"
 }
