@@ -321,6 +321,92 @@
       },
       "note": "",
       "at": "2026-10-09T21:41:10.175Z"
+    },
+    {
+      "id": "mv1i3lvb8veqh",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "pyromancers-handbook",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "pyromancers-handbook",
+        "title": "The Pyromancer's Handbook",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "common",
+        "value": 6,
+        "shortText": "DESTROY 2 random hand books.",
+        "rulesText": "On Assign: DESTROY 2 random books from your hand.",
+        "reminders": [
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "pyromancers-handbook:greater-pyromancy",
+            "name": "Greater Pyromancy",
+            "before": "Value 6",
+            "after": "Value 9",
+            "text": "Printed Value 9. Still DESTROYs 2 random hand books."
+          },
+          {
+            "id": "pyromancers-handbook:controlled-burn",
+            "name": "Controlled Burn",
+            "before": "DESTROY 2 hand books",
+            "after": "DESTROY 1 hand book",
+            "text": "On Assign: DESTROY 1 random other book from your hand."
+          },
+          {
+            "id": "pyromancers-handbook:from-the-ashes",
+            "name": "From the Ashes",
+            "before": "DESTROY 2 hand books",
+            "after": "DESTROY 2 hand books, then draw 2",
+            "text": "On Assign: DESTROY 2 random other books from your hand. Then draw 2 books."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "pyromancers-handbook",
+        "title": "The Pyromancer's Handbook",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "common",
+        "value": 5,
+        "shortText": "DESTROY 2 random hand books.",
+        "rulesText": "On Assign: DESTROY 1 random books from your hand.",
+        "reminders": [
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "pyromancers-handbook:greater-pyromancy",
+            "name": "Greater Pyromancy",
+            "before": "Value 6",
+            "after": "Value 9",
+            "text": "Printed Value 9. Still DESTROYs 2 random hand books."
+          },
+          {
+            "id": "pyromancers-handbook:controlled-burn",
+            "name": "Controlled Burn",
+            "before": "DESTROY 2 hand books",
+            "after": "DESTROY 1 hand book",
+            "text": "On Assign: DESTROY 1 random other book from your hand."
+          },
+          {
+            "id": "pyromancers-handbook:from-the-ashes",
+            "name": "From the Ashes",
+            "before": "DESTROY 2 hand books",
+            "after": "DESTROY 2 hand books, then draw 2",
+            "text": "On Assign: DESTROY 2 random other books from your hand. Then draw 2 books."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-09T21:52:10.103Z"
     }
   ],
   "applied": [
@@ -5913,5 +5999,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T21:49:52.427Z"
+  "updatedAt": "2026-10-09T21:52:10.103Z"
 }
