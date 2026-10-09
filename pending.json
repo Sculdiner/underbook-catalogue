@@ -202,7 +202,7 @@
           "monsters"
         ],
         "rarity": "rare",
-        "value": 6,
+        "value": 5,
         "shortText": "Ignores visitor abilities that affect it.",
         "rulesText": "Ignores visitor abilities that affect this book — changing its Value or cost, moving, discarding or DESTROYing it. Visitor-wide conditions still apply.",
         "rebinds": [
@@ -230,7 +230,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-09T21:49:44.322Z"
+      "at": "2026-10-09T21:49:52.427Z"
     },
     {
       "id": "mv182aly5v6la",
@@ -5913,5 +5913,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T21:49:44.322Z"
+  "updatedAt": "2026-10-09T21:49:52.427Z"
 }
