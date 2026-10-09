@@ -401,12 +401,12 @@
             "name": "From the Ashes",
             "before": "DESTROY 1 hand book",
             "after": "Return a destroyed book to your discard pile. Them, DESTROY 1 hand book.",
-            "text": "On Assign: DESTROY 2 random other books from your hand. Then draw 2 books."
+            "text": "On Assign: Return a destroyed book to your discard pile . Then DESTROY 1 random other book from your hand."
           }
         ]
       },
       "note": "",
-      "at": "2026-10-09T21:53:57.602Z"
+      "at": "2026-10-09T21:54:16.113Z"
     }
   ],
   "applied": [
@@ -5999,5 +5999,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T21:53:57.602Z"
+  "updatedAt": "2026-10-09T21:54:16.113Z"
 }
