@@ -224,6 +224,96 @@
       },
       "note": "",
       "at": "2026-10-09T17:10:48.266Z"
+    },
+    {
+      "id": "mv182aly5v6la",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "the-starless-sea",
+      "before": {
+        "actionCost": 0,
+        "copies": 1,
+        "id": "the-starless-sea",
+        "title": "The Starless Sea",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 2,
+        "extension": true,
+        "shortText": "Ignore visitor abilities this turn. DESTROY at End Turn.",
+        "rulesText": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn.",
+        "reminders": [
+          "ignore-abilities",
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "the-starless-sea:black-horizon",
+            "name": "Black Horizon",
+            "before": "Value 2",
+            "after": "Value 5",
+            "text": "Printed Value 5. Still costs 0, ignores visitor abilities this turn and is DESTROYed at End Turn."
+          },
+          {
+            "id": "the-starless-sea:depthless-silence",
+            "name": "Depthless Silence",
+            "before": "No draw",
+            "after": "Then draw 1",
+            "text": "On Assign: ignore all visitor abilities for the rest of this turn, then draw 1 book. DESTROY this at End Turn."
+          },
+          {
+            "id": "the-starless-sea:after-the-darkness",
+            "name": "After the Darkness",
+            "before": "DESTROYed at End Turn",
+            "after": "DESTROYed at End Turn: +1 Action next turn",
+            "text": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn; when it is, gain +1 Action next turn."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 0,
+        "copies": 1,
+        "id": "the-starless-sea",
+        "title": "The Starless Sea",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 2,
+        "extension": true,
+        "shortText": "Ignore visitor abilities this turn. DESTROY at End Turn.",
+        "rulesText": "This book costs no action.\nOn Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn.",
+        "reminders": [
+          "ignore-abilities",
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "the-starless-sea:black-horizon",
+            "name": "Black Horizon",
+            "before": "Value 2",
+            "after": "Value 5",
+            "text": "Printed Value 5. Still costs 0, ignores visitor abilities this turn and is DESTROYed at End Turn."
+          },
+          {
+            "id": "the-starless-sea:depthless-silence",
+            "name": "Depthless Silence",
+            "before": "No draw",
+            "after": "Then draw 1",
+            "text": "On Assign: ignore all visitor abilities for the rest of this turn, then draw 1 book. DESTROY this at End Turn."
+          },
+          {
+            "id": "the-starless-sea:after-the-darkness",
+            "name": "After the Darkness",
+            "before": "DESTROYed at End Turn",
+            "after": "DESTROYed at End Turn: +1 Action next turn",
+            "text": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn; when it is, gain +1 Action next turn."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-09T17:11:12.694Z"
     }
   ],
   "applied": [
@@ -5816,5 +5906,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T17:10:48.267Z"
+  "updatedAt": "2026-10-09T17:11:12.694Z"
 }
