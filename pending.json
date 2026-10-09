@@ -19,140 +19,6 @@
       "at": "2026-10-07T18:10:20.980Z"
     },
     {
-      "id": "muzx8efr2znl1",
-      "kind": "encounters",
-      "op": "edit",
-      "targetId": "charnel-kings-audience",
-      "before": {
-        "id": "charnel-kings-audience",
-        "stage": 2,
-        "name": "The Charnel King's Audience",
-        "type": "boss",
-        "category": "elite-boss",
-        "purpose": "Create low-discard attack windows against the King. 47 / 62 / 90.",
-        "intro": {
-          "title": "The Charnel King",
-          "epithet": "Sovereign of the Lower Shelves",
-          "line": "Kneel. Or don't. The knees go first anyway.",
-          "emblem": "bone-rosette"
-        },
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Bone Steward",
-            "fulfillment": 11,
-            "patience": 3,
-            "abilityId": "return-to-library"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Dead Noble",
-            "fulfillment": 12,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Restless Knight",
-            "fulfillment": 11,
-            "patience": 2,
-            "abilityId": "extra-patience-if-untended"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "The Charnel King",
-            "fulfillment": 28,
-            "patience": 6,
-            "abilityId": "discard-value-minus",
-            "visitorDefId": "ossuary-sexton",
-            "headliner": true
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Mummified Advisor",
-            "fulfillment": 13,
-            "patience": 4,
-            "abilityId": "discard-value-plus"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Royal Exhumer",
-            "fulfillment": 15,
-            "patience": 4,
-            "abilityId": "return-to-library"
-          }
-        ]
-      },
-      "after": {
-        "id": "charnel-kings-audience",
-        "stage": 2,
-        "name": "The Charnel King's Audience",
-        "type": "boss",
-        "category": "elite-boss",
-        "purpose": "Create low-discard attack windows against the King. 47 / 62 / 90.",
-        "intro": {
-          "title": "The Charnel King",
-          "epithet": "Sovereign of the Lower Shelves",
-          "line": "Kneel. Or don't. The knees go first anyway.",
-          "emblem": "bone-rosette"
-        },
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "fulfillment": 4,
-            "patience": 4,
-            "name": "Bone Steward",
-            "abilityId": "return-to-library"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Dead Noble",
-            "fulfillment": 12,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 0,
-            "fulfillment": 14,
-            "patience": 3,
-            "name": "Restless Knight",
-            "abilityId": "extra-patience-if-untended"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "fulfillment": 29,
-            "patience": 6,
-            "name": "The Charnel King",
-            "visitorDefId": "ossuary-sexton",
-            "abilityId": "discard-value-minus",
-            "headliner": true
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Mummified Advisor",
-            "fulfillment": 13,
-            "patience": 4,
-            "abilityId": "discard-value-plus"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Royal Exhumer",
-            "fulfillment": 15,
-            "patience": 4,
-            "abilityId": "return-to-library"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "fulfillment": 4,
-            "patience": 4,
-            "name": "Bone Steward",
-            "abilityId": "return-to-library"
-          }
-        ],
-        "disabled": true
-      },
-      "note": "",
-      "at": "2026-10-09T17:22:15.176Z"
-    },
-    {
       "id": "mv180n0v2pydv",
       "kind": "books",
       "op": "edit",
@@ -231,182 +97,6 @@
       },
       "note": "",
       "at": "2026-10-09T21:49:52.427Z"
-    },
-    {
-      "id": "mv182aly5v6la",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "the-starless-sea",
-      "before": {
-        "actionCost": 0,
-        "copies": 1,
-        "id": "the-starless-sea",
-        "title": "The Starless Sea",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "rare",
-        "value": 2,
-        "extension": true,
-        "shortText": "Ignore visitor abilities this turn. DESTROY at End Turn.",
-        "rulesText": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn.",
-        "reminders": [
-          "ignore-abilities",
-          "destroy"
-        ],
-        "rebinds": [
-          {
-            "id": "the-starless-sea:black-horizon",
-            "name": "Black Horizon",
-            "before": "Value 2",
-            "after": "Value 5",
-            "text": "Printed Value 5. Still costs 0, ignores visitor abilities this turn and is DESTROYed at End Turn."
-          },
-          {
-            "id": "the-starless-sea:depthless-silence",
-            "name": "Depthless Silence",
-            "before": "No draw",
-            "after": "Then draw 1",
-            "text": "On Assign: ignore all visitor abilities for the rest of this turn, then draw 1 book. DESTROY this at End Turn."
-          },
-          {
-            "id": "the-starless-sea:after-the-darkness",
-            "name": "After the Darkness",
-            "before": "DESTROYed at End Turn",
-            "after": "DESTROYed at End Turn: +1 Action next turn",
-            "text": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn; when it is, gain +1 Action next turn."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 0,
-        "copies": 1,
-        "id": "the-starless-sea",
-        "title": "The Starless Sea",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "rare",
-        "value": 2,
-        "extension": true,
-        "shortText": "Ignore visitor abilities this turn. DESTROY at End Turn.",
-        "rulesText": "This book costs no action.\nOn Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn.",
-        "reminders": [
-          "ignore-abilities",
-          "destroy"
-        ],
-        "rebinds": [
-          {
-            "id": "the-starless-sea:black-horizon",
-            "name": "Black Horizon",
-            "before": "Value 2",
-            "after": "Value 4",
-            "text": "Printed Value 4. Still costs 0, ignores visitor abilities this turn and is DESTROYed at End Turn."
-          },
-          {
-            "id": "the-starless-sea:depthless-silence",
-            "name": "Depthless Silence",
-            "before": "No draw",
-            "after": "Then draw 1",
-            "text": "On Assign: ignore all visitor abilities for the rest of this turn, then draw 1 book. DESTROY this at End Turn."
-          },
-          {
-            "id": "the-starless-sea:after-the-darkness",
-            "name": "After the Darkness",
-            "before": "DESTROYed at End Turn",
-            "after": "DESTROYed at End Turn: +1 Action next turn",
-            "text": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn; when it is, gain +1 Action next turn."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-09T21:41:10.175Z"
-    },
-    {
-      "id": "mv1i3lvb8veqh",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "pyromancers-handbook",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "pyromancers-handbook",
-        "title": "The Pyromancer's Handbook",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "common",
-        "value": 6,
-        "shortText": "DESTROY 2 random hand books.",
-        "rulesText": "On Assign: DESTROY 2 random books from your hand.",
-        "reminders": [
-          "destroy"
-        ],
-        "rebinds": [
-          {
-            "id": "pyromancers-handbook:greater-pyromancy",
-            "name": "Greater Pyromancy",
-            "before": "Value 6",
-            "after": "Value 9",
-            "text": "Printed Value 9. Still DESTROYs 2 random hand books."
-          },
-          {
-            "id": "pyromancers-handbook:controlled-burn",
-            "name": "Controlled Burn",
-            "before": "DESTROY 2 hand books",
-            "after": "DESTROY 1 hand book",
-            "text": "On Assign: DESTROY 1 random other book from your hand."
-          },
-          {
-            "id": "pyromancers-handbook:from-the-ashes",
-            "name": "From the Ashes",
-            "before": "DESTROY 2 hand books",
-            "after": "DESTROY 2 hand books, then draw 2",
-            "text": "On Assign: DESTROY 2 random other books from your hand. Then draw 2 books."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "pyromancers-handbook",
-        "title": "The Pyromancer's Handbook",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "common",
-        "value": 5,
-        "shortText": "DESTROY 2 random hand books.",
-        "rulesText": "On Assign: DESTROY 1 random book from your hand.",
-        "reminders": [
-          "destroy"
-        ],
-        "rebinds": [
-          {
-            "id": "pyromancers-handbook:greater-pyromancy",
-            "name": "Greater Pyromancy",
-            "before": "Value 5",
-            "after": "Value 7",
-            "text": "Printed Value 9. Still DESTROYs 2 random hand books."
-          },
-          {
-            "id": "pyromancers-handbook:controlled-burn",
-            "name": "Controlled Burn",
-            "before": "DESTROY 1 hand book",
-            "after": "Discard 1 hand book",
-            "text": "On Assign: Discard 1 random other book from your hand."
-          },
-          {
-            "id": "pyromancers-handbook:from-the-ashes",
-            "name": "From the Ashes",
-            "before": "DESTROY 1 hand book",
-            "after": "Return a destroyed book to your discard pile. Them, DESTROY 1 hand book.",
-            "text": "On Assign: Return a destroyed book to your discard pile . Then DESTROY 1 random other book from your hand."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-09T21:54:16.113Z"
     }
   ],
   "applied": [
@@ -5997,7 +5687,323 @@
       "at": "2026-10-07T18:10:58.700Z",
       "appliedAt": "2026-10-07T18:33:06.151Z",
       "result": "New icon set."
+    },
+    {
+      "id": "muzx8efr2znl1",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "charnel-kings-audience",
+      "before": {
+        "id": "charnel-kings-audience",
+        "stage": 2,
+        "name": "The Charnel King's Audience",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "Create low-discard attack windows against the King. 47 / 62 / 90.",
+        "intro": {
+          "title": "The Charnel King",
+          "epithet": "Sovereign of the Lower Shelves",
+          "line": "Kneel. Or don't. The knees go first anyway.",
+          "emblem": "bone-rosette"
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Bone Steward",
+            "fulfillment": 11,
+            "patience": 3,
+            "abilityId": "return-to-library"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Noble",
+            "fulfillment": 12,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Restless Knight",
+            "fulfillment": 11,
+            "patience": 2,
+            "abilityId": "extra-patience-if-untended"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "The Charnel King",
+            "fulfillment": 28,
+            "patience": 6,
+            "abilityId": "discard-value-minus",
+            "visitorDefId": "ossuary-sexton",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Mummified Advisor",
+            "fulfillment": 13,
+            "patience": 4,
+            "abilityId": "discard-value-plus"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Royal Exhumer",
+            "fulfillment": 15,
+            "patience": 4,
+            "abilityId": "return-to-library"
+          }
+        ]
+      },
+      "after": {
+        "id": "charnel-kings-audience",
+        "stage": 2,
+        "name": "The Charnel King's Audience",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "Create low-discard attack windows against the King. 47 / 62 / 90.",
+        "intro": {
+          "title": "The Charnel King",
+          "epithet": "Sovereign of the Lower Shelves",
+          "line": "Kneel. Or don't. The knees go first anyway.",
+          "emblem": "bone-rosette"
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "fulfillment": 4,
+            "patience": 4,
+            "name": "Bone Steward",
+            "abilityId": "return-to-library"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Noble",
+            "fulfillment": 12,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "fulfillment": 14,
+            "patience": 3,
+            "name": "Restless Knight",
+            "abilityId": "extra-patience-if-untended"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "fulfillment": 29,
+            "patience": 6,
+            "name": "The Charnel King",
+            "visitorDefId": "ossuary-sexton",
+            "abilityId": "discard-value-minus",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Mummified Advisor",
+            "fulfillment": 13,
+            "patience": 4,
+            "abilityId": "discard-value-plus"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Royal Exhumer",
+            "fulfillment": 15,
+            "patience": 4,
+            "abilityId": "return-to-library"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "fulfillment": 4,
+            "patience": 4,
+            "name": "Bone Steward",
+            "abilityId": "return-to-library"
+          }
+        ],
+        "disabled": true
+      },
+      "note": "",
+      "at": "2026-10-09T17:22:15.176Z",
+      "appliedAt": "2026-10-09T22:22:32.675Z",
+      "result": "The Charnel King's Audience is recast (47 / 62 / 91) and switched off; Stage 2's Boss now comes from the Duchess and the Archbishop."
+    },
+    {
+      "id": "mv182aly5v6la",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "the-starless-sea",
+      "before": {
+        "actionCost": 0,
+        "copies": 1,
+        "id": "the-starless-sea",
+        "title": "The Starless Sea",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 2,
+        "extension": true,
+        "shortText": "Ignore visitor abilities this turn. DESTROY at End Turn.",
+        "rulesText": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn.",
+        "reminders": [
+          "ignore-abilities",
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "the-starless-sea:black-horizon",
+            "name": "Black Horizon",
+            "before": "Value 2",
+            "after": "Value 5",
+            "text": "Printed Value 5. Still costs 0, ignores visitor abilities this turn and is DESTROYed at End Turn."
+          },
+          {
+            "id": "the-starless-sea:depthless-silence",
+            "name": "Depthless Silence",
+            "before": "No draw",
+            "after": "Then draw 1",
+            "text": "On Assign: ignore all visitor abilities for the rest of this turn, then draw 1 book. DESTROY this at End Turn."
+          },
+          {
+            "id": "the-starless-sea:after-the-darkness",
+            "name": "After the Darkness",
+            "before": "DESTROYed at End Turn",
+            "after": "DESTROYed at End Turn: +1 Action next turn",
+            "text": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn; when it is, gain +1 Action next turn."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 0,
+        "copies": 1,
+        "id": "the-starless-sea",
+        "title": "The Starless Sea",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 2,
+        "extension": true,
+        "shortText": "Ignore visitor abilities this turn. DESTROY at End Turn.",
+        "rulesText": "This book costs no action.\nOn Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn.",
+        "reminders": [
+          "ignore-abilities",
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "the-starless-sea:black-horizon",
+            "name": "Black Horizon",
+            "before": "Value 2",
+            "after": "Value 4",
+            "text": "Printed Value 4. Still costs 0, ignores visitor abilities this turn and is DESTROYed at End Turn."
+          },
+          {
+            "id": "the-starless-sea:depthless-silence",
+            "name": "Depthless Silence",
+            "before": "No draw",
+            "after": "Then draw 1",
+            "text": "On Assign: ignore all visitor abilities for the rest of this turn, then draw 1 book. DESTROY this at End Turn."
+          },
+          {
+            "id": "the-starless-sea:after-the-darkness",
+            "name": "After the Darkness",
+            "before": "DESTROYed at End Turn",
+            "after": "DESTROYed at End Turn: +1 Action next turn",
+            "text": "On Assign: ignore all visitor abilities for the rest of this turn. DESTROY this at End Turn; when it is, gain +1 Action next turn."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-09T21:41:10.175Z",
+      "appliedAt": "2026-10-09T22:22:32.675Z",
+      "result": "The Starless Sea's rules now say it costs no Action, and Black Horizon is Value 4."
+    },
+    {
+      "id": "mv1i3lvb8veqh",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "pyromancers-handbook",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "pyromancers-handbook",
+        "title": "The Pyromancer's Handbook",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "common",
+        "value": 6,
+        "shortText": "DESTROY 2 random hand books.",
+        "rulesText": "On Assign: DESTROY 2 random books from your hand.",
+        "reminders": [
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "pyromancers-handbook:greater-pyromancy",
+            "name": "Greater Pyromancy",
+            "before": "Value 6",
+            "after": "Value 9",
+            "text": "Printed Value 9. Still DESTROYs 2 random hand books."
+          },
+          {
+            "id": "pyromancers-handbook:controlled-burn",
+            "name": "Controlled Burn",
+            "before": "DESTROY 2 hand books",
+            "after": "DESTROY 1 hand book",
+            "text": "On Assign: DESTROY 1 random other book from your hand."
+          },
+          {
+            "id": "pyromancers-handbook:from-the-ashes",
+            "name": "From the Ashes",
+            "before": "DESTROY 2 hand books",
+            "after": "DESTROY 2 hand books, then draw 2",
+            "text": "On Assign: DESTROY 2 random other books from your hand. Then draw 2 books."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "pyromancers-handbook",
+        "title": "The Pyromancer's Handbook",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "common",
+        "value": 5,
+        "shortText": "DESTROY 2 random hand books.",
+        "rulesText": "On Assign: DESTROY 1 random book from your hand.",
+        "reminders": [
+          "destroy"
+        ],
+        "rebinds": [
+          {
+            "id": "pyromancers-handbook:greater-pyromancy",
+            "name": "Greater Pyromancy",
+            "before": "Value 5",
+            "after": "Value 7",
+            "text": "Printed Value 9. Still DESTROYs 2 random hand books."
+          },
+          {
+            "id": "pyromancers-handbook:controlled-burn",
+            "name": "Controlled Burn",
+            "before": "DESTROY 1 hand book",
+            "after": "Discard 1 hand book",
+            "text": "On Assign: Discard 1 random other book from your hand."
+          },
+          {
+            "id": "pyromancers-handbook:from-the-ashes",
+            "name": "From the Ashes",
+            "before": "DESTROY 1 hand book",
+            "after": "Return a destroyed book to your discard pile. Them, DESTROY 1 hand book.",
+            "text": "On Assign: Return a destroyed book to your discard pile . Then DESTROY 1 random other book from your hand."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-09T21:54:16.113Z",
+      "appliedAt": "2026-10-09T22:22:32.675Z",
+      "result": "The Pyromancer's Handbook is Value 5 and burns 1 book; Greater Pyromancy Value 7, Controlled Burn discards instead, From the Ashes returns a destroyed book of your choice first."
     }
   ],
-  "updatedAt": "2026-10-09T22:09:20.488Z"
+  "updatedAt": "2026-10-09T22:22:32.676Z"
 }
