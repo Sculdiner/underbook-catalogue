@@ -144,6 +144,86 @@
       },
       "note": "",
       "at": "2026-10-08T19:20:15.639Z"
+    },
+    {
+      "id": "mv180n0v2pydv",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "apex-predator",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "apex-predator",
+        "title": "Apex Predator",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 7,
+        "shortText": "Ignores visitor abilities that affect it.",
+        "rulesText": "Ignores visitor abilities that affect this book — changing its Value or cost, moving, discarding or DESTROYing it. Visitor-wide conditions still apply.",
+        "rebinds": [
+          {
+            "id": "apex-predator:perfect-predator",
+            "name": "Perfect Predator",
+            "before": "Value 7",
+            "after": "Value 10",
+            "text": "Printed Value 10. Still ignores visitor abilities."
+          },
+          {
+            "id": "apex-predator:unstoppable-predator",
+            "name": "Unstoppable Predator",
+            "before": "Action Cost 1",
+            "after": "Action Cost 0",
+            "text": "Assigning this copy costs 0 Actions. Still Value 7; still ignores visitor abilities."
+          },
+          {
+            "id": "apex-predator:predators-instinct",
+            "name": "Predator's Instinct",
+            "before": "No On Assign",
+            "after": "On Assign: draw 1",
+            "text": "Ignores visitor abilities that affect this book. On Assign: draw 1 book."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "apex-predator",
+        "title": "Apex Predator",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 7,
+        "shortText": "Ignores visitor abilities that affect it.",
+        "rulesText": "Ignores visitor abilities that affect this book — changing its Value or cost, moving, discarding or DESTROYing it. Visitor-wide conditions still apply.",
+        "rebinds": [
+          {
+            "id": "apex-predator:perfect-predator",
+            "name": "Perfect Predator",
+            "before": "Value 7",
+            "after": "Value 9",
+            "text": "Printed Value 10. Still ignores visitor abilities."
+          },
+          {
+            "id": "apex-predator:unstoppable-predator",
+            "name": "Unstoppable Predator",
+            "before": "Action Cost 1",
+            "after": "Action Cost 0",
+            "text": "Assigning this copy costs 0 Actions. Still Value 7; still ignores visitor abilities."
+          },
+          {
+            "id": "apex-predator:predators-instinct",
+            "name": "Predator's Instinct",
+            "before": "No On Assign",
+            "after": "On Assign: draw 1",
+            "text": "Ignores visitor abilities that affect this book. On Assign: draw 1 book."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-09T17:09:55.463Z"
     }
   ],
   "applied": [
@@ -5736,5 +5816,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-08T19:40:31.783Z"
+  "updatedAt": "2026-10-09T17:09:55.471Z"
 }
