@@ -17,86 +17,6 @@
       },
       "note": "",
       "at": "2026-10-07T18:10:20.980Z"
-    },
-    {
-      "id": "mv180n0v2pydv",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "apex-predator",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "apex-predator",
-        "title": "Apex Predator",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "rare",
-        "value": 7,
-        "shortText": "Ignores visitor abilities that affect it.",
-        "rulesText": "Ignores visitor abilities that affect this book — changing its Value or cost, moving, discarding or DESTROYing it. Visitor-wide conditions still apply.",
-        "rebinds": [
-          {
-            "id": "apex-predator:perfect-predator",
-            "name": "Perfect Predator",
-            "before": "Value 7",
-            "after": "Value 10",
-            "text": "Printed Value 10. Still ignores visitor abilities."
-          },
-          {
-            "id": "apex-predator:unstoppable-predator",
-            "name": "Unstoppable Predator",
-            "before": "Action Cost 1",
-            "after": "Action Cost 0",
-            "text": "Assigning this copy costs 0 Actions. Still Value 7; still ignores visitor abilities."
-          },
-          {
-            "id": "apex-predator:predators-instinct",
-            "name": "Predator's Instinct",
-            "before": "No On Assign",
-            "after": "On Assign: draw 1",
-            "text": "Ignores visitor abilities that affect this book. On Assign: draw 1 book."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "apex-predator",
-        "title": "Apex Predator",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "rare",
-        "value": 5,
-        "shortText": "Ignores visitor abilities that affect it.",
-        "rulesText": "Ignores visitor abilities that affect this book — changing its Value or cost, moving, discarding or DESTROYing it. Visitor-wide conditions still apply.",
-        "rebinds": [
-          {
-            "id": "apex-predator:perfect-predator",
-            "name": "Perfect Predator",
-            "before": "Value 5",
-            "after": "Value 7",
-            "text": "Printed Value 7. Still ignores visitor abilities."
-          },
-          {
-            "id": "apex-predator:unstoppable-predator",
-            "name": "Pack Leader",
-            "before": "ignores visitor abilities.",
-            "after": "all books ignore visitor abilities.",
-            "text": "Assigning this copy costs 0 Actions. Still Value 5; all books assigned to the same visitor this turn, ignore abilities"
-          },
-          {
-            "id": "apex-predator:predators-instinct",
-            "name": "Predator's Instinct",
-            "before": "No On Assign",
-            "after": "On Assign: draw 1",
-            "text": "Ignores visitor abilities that affect this book. On Assign: draw 1 book."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-09T21:49:52.427Z"
     }
   ],
   "applied": [
@@ -6003,7 +5923,89 @@
       "at": "2026-10-09T21:54:16.113Z",
       "appliedAt": "2026-10-09T22:22:32.675Z",
       "result": "The Pyromancer's Handbook is Value 5 and burns 1 book; Greater Pyromancy Value 7, Controlled Burn discards instead, From the Ashes returns a destroyed book of your choice first."
+    },
+    {
+      "id": "mv180n0v2pydv",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "apex-predator",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "apex-predator",
+        "title": "Apex Predator",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 7,
+        "shortText": "Ignores visitor abilities that affect it.",
+        "rulesText": "Ignores visitor abilities that affect this book — changing its Value or cost, moving, discarding or DESTROYing it. Visitor-wide conditions still apply.",
+        "rebinds": [
+          {
+            "id": "apex-predator:perfect-predator",
+            "name": "Perfect Predator",
+            "before": "Value 7",
+            "after": "Value 10",
+            "text": "Printed Value 10. Still ignores visitor abilities."
+          },
+          {
+            "id": "apex-predator:unstoppable-predator",
+            "name": "Unstoppable Predator",
+            "before": "Action Cost 1",
+            "after": "Action Cost 0",
+            "text": "Assigning this copy costs 0 Actions. Still Value 7; still ignores visitor abilities."
+          },
+          {
+            "id": "apex-predator:predators-instinct",
+            "name": "Predator's Instinct",
+            "before": "No On Assign",
+            "after": "On Assign: draw 1",
+            "text": "Ignores visitor abilities that affect this book. On Assign: draw 1 book."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "apex-predator",
+        "title": "Apex Predator",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "value": 5,
+        "shortText": "Ignores visitor abilities that affect it.",
+        "rulesText": "Ignores visitor abilities that affect this book — changing its Value or cost, moving, discarding or DESTROYing it. Visitor-wide conditions still apply.",
+        "rebinds": [
+          {
+            "id": "apex-predator:perfect-predator",
+            "name": "Perfect Predator",
+            "before": "Value 5",
+            "after": "Value 7",
+            "text": "Printed Value 7. Still ignores visitor abilities."
+          },
+          {
+            "id": "apex-predator:unstoppable-predator",
+            "name": "Pack Leader",
+            "before": "ignores visitor abilities.",
+            "after": "all books ignore visitor abilities.",
+            "text": "Assigning this copy costs 0 Actions. Still Value 5; all books assigned to the same visitor this turn, ignore abilities"
+          },
+          {
+            "id": "apex-predator:predators-instinct",
+            "name": "Predator's Instinct",
+            "before": "No On Assign",
+            "after": "On Assign: draw 1",
+            "text": "Ignores visitor abilities that affect this book. On Assign: draw 1 book."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-09T21:49:52.427Z",
+      "appliedAt": "2026-10-09T22:35:54.523Z",
+      "result": "Applied: Apex Predator Value 5, Perfect Predator Value 7, Pack Leader replaces Unstoppable Predator at 1 Action (the leftover 0-Action sentence dropped, user), every book assigned to its visitor this turn ignores visitor abilities."
     }
   ],
-  "updatedAt": "2026-10-09T22:22:32.676Z"
+  "updatedAt": "2026-10-09T22:35:54.525Z"
 }
