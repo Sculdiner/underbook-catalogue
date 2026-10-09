@@ -138,12 +138,19 @@
             "fulfillment": 15,
             "patience": 4,
             "abilityId": "return-to-library"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "fulfillment": 4,
+            "patience": 4,
+            "name": "Bone Steward",
+            "abilityId": "return-to-library"
           }
         ],
         "disabled": true
       },
       "note": "",
-      "at": "2026-10-09T17:21:48.533Z"
+      "at": "2026-10-09T17:22:15.176Z"
     },
     {
       "id": "mv180n0v2pydv",
@@ -5906,5 +5913,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T17:21:48.533Z"
+  "updatedAt": "2026-10-09T17:22:15.177Z"
 }
