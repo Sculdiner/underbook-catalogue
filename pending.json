@@ -394,7 +394,7 @@
             "name": "Controlled Burn",
             "before": "DESTROY 1 hand books",
             "after": "Discard 1 hand book",
-            "text": "On Assign: DESTROY 1 random other book from your hand."
+            "text": "On Assign: Discard 1 random other book from your hand."
           },
           {
             "id": "pyromancers-handbook:from-the-ashes",
@@ -406,7 +406,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-09T21:53:05.327Z"
+      "at": "2026-10-09T21:53:10.156Z"
     }
   ],
   "applied": [
@@ -5999,5 +5999,5 @@
       "result": "New icon set."
     }
   ],
-  "updatedAt": "2026-10-09T21:53:05.328Z"
+  "updatedAt": "2026-10-09T21:53:10.156Z"
 }
