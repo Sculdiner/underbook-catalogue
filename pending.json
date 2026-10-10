@@ -17,175 +17,6 @@
       },
       "note": "",
       "at": "2026-10-07T18:10:20.980Z"
-    },
-    {
-      "id": "mv22ufks3mdmc",
-      "kind": "encounters",
-      "op": "edit",
-      "targetId": "mass-of-the-after-after-life",
-      "before": {
-        "id": "mass-of-the-after-after-life",
-        "stage": 2,
-        "name": "Mass of the After-After-Life",
-        "type": "boss",
-        "category": "elite-boss",
-        "purpose": "The recycle-event centerpiece. 56 / 70 / 101.",
-        "intro": {
-          "title": "The Archbishop",
-          "epithet": "Twice Risen, Still Unimpressed",
-          "line": "We've died twice. We'd like something lighter this time.",
-          "emblem": "rose-window"
-        },
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Dead Parishioner",
-            "fulfillment": 10,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Dead Parishioner",
-            "fulfillment": 10,
-            "patience": 3
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Enthusiastic Convert",
-            "fulfillment": 11,
-            "patience": 3,
-            "abilityId": "bonus-three-if-discard-three"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Archbishop of the After-After-Life",
-            "fulfillment": 31,
-            "patience": 7,
-            "abilityId": "recycle-blessing",
-            "visitorDefId": "ossuary-vicar",
-            "headliner": true
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Resurrection Deacon",
-            "fulfillment": 13,
-            "patience": 4,
-            "abilityId": "return-to-hand"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Skeleton Choir",
-            "fulfillment": 12,
-            "patience": 3,
-            "abilityId": "return-to-library"
-          },
-          {
-            "arriveAfterTurn": 3,
-            "name": "Church Sexton",
-            "fulfillment": 14,
-            "patience": 3,
-            "abilityId": "discard-random-on-arrival"
-          }
-        ]
-      },
-      "after": {
-        "id": "mass-of-the-after-after-life",
-        "stage": 2,
-        "name": "Mass of the After-After-Life",
-        "type": "boss",
-        "category": "elite-boss",
-        "purpose": "The recycle-event centerpiece. 56 / 70 / 101.",
-        "intro": {
-          "title": "The Archbishop",
-          "epithet": "Twice Risen, Still Unimpressed",
-          "line": "We've died twice. We'd like something lighter this time.",
-          "emblem": "rose-window"
-        },
-        "visitors": [
-          {
-            "arriveAfterTurn": 0,
-            "name": "Skeleton Choir",
-            "fulfillment": 10,
-            "patience": 3,
-            "abilityId": "cleaning-up",
-            "visitorDefId": "choirbone"
-          },
-          {
-            "arriveAfterTurn": 0,
-            "name": "Skeleton Choir",
-            "fulfillment": 12,
-            "patience": 3,
-            "abilityId": "cleaning-up",
-            "visitorDefId": "choirbone"
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Archbishop of the After-After-Life",
-            "fulfillment": 33,
-            "patience": 7,
-            "abilityId": "recycle-blessing",
-            "visitorDefId": "ossuary-vicar",
-            "headliner": true
-          },
-          {
-            "arriveAfterTurn": 1,
-            "name": "Skeleton Choir",
-            "fulfillment": 13,
-            "patience": 4,
-            "visitorDefId": "choirbone",
-            "abilityId": "cleaning-up"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Cathedral Servant",
-            "fulfillment": 11,
-            "patience": 2,
-            "visitorDefId": "ossuary-yawning-skeleton"
-          },
-          {
-            "arriveAfterTurn": 3,
-            "name": "Enthusiastic Convert",
-            "fulfillment": 11,
-            "patience": 3,
-            "abilityId": "bonus-three-if-discard-three",
-            "visitorDefId": "ossuary-crypt-landlord"
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-10T07:44:51.867Z"
-    },
-    {
-      "id": "mv22xv8qzb3lp",
-      "kind": "abilities",
-      "op": "add",
-      "targetId": "cleaning-up",
-      "before": null,
-      "after": {
-        "id": "cleaning-up",
-        "name": "Choir",
-        "text": "When fulfilled, return all books from your discard pile to the top of your Library."
-      },
-      "note": "",
-      "at": "2026-10-10T07:43:39.072Z"
-    },
-    {
-      "id": "mv2317dk2bcgb",
-      "kind": "abilities",
-      "op": "edit",
-      "targetId": "recycle-blessing",
-      "before": {
-        "id": "recycle-blessing",
-        "name": "After-After Resurrection",
-        "text": "Whenever the normal full discard-to-Library recycle occurs, gain +4 Fulfillment."
-      },
-      "after": {
-        "id": "recycle-blessing",
-        "name": "After-After Resurrection",
-        "text": "Whenever the normal full discard-to-Library recycle occurs, gain 4 Fulfillment."
-      },
-      "note": "",
-      "at": "2026-10-10T07:38:09.944Z"
     }
   ],
   "applied": [
@@ -6174,7 +6005,182 @@
       "at": "2026-10-09T21:49:52.427Z",
       "appliedAt": "2026-10-09T22:35:54.523Z",
       "result": "Applied: Apex Predator Value 5, Perfect Predator Value 7, Pack Leader replaces Unstoppable Predator at 1 Action (the leftover 0-Action sentence dropped, user), every book assigned to its visitor this turn ignores visitor abilities."
+    },
+    {
+      "id": "mv22ufks3mdmc",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "mass-of-the-after-after-life",
+      "before": {
+        "id": "mass-of-the-after-after-life",
+        "stage": 2,
+        "name": "Mass of the After-After-Life",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "The recycle-event centerpiece. 56 / 70 / 101.",
+        "intro": {
+          "title": "The Archbishop",
+          "epithet": "Twice Risen, Still Unimpressed",
+          "line": "We've died twice. We'd like something lighter this time.",
+          "emblem": "rose-window"
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Parishioner",
+            "fulfillment": 10,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Dead Parishioner",
+            "fulfillment": 10,
+            "patience": 3
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Enthusiastic Convert",
+            "fulfillment": 11,
+            "patience": 3,
+            "abilityId": "bonus-three-if-discard-three"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Archbishop of the After-After-Life",
+            "fulfillment": 31,
+            "patience": 7,
+            "abilityId": "recycle-blessing",
+            "visitorDefId": "ossuary-vicar",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Resurrection Deacon",
+            "fulfillment": 13,
+            "patience": 4,
+            "abilityId": "return-to-hand"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Skeleton Choir",
+            "fulfillment": 12,
+            "patience": 3,
+            "abilityId": "return-to-library"
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Church Sexton",
+            "fulfillment": 14,
+            "patience": 3,
+            "abilityId": "discard-random-on-arrival"
+          }
+        ]
+      },
+      "after": {
+        "id": "mass-of-the-after-after-life",
+        "stage": 2,
+        "name": "Mass of the After-After-Life",
+        "type": "boss",
+        "category": "elite-boss",
+        "purpose": "The recycle-event centerpiece. 56 / 70 / 101.",
+        "intro": {
+          "title": "The Archbishop",
+          "epithet": "Twice Risen, Still Unimpressed",
+          "line": "We've died twice. We'd like something lighter this time.",
+          "emblem": "rose-window"
+        },
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Skeleton Choir",
+            "fulfillment": 10,
+            "patience": 3,
+            "abilityId": "cleaning-up",
+            "visitorDefId": "choirbone"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Skeleton Choir",
+            "fulfillment": 12,
+            "patience": 3,
+            "abilityId": "cleaning-up",
+            "visitorDefId": "choirbone"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Archbishop of the After-After-Life",
+            "fulfillment": 33,
+            "patience": 7,
+            "abilityId": "recycle-blessing",
+            "visitorDefId": "ossuary-vicar",
+            "headliner": true
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Skeleton Choir",
+            "fulfillment": 13,
+            "patience": 4,
+            "visitorDefId": "choirbone",
+            "abilityId": "cleaning-up"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Cathedral Servant",
+            "fulfillment": 11,
+            "patience": 2,
+            "visitorDefId": "ossuary-yawning-skeleton"
+          },
+          {
+            "arriveAfterTurn": 3,
+            "name": "Enthusiastic Convert",
+            "fulfillment": 11,
+            "patience": 3,
+            "abilityId": "bonus-three-if-discard-three",
+            "visitorDefId": "ossuary-crypt-landlord"
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-10T07:44:51.867Z",
+      "appliedAt": "2026-10-10T09:28:45.825Z",
+      "result": "Mass of the After-After-Life recast as queued: thresholds now 44 / 57 / 90."
+    },
+    {
+      "id": "mv22xv8qzb3lp",
+      "kind": "abilities",
+      "op": "add",
+      "targetId": "cleaning-up",
+      "before": null,
+      "after": {
+        "id": "cleaning-up",
+        "name": "Choir",
+        "text": "When fulfilled, return all books from your discard pile to the top of your Library."
+      },
+      "note": "",
+      "at": "2026-10-10T07:43:39.072Z",
+      "appliedAt": "2026-10-10T09:28:45.825Z",
+      "result": "Choir built: when fulfilled, the whole discard pile goes on top of the Library (shuffled); it does not count as a recycle for the Archbishop."
+    },
+    {
+      "id": "mv2317dk2bcgb",
+      "kind": "abilities",
+      "op": "edit",
+      "targetId": "recycle-blessing",
+      "before": {
+        "id": "recycle-blessing",
+        "name": "After-After Resurrection",
+        "text": "Whenever the normal full discard-to-Library recycle occurs, gain +4 Fulfillment."
+      },
+      "after": {
+        "id": "recycle-blessing",
+        "name": "After-After Resurrection",
+        "text": "Whenever the normal full discard-to-Library recycle occurs, gain 4 Fulfillment."
+      },
+      "note": "",
+      "at": "2026-10-10T07:38:09.944Z",
+      "appliedAt": "2026-10-10T09:28:45.825Z",
+      "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-10T07:44:51.867Z"
+  "updatedAt": "2026-10-10T09:28:45.826Z"
 }
