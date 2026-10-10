@@ -155,6 +155,20 @@
       },
       "note": "",
       "at": "2026-10-10T07:34:55.044Z"
+    },
+    {
+      "id": "mv22xv8qzb3lp",
+      "kind": "abilities",
+      "op": "add",
+      "targetId": "cleaning-up",
+      "before": null,
+      "after": {
+        "id": "cleaning-up",
+        "name": "Cleaning up",
+        "text": "When fulfilled, return all books from your discard pile to the top of your Library."
+      },
+      "note": "",
+      "at": "2026-10-10T07:35:34.250Z"
     }
   ],
   "applied": [
@@ -6145,5 +6159,5 @@
       "result": "Applied: Apex Predator Value 5, Perfect Predator Value 7, Pack Leader replaces Unstoppable Predator at 1 Action (the leftover 0-Action sentence dropped, user), every book assigned to its visitor this turn ignores visitor abilities."
     }
   ],
-  "updatedAt": "2026-10-10T07:34:55.045Z"
+  "updatedAt": "2026-10-10T07:35:34.250Z"
 }
