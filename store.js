@@ -88,7 +88,7 @@ const b64dec = (b64) => new TextDecoder().decode(Uint8Array.from(atob(b64.replac
 const RARITIES = ['common', 'uncommon', 'rare'];
 const CURIO_RARITIES = ['common', 'uncommon', 'rare', 'legendary'];
 const CURSE_FAMILIES = ['bookselling', 'economy', 'summoning', 'curio'];
-const BOOK_FLAGS = ['summon-only', 'token', 'tutorial-only'];
+const BOOK_FLAGS = ['summon-only', 'token', 'tutorial-only', 'unplayable'];
 const ENC_TYPES = ['normal', 'elite', 'boss'];
 const ENC_CATEGORIES = ['normal', 'distinguished', 'elite-boss'];
 const CATEGORY_LABEL = { normal: 'Normal', distinguished: 'Distinguished', 'elite-boss': 'Elite / Boss' };
