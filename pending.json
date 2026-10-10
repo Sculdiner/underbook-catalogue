@@ -172,6 +172,24 @@
       },
       "note": "",
       "at": "2026-10-10T07:35:34.250Z"
+    },
+    {
+      "id": "mv2317dk2bcgb",
+      "kind": "abilities",
+      "op": "edit",
+      "targetId": "recycle-blessing",
+      "before": {
+        "id": "recycle-blessing",
+        "name": "After-After Resurrection",
+        "text": "Whenever the normal full discard-to-Library recycle occurs, gain +4 Fulfillment."
+      },
+      "after": {
+        "id": "recycle-blessing",
+        "name": "After-After Resurrection",
+        "text": "Whenever the normal full discard-to-Library recycle occurs, gain 4 Fulfillment."
+      },
+      "note": "",
+      "at": "2026-10-10T07:38:09.944Z"
     }
   ],
   "applied": [
@@ -6162,5 +6180,5 @@
       "result": "Applied: Apex Predator Value 5, Perfect Predator Value 7, Pack Leader replaces Unstoppable Predator at 1 Action (the leftover 0-Action sentence dropped, user), every book assigned to its visitor this turn ignores visitor abilities."
     }
   ],
-  "updatedAt": "2026-10-10T07:37:40.071Z"
+  "updatedAt": "2026-10-10T07:38:09.944Z"
 }
