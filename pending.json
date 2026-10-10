@@ -104,13 +104,6 @@
         "visitors": [
           {
             "arriveAfterTurn": 0,
-            "name": "Skeleton Choir",
-            "fulfillment": 13,
-            "patience": 4,
-            "visitorDefId": "choirbone"
-          },
-          {
-            "arriveAfterTurn": 0,
             "name": "Cathedral Cleaner",
             "fulfillment": 10,
             "patience": 3,
@@ -134,6 +127,13 @@
             "headliner": true
           },
           {
+            "arriveAfterTurn": 1,
+            "name": "Skeleton Choir",
+            "fulfillment": 13,
+            "patience": 4,
+            "visitorDefId": "choirbone"
+          },
+          {
             "arriveAfterTurn": 2,
             "name": "Cathedral Cleaner",
             "fulfillment": 12,
@@ -151,7 +151,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-10T07:41:40.540Z"
+      "at": "2026-10-10T07:41:48.983Z"
     },
     {
       "id": "mv22xv8qzb3lp",
@@ -6174,5 +6174,5 @@
       "result": "Applied: Apex Predator Value 5, Perfect Predator Value 7, Pack Leader replaces Unstoppable Predator at 1 Action (the leftover 0-Action sentence dropped, user), every book assigned to its visitor this turn ignores visitor abilities."
     }
   ],
-  "updatedAt": "2026-10-10T07:41:40.541Z"
+  "updatedAt": "2026-10-10T07:41:48.983Z"
 }
