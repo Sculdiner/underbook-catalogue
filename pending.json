@@ -141,8 +141,7 @@
             "arriveAfterTurn": 2,
             "name": "Skeleton Choir",
             "fulfillment": 12,
-            "patience": 3,
-            "abilityId": "return-to-library"
+            "patience": 3
           },
           {
             "arriveAfterTurn": 3,
@@ -154,7 +153,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-10T07:35:56.925Z"
+      "at": "2026-10-10T07:35:58.940Z"
     },
     {
       "id": "mv22xv8qzb3lp",
@@ -6159,5 +6158,5 @@
       "result": "Applied: Apex Predator Value 5, Perfect Predator Value 7, Pack Leader replaces Unstoppable Predator at 1 Action (the leftover 0-Action sentence dropped, user), every book assigned to its visitor this turn ignores visitor abilities."
     }
   ],
-  "updatedAt": "2026-10-10T07:35:56.925Z"
+  "updatedAt": "2026-10-10T07:35:58.940Z"
 }
