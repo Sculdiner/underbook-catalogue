@@ -116,7 +116,7 @@
             "fulfillment": 12,
             "patience": 3,
             "abilityId": "cleaning-up",
-            "visitorDefId": "ossuary-yawning-skeleton"
+            "visitorDefId": "choirbone"
           },
           {
             "arriveAfterTurn": 1,
@@ -150,7 +150,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-10T07:43:04.881Z"
+      "at": "2026-10-10T07:43:33.232Z"
     },
     {
       "id": "mv22xv8qzb3lp",
@@ -6173,5 +6173,5 @@
       "result": "Applied: Apex Predator Value 5, Perfect Predator Value 7, Pack Leader replaces Unstoppable Predator at 1 Action (the leftover 0-Action sentence dropped, user), every book assigned to its visitor this turn ignores visitor abilities."
     }
   ],
-  "updatedAt": "2026-10-10T07:43:04.881Z"
+  "updatedAt": "2026-10-10T07:43:33.232Z"
 }
