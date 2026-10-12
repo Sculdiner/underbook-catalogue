@@ -125,7 +125,7 @@
           {
             "arriveAfterTurn": 0,
             "name": "Pilgrim",
-            "fulfillment": 11,
+            "fulfillment": 12,
             "patience": 2,
             "abilityId": "devout-hand"
           },
@@ -152,7 +152,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-12T14:23:41.122Z"
+      "at": "2026-10-12T14:24:52.756Z"
     },
     {
       "id": "mv5cbzaus8r2t",
@@ -6338,5 +6338,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T14:23:41.122Z"
+  "updatedAt": "2026-10-12T14:24:52.757Z"
 }
