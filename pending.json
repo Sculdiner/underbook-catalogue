@@ -147,12 +147,13 @@
           {
             "arriveAfterTurn": 3,
             "fulfillment": 8,
-            "patience": 3
+            "patience": 3,
+            "abilityId": "first-in-line"
           }
         ]
       },
       "note": "",
-      "at": "2026-10-12T14:47:04.812Z"
+      "at": "2026-10-12T14:47:11.806Z"
     },
     {
       "id": "mv5cbzaus8r2t",
@@ -6338,5 +6339,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T14:47:04.812Z"
+  "updatedAt": "2026-10-12T14:47:11.807Z"
 }
