@@ -131,7 +131,7 @@
           },
           {
             "arriveAfterTurn": 1,
-            "name": "Pilgrim of the Smiling One",
+            "name": "Pilgrim",
             "fulfillment": 12,
             "patience": 3,
             "abilityId": "eager"
@@ -152,7 +152,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-12T14:23:06.980Z"
+      "at": "2026-10-12T14:23:41.122Z"
     },
     {
       "id": "mv5cbzaus8r2t",
@@ -6338,5 +6338,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T14:23:06.980Z"
+  "updatedAt": "2026-10-12T14:23:41.122Z"
 }
