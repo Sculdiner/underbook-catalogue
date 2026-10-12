@@ -144,17 +144,11 @@
             "fulfillment": 13,
             "patience": 2,
             "abilityId": "devout-hand"
-          },
-          {
-            "arriveAfterTurn": 2,
-            "name": "Pilgrim of the Ring",
-            "fulfillment": 14,
-            "patience": 3
           }
         ]
       },
       "note": "",
-      "at": "2026-10-12T14:45:11.185Z"
+      "at": "2026-10-12T14:45:55.945Z"
     },
     {
       "id": "mv5cbzaus8r2t",
@@ -6340,5 +6334,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T14:45:11.185Z"
+  "updatedAt": "2026-10-12T14:45:55.945Z"
 }
