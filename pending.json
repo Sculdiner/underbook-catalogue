@@ -142,7 +142,8 @@
             "arriveAfterTurn": 2,
             "name": "Pilgrim",
             "fulfillment": 13,
-            "patience": 2
+            "patience": 2,
+            "visitorDefId": "human-highwaywoman"
           },
           {
             "arriveAfterTurn": 3,
@@ -155,7 +156,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-12T15:03:14.894Z"
+      "at": "2026-10-12T15:04:12.390Z"
     },
     {
       "id": "mv5cbzaus8r2t",
@@ -6341,5 +6342,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T15:03:14.895Z"
+  "updatedAt": "2026-10-12T15:04:12.390Z"
 }
