@@ -148,12 +148,14 @@
             "arriveAfterTurn": 3,
             "fulfillment": 8,
             "patience": 3,
-            "abilityId": "first-in-line"
+            "abilityId": "first-in-line",
+            "visitorDefId": "altar-pilgrim-frog",
+            "name": "Frog Pilgrim"
           }
         ]
       },
       "note": "",
-      "at": "2026-10-12T14:47:11.806Z"
+      "at": "2026-10-12T15:03:14.894Z"
     },
     {
       "id": "mv5cbzaus8r2t",
@@ -6339,5 +6341,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T14:47:11.807Z"
+  "updatedAt": "2026-10-12T15:03:14.895Z"
 }
