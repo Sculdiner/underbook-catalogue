@@ -102,22 +102,25 @@ textarea.inl { resize: none; field-sizing: content; overflow: hidden; display: b
 .titlecard { display: grid; grid-template-columns: 1fr 1fr 2fr; gap: 12px; margin-top: 14px; padding: 12px 14px; border-radius: 12px; background: var(--panel); }
 
 /* ---------------------------------------------------------------- waves board */
-.board { display: flex; gap: 14px; align-items: flex-start; margin-top: 18px; padding-bottom: 12px; }
-.wave { flex: none; width: 258px; border-radius: 16px; background: var(--panel); padding: 10px; min-height: 160px; transition: background .12s, box-shadow .12s; }
+/* One row per arrival wave (2026-10-12, user): the turn on a strip above, its visitors across. */
+.board { display: flex; flex-direction: column; gap: 12px; margin-top: 18px; padding-bottom: 12px; }
+.wave { display: flex; flex-direction: column; gap: 6px; border-radius: 16px; background: var(--panel); padding: 10px; min-height: 120px; transition: background .12s, box-shadow .12s; }
 .wave.empty { background: transparent; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, .08); }
 .wave.over { background: rgba(216, 165, 74, .1); box-shadow: inset 0 0 0 2px rgba(216, 165, 74, .5); }
-.wave-h { display: flex; align-items: baseline; gap: 8px; padding: 4px 6px 10px; }
+.wave-h { display: flex; align-items: baseline; gap: 10px; padding: 2px 6px 4px; }
 .wave-h b { font: 700 1.1rem var(--serif); }
-.wave-h span { margin-left: auto; font-size: .75rem; color: var(--ink3); }
-.wave-drop { padding: 22px 10px; text-align: center; color: var(--ink3); font-size: .82rem; }
-.add-v { width: 100%; height: 36px; margin-top: 6px; border: 1.5px dashed rgba(255, 255, 255, .12); border-radius: 10px; background: transparent; color: var(--ink3); cursor: pointer; }
+.wave-h span { font-size: .75rem; color: var(--ink3); }
+.wave-cards { flex: 1; min-width: 0; display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-start; }
+.wave-cards .vcard { width: 224px; margin-bottom: 0; }
+.wave-drop { align-self: center; padding: 22px 10px; color: var(--ink3); font-size: .82rem; }
+.add-v { align-self: stretch; width: 48px; min-height: 36px; border: 1.5px dashed rgba(255, 255, 255, .12); border-radius: 10px; background: transparent; color: var(--ink3); cursor: pointer; }
 .add-v:hover { color: var(--ink); border-color: rgba(255, 255, 255, .25); }
 
 .vcard { position: relative; margin-bottom: 8px; padding: 10px; border-radius: 12px; background: var(--card); cursor: grab; transition: box-shadow .12s, opacity .12s; }
 .vcard:hover { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .12); }
 .vcard.head { box-shadow: inset 0 0 0 1.5px rgba(216, 165, 74, .7); }
 .vcard.dragging { opacity: .35; }
-.vcard.drop-before::before { content: ''; position: absolute; left: 6px; right: 6px; top: -6px; height: 3px; border-radius: 2px; background: var(--accent); }
+.vcard.drop-before::before { content: ''; position: absolute; top: 6px; bottom: 6px; left: -7px; width: 3px; border-radius: 2px; background: var(--accent); }
 .vtop { display: flex; gap: 10px; }
 .portrait { flex: none; width: 52px; height: 64px; border: 0; border-radius: 9px; padding: 0; background: rgba(0, 0, 0, .3) center top / cover no-repeat; display: grid; place-items: center; color: var(--ink3); font-size: 1.2rem; cursor: pointer; }
 .portrait:hover { box-shadow: 0 0 0 2px rgba(216, 165, 74, .6); }
@@ -231,9 +234,7 @@ table.paths td.bad { color: #f0a49b; font-weight: 700; }
 .empty-main { display: grid; place-items: center; height: 70%; color: var(--ink3); text-align: center; }
 kbd { padding: 1px 6px; border-radius: 5px; background: rgba(255, 255, 255, .08); font-size: .75rem; }
 .cast-item .portrait { pointer-events: none; }
-.board { flex-wrap: wrap; }
 .canvas .edge.hl + path, .canvas .edge { marker-end: url(#arrow); }
-.wave { width: 246px; }
 
 /* ---- the game's node medallions on the canvas, palette and inspector */
 .canvas .node circle.body { fill: transparent; stroke: none; }

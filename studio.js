@@ -6,7 +6,7 @@
  * for Claude to apply. Edits save themselves a moment after they are made;
  * Ctrl+Z / Ctrl+Y step through this session's history of the open item.
  *
- * Encounters: arrival waves are columns; visitor cards drag between them,
+ * Encounters: arrival waves are rows (2026-10-12, user); visitor cards drag between them,
  * Need and Patience step with −/+, portraits and abilities come from pickers
  * or are dragged in from the right-hand palette.
  * Routes: a grid canvas; nodes drag to a cell, a node's handle drags out a
@@ -362,9 +362,11 @@ function waveHtml(d, w) {
   const need = cards.reduce((s, [v]) => s + (Number(v.fulfillment) || 0), 0);
   return `<div class="wave ${cards.length ? '' : 'empty'}" data-wave="${w}">
     <div class="wave-h"><b>${w === 0 ? 'At the open' : `After turn ${w}`}</b><span>${cards.length ? `${cards.length} · Need ${need}` : 'empty'}</span></div>
-    ${cards.map(([v, i]) => visitorCard(v, i)).join('')}
-    ${cards.length ? '' : `<div class="wave-drop">Drop a visitor or a portrait here</div>`}
-    <button type="button" class="add-v" data-act="add-visitor" data-wave="${w}">+ Visitor</button>
+    <div class="wave-cards">
+      ${cards.map(([v, i]) => visitorCard(v, i)).join('')}
+      ${cards.length ? '' : `<div class="wave-drop">Drop a visitor or a portrait here</div>`}
+      <button type="button" class="add-v" data-act="add-visitor" data-wave="${w}" title="Add a visitor">+</button>
+    </div>
   </div>`;
 }
 
@@ -1076,12 +1078,17 @@ document.addEventListener('dragend', () => {
   if (hl) hl.style.display = 'none';
 });
 
-/** Where a visitor or portrait dropped on a wave lands: before the card under the pointer, or at the end. */
-function dropTarget(wave, y) {
+/**
+ * Where a visitor or portrait dropped on a wave lands: before the card under
+ * the pointer, or at the end. A wave is a row of cards that may wrap, so a
+ * card comes first if the pointer is on a line above it, or on its line and
+ * left of its middle.
+ */
+function dropTarget(wave, x, y) {
   const cards = $$('.vcard', wave).filter((c) => !c.classList.contains('dragging'));
   for (const c of cards) {
     const r = c.getBoundingClientRect();
-    if (y < r.top + r.height / 2) return c;
+    if (y < r.top || (y <= r.bottom && x < r.left + r.width / 2)) return c;
   }
   return null;
 }
@@ -1109,7 +1116,7 @@ document.addEventListener('dragover', (e) => {
     if (!wave) return;
     e.preventDefault();
     wave.classList.add('over');
-    dropTarget(wave, e.clientY)?.classList.add('drop-before');
+    dropTarget(wave, e.clientX, e.clientY)?.classList.add('drop-before');
     return;
   }
   if (dragKind === 'node') {
@@ -1147,7 +1154,7 @@ document.addEventListener('drop', (e) => {
   const wave = e.target.closest('.wave');
   if (!wave) return;
   const w = Number(wave.dataset.wave);
-  const before = dropTarget(wave, e.clientY);
+  const before = dropTarget(wave, e.clientX, e.clientY);
   edit((d) => {
     if (kind === 'visitor') {
       const from = Number(value);
