@@ -143,11 +143,16 @@
             "name": "Pilgrim",
             "fulfillment": 13,
             "patience": 2
+          },
+          {
+            "arriveAfterTurn": 3,
+            "fulfillment": 5,
+            "patience": 2
           }
         ]
       },
       "note": "",
-      "at": "2026-10-12T14:46:26.741Z"
+      "at": "2026-10-12T14:46:39.345Z"
     },
     {
       "id": "mv5cbzaus8r2t",
@@ -6333,5 +6338,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T14:46:26.741Z"
+  "updatedAt": "2026-10-12T14:46:39.345Z"
 }
