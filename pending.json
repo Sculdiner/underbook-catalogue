@@ -125,7 +125,7 @@
           {
             "arriveAfterTurn": 1,
             "name": "Servant of the Hand",
-            "fulfillment": 6,
+            "fulfillment": 7,
             "patience": 4,
             "abilityId": "offering",
             "visitorDefId": "altar-servant-hand"
@@ -148,7 +148,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-12T14:46:12.075Z"
+      "at": "2026-10-12T14:46:14.201Z"
     },
     {
       "id": "mv5cbzaus8r2t",
@@ -6334,5 +6334,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T14:46:12.075Z"
+  "updatedAt": "2026-10-12T14:46:14.201Z"
 }
