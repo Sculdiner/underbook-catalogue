@@ -146,13 +146,13 @@
           },
           {
             "arriveAfterTurn": 3,
-            "fulfillment": 5,
+            "fulfillment": 6,
             "patience": 2
           }
         ]
       },
       "note": "",
-      "at": "2026-10-12T14:46:39.345Z"
+      "at": "2026-10-12T14:46:43.230Z"
     },
     {
       "id": "mv5cbzaus8r2t",
@@ -6338,5 +6338,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T14:46:39.345Z"
+  "updatedAt": "2026-10-12T14:46:43.230Z"
 }
