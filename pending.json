@@ -37,6 +37,122 @@
       },
       "note": "",
       "at": "2026-10-12T14:13:38.769Z"
+    },
+    {
+      "id": "mv5cbu4rzjjtg",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "hands-due",
+      "before": {
+        "id": "hands-due",
+        "stage": 4,
+        "name": "The Hand's Due",
+        "type": "normal",
+        "category": "normal",
+        "band": "opening",
+        "purpose": "Teaches Offering: the Herald wants a book every turn, and only the Servant can take it. DRAFT.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Servant of the Hand",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "offering",
+            "visitorDefId": "altar-servant-hand"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Herald of the Hand",
+            "fulfillment": 16,
+            "patience": 4,
+            "abilityId": "hands-due",
+            "visitorDefId": "altar-herald-hand"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Pilgrim of the Hand",
+            "fulfillment": 11,
+            "patience": 3,
+            "abilityId": "devout-hand"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Pilgrim of the Smiling One",
+            "fulfillment": 12,
+            "patience": 3,
+            "abilityId": "eager"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Pilgrim of the Hand",
+            "fulfillment": 13,
+            "patience": 3,
+            "abilityId": "devout-hand"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Pilgrim of the Ring",
+            "fulfillment": 14,
+            "patience": 3
+          }
+        ]
+      },
+      "after": {
+        "id": "hands-due",
+        "stage": 4,
+        "name": "The Hand's Due",
+        "type": "normal",
+        "category": "normal",
+        "band": "opening",
+        "purpose": "Teaches Offering: the Herald wants a book every turn, and only the Servant can take it. DRAFT.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Servant of the Hand",
+            "fulfillment": 6,
+            "patience": 3,
+            "abilityId": "offering",
+            "visitorDefId": "altar-servant-hand"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Herald of the Hand",
+            "fulfillment": 16,
+            "patience": 4,
+            "abilityId": "hands-due",
+            "visitorDefId": "altar-herald-hand"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Pilgrim",
+            "fulfillment": 11,
+            "patience": 3,
+            "abilityId": "devout-hand"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Pilgrim of the Smiling One",
+            "fulfillment": 12,
+            "patience": 3,
+            "abilityId": "eager"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Pilgrim of the Hand",
+            "fulfillment": 13,
+            "patience": 3,
+            "abilityId": "devout-hand"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Pilgrim of the Ring",
+            "fulfillment": 14,
+            "patience": 3
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-12T14:21:41.066Z"
     }
   ],
   "applied": [
@@ -6202,5 +6318,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T14:13:38.770Z"
+  "updatedAt": "2026-10-12T14:21:41.067Z"
 }
