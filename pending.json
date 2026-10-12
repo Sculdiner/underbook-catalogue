@@ -133,7 +133,7 @@
           {
             "arriveAfterTurn": 1,
             "name": "Herald of the Hand",
-            "fulfillment": 16,
+            "fulfillment": 18,
             "patience": 4,
             "abilityId": "hands-due",
             "visitorDefId": "altar-herald-hand"
@@ -148,7 +148,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-12T14:46:07.298Z"
+      "at": "2026-10-12T14:46:09.614Z"
     },
     {
       "id": "mv5cbzaus8r2t",
@@ -6334,5 +6334,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T14:46:07.299Z"
+  "updatedAt": "2026-10-12T14:46:09.614Z"
 }
