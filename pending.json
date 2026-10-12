@@ -177,6 +177,121 @@
       },
       "note": "",
       "at": "2026-10-12T14:22:52.215Z"
+    },
+    {
+      "id": "mv5dy2qjw88zt",
+      "kind": "encounters",
+      "op": "edit",
+      "targetId": "the-long-wait",
+      "before": {
+        "id": "the-long-wait",
+        "stage": 4,
+        "name": "The Long Wait",
+        "type": "normal",
+        "category": "normal",
+        "band": "opening",
+        "purpose": "Deck exam, no Offering: First in Line, Eager children, a Slow Reader elder; the Herald is the relief valve. DRAFT.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Fifth-Generation Pilgrim",
+            "fulfillment": 17,
+            "patience": 5,
+            "abilityId": "one-book-per-turn"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Pilgrim Child",
+            "fulfillment": 9,
+            "patience": 2,
+            "abilityId": "eager"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Herald of the Smiling One",
+            "fulfillment": 15,
+            "patience": 4,
+            "abilityId": "contentment",
+            "visitorDefId": "altar-herald-smiling"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Pilgrim of the Ring",
+            "fulfillment": 13,
+            "patience": 3,
+            "abilityId": "first-in-line"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Pilgrim Child",
+            "fulfillment": 10,
+            "patience": 2,
+            "abilityId": "eager"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Pilgrim of the Page",
+            "fulfillment": 14,
+            "patience": 3
+          }
+        ]
+      },
+      "after": {
+        "id": "the-long-wait",
+        "stage": 4,
+        "name": "The Long Wait",
+        "type": "normal",
+        "category": "normal",
+        "band": "opening",
+        "purpose": "Deck exam, no Offering: First in Line, Eager children, a Slow Reader elder; the Herald is the relief valve. DRAFT.",
+        "visitors": [
+          {
+            "arriveAfterTurn": 0,
+            "name": "Fifth-Generation Pilgrim",
+            "fulfillment": 17,
+            "patience": 5,
+            "abilityId": "one-book-per-turn",
+            "visitorDefId": "altar-pilgrim-father"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Pilgrim Child",
+            "fulfillment": 9,
+            "patience": 2,
+            "abilityId": "eager"
+          },
+          {
+            "arriveAfterTurn": 0,
+            "name": "Herald of the Smiling One",
+            "fulfillment": 15,
+            "patience": 4,
+            "abilityId": "contentment",
+            "visitorDefId": "altar-herald-smiling"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Pilgrim of the Ring",
+            "fulfillment": 13,
+            "patience": 3,
+            "abilityId": "first-in-line"
+          },
+          {
+            "arriveAfterTurn": 1,
+            "name": "Pilgrim Child",
+            "fulfillment": 10,
+            "patience": 2,
+            "abilityId": "eager"
+          },
+          {
+            "arriveAfterTurn": 2,
+            "name": "Pilgrim of the Page",
+            "fulfillment": 14,
+            "patience": 3
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-12T15:06:58.267Z"
     }
   ],
   "applied": [
@@ -6342,5 +6457,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T15:04:17.920Z"
+  "updatedAt": "2026-10-12T15:06:58.267Z"
 }
