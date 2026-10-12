@@ -136,7 +136,7 @@
             "visitorDefId": "altar-herald-hand"
           },
           {
-            "arriveAfterTurn": 1,
+            "arriveAfterTurn": 2,
             "name": "Pilgrim",
             "fulfillment": 13,
             "patience": 2,
@@ -151,7 +151,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-12T14:42:39.918Z"
+      "at": "2026-10-12T14:43:29.047Z"
     },
     {
       "id": "mv5cbzaus8r2t",
@@ -6337,5 +6337,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T14:42:39.918Z"
+  "updatedAt": "2026-10-12T14:43:29.048Z"
 }
