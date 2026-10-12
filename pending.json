@@ -153,6 +153,26 @@
       },
       "note": "",
       "at": "2026-10-12T14:21:41.066Z"
+    },
+    {
+      "id": "mv5cbzaus8r2t",
+      "kind": "abilities",
+      "op": "edit",
+      "targetId": "devout-hand",
+      "before": {
+        "id": "devout-hand",
+        "name": "Devout (the Hand)",
+        "shortText": "End Turn, no Offering to the Hand → <bad>−1 Patience</bad>.",
+        "text": "At End Turn, if no Offering was made to the Hand this turn, lose 1 additional Patience."
+      },
+      "after": {
+        "id": "devout-hand",
+        "name": "Devout",
+        "shortText": "End Turn, no Offering to the Hand → <bad>−1 Patience</bad>.",
+        "text": "At End Turn, if no Offering was made to the Hand this turn, lose 1 additional Patience."
+      },
+      "note": "",
+      "at": "2026-10-12T14:21:47.766Z"
     }
   ],
   "applied": [
@@ -6318,5 +6338,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T14:21:41.067Z"
+  "updatedAt": "2026-10-12T14:21:47.766Z"
 }
