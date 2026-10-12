@@ -138,7 +138,7 @@
           },
           {
             "arriveAfterTurn": 1,
-            "name": "Pilgrim of the Hand",
+            "name": "Pilgrim",
             "fulfillment": 13,
             "patience": 3,
             "abilityId": "devout-hand"
@@ -152,7 +152,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-12T14:21:41.066Z"
+      "at": "2026-10-12T14:23:01.260Z"
     },
     {
       "id": "mv5cbzaus8r2t",
@@ -6338,5 +6338,5 @@
       "result": "Text updated; the rule is unchanged."
     }
   ],
-  "updatedAt": "2026-10-12T14:22:52.215Z"
+  "updatedAt": "2026-10-12T14:23:01.260Z"
 }
