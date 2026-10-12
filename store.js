@@ -402,7 +402,7 @@ const findItem = (kind, key) => items(kind).find((x) => x.key === key) ?? items(
 function thresholds(e) {
   const sorted = e.visitors.map((v) => Number(v.fulfillment) || 0).sort((a, b) => a - b);
   const upTo = (n) => sorted.slice(0, n).reduce((s, x) => s + x, 0);
-  const oss = e.stage === 2;
+  const oss = (e.stage ?? 1) >= 2;
   return {
     survival: upTo(oss ? Math.max(0, sorted.length - 2) : 3),
     strong: upTo(oss ? Math.max(0, sorted.length - 1) : 4),

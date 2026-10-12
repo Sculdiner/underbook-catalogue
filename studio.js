@@ -350,8 +350,8 @@ function encounterMain() {
     <div class="statbar">
       <div class="stat"><b>${d.visitors.length}</b><span>Visitors</span></div>
       <div class="stat"><b>${total}</b><span>Total Need</span></div>
-      <div class="stat" title="${d.stage === 2 ? 'All but the two largest Needs' : 'The three easiest visitors'}"><b>${t.survival}</b><span>Survival</span></div>
-      <div class="stat" title="${d.stage === 2 ? 'All but the largest Need' : 'The four easiest visitors'}"><b>${t.strong}</b><span>Strong</span></div>
+      <div class="stat" title="${(d.stage ?? 1) >= 2 ? 'All but the two largest Needs' : 'The three easiest visitors'}"><b>${t.survival}</b><span>Survival</span></div>
+      <div class="stat" title="${(d.stage ?? 1) >= 2 ? 'All but the largest Need' : 'The four easiest visitors'}"><b>${t.strong}</b><span>Strong</span></div>
       <div class="stat" title="Everyone"><b>${t.perfect}</b><span>Perfect</span></div>
     </div>
     <div class="board">${waves.map((w) => waveHtml(d, w)).join('')}</div>`;
