@@ -17,228 +17,6 @@
       },
       "note": "",
       "at": "2026-10-07T18:10:20.980Z"
-    },
-    {
-      "id": "mv7y9ucpq9t3x",
-      "kind": "routes",
-      "op": "edit",
-      "targetId": "pilgrim-road",
-      "before": {
-        "id": "pilgrim-road",
-        "name": "The Pilgrim Road",
-        "nodes": [
-          {
-            "key": "n1",
-            "type": "encounter-normal",
-            "band": "opening",
-            "branch": "shared",
-            "depth": 0,
-            "lane": 0,
-            "next": [
-              "d1"
-            ]
-          },
-          {
-            "key": "d1",
-            "type": "encounter-elite",
-            "branch": "shared",
-            "depth": 1,
-            "lane": 0,
-            "next": [
-              "m"
-            ]
-          },
-          {
-            "key": "m",
-            "type": "merchant",
-            "branch": "shared",
-            "depth": 2,
-            "lane": 0,
-            "next": [
-              "d2"
-            ]
-          },
-          {
-            "key": "d2",
-            "type": "encounter-elite",
-            "branch": "shared",
-            "depth": 3,
-            "lane": 0,
-            "next": [
-              "se",
-              "hd"
-            ]
-          },
-          {
-            "key": "se",
-            "type": "event",
-            "branch": "safe",
-            "depth": 4,
-            "lane": -2,
-            "next": [
-              "sf"
-            ]
-          },
-          {
-            "key": "hd",
-            "type": "encounter-elite",
-            "branch": "hard",
-            "depth": 4,
-            "lane": 2,
-            "next": [
-              "ht"
-            ]
-          },
-          {
-            "key": "sf",
-            "type": "reward",
-            "branch": "safe",
-            "depth": 5,
-            "lane": -2,
-            "next": [
-              "s",
-              "b"
-            ]
-          },
-          {
-            "key": "ht",
-            "type": "treasure",
-            "branch": "hard",
-            "depth": 5,
-            "lane": 2,
-            "next": [
-              "s",
-              "b"
-            ]
-          },
-          {
-            "key": "s",
-            "type": "shrine",
-            "branch": "shrine",
-            "depth": 6,
-            "lane": 0,
-            "next": [
-              "b"
-            ]
-          },
-          {
-            "key": "b",
-            "type": "encounter-boss",
-            "branch": "shared",
-            "depth": 8,
-            "lane": 0,
-            "next": []
-          }
-        ],
-        "boss": "b",
-        "merchant": "m",
-        "stages": [
-          4
-        ]
-      },
-      "after": {
-        "id": "pilgrim-road",
-        "name": "The Pilgrim Road",
-        "nodes": [
-          {
-            "key": "n1",
-            "type": "encounter-normal",
-            "band": "opening",
-            "branch": "shared",
-            "depth": 0,
-            "lane": 0,
-            "next": [
-              "d1"
-            ]
-          },
-          {
-            "key": "d1",
-            "type": "encounter-elite",
-            "branch": "shared",
-            "depth": 1,
-            "lane": 0,
-            "next": [
-              "f1"
-            ]
-          },
-          {
-            "key": "m",
-            "type": "merchant",
-            "branch": "shared",
-            "depth": 3,
-            "lane": 0,
-            "next": [
-              "d2"
-            ]
-          },
-          {
-            "key": "d2",
-            "type": "encounter-elite",
-            "branch": "shared",
-            "depth": 4,
-            "lane": 0,
-            "next": [
-              "hd",
-              "s"
-            ]
-          },
-          {
-            "key": "hd",
-            "type": "encounter-elite",
-            "branch": "hard",
-            "depth": 5,
-            "lane": 1,
-            "next": [
-              "ht"
-            ]
-          },
-          {
-            "key": "ht",
-            "type": "treasure",
-            "branch": "hard",
-            "depth": 6,
-            "lane": 1,
-            "next": [
-              "s"
-            ]
-          },
-          {
-            "key": "s",
-            "type": "shrine",
-            "branch": "shrine",
-            "depth": 7,
-            "lane": 0,
-            "next": [
-              "b"
-            ]
-          },
-          {
-            "key": "b",
-            "type": "encounter-boss",
-            "branch": "shared",
-            "depth": 8,
-            "lane": 0,
-            "next": []
-          },
-          {
-            "key": "f1",
-            "type": "reward",
-            "branch": "shared",
-            "depth": 2,
-            "lane": 0,
-            "next": [
-              "m"
-            ]
-          }
-        ],
-        "boss": "b",
-        "merchant": "m",
-        "stages": [
-          4
-        ]
-      },
-      "note": "",
-      "at": "2026-10-14T10:12:51.307Z"
     }
   ],
   "applied": [
@@ -6685,7 +6463,231 @@
       "at": "2026-10-12T15:06:58.267Z",
       "appliedAt": "2026-10-12T15:12:55.390Z",
       "result": "The Long Wait's fifth-generation pilgrim now wears the Weary Father portrait."
+    },
+    {
+      "id": "mv7y9ucpq9t3x",
+      "kind": "routes",
+      "op": "edit",
+      "targetId": "pilgrim-road",
+      "before": {
+        "id": "pilgrim-road",
+        "name": "The Pilgrim Road",
+        "nodes": [
+          {
+            "key": "n1",
+            "type": "encounter-normal",
+            "band": "opening",
+            "branch": "shared",
+            "depth": 0,
+            "lane": 0,
+            "next": [
+              "d1"
+            ]
+          },
+          {
+            "key": "d1",
+            "type": "encounter-elite",
+            "branch": "shared",
+            "depth": 1,
+            "lane": 0,
+            "next": [
+              "m"
+            ]
+          },
+          {
+            "key": "m",
+            "type": "merchant",
+            "branch": "shared",
+            "depth": 2,
+            "lane": 0,
+            "next": [
+              "d2"
+            ]
+          },
+          {
+            "key": "d2",
+            "type": "encounter-elite",
+            "branch": "shared",
+            "depth": 3,
+            "lane": 0,
+            "next": [
+              "se",
+              "hd"
+            ]
+          },
+          {
+            "key": "se",
+            "type": "event",
+            "branch": "safe",
+            "depth": 4,
+            "lane": -2,
+            "next": [
+              "sf"
+            ]
+          },
+          {
+            "key": "hd",
+            "type": "encounter-elite",
+            "branch": "hard",
+            "depth": 4,
+            "lane": 2,
+            "next": [
+              "ht"
+            ]
+          },
+          {
+            "key": "sf",
+            "type": "reward",
+            "branch": "safe",
+            "depth": 5,
+            "lane": -2,
+            "next": [
+              "s",
+              "b"
+            ]
+          },
+          {
+            "key": "ht",
+            "type": "treasure",
+            "branch": "hard",
+            "depth": 5,
+            "lane": 2,
+            "next": [
+              "s",
+              "b"
+            ]
+          },
+          {
+            "key": "s",
+            "type": "shrine",
+            "branch": "shrine",
+            "depth": 6,
+            "lane": 0,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "b",
+            "type": "encounter-boss",
+            "branch": "shared",
+            "depth": 8,
+            "lane": 0,
+            "next": []
+          }
+        ],
+        "boss": "b",
+        "merchant": "m",
+        "stages": [
+          4
+        ]
+      },
+      "after": {
+        "id": "pilgrim-road",
+        "name": "The Pilgrim Road",
+        "nodes": [
+          {
+            "key": "n1",
+            "type": "encounter-normal",
+            "band": "opening",
+            "branch": "shared",
+            "depth": 0,
+            "lane": 0,
+            "next": [
+              "d1"
+            ]
+          },
+          {
+            "key": "d1",
+            "type": "encounter-elite",
+            "branch": "shared",
+            "depth": 1,
+            "lane": 0,
+            "next": [
+              "f1"
+            ]
+          },
+          {
+            "key": "m",
+            "type": "merchant",
+            "branch": "shared",
+            "depth": 3,
+            "lane": 0,
+            "next": [
+              "d2"
+            ]
+          },
+          {
+            "key": "d2",
+            "type": "encounter-elite",
+            "branch": "shared",
+            "depth": 4,
+            "lane": 0,
+            "next": [
+              "hd",
+              "s"
+            ]
+          },
+          {
+            "key": "hd",
+            "type": "encounter-elite",
+            "branch": "hard",
+            "depth": 5,
+            "lane": 1,
+            "next": [
+              "ht"
+            ]
+          },
+          {
+            "key": "ht",
+            "type": "treasure",
+            "branch": "hard",
+            "depth": 6,
+            "lane": 1,
+            "next": [
+              "s"
+            ]
+          },
+          {
+            "key": "s",
+            "type": "shrine",
+            "branch": "shrine",
+            "depth": 7,
+            "lane": 0,
+            "next": [
+              "b"
+            ]
+          },
+          {
+            "key": "b",
+            "type": "encounter-boss",
+            "branch": "shared",
+            "depth": 8,
+            "lane": 0,
+            "next": []
+          },
+          {
+            "key": "f1",
+            "type": "reward",
+            "branch": "shared",
+            "depth": 2,
+            "lane": 0,
+            "next": [
+              "m"
+            ]
+          }
+        ],
+        "boss": "b",
+        "merchant": "m",
+        "stages": [
+          4
+        ]
+      },
+      "note": "",
+      "at": "2026-10-14T10:12:51.307Z",
+      "appliedAt": "2026-10-14T10:21:21.512Z",
+      "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-14T10:12:51.307Z"
+  "updatedAt": "2026-10-14T10:21:21.515Z"
 }
