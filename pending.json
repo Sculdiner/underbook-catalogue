@@ -165,7 +165,7 @@
             "key": "m",
             "type": "merchant",
             "branch": "shared",
-            "depth": 2,
+            "depth": 3,
             "lane": 0,
             "next": [
               "d2"
@@ -175,7 +175,7 @@
             "key": "d2",
             "type": "encounter-elite",
             "branch": "shared",
-            "depth": 3,
+            "depth": 4,
             "lane": 0,
             "next": [
               "hd",
@@ -238,7 +238,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-14T10:12:46.448Z"
+      "at": "2026-10-14T10:12:48.722Z"
     }
   ],
   "applied": [
@@ -6687,5 +6687,5 @@
       "result": "The Long Wait's fifth-generation pilgrim now wears the Weary Father portrait."
     }
   ],
-  "updatedAt": "2026-10-14T10:12:46.449Z"
+  "updatedAt": "2026-10-14T10:12:48.722Z"
 }
