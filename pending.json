@@ -158,7 +158,6 @@
             "depth": 1,
             "lane": 0,
             "next": [
-              "m",
               "f1"
             ]
           },
@@ -239,7 +238,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-14T10:12:35.900Z"
+      "at": "2026-10-14T10:12:38.258Z"
     }
   ],
   "applied": [
@@ -6688,5 +6687,5 @@
       "result": "The Long Wait's fifth-generation pilgrim now wears the Weary Father portrait."
     }
   ],
-  "updatedAt": "2026-10-14T10:12:35.900Z"
+  "updatedAt": "2026-10-14T10:12:38.258Z"
 }
