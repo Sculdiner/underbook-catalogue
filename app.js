@@ -52,8 +52,10 @@ import {
   loadCatalogue,
   refreshPending,
   repo,
+  routeBudget,
   routeChecks,
   routePaths,
+  routeStagesLabel,
   same,
   setField,
   setPath,
@@ -465,12 +467,12 @@ views.list = {
     return (
       filterBar('routes', []) +
       '<div id="results">' +
-      `<p class="small muted" style="margin-top:0">Every Stage currently draws one of these layouts at random.</p>` +
+      `<p class="small muted" style="margin-top:0">Stages 1–3 each draw one of the shared layouts at random; Stage 4 draws only its own.</p>` +
       (all.length
         ? all
             .map(
               (it) => `<a class="route-card ${it.pending?.op === 'delete' ? 'deleted' : ''} ${isOff(it.data) ? 'off' : ''}" href="#/routes/${encodeURIComponent(it.key)}">
-          <div class="name"><span>${esc(it.data.name)}</span>${offTag(it.data)}${pendingTag(it)}<span class="small muted" style="margin-left:auto">${it.data.nodes.length} nodes</span></div>
+          <div class="name"><span>${esc(it.data.name)}</span>${offTag(it.data)}${pendingTag(it)}<span class="small muted" style="margin-left:auto">${esc(routeStagesLabel(it.data))} · ${it.data.nodes.length} nodes</span></div>
           <div class="map-wrap" style="margin:0">${routeSvg(it.data, { mini: true })}</div></a>`,
             )
             .join('')
@@ -577,7 +579,7 @@ function routePathTable(r) {
   const paths = routePaths(r);
   if (!paths.length) return '';
   const cols = ['encounter-normal', 'encounter-elite', 'event', 'reward', 'shrine', 'treasure', 'merchant'];
-  const budget = S.cat.budgets?.early;
+  const budget = routeBudget(S.cat, r);
   const cell = (t, n) => {
     const bad = budget && ((budget.min[t] != null && n < budget.min[t]) || (budget.max[t] != null && n > budget.max[t]));
     return `<td style="${bad ? 'color:var(--danger);font-weight:700' : ''}">${n}</td>`;
@@ -592,7 +594,7 @@ function routePathTable(r) {
           .join('')}</tr>`,
     )
     .join('')}</tbody></table></div>
-    ${budget ? `<p class="small muted">Red = outside the Stage 1–2 path budget (min–max per walk).</p>` : ''}`;
+    ${budget ? `<p class="small muted">Red = outside the ${esc(routeStagesLabel(r))} path budget (min–max per walk).</p>` : ''}`;
 }
 
 const legend = () =>

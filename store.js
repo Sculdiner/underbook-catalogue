@@ -430,6 +430,19 @@ function routePaths(r) {
   return out;
 }
 
+/**
+ * The per-walk budget a route is held to (mirrors `budgetForStage` in
+ * content/stageLayouts.ts): Stage 4's for a Stage 4 route, else Stages 1–3's.
+ */
+function routeBudget(cat, r) {
+  return (r?.stages?.includes(4) && cat?.budgets?.stage4) || cat?.budgets?.early;
+}
+
+/** Which Stages draw a route: its own `stages`, or the shared Stages 1–3. */
+function routeStagesLabel(r) {
+  return r?.stages?.length ? `Stage ${r.stages.join(', ')}` : 'Stages 1–3';
+}
+
 function routeChecks(r) {
   const errs = [];
   const keys = r.nodes.map((n) => n.key);
@@ -562,8 +575,10 @@ export {
   loadCatalogue,
   refreshPending,
   repo,
+  routeBudget,
   routeChecks,
   routePaths,
+  routeStagesLabel,
   same,
   setField,
   setPath,

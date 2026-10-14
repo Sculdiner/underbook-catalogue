@@ -32,8 +32,10 @@ import {
   cap,
   ago,
   thresholds,
+  routeBudget,
   routeChecks,
   routePaths,
+  routeStagesLabel,
   setPath,
   getPath,
   NODE_STYLE,
@@ -252,8 +254,11 @@ function drawSide() {
         html += row(it, `${{ normal: 'N', distinguished: 'D', 'elite-boss': 'E/B' }[it.data.category] ?? ''}${it.data.band ? ' ' + it.data.band[0].toUpperCase() : ''} · ${it.data.visitors?.length ?? 0}`);
     }
   } else {
-    html += `<div class="side-group label">Stage layouts</div>`;
-    for (const it of all) html += row(it, `${it.data.nodes?.length ?? 0} nodes`);
+    // Grouped by the Stages that draw them: the shared layouts, then Stage 4's own.
+    for (const group of [...new Set(all.map((x) => routeStagesLabel(x.data)))]) {
+      html += `<div class="side-group label">${esc(group)}</div>`;
+      for (const it of all.filter((x) => routeStagesLabel(x.data) === group)) html += row(it, `${it.data.nodes?.length ?? 0} nodes`);
+    }
   }
   const side = $('#side');
   const focused = document.activeElement?.id === 'side-search';
@@ -525,7 +530,7 @@ function routeMain() {
   return `
     <div class="ed-head"><div class="grow">
       <input class="inl ed-name" data-bind="name" value="${esc(d.name)}" placeholder="Route name">
-      <div class="ed-meta"><span class="tag">${d.nodes.length} nodes</span><span class="muted" style="font-size:.82rem">Every Stage currently draws one of the four layouts at random.</span></div>
+      <div class="ed-meta"><span class="tag">${d.nodes.length} nodes</span><span class="muted" style="font-size:.82rem">Used on</span><div class="seg">${[['', 'Stages 1–3'], ['4', 'Stage 4']].map(([s, l]) => `<button type="button" class="${(d.stages?.includes(4) ? '4' : '') === s ? 'on' : ''}" data-act="route-stage" data-stage="${s}">${l}</button>`).join('')}</div><span class="muted" style="font-size:.82rem">${d.stages?.includes(4) ? 'Stage 4 draws only its own layouts.' : 'Stages 1–3 each draw one of these at random.'}</span></div>
     </div>${headActions()}</div>
     <div id="banner"></div>
     <div class="route-tools">
@@ -713,7 +718,7 @@ function routeRail() {
   } else if (ED.sel?.edge) {
     insp = `<p>${esc(ED.sel.edge[0])} → ${esc(ED.sel.edge[1])}</p><button class="btn sm danger" data-act="del-edge">Remove connection</button>`;
   }
-  const budget = S.cat.budgets?.early;
+  const budget = routeBudget(S.cat, d);
   const cols = ['encounter-normal', 'encounter-elite', 'event', 'reward', 'shrine', 'treasure', 'merchant'];
   const bad = (t, c) => budget && ((budget.min[t] != null && c < budget.min[t]) || (budget.max[t] != null && c > budget.max[t]));
   const table = paths.length
@@ -727,7 +732,7 @@ function routeRail() {
             })
             .join('')}</tr>`;
         })
-        .join('')}</tbody></table><p class="hint">Hover a path to trace it. Red = outside the Stage 1–2 budget for one walk.</p>`
+        .join('')}</tbody></table><p class="hint">Hover a path to trace it. Red = outside the ${esc(routeStagesLabel(d))} budget for one walk.</p>`
     : '<p class="hint">No complete paths yet.</p>';
   const problems = [...errs.map((e) => `<li class="err">${esc(e)}</li>`), ...warns.map((w) => `<li class="warn">${esc(w)}</li>`)];
   return `
@@ -1034,6 +1039,11 @@ document.addEventListener('click', async (e) => {
       });
     case 'node-band':
       return edit((d) => (d.nodes.find((x) => x.key === ED.sel.node).band = b.dataset.band));
+    case 'route-stage':
+      return edit((d) => {
+        if (b.dataset.stage) d.stages = [Number(b.dataset.stage)];
+        else delete d.stages;
+      });
     case 'unlink':
       return edit((d) => {
         const n = d.nodes.find((x) => x.key === b.dataset.a);
