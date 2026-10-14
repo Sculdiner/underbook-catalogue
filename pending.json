@@ -192,17 +192,6 @@
             ]
           },
           {
-            "key": "sf",
-            "type": "reward",
-            "branch": "safe",
-            "depth": 5,
-            "lane": -2,
-            "next": [
-              "s",
-              "b"
-            ]
-          },
-          {
             "key": "ht",
             "type": "treasure",
             "branch": "hard",
@@ -239,7 +228,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-14T10:11:31.944Z"
+      "at": "2026-10-14T10:11:34.424Z"
     }
   ],
   "applied": [
@@ -6688,5 +6677,5 @@
       "result": "The Long Wait's fifth-generation pilgrim now wears the Weary Father portrait."
     }
   ],
-  "updatedAt": "2026-10-14T10:11:31.945Z"
+  "updatedAt": "2026-10-14T10:11:34.424Z"
 }
