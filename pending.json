@@ -208,13 +208,13 @@
         ],
         "rarity": "common",
         "value": 2,
-        "actionCost": 1,
+        "actionCost": 0,
         "copies": 1,
         "rebinds": [],
         "rulesText": "On Assign: create a pyroclasm in your hand (1v/1a). Pyroclasms everywhere, get +1 value until the end of the encounter."
       },
       "note": "",
-      "at": "2026-10-18T08:55:44.784Z"
+      "at": "2026-10-18T08:55:52.801Z"
     }
   ],
   "applied": [
@@ -6887,5 +6887,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:55:44.784Z"
+  "updatedAt": "2026-10-18T08:55:52.801Z"
 }
