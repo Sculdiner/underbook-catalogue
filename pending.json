@@ -35,7 +35,8 @@
         "actionCost": 1,
         "copies": 1,
         "rebinds": [],
-        "rulesText": "Until the end of the encounter, whenever you gain an action, a random visitor gains 2 fulfillment."
+        "rulesText": "Until the end of the encounter, whenever you gain an action, a random visitor gains 2 fulfillment.",
+        "onDisplay": true
       },
       "note": "",
       "at": "2026-10-18T08:05:17.454Z"
@@ -79,7 +80,8 @@
         "actionCost": 1,
         "copies": 1,
         "rebinds": [],
-        "rulesText": "Shuffle a Pyroclasm book (1v/1a)  to your Library.\nUntil the end of the encounter, whenever you destroy a book, pyroclasm gains +2 value."
+        "rulesText": "Shuffle a Pyroclasm book (1v/1a)  to your Library.\nUntil the end of the encounter, whenever you destroy a book, pyroclasm gains +2 value.",
+        "onDisplay": true
       },
       "note": "",
       "at": "2026-10-18T08:49:11.338Z"
@@ -101,7 +103,8 @@
         "actionCost": 1,
         "copies": 1,
         "rebinds": [],
-        "rulesText": "Until the end lf the encounter, whenever a book triggers a draw effect, all visitors gain 1 fulfillment."
+        "rulesText": "Until the end lf the encounter, whenever a book triggers a draw effect, all visitors gain 1 fulfillment.",
+        "onDisplay": true
       },
       "note": "",
       "at": "2026-10-18T08:16:17.782Z"
@@ -123,7 +126,8 @@
         "actionCost": 1,
         "copies": 1,
         "rebinds": [],
-        "rulesText": "Until the end of the encounter: Whenever a book effect you own, would create a new book, duplicate it. It costs 0 actions this turn."
+        "rulesText": "Until the end of the encounter: Whenever a book effect you own, would create a new book, duplicate it. It costs 0 actions this turn.",
+        "onDisplay": true
       },
       "note": "",
       "at": "2026-10-18T08:51:08.337Z"
@@ -145,7 +149,8 @@
         "actionCost": 1,
         "copies": 1,
         "rebinds": [],
-        "rulesText": "Until the end of the encounter, whenever a book is destroyed, it gains +2 value."
+        "rulesText": "Until the end of the encounter, whenever a book is destroyed, it gains +2 value.",
+        "onDisplay": true
       },
       "note": "",
       "at": "2026-10-18T17:21:26.218Z"
@@ -255,7 +260,8 @@
         "actionCost": 1,
         "copies": 1,
         "rebinds": [],
-        "rulesText": "Until the end of the encounter: whenever you summon a Book, it gets +1 value."
+        "rulesText": "Until the end of the encounter: whenever you summon a Book, it gets +1 value.",
+        "onDisplay": true
       },
       "note": "",
       "at": "2026-10-18T17:27:48.390Z"
@@ -6931,5 +6937,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T17:27:48.390Z"
+  "updatedAt": "2026-10-18T18:36:26.957Z"
 }
