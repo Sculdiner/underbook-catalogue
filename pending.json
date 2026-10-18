@@ -180,7 +180,7 @@
       "before": null,
       "after": {
         "id": "witchcraft-jtems",
-        "title": "Witchcraft {jtems)",
+        "title": "Witchcraft Signs",
         "traits": [
           "magic"
         ],
@@ -192,7 +192,7 @@
         "rulesText": "On assign: discard a book at random. Return a destroyed book to your hand (you choose)."
       },
       "note": "",
-      "at": "2026-10-18T08:42:38.386Z"
+      "at": "2026-10-18T17:22:20.537Z"
     },
     {
       "id": "mvdl9qmvdsd0a",
@@ -6909,5 +6909,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T17:21:26.220Z"
+  "updatedAt": "2026-10-18T17:22:20.537Z"
 }
