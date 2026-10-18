@@ -167,10 +167,10 @@
         "actionCost": 1,
         "copies": 1,
         "rebinds": [],
-        "rulesText": "Bookmarked.\nEnd of turn: Shuffle up to 3 destroyed books to your library, at random."
+        "rulesText": "Bookmarked.\nEnd of turn: Shuffle a destroyed book to your library, at random."
       },
       "note": "",
-      "at": "2026-10-18T08:48:13.410Z"
+      "at": "2026-10-18T08:48:30.764Z"
     },
     {
       "id": "mvdksymk3wlei",
@@ -6865,5 +6865,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:48:13.410Z"
+  "updatedAt": "2026-10-18T08:48:30.764Z"
 }
