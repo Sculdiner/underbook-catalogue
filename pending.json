@@ -232,10 +232,11 @@
         "value": 2,
         "actionCost": 1,
         "copies": 1,
-        "rebinds": []
+        "rebinds": [],
+        "rulesText": "Destroy all Pyroclasms,"
       },
       "note": "",
-      "at": "2026-10-18T08:56:49.402Z"
+      "at": "2026-10-18T08:57:22.249Z"
     }
   ],
   "applied": [
@@ -6908,5 +6909,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:56:49.402Z"
+  "updatedAt": "2026-10-18T08:57:22.249Z"
 }
