@@ -123,10 +123,10 @@
         "actionCost": 1,
         "copies": 1,
         "rebinds": [],
-        "rulesText": "Whenever a book effect you own, would create a new book, duplicate it."
+        "rulesText": "Whenever a book effect you own, would create a new book, duplicate it. It costs 0 actions this turn."
       },
       "note": "",
-      "at": "2026-10-18T08:17:46.868Z"
+      "at": "2026-10-18T08:50:57.116Z"
     },
     {
       "id": "mvdk12ouglnqa",
@@ -6865,5 +6865,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:49:11.338Z"
+  "updatedAt": "2026-10-18T08:50:57.116Z"
 }
