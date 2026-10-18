@@ -100,10 +100,11 @@
         "value": 2,
         "actionCost": 1,
         "copies": 1,
-        "rebinds": []
+        "rebinds": [],
+        "rulesText": "Until the end lf the encounter, whenever a book triggers a draw effect, all visitors gain 1 fulfillment."
       },
       "note": "",
-      "at": "2026-10-18T08:14:18.535Z"
+      "at": "2026-10-18T08:16:07.302Z"
     }
   ],
   "applied": [
@@ -6776,5 +6777,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:14:18.535Z"
+  "updatedAt": "2026-10-18T08:16:07.302Z"
 }
