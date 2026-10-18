@@ -166,10 +166,11 @@
         "value": 2,
         "actionCost": 1,
         "copies": 1,
-        "rebinds": []
+        "rebinds": [],
+        "rulesText": "On Assign: Return all destroyed books to your discard pile."
       },
       "note": "",
-      "at": "2026-10-18T08:26:44.328Z"
+      "at": "2026-10-18T08:27:33.914Z"
     }
   ],
   "applied": [
@@ -6842,5 +6843,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:26:44.328Z"
+  "updatedAt": "2026-10-18T08:27:33.914Z"
 }
