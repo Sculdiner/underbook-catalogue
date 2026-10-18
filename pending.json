@@ -34,10 +34,11 @@
         "value": 2,
         "actionCost": 1,
         "copies": 1,
-        "rebinds": []
+        "rebinds": [],
+        "rulesText": "Until the end of the encounter, whenever you gain an action, a random visitor gains 2 fulfillment."
       },
       "note": "",
-      "at": "2026-10-18T08:03:37.497Z"
+      "at": "2026-10-18T08:04:58.489Z"
     }
   ],
   "applied": [
@@ -6710,5 +6711,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:03:37.504Z"
+  "updatedAt": "2026-10-18T08:04:58.489Z"
 }
