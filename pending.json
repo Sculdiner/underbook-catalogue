@@ -79,10 +79,10 @@
         "actionCost": 1,
         "copies": 1,
         "rebinds": [],
-        "rulesText": "Shuffle a Pyroclasm (1v/1a)  to your Library.\nUntil the end of the encounter, whenever you destroy a book, pyroclasm gains +2 value."
+        "rulesText": "Shuffle a Pyroclasm book (1v/1a)  to your Library.\nUntil the end of the encounter, whenever you destroy a book, pyroclasm gains +2 value."
       },
       "note": "",
-      "at": "2026-10-18T08:12:53.410Z"
+      "at": "2026-10-18T08:49:11.338Z"
     },
     {
       "id": "mvdjui07nkb64",
@@ -6865,5 +6865,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:48:36.946Z"
+  "updatedAt": "2026-10-18T08:49:11.338Z"
 }
