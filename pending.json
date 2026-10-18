@@ -105,6 +105,27 @@
       },
       "note": "",
       "at": "2026-10-18T08:16:17.782Z"
+    },
+    {
+      "id": "mvdjxq9lnl1su",
+      "kind": "books",
+      "op": "add",
+      "targetId": "master-conjurer",
+      "before": null,
+      "after": {
+        "id": "master-conjurer",
+        "title": "Master Conjurer",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 2,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-18T08:16:49.208Z"
     }
   ],
   "applied": [
@@ -6777,5 +6798,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:16:17.782Z"
+  "updatedAt": "2026-10-18T08:16:49.209Z"
 }
