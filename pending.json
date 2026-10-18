@@ -237,6 +237,27 @@
       },
       "note": "",
       "at": "2026-10-18T17:26:02.202Z"
+    },
+    {
+      "id": "mve3lb0otc1an",
+      "kind": "books",
+      "op": "add",
+      "targetId": "empowering-conjurations",
+      "before": null,
+      "after": {
+        "id": "empowering-conjurations",
+        "title": "Empowering Conjurations",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 2,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-18T17:27:01.896Z"
     }
   ],
   "applied": [
@@ -6909,5 +6930,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T17:26:02.202Z"
+  "updatedAt": "2026-10-18T17:27:01.896Z"
 }
