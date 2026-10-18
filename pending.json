@@ -136,7 +136,7 @@
       "before": null,
       "after": {
         "id": "runic-empowrerment",
-        "title": "Ceremony of the Dark Witch",
+        "title": "Dark Covens",
         "traits": [
           "magic"
         ],
@@ -148,7 +148,7 @@
         "rulesText": "Until the end of the encounter, whenever a book is destroyed, it gains +2 value."
       },
       "note": "",
-      "at": "2026-10-18T08:44:09.407Z"
+      "at": "2026-10-18T17:21:26.218Z"
     },
     {
       "id": "mvdkahgoyxg77",
@@ -6909,5 +6909,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T09:00:11.892Z"
+  "updatedAt": "2026-10-18T17:21:26.220Z"
 }
