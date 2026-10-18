@@ -224,7 +224,7 @@
       "before": null,
       "after": {
         "id": "lava-lances",
-        "title": "Lava Golems",
+        "title": "Lava Golem",
         "traits": [
           "magic"
         ],
@@ -236,7 +236,7 @@
         "rulesText": "Destroy all Pyroclasms you own. Lava Golem"
       },
       "note": "",
-      "at": "2026-10-18T08:58:01.588Z"
+      "at": "2026-10-18T08:58:04.524Z"
     }
   ],
   "applied": [
@@ -6909,5 +6909,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:58:01.588Z"
+  "updatedAt": "2026-10-18T08:58:04.524Z"
 }
