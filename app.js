@@ -248,7 +248,7 @@ function filterBar(kind, chipsets) {
 const matches = (q, ...fields) => !q || fields.some((s) => String(s ?? '').toLowerCase().includes(q.toLowerCase()));
 
 function bookCover(b, extra = '') {
-  const v = `<span class="vbadge">V${b.value ?? '?'} · ${b.actionCost ?? 1}A</span>`;
+  const v = `<span class="vbadge">${b.onDisplay ? 'On Display' : `V${b.value ?? '?'}`} · ${b.actionCost ?? 1}A</span>`;
   if (b.upload)
     return `<div class="cover zoomable ${extra}" ${zoomAttrs('url', uploadUrl(b.upload), b.title)} style="background-image:url('${uploadUrl(b.upload)}')">${v}${ZOOM_BADGE}</div>`;
   if (hasArt('books', b.id))
@@ -393,11 +393,11 @@ function bookRow(it) {
   const thumb = art
     ? `<span class="deck-thumb"><i style="background-image:url('${art}')"></i></span>`
     : `<span class="deck-thumb blank">${esc((b.title || '?')[0])}</span>`;
-  const sub = [(b.actionCost ?? 1) !== 1 ? `${b.actionCost} Actions` : '', b.extension ? 'Extension' : '', ...(b.flags ?? [])].filter(Boolean);
+  const sub = [b.onDisplay ? 'On Display' : '', (b.actionCost ?? 1) !== 1 ? `${b.actionCost} Actions` : '', b.extension ? 'Extension' : '', ...(b.flags ?? [])].filter(Boolean);
   return `<a class="deck-row ${b.rarity} ${it.pending?.op === 'delete' ? 'deleted' : ''} ${isOff(b) ? 'off' : ''}" href="#/books/${encodeURIComponent(it.key)}">
     ${thumb}
     <span class="deck-name"><span class="deck-title name">${esc(b.title)}</span>${sub.length ? `<span class="deck-sub">${esc(sub.join(' · '))}</span>` : ''}</span>
-    ${offTag(b)}${pendingTag(it)}<span class="deck-value">${b.value ?? '?'}</span></a>`;
+    ${offTag(b)}${pendingTag(it)}${b.onDisplay ? '' : `<span class="deck-value">${b.value ?? '?'}</span>`}</a>`;
 }
 
 function bookGroup(b) {
@@ -645,7 +645,7 @@ function detailActions(kind, it) {
   </div>`;
 }
 
-const ENGINE_SKIP = new Set(['id', 'disabled', 'upload', 'title', 'traits', 'rarity', 'value', 'actionCost', 'copies', 'shortText', 'rulesText', 'flavor', 'flags', 'extension', 'rebinds', 'reminders']);
+const ENGINE_SKIP = new Set(['id', 'disabled', 'onDisplay', 'upload', 'title', 'traits', 'rarity', 'value', 'actionCost', 'copies', 'shortText', 'rulesText', 'flavor', 'flags', 'extension', 'rebinds', 'reminders']);
 
 views.detail = {
   books(it) {
@@ -669,16 +669,17 @@ views.detail = {
             ${b.extension ? '<span class="tag">Extension</span>' : ''}${sig ? `<span class="tag gold">${esc(sig.name)} signature</span>` : ''}
           </div>
           <div class="stats">
-            <label class="stat"><input type="number" class="inl inl-num" data-ipath="value" value="${b.value ?? 0}"><span>Value</span></label>
+            ${b.onDisplay ? '' : `<label class="stat"><input type="number" class="inl inl-num" data-ipath="value" value="${b.value ?? 0}"><span>Value</span></label>`}
             <label class="stat"><input type="number" class="inl inl-num" data-ipath="actionCost" value="${b.actionCost ?? 1}"><span>Actions</span></label>
           </div>
         </div></div>
+      <div class="field check display-check"><label><input type="checkbox" data-ipath="onDisplay" ${b.onDisplay ? 'checked' : ''}> <span><b>On Display</b><small>Played onto the cart, not to a visitor. No Value, no Rebinds; lasts the whole Encounter.</small></span></label></div>
       ${live ? '<p class="edit-hint">Tap anything to change it. It saves by itself.</p>' : ''}
       <h3>Rules</h3>
       <textarea class="inl inl-rules" data-ipath="rulesText" placeholder="Tap to write the rules…">${esc(b.rulesText ?? '')}</textarea>
-      <h3>Rebinds <small class="muted small">${rebinds.length}</small></h3>
+      ${b.onDisplay ? '' : `<h3>Rebinds <small class="muted small">${rebinds.length}</small></h3>
       <div class="rb-list">${rebinds.map((u, i) => rebindCard(u, i, live && S.inline?.openRebind === i, { attr: 'data-ipath', count: rebinds.length })).join('')}</div>
-      ${live ? '<button type="button" class="btn ghost add-row" style="width:100%;margin-top:10px" data-act="add-rebind">+ Add rebind</button>' : ''}
+      ${live ? '<button type="button" class="btn ghost add-row" style="width:100%;margin-top:10px" data-act="add-rebind">+ Add rebind</button>' : ''}`}
       <h3>Flags</h3>
       <div class="chips" style="flex-wrap:wrap;overflow:visible">${BOOK_FLAGS.map((f) => `<button type="button" class="chip ${(b.flags ?? []).includes(f) ? 'on' : ''}" data-itoggle="flags" data-val="${f}">${f}</button>`).join('')}</div>
       <div class="field check" style="margin-top:12px"><label><input type="checkbox" data-ipath="extension" ${b.extension ? 'checked' : ''}> Extension book (beyond its Trait’s core ten)</label></div>
@@ -1125,6 +1126,7 @@ function diffHtml(e) {
   return `<div class="diff">${keys
     .filter((k) => !same(e.before[k], e.after[k]))
     .map((k) => {
+      if (k === 'onDisplay') return `<div class="dk">On Display</div><div class="${e.after.onDisplay ? 'plus' : 'minus'}">${e.after.onDisplay ? 'Now On Display' : 'No longer On Display'}</div>`;
       if (k === 'disabled') return `<div class="dk">in the game</div><div class="${e.after.disabled ? 'minus' : 'plus'}">${e.after.disabled ? 'Switched off' : 'Switched back on'}</div>`;
       if (k === 'upload') return e.after.upload ? uploadDiff(e) : `<div class="dk">image</div><div class="minus">Uploaded image removed</div>`;
       if (k === 'icon' && e.after.icon) return `<div class="dk">icon</div><img class="diff-icon" src="${artUrl('library', e.after.icon)}" alt="">`;
