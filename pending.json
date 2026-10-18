@@ -17,254 +17,6 @@
       },
       "note": "",
       "at": "2026-10-07T18:10:20.980Z"
-    },
-    {
-      "id": "mvdjgrdsizghe",
-      "kind": "books",
-      "op": "add",
-      "targetId": "timeloop-paradoxes",
-      "before": null,
-      "after": {
-        "id": "timeloop-paradoxes",
-        "title": "Timeloop Paradoxes",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "uncommon",
-        "value": 0,
-        "actionCost": 1,
-        "copies": 1,
-        "rebinds": [],
-        "rulesText": "Until the end of the encounter, whenever you gain an action, a random visitor gains 2 fulfillment.",
-        "onDisplay": true
-      },
-      "note": "",
-      "at": "2026-10-18T08:05:17.454Z"
-    },
-    {
-      "id": "mvdjkuydbz8rq",
-      "kind": "books",
-      "op": "add",
-      "targetId": "teleportation-basics",
-      "before": null,
-      "after": {
-        "id": "teleportation-basics",
-        "title": "Teleportation Basics",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "common",
-        "value": 1,
-        "actionCost": 1,
-        "copies": 1,
-        "rebinds": [],
-        "rulesText": "Gain 1 action. Draw 1 book."
-      },
-      "note": "",
-      "at": "2026-10-18T08:07:35.585Z"
-    },
-    {
-      "id": "mvdjn47q67n2v",
-      "kind": "books",
-      "op": "add",
-      "targetId": "pyroclasmic-evocations",
-      "before": null,
-      "after": {
-        "id": "pyroclasmic-evocations",
-        "title": "Pyroclasmic Evocations",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "uncommon",
-        "value": 0,
-        "actionCost": 1,
-        "copies": 1,
-        "rebinds": [],
-        "rulesText": "Shuffle a Pyroclasm book (1v/1a)  to your Library.\nUntil the end of the encounter, whenever you destroy a book, pyroclasm gains +2 value.",
-        "onDisplay": true
-      },
-      "note": "",
-      "at": "2026-10-18T08:49:11.338Z"
-    },
-    {
-      "id": "mvdjui07nkb64",
-      "kind": "books",
-      "op": "add",
-      "targetId": "divination-circles",
-      "before": null,
-      "after": {
-        "id": "divination-circles",
-        "title": "Thaumaturgy",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "uncommon",
-        "value": 0,
-        "actionCost": 1,
-        "copies": 1,
-        "rebinds": [],
-        "rulesText": "Until the end lf the encounter, whenever a book triggers a draw effect, all visitors gain 1 fulfillment.",
-        "onDisplay": true
-      },
-      "note": "",
-      "at": "2026-10-18T08:16:17.782Z"
-    },
-    {
-      "id": "mvdjxq9lnl1su",
-      "kind": "books",
-      "op": "add",
-      "targetId": "master-conjurer",
-      "before": null,
-      "after": {
-        "id": "master-conjurer",
-        "title": "Master Conjurer",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "rare",
-        "value": 0,
-        "actionCost": 1,
-        "copies": 1,
-        "rebinds": [],
-        "rulesText": "Until the end of the encounter: Whenever a book effect you own, would create a new book, duplicate it. It costs 0 actions this turn.",
-        "onDisplay": true
-      },
-      "note": "",
-      "at": "2026-10-18T08:51:08.337Z"
-    },
-    {
-      "id": "mvdk12ouglnqa",
-      "kind": "books",
-      "op": "add",
-      "targetId": "runic-empowrerment",
-      "before": null,
-      "after": {
-        "id": "runic-empowrerment",
-        "title": "Dark Covens",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "uncommon",
-        "value": 0,
-        "actionCost": 1,
-        "copies": 1,
-        "rebinds": [],
-        "rulesText": "Until the end of the encounter, whenever a book is destroyed, it gains +2 value.",
-        "onDisplay": true
-      },
-      "note": "",
-      "at": "2026-10-18T17:21:26.218Z"
-    },
-    {
-      "id": "mvdkahgoyxg77",
-      "kind": "books",
-      "op": "add",
-      "targetId": "witchcraft-summoning",
-      "before": null,
-      "after": {
-        "id": "witchcraft-summoning",
-        "title": "Witchcraft Summoning",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "common",
-        "value": 2,
-        "actionCost": 1,
-        "copies": 1,
-        "rebinds": [],
-        "rulesText": "Bookmarked.\nEnd of turn: Shuffle a destroyed book to your library, at random."
-      },
-      "note": "",
-      "at": "2026-10-18T08:48:36.946Z"
-    },
-    {
-      "id": "mvdksymk3wlei",
-      "kind": "books",
-      "op": "add",
-      "targetId": "witchcraft-jtems",
-      "before": null,
-      "after": {
-        "id": "witchcraft-jtems",
-        "title": "Witchcraft Signs",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "uncommon",
-        "value": 2,
-        "actionCost": 1,
-        "copies": 1,
-        "rebinds": [],
-        "rulesText": "On assign: discard a book at random. Return a destroyed book to your hand (you choose)."
-      },
-      "note": "",
-      "at": "2026-10-18T17:22:20.537Z"
-    },
-    {
-      "id": "mvdl9qmvdsd0a",
-      "kind": "books",
-      "op": "add",
-      "targetId": "pyroclasmic-ignitions",
-      "before": null,
-      "after": {
-        "id": "pyroclasmic-ignitions",
-        "title": "Pyroclasmic Ignitions",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "common",
-        "value": 3,
-        "actionCost": 1,
-        "copies": 1,
-        "rebinds": [],
-        "rulesText": "On Assign: create a pyroclasm in your hand (1v/1a). Pyroclasms everywhere, get +1 value until the end of the encounter."
-      },
-      "note": "",
-      "at": "2026-10-18T08:56:05.194Z"
-    },
-    {
-      "id": "mvdld69maqhyr",
-      "kind": "books",
-      "op": "add",
-      "targetId": "lava-lances",
-      "before": null,
-      "after": {
-        "id": "lava-lances",
-        "title": "Lava Golem",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "rare",
-        "value": 4,
-        "actionCost": 1,
-        "copies": 1,
-        "rebinds": [],
-        "rulesText": "Lava Elemental Mastery gets +1 whenever you play a pyroclasm. (Effect triggers wherever Lava Elemental Mastery is and lasts until the end of the encounter)"
-      },
-      "note": "",
-      "at": "2026-10-18T17:26:02.202Z"
-    },
-    {
-      "id": "mve3lb0otc1an",
-      "kind": "books",
-      "op": "add",
-      "targetId": "empowering-conjurations",
-      "before": null,
-      "after": {
-        "id": "empowering-conjurations",
-        "title": "Empowering Conjurations",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "uncommon",
-        "value": 0,
-        "actionCost": 1,
-        "copies": 1,
-        "rebinds": [],
-        "rulesText": "Until the end of the encounter: whenever you summon a Book, it gets +1 value.",
-        "onDisplay": true
-      },
-      "note": "",
-      "at": "2026-10-18T17:27:48.390Z"
     }
   ],
   "applied": [
@@ -6935,7 +6687,277 @@
       "at": "2026-10-14T10:12:51.307Z",
       "appliedAt": "2026-10-14T10:21:21.512Z",
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
+    },
+    {
+      "id": "mvdjgrdsizghe",
+      "kind": "books",
+      "op": "add",
+      "targetId": "timeloop-paradoxes",
+      "before": null,
+      "after": {
+        "id": "timeloop-paradoxes",
+        "title": "Timeloop Paradoxes",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 0,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": [],
+        "rulesText": "Until the end of the encounter, whenever you gain an action, a random visitor gains 2 fulfillment.",
+        "onDisplay": true
+      },
+      "note": "",
+      "at": "2026-10-18T08:05:17.454Z",
+      "appliedAt": "2026-10-18T19:26:38.995Z",
+      "result": "Added as Timeloop Paradoxes (Magic Uncommon, On Display): each Action gained from any source gives a random waiting visitor 2 Fulfillment."
+    },
+    {
+      "id": "mvdjkuydbz8rq",
+      "kind": "books",
+      "op": "add",
+      "targetId": "teleportation-basics",
+      "before": null,
+      "after": {
+        "id": "teleportation-basics",
+        "title": "Teleportation Basics",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "common",
+        "value": 1,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": [],
+        "rulesText": "Gain 1 action. Draw 1 book."
+      },
+      "note": "",
+      "at": "2026-10-18T08:07:35.585Z",
+      "appliedAt": "2026-10-18T19:26:38.995Z",
+      "result": "Added as Teleportation Basics (Magic Common, V1): gain 1 Action, draw 1. No Rebinds yet (open)."
+    },
+    {
+      "id": "mvdjn47q67n2v",
+      "kind": "books",
+      "op": "add",
+      "targetId": "pyroclasmic-evocations",
+      "before": null,
+      "after": {
+        "id": "pyroclasmic-evocations",
+        "title": "Pyroclasmic Evocations",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 0,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": [],
+        "rulesText": "Shuffle a Pyroclasm book (1v/1a)  to your Library.\nUntil the end of the encounter, whenever you destroy a book, pyroclasm gains +2 value.",
+        "onDisplay": true
+      },
+      "note": "",
+      "at": "2026-10-18T08:49:11.338Z",
+      "appliedAt": "2026-10-18T19:26:38.995Z",
+      "result": "Added as Pyroclasmic Evocations (Magic Uncommon, On Display): shuffles a Pyroclasm in; each DESTROY by your books gives every Pyroclasm +2 this Encounter. Pyroclasm token added (Magic, V1/1A, not Temporary)."
+    },
+    {
+      "id": "mvdjui07nkb64",
+      "kind": "books",
+      "op": "add",
+      "targetId": "divination-circles",
+      "before": null,
+      "after": {
+        "id": "divination-circles",
+        "title": "Thaumaturgy",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 0,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": [],
+        "rulesText": "Until the end lf the encounter, whenever a book triggers a draw effect, all visitors gain 1 fulfillment.",
+        "onDisplay": true
+      },
+      "note": "",
+      "at": "2026-10-18T08:16:17.782Z",
+      "appliedAt": "2026-10-18T19:26:38.995Z",
+      "result": "Added as Thaumaturgy (Magic Uncommon, On Display): each book draw effect gives every waiting visitor 1 Fulfillment (not the refill, visitors or Curios)."
+    },
+    {
+      "id": "mvdjxq9lnl1su",
+      "kind": "books",
+      "op": "add",
+      "targetId": "master-conjurer",
+      "before": null,
+      "after": {
+        "id": "master-conjurer",
+        "title": "Master Conjurer",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 0,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": [],
+        "rulesText": "Until the end of the encounter: Whenever a book effect you own, would create a new book, duplicate it. It costs 0 actions this turn.",
+        "onDisplay": true
+      },
+      "note": "",
+      "at": "2026-10-18T08:51:08.337Z",
+      "appliedAt": "2026-10-18T19:26:38.995Z",
+      "result": "Added as Master Conjurer (Magic Rare, On Display): every conjured book is duplicated; only the copy costs 0 this turn."
+    },
+    {
+      "id": "mvdk12ouglnqa",
+      "kind": "books",
+      "op": "add",
+      "targetId": "runic-empowrerment",
+      "before": null,
+      "after": {
+        "id": "runic-empowrerment",
+        "title": "Dark Covens",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 0,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": [],
+        "rulesText": "Until the end of the encounter, whenever a book is destroyed, it gains +2 value.",
+        "onDisplay": true
+      },
+      "note": "",
+      "at": "2026-10-18T17:21:26.218Z",
+      "appliedAt": "2026-10-18T19:26:38.995Z",
+      "result": "Added as The Witching Hour (renamed from Dark Covens, occult-sheet cover; Magic Uncommon, On Display): any DESTROYed book, a visitor's DESTROY too, gains +2 Value it keeps while DESTROYed."
+    },
+    {
+      "id": "mvdkahgoyxg77",
+      "kind": "books",
+      "op": "add",
+      "targetId": "witchcraft-summoning",
+      "before": null,
+      "after": {
+        "id": "witchcraft-summoning",
+        "title": "Witchcraft Summoning",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "common",
+        "value": 2,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": [],
+        "rulesText": "Bookmarked.\nEnd of turn: Shuffle a destroyed book to your library, at random."
+      },
+      "note": "",
+      "at": "2026-10-18T08:48:36.946Z",
+      "appliedAt": "2026-10-18T19:26:38.995Z",
+      "result": "Added as Whispers Beyond (renamed from Witchcraft Summoning, occult-sheet cover; Magic Common, V2, Bookmarked): each End Turn shuffles a random DESTROYed book into the Library. No Rebinds yet (open)."
+    },
+    {
+      "id": "mvdksymk3wlei",
+      "kind": "books",
+      "op": "add",
+      "targetId": "witchcraft-jtems",
+      "before": null,
+      "after": {
+        "id": "witchcraft-jtems",
+        "title": "Witchcraft Signs",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 2,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": [],
+        "rulesText": "On assign: discard a book at random. Return a destroyed book to your hand (you choose)."
+      },
+      "note": "",
+      "at": "2026-10-18T17:22:20.537Z",
+      "appliedAt": "2026-10-18T19:26:38.995Z",
+      "result": "Added as The Black Candle (renamed from Witchcraft Signs, occult-sheet cover; Magic Uncommon, V2): discard a random hand book, then return a chosen DESTROYed book to hand. No Rebinds yet (open)."
+    },
+    {
+      "id": "mvdl9qmvdsd0a",
+      "kind": "books",
+      "op": "add",
+      "targetId": "pyroclasmic-ignitions",
+      "before": null,
+      "after": {
+        "id": "pyroclasmic-ignitions",
+        "title": "Pyroclasmic Ignitions",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "common",
+        "value": 3,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": [],
+        "rulesText": "On Assign: create a pyroclasm in your hand (1v/1a). Pyroclasms everywhere, get +1 value until the end of the encounter."
+      },
+      "note": "",
+      "at": "2026-10-18T08:56:05.194Z",
+      "appliedAt": "2026-10-18T19:26:38.995Z",
+      "result": "Added as Pyroclasmic Ignitions (Magic Common, V3): conjures a Pyroclasm to hand, then every Pyroclasm +1 this Encounter. No Rebinds yet (open)."
+    },
+    {
+      "id": "mvdld69maqhyr",
+      "kind": "books",
+      "op": "add",
+      "targetId": "lava-lances",
+      "before": null,
+      "after": {
+        "id": "lava-lances",
+        "title": "Lava Golem",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 4,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": [],
+        "rulesText": "Lava Elemental Mastery gets +1 whenever you play a pyroclasm. (Effect triggers wherever Lava Elemental Mastery is and lasts until the end of the encounter)"
+      },
+      "note": "",
+      "at": "2026-10-18T17:26:02.202Z",
+      "appliedAt": "2026-10-18T19:26:38.995Z",
+      "result": "Added as Lava Golem (Magic Rare, V4): +1 this Encounter whenever a Pyroclasm is assigned, wherever it is. No Rebinds yet (open)."
+    },
+    {
+      "id": "mve3lb0otc1an",
+      "kind": "books",
+      "op": "add",
+      "targetId": "empowering-conjurations",
+      "before": null,
+      "after": {
+        "id": "empowering-conjurations",
+        "title": "Empowering Conjurations",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 0,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": [],
+        "rulesText": "Until the end of the encounter: whenever you summon a Book, it gets +1 value.",
+        "onDisplay": true
+      },
+      "note": "",
+      "at": "2026-10-18T17:27:48.390Z",
+      "appliedAt": "2026-10-18T19:26:38.995Z",
+      "result": "Added as Empowering Conjurations (Magic Uncommon, On Display): each conjured book gains +2 (raised from +1; 'summon' reads 'conjure')."
     }
   ],
-  "updatedAt": "2026-10-18T18:36:26.957Z"
+  "updatedAt": "2026-10-18T19:26:38.996Z"
 }
