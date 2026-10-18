@@ -92,7 +92,7 @@
       "before": null,
       "after": {
         "id": "divination-circles",
-        "title": "Divination Circles",
+        "title": "Thaumaturgy",
         "traits": [
           "magic"
         ],
@@ -104,7 +104,7 @@
         "rulesText": "Until the end lf the encounter, whenever a book triggers a draw effect, all visitors gain 1 fulfillment."
       },
       "note": "",
-      "at": "2026-10-18T08:16:07.302Z"
+      "at": "2026-10-18T08:16:14.769Z"
     }
   ],
   "applied": [
@@ -6777,5 +6777,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:16:07.302Z"
+  "updatedAt": "2026-10-18T08:16:14.769Z"
 }
