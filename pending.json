@@ -193,6 +193,27 @@
       },
       "note": "",
       "at": "2026-10-18T08:42:38.386Z"
+    },
+    {
+      "id": "mvdl9qmvdsd0a",
+      "kind": "books",
+      "op": "add",
+      "targetId": "pyroclasmic-ignitions",
+      "before": null,
+      "after": {
+        "id": "pyroclasmic-ignitions",
+        "title": "Pyroclasmic Ignitions",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "common",
+        "value": 2,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-18T08:54:09.175Z"
     }
   ],
   "applied": [
@@ -6865,5 +6886,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:51:08.337Z"
+  "updatedAt": "2026-10-18T08:54:09.175Z"
 }
