@@ -53,13 +53,13 @@
           "magic"
         ],
         "rarity": "common",
-        "value": 2,
+        "value": 1,
         "actionCost": 1,
         "copies": 1,
         "rebinds": []
       },
       "note": "",
-      "at": "2026-10-18T08:06:48.757Z"
+      "at": "2026-10-18T08:07:06.208Z"
     }
   ],
   "applied": [
@@ -6732,5 +6732,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:06:48.757Z"
+  "updatedAt": "2026-10-18T08:07:06.208Z"
 }
