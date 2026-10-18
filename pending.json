@@ -136,7 +136,7 @@
       "before": null,
       "after": {
         "id": "runic-empowrerment",
-        "title": "Runic Collapse",
+        "title": "Ceremony of the Black Witch",
         "traits": [
           "magic"
         ],
@@ -148,7 +148,7 @@
         "rulesText": "Until the end of the encounter, whenever a book is destroyed, it gains +2 value."
       },
       "note": "",
-      "at": "2026-10-18T08:26:08.321Z"
+      "at": "2026-10-18T08:43:51.950Z"
     },
     {
       "id": "mvdkahgoyxg77",
@@ -6865,5 +6865,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:42:38.386Z"
+  "updatedAt": "2026-10-18T08:43:51.950Z"
 }
