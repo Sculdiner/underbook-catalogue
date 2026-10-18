@@ -233,10 +233,10 @@
         "actionCost": 1,
         "copies": 1,
         "rebinds": [],
-        "rulesText": "Remove from the game all Pyroclasms you own. Lava Golem gets +2 until the end of the  encounter, for each one removed."
+        "rulesText": "Lava Elemental Mastery gets +1 whenever you play a pyroclasm. (Effect triggers wherever Lava Elemental Mastery is and lasts until the end of the encounter)"
       },
       "note": "",
-      "at": "2026-10-18T09:00:11.892Z"
+      "at": "2026-10-18T17:26:02.202Z"
     }
   ],
   "applied": [
@@ -6909,5 +6909,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T17:22:20.537Z"
+  "updatedAt": "2026-10-18T17:26:02.202Z"
 }
