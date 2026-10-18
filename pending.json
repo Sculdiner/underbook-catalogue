@@ -61,6 +61,27 @@
       },
       "note": "",
       "at": "2026-10-18T08:07:35.585Z"
+    },
+    {
+      "id": "mvdjn47q67n2v",
+      "kind": "books",
+      "op": "add",
+      "targetId": "pyroclasmic-evocations",
+      "before": null,
+      "after": {
+        "id": "pyroclasmic-evocations",
+        "title": "Pyroclasmic Evocations",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 2,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-18T08:08:34.070Z"
     }
   ],
   "applied": [
@@ -6733,5 +6754,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:07:35.585Z"
+  "updatedAt": "2026-10-18T08:08:34.070Z"
 }
