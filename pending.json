@@ -17,6 +17,27 @@
       },
       "note": "",
       "at": "2026-10-07T18:10:20.980Z"
+    },
+    {
+      "id": "mvdjgrdsizghe",
+      "kind": "books",
+      "op": "add",
+      "targetId": "timeloop-paradoxes",
+      "before": null,
+      "after": {
+        "id": "timeloop-paradoxes",
+        "title": "Timeloop Paradoxes",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 2,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-18T08:03:37.497Z"
     }
   ],
   "applied": [
@@ -6689,5 +6710,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-14T10:21:21.515Z"
+  "updatedAt": "2026-10-18T08:03:37.504Z"
 }
