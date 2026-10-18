@@ -145,10 +145,10 @@
         "actionCost": 1,
         "copies": 1,
         "rebinds": [],
-        "rulesText": "Until the end of the encounter,"
+        "rulesText": "Until the end of the encounter, whenever a book is destroyed, it gains +2 value."
       },
       "note": "",
-      "at": "2026-10-18T08:24:20.842Z"
+      "at": "2026-10-18T08:26:08.321Z"
     }
   ],
   "applied": [
@@ -6821,5 +6821,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:24:20.842Z"
+  "updatedAt": "2026-10-18T08:26:08.321Z"
 }
