@@ -215,6 +215,27 @@
       },
       "note": "",
       "at": "2026-10-18T08:56:05.194Z"
+    },
+    {
+      "id": "mvdld69maqhyr",
+      "kind": "books",
+      "op": "add",
+      "targetId": "lava-lances",
+      "before": null,
+      "after": {
+        "id": "lava-lances",
+        "title": "Lava Lances",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 2,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-18T08:56:49.402Z"
     }
   ],
   "applied": [
@@ -6887,5 +6908,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:56:05.194Z"
+  "updatedAt": "2026-10-18T08:56:49.402Z"
 }
