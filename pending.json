@@ -254,10 +254,11 @@
         "value": 2,
         "actionCost": 1,
         "copies": 1,
-        "rebinds": []
+        "rebinds": [],
+        "rulesText": "Until the end of the encounter: whenever you summon a Book, it gets +2 value."
       },
       "note": "",
-      "at": "2026-10-18T17:27:01.896Z"
+      "at": "2026-10-18T17:27:35.334Z"
     }
   ],
   "applied": [
@@ -6930,5 +6931,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T17:27:01.896Z"
+  "updatedAt": "2026-10-18T17:27:35.334Z"
 }
