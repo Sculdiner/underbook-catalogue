@@ -83,6 +83,27 @@
       },
       "note": "",
       "at": "2026-10-18T08:12:53.410Z"
+    },
+    {
+      "id": "mvdjui07nkb64",
+      "kind": "books",
+      "op": "add",
+      "targetId": "divination-circles",
+      "before": null,
+      "after": {
+        "id": "divination-circles",
+        "title": "Divination Circles",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 2,
+        "actionCost": 1,
+        "copies": 1,
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-18T08:14:18.535Z"
     }
   ],
   "applied": [
@@ -6755,5 +6776,5 @@
       "result": "In the game: Stage 4 now uses your route, with the Pilgrims' Cairn on every path."
     }
   ],
-  "updatedAt": "2026-10-18T08:12:53.410Z"
+  "updatedAt": "2026-10-18T08:14:18.535Z"
 }
