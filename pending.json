@@ -58,7 +58,7 @@
         "extension": true,
         "onDisplay": true,
         "shortText": "On Display. Shuffle in a Pyroclasm. You DESTROY a book: every Pyroclasm +2.",
-        "rulesText": "On Display: shuffle 2 Pyroclasms into your Library. All Pyroclasms gain +1 value. Until the end of the Encounter: whenever you DESTROY a book, every Pyroclasm gains +2 Value.",
+        "rulesText": "On Display: shuffle 2 Pyroclasms into your Library. All Pyroclasms gain +1 value. Until the end of the Encounter: whenever you DESTROY a book, every Pyroclasm gains +1 Value.",
         "reminders": [
           "on-display",
           "conjure",
@@ -68,7 +68,7 @@
         "rebinds": []
       },
       "note": "",
-      "at": "2026-10-19T15:57:21.869Z"
+      "at": "2026-10-19T15:58:36.958Z"
     }
   ],
   "applied": [
@@ -7011,5 +7011,5 @@
       "result": "Added as Empowering Conjurations (Magic Uncommon, On Display): each conjured book gains +2 (raised from +1; 'summon' reads 'conjure')."
     }
   ],
-  "updatedAt": "2026-10-19T15:57:21.870Z"
+  "updatedAt": "2026-10-19T15:58:36.958Z"
 }
