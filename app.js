@@ -651,7 +651,6 @@ views.detail = {
   books(it) {
     const { live, d: b } = inlineFor('books', it);
     const sig = S.cat.traits.find((t) => t.signatureBook === b.id);
-    const starter = S.cat.traits.flatMap((t) => (t.starterBooks ?? []).filter((e) => e.bookId === b.id).map((e) => ({ t, n: e.count })))[0];
     const engine = Object.entries(b).filter(([k]) => !ENGINE_SKIP.has(k));
     const rebinds = b.rebinds ?? [];
     const tr = trait(b.traits?.[0]);
@@ -667,7 +666,7 @@ views.detail = {
             <select class="inl-chip tag ${b.rarity}" data-ipath="rarity" aria-label="Rarity">
               ${RARITIES.map((r) => `<option value="${r}" ${r === b.rarity ? 'selected' : ''}>${cap(r)}</option>`).join('')}
             </select>
-            ${b.extension ? '<span class="tag">Extension</span>' : ''}${sig ? `<span class="tag gold">${esc(sig.name)} signature</span>` : ''}${starter ? `<span class="tag gold">${esc(starter.t.name)} starter ×${starter.n}</span>` : ''}
+            ${b.extension ? '<span class="tag">Extension</span>' : ''}${sig ? `<span class="tag gold">${esc(sig.name)} signature</span>` : ''}
           </div>
           <div class="stats">
             ${b.onDisplay ? '' : `<label class="stat"><input type="number" class="inl inl-num" data-ipath="value" value="${b.value ?? 0}"><span>Value</span></label>`}
