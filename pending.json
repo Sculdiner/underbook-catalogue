@@ -17,58 +17,6 @@
       },
       "note": "",
       "at": "2026-10-07T18:10:20.980Z"
-    },
-    {
-      "id": "mvfftufi7j4yf",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "pyroclasmic-evocations",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "pyroclasmic-evocations",
-        "title": "Pyroclasmic Evocations",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "uncommon",
-        "value": 0,
-        "extension": true,
-        "onDisplay": true,
-        "shortText": "On Display. Shuffle in a Pyroclasm. You DESTROY a book: every Pyroclasm +2.",
-        "rulesText": "On Display: shuffle a Pyroclasm into your Library. Until the end of the Encounter: whenever you DESTROY a book, every Pyroclasm gains +2 Value.",
-        "reminders": [
-          "on-display",
-          "conjure",
-          "pyroclasm",
-          "destroy"
-        ],
-        "rebinds": []
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "pyroclasmic-evocations",
-        "title": "Pyroclasmic Evocations",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "uncommon",
-        "value": 0,
-        "extension": true,
-        "onDisplay": true,
-        "shortText": "On Display. Shuffle in a Pyroclasm. You DESTROY a book: every Pyroclasm +2.",
-        "rulesText": "On Display: shuffle 2 Pyroclasms into your Library. All Pyroclasms gain +1 value. Until the end of the Encounter: whenever you DESTROY a book, every Pyroclasm gains +1 Value.",
-        "reminders": [
-          "on-display",
-          "conjure",
-          "pyroclasm",
-          "destroy"
-        ],
-        "rebinds": []
-      },
-      "note": "",
-      "at": "2026-10-19T15:58:36.958Z"
     }
   ],
   "applied": [
@@ -7009,7 +6957,61 @@
       "at": "2026-10-18T17:27:48.390Z",
       "appliedAt": "2026-10-18T19:26:38.995Z",
       "result": "Added as Empowering Conjurations (Magic Uncommon, On Display): each conjured book gains +2 (raised from +1; 'summon' reads 'conjure')."
+    },
+    {
+      "id": "mvfftufi7j4yf",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "pyroclasmic-evocations",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "pyroclasmic-evocations",
+        "title": "Pyroclasmic Evocations",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 0,
+        "extension": true,
+        "onDisplay": true,
+        "shortText": "On Display. Shuffle in a Pyroclasm. You DESTROY a book: every Pyroclasm +2.",
+        "rulesText": "On Display: shuffle a Pyroclasm into your Library. Until the end of the Encounter: whenever you DESTROY a book, every Pyroclasm gains +2 Value.",
+        "reminders": [
+          "on-display",
+          "conjure",
+          "pyroclasm",
+          "destroy"
+        ],
+        "rebinds": []
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "pyroclasmic-evocations",
+        "title": "Pyroclasmic Evocations",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 0,
+        "extension": true,
+        "onDisplay": true,
+        "shortText": "On Display. Shuffle in a Pyroclasm. You DESTROY a book: every Pyroclasm +2.",
+        "rulesText": "On Display: shuffle 2 Pyroclasms into your Library. All Pyroclasms gain +1 value. Until the end of the Encounter: whenever you DESTROY a book, every Pyroclasm gains +1 Value.",
+        "reminders": [
+          "on-display",
+          "conjure",
+          "pyroclasm",
+          "destroy"
+        ],
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-19T15:58:36.958Z",
+      "appliedAt": "2026-10-19T16:00:03.782Z",
+      "result": "Applied: on display it shuffles in 2 Pyroclasms, all Pyroclasms +1, then +1 to every Pyroclasm per DESTROY of yours."
     }
   ],
-  "updatedAt": "2026-10-19T15:58:36.958Z"
+  "updatedAt": "2026-10-19T16:00:03.783Z"
 }
