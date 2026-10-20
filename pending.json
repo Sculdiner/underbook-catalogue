@@ -436,14 +436,14 @@
           {
             "id": "hydra-anatomy:regrowing-head",
             "name": "Regrowing Head",
-            "before": "Discarded: +3 Value",
+            "before": "Discarded: +2 Value",
             "after": "Discarded: +3 Value, shuffled into Library",
             "text": "Whenever this book is discarded by an effect: gain +3 Value, then shuffle it into your Library instead."
           }
         ]
       },
       "note": "",
-      "at": "2026-10-20T22:03:28.425Z"
+      "at": "2026-10-20T22:03:33.620Z"
     }
   ],
   "applied": [
@@ -7440,5 +7440,5 @@
       "result": "Applied: on display it shuffles in 2 Pyroclasms, all Pyroclasms +1, then +1 to every Pyroclasm per DESTROY of yours."
     }
   ],
-  "updatedAt": "2026-10-20T22:03:28.425Z"
+  "updatedAt": "2026-10-20T22:03:33.620Z"
 }
