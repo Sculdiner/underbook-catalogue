@@ -248,6 +248,62 @@
       },
       "note": "",
       "at": "2026-10-20T21:57:00.859Z"
+    },
+    {
+      "id": "mvh8509rf9lsj",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "blackwater-swamp",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "blackwater-swamp",
+        "title": "Blackwater Swamp",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "uncommon",
+        "archetypes": [
+          "discard"
+        ],
+        "value": 0,
+        "extension": true,
+        "onDisplay": true,
+        "shortText": "On Display. You discard a book: it gains +2 Value this Encounter.",
+        "rulesText": "On Display: until the end of the Encounter, whenever you discard a book, it gains +2 Value until the end of the Encounter.",
+        "reminders": [
+          "on-display",
+          "discard",
+          "value-duration"
+        ],
+        "rebinds": []
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "blackwater-swamp",
+        "title": "Blackwater Swamp",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "uncommon",
+        "archetypes": [
+          "discard"
+        ],
+        "value": 0,
+        "extension": true,
+        "onDisplay": true,
+        "shortText": "On Display. You discard a book: it gains +2 Value this Encounter.",
+        "rulesText": "On Display: until the end of the Encounter, whenever you discard a book, it gains +1 Value until the end of the Encounter.",
+        "reminders": [
+          "on-display",
+          "discard",
+          "value-duration"
+        ],
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-20T21:57:38.079Z"
     }
   ],
   "applied": [
@@ -7244,5 +7300,5 @@
       "result": "Applied: on display it shuffles in 2 Pyroclasms, all Pyroclasms +1, then +1 to every Pyroclasm per DESTROY of yours."
     }
   ],
-  "updatedAt": "2026-10-20T21:57:00.859Z"
+  "updatedAt": "2026-10-20T21:57:38.079Z"
 }
