@@ -424,7 +424,7 @@
             "name": "Many Heads",
             "before": "Discarded: +2 Value",
             "after": "Discarded: +3 Value",
-            "text": "Whenever this book is discarded by an effect: gain +5 Value."
+            "text": "Whenever this book is discarded by an effect: gain +3 Value."
           },
           {
             "id": "hydra-anatomy:thick-anatomy",
@@ -443,7 +443,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-20T22:02:42.378Z"
+      "at": "2026-10-20T22:02:46.052Z"
     }
   ],
   "applied": [
@@ -7440,5 +7440,5 @@
       "result": "Applied: on display it shuffles in 2 Pyroclasms, all Pyroclasms +1, then +1 to every Pyroclasm per DESTROY of yours."
     }
   ],
-  "updatedAt": "2026-10-20T22:02:42.378Z"
+  "updatedAt": "2026-10-20T22:02:46.052Z"
 }
