@@ -105,6 +105,58 @@
       },
       "note": "",
       "at": "2026-10-20T21:52:37.090Z"
+    },
+    {
+      "id": "mvh81ueba5eym",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "on-the-brood-of-spiders",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "on-the-brood-of-spiders",
+        "title": "On the Brood of Spiders",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "uncommon",
+        "archetypes": [
+          "conjuration"
+        ],
+        "value": 2,
+        "extension": true,
+        "shortText": "Conjure 2 Spiderlings.",
+        "rulesText": "On Assign: conjure 2 Spiderlings (Monsters, Value 2, 0 Actions) into your hand. They are temporary.",
+        "reminders": [
+          "conjure",
+          "temporary"
+        ],
+        "rebinds": []
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "on-the-brood-of-spiders",
+        "title": "On the Brood of Spiders",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "uncommon",
+        "archetypes": [
+          "conjuration"
+        ],
+        "value": 1,
+        "extension": true,
+        "shortText": "Conjure 2 Spiderlings.",
+        "rulesText": "On Assign: conjure 2 Spiderlings (Monsters, Value 2, 0 Actions) into your hand. They are temporary.",
+        "reminders": [
+          "conjure",
+          "temporary"
+        ],
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-20T21:55:10.499Z"
     }
   ],
   "applied": [
@@ -7101,5 +7153,5 @@
       "result": "Applied: on display it shuffles in 2 Pyroclasms, all Pyroclasms +1, then +1 to every Pyroclasm per DESTROY of yours."
     }
   ],
-  "updatedAt": "2026-10-20T21:52:37.090Z"
+  "updatedAt": "2026-10-20T21:55:10.499Z"
 }
