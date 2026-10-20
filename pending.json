@@ -430,8 +430,8 @@
             "id": "hydra-anatomy:thick-anatomy",
             "name": "Thick Anatomy",
             "before": "Value 4",
-            "after": "Value 4",
-            "text": "Printed Value 4."
+            "after": "Value 6",
+            "text": "Printed Value"
           },
           {
             "id": "hydra-anatomy:regrowing-head",
@@ -443,7 +443,7 @@
         ]
       },
       "note": "",
-      "at": "2026-10-20T22:03:17.713Z"
+      "at": "2026-10-20T22:03:20.333Z"
     }
   ],
   "applied": [
@@ -7440,5 +7440,5 @@
       "result": "Applied: on display it shuffles in 2 Pyroclasms, all Pyroclasms +1, then +1 to every Pyroclasm per DESTROY of yours."
     }
   ],
-  "updatedAt": "2026-10-20T22:03:17.713Z"
+  "updatedAt": "2026-10-20T22:03:20.334Z"
 }
