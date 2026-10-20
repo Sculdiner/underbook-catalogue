@@ -1,0 +1,48 @@
+/* The archetype breakdown (2026-10-21), shared by the phone catalogue and the Studio. */
+.bd { display: flex; flex-direction: column; gap: 14px; padding: 12px 16px 24px; max-width: 1280px; margin: 0 auto; }
+.bd-card { background: var(--card); border: 1px solid var(--line); border-radius: 14px; padding: 14px; min-width: 0; }
+.bd-card h2 { margin: 0 0 10px; font: 700 1.35rem var(--serif); color: var(--ink); }
+.bd-card h2 small { font: 400 .8rem var(--sans); color: var(--ink3); margin-left: 6px; }
+.bd-scroll { overflow-x: auto; }
+.bd-table { width: 100%; border-collapse: collapse; font-size: .88rem; color: var(--ink2); margin-bottom: 10px; }
+.bd-table th, .bd-table td { padding: 6px 8px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.bd-table thead th { color: var(--ink3); font-weight: 600; font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; }
+.bd-table tbody th { color: var(--ink); font-weight: 600; }
+.bd-table b { color: var(--ink); }
+.bd-rar th.common, .bd-count.common b, .bd-r.common { color: var(--common); }
+.bd-rar th.uncommon, .bd-count.uncommon b, .bd-r.uncommon { color: var(--uncommon); }
+.bd-rar th.rare, .bd-count.rare b, .bd-r.rare { color: var(--rare); }
+.bd-note { margin: 4px 0 0; font-size: .78rem; color: var(--ink3); }
+.bd-muted { opacity: .7; }
+.bd-size { font: 400 .72rem var(--sans); color: var(--ink3); border: 1px solid var(--line); border-radius: 999px; padding: 1px 7px; margin-left: 4px; }
+.bd-size.bridge { border-style: dashed; }
+.bd-dot { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 7px; background: currentColor; vertical-align: 1px; }
+.bd-dot.arch-actions { color: #6fb3e0; }
+.bd-dot.arch-conjuration { color: #c48be0; }
+.bd-dot.arch-discard { color: #7cc88a; }
+.bd-dot.arch-big-value { color: #e0a85a; }
+.bd-dot.arch-patience { color: #e07f9a; }
+.bd-dot.arch-untagged { color: var(--ink3); }
+.bd-traits { display: grid; grid-template-columns: 1fr; gap: 14px; }
+@media (min-width: 900px) { .bd-traits { grid-template-columns: 1fr 1fr; } }
+.bd-counts { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.bd-count { font-size: .8rem; color: var(--ink2); background: var(--card2); border-radius: 999px; padding: 3px 10px; }
+.bd-arch { border-top: 1px solid var(--line); padding: 10px 0 4px; }
+.bd-arch h3 { margin: 0 0 6px; font: 600 1rem var(--sans); color: var(--ink); }
+.bd-arch h3 > b { color: var(--accent); margin-left: 4px; }
+.bd-row { display: grid; grid-template-columns: 92px 1fr; gap: 8px; align-items: start; padding: 3px 0; }
+.bd-r { font-size: .78rem; padding-top: 3px; }
+.bd-r b { margin-left: 3px; }
+.bd-books { display: flex; flex-wrap: wrap; gap: 4px; min-width: 0; }
+.bd-book { font-size: .8rem; color: var(--ink); text-decoration: none; background: var(--card2); border-radius: 6px; padding: 3px 8px; border-left: 3px solid var(--common); }
+.bd-book.uncommon { border-left-color: var(--uncommon); }
+.bd-book.rare { border-left-color: var(--rare); }
+.bd-book i { font-style: normal; font-size: .68rem; color: var(--ink3); }
+.bd-none { color: var(--ink3); font-size: .8rem; padding-top: 3px; }
+@media (max-width: 600px) {
+  .bd { padding: 10px 10px 24px; }
+  .bd-table { font-size: .8rem; }
+  .bd-table th, .bd-table td { padding: 5px 4px; }
+  .bd-table .bd-size { display: none; }
+  .bd-row { grid-template-columns: 82px 1fr; }
+}

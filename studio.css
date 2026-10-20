@@ -276,3 +276,7 @@ kbd { padding: 1px 6px; border-radius: 5px; background: rgba(255, 255, 255, .08)
 .btn.active-toggle.on .knob { background: #7fae6a; }
 .btn.active-toggle.on .knob::after { transform: translateX(11px); background: #fff; }
 .btn.active-toggle:not(.on) { color: var(--ink2); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .18); }
+
+/* The archetype breakdown takes the whole width (2026-10-21). */
+.shell.wide { grid-template-columns: 1fr; }
+.shell.wide .side, .shell.wide .rail { display: none; }

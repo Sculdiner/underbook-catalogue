@@ -54,6 +54,7 @@ import {
   withActive,
 } from './store.js';
 import { ZOOM_BADGE, zoomAttrs } from './zoom.js';
+import { breakdownHtml } from './breakdown.js';
 
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
@@ -115,7 +116,7 @@ function dialog(html, ok = 'OK', danger = false) {
 
 function parseHash() {
   const [mode = 'encounters', key] = location.hash.replace(/^#\/?/, '').split('/').map(decodeURIComponent);
-  return { mode: mode === 'routes' ? 'routes' : 'encounters', key };
+  return { mode: mode === 'routes' || mode === 'archetypes' ? mode : 'encounters', key };
 }
 
 function render() {
@@ -123,6 +124,15 @@ function render() {
   for (const a of $$('.modes a')) a.classList.toggle('on', a.dataset.mode === mode);
   $('#token-banner').hidden = !!token();
   if (!S.cat) return;
+  // The archetype breakdown (2026-10-21): a full-width page, no list or rail.
+  document.querySelector('.shell').classList.toggle('wide', mode === 'archetypes');
+  if (mode === 'archetypes') {
+    ED = null;
+    $('#side').innerHTML = '';
+    $('#rail').innerHTML = '';
+    $('#main').innerHTML = breakdownHtml({ bookHref: (id) => `index.html#/books/${encodeURIComponent(id)}`, newTab: true });
+    return;
+  }
   if (key) openEditor(mode, key);
   else ED = null;
   drawSide();

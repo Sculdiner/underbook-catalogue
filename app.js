@@ -78,6 +78,7 @@ import {
 import { ZOOM_BADGE, zoomAttrs } from './zoom.js';
 import { uploadAndFrame } from './upload.js';
 import { flushNotes, initNotes, loadNotes, notesView } from './notes.js';
+import { breakdownHtml } from './breakdown.js';
 
 Object.assign(S, {
   proposed: LS.get('proposed', true),
@@ -170,6 +171,7 @@ function render() {
   if (r.tab === 'settings') title = 'Settings';
   else if (r.tab === 'changes') title = 'Changes';
   else if (r.tab === 'notes') title = 'Notes';
+  else if (r.tab === 'archetypes') title = 'Archetypes';
   else if (listTab && !r.id) title = cap(r.tab);
   if (INLINE_KINDS.includes(r.tab) && isForm) {
     location.replace(r.id === 'new' ? `#/${r.tab}` : `#/${r.tab}/${encodeURIComponent(r.id)}`);
@@ -1184,6 +1186,7 @@ views.changes = () => {
 // ------------------------------------------------------------------ notes (notes.js)
 
 views.notes = notesView;
+views.archetypes = () => breakdownHtml({ bookHref: (id) => `#/books/${encodeURIComponent(id)}` });
 initNotes({ toast, ask, render: () => render(), autosize });
 
 // ------------------------------------------------------------------ settings
