@@ -157,6 +157,97 @@
       },
       "note": "",
       "at": "2026-10-20T21:55:10.499Z"
+    },
+    {
+      "id": "mvh847jvi8hn2",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "whispers-of-blackwater",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "whispers-of-blackwater",
+        "title": "Whispers of Blackwater",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "archetypes": [
+          "discard"
+        ],
+        "value": 2,
+        "extension": true,
+        "shortText": "Return a random discarded book; +1 Value this Encounter.",
+        "rulesText": "On Assign: return 1 random book from your discard pile to your hand. It gains +1 Value until the end of the Encounter.",
+        "reminders": [
+          "value-duration"
+        ],
+        "rebinds": [
+          {
+            "id": "whispers-of-blackwater:louder-whispers",
+            "name": "Louder Whispers",
+            "before": "+1 Value this Encounter",
+            "after": "+3 Value this Encounter",
+            "text": "On Assign: return 1 random book from your discard pile to your hand. It gains +3 Value until the end of the Encounter."
+          },
+          {
+            "id": "whispers-of-blackwater:many-voices",
+            "name": "Many Voices",
+            "before": "Return 1 book",
+            "after": "Return 2 books",
+            "text": "On Assign: return 2 random different books from your discard pile to your hand. Each gains +1 Value until the end of the Encounter."
+          },
+          {
+            "id": "whispers-of-blackwater:blackwater-passage",
+            "name": "Blackwater Passage",
+            "before": "Return a random book",
+            "after": "Return the highest-Value book",
+            "text": "On Assign: return the highest-Value book from your discard pile to your hand. It gains +1 Value until the end of the Encounter."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "whispers-of-blackwater",
+        "title": "Whispers of Blackwater",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "value": 2,
+        "extension": true,
+        "shortText": "Return a random discarded book; +1 Value this Encounter.",
+        "rulesText": "On Assign: return 1 random book from your discard pile to your hand. It gains +1 Value until the end of the Encounter.",
+        "reminders": [
+          "value-duration"
+        ],
+        "rebinds": [
+          {
+            "id": "whispers-of-blackwater:louder-whispers",
+            "name": "Louder Whispers",
+            "before": "+1 Value this Encounter",
+            "after": "+3 Value this Encounter",
+            "text": "On Assign: return 1 random book from your discard pile to your hand. It gains +3 Value until the end of the Encounter."
+          },
+          {
+            "id": "whispers-of-blackwater:many-voices",
+            "name": "Many Voices",
+            "before": "Return 1 book",
+            "after": "Return 2 books",
+            "text": "On Assign: return 2 random different books from your discard pile to your hand. Each gains +1 Value until the end of the Encounter."
+          },
+          {
+            "id": "whispers-of-blackwater:blackwater-passage",
+            "name": "Blackwater Passage",
+            "before": "Return a random book",
+            "after": "Return the highest-Value book",
+            "text": "On Assign: return the highest-Value book from your discard pile to your hand. It gains +1 Value until the end of the Encounter."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-20T21:57:00.859Z"
     }
   ],
   "applied": [
@@ -7153,5 +7244,5 @@
       "result": "Applied: on display it shuffles in 2 Pyroclasms, all Pyroclasms +1, then +1 to every Pyroclasm per DESTROY of yours."
     }
   ],
-  "updatedAt": "2026-10-20T21:55:10.499Z"
+  "updatedAt": "2026-10-20T21:57:00.859Z"
 }
