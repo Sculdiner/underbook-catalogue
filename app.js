@@ -396,9 +396,17 @@ function bookRow(it) {
   const sub = [b.onDisplay ? 'On Display' : '', (b.actionCost ?? 1) !== 1 ? `${b.actionCost} Actions` : '', b.extension ? 'Extension' : '', ...(b.flags ?? [])].filter(Boolean);
   return `<a class="deck-row ${b.rarity} ${it.pending?.op === 'delete' ? 'deleted' : ''} ${isOff(b) ? 'off' : ''}" href="#/books/${encodeURIComponent(it.key)}">
     ${thumb}
-    <span class="deck-name"><span class="deck-title name">${esc(b.title)}</span>${sub.length ? `<span class="deck-sub">${esc(sub.join(' · '))}</span>` : ''}</span>
+    <span class="deck-name"><span class="deck-title name">${esc(b.title)}</span>${sub.length ? `<span class="deck-sub">${esc(sub.join(' · '))}</span>` : ''}${archTags(b)}</span>
     ${offTag(b)}${pendingTag(it)}${b.onDisplay ? '' : `<span class="deck-value">${b.value ?? '?'}</span>`}</a>`;
 }
+
+/** The archetypes on the site (2026-10-20): name and the colour class of their tag. */
+const archetypes = () => S.cat.archetypes ?? [];
+const archetypeName = (id) => archetypes().find((a) => a.id === id)?.name ?? id;
+const archTags = (b) =>
+  (b.archetypes ?? []).length
+    ? `<span class="arch-tags">${b.archetypes.map((a) => `<i class="arch arch-${esc(a)}">${esc(archetypeName(a))}</i>`).join('')}</span>`
+    : '';
 
 function bookGroup(b) {
   if (b.flags?.some((f) => f === 'token' || f === 'tutorial-only')) return 'special';
@@ -414,7 +422,8 @@ views.list = {
       ({ data: b }) =>
         matches(f.q, b.title, b.id, b.rulesText, b.shortText) &&
         (!f.trait || (f.trait === 'basics' ? !b.traits.length : b.traits.includes(f.trait))) &&
-        (!f.rarity || b.rarity === f.rarity),
+        (!f.rarity || b.rarity === f.rarity) &&
+        (!f.archetype || (f.archetype === 'untagged' ? !(b.archetypes ?? []).length : (b.archetypes ?? []).includes(f.archetype))),
     );
     const groups = order
       .map((g) => [g, all.filter((x) => bookGroup(x.data) === g).sort((a, b) => rarityRank(a.data.rarity) - rarityRank(b.data.rarity))])
@@ -424,6 +433,7 @@ views.list = {
       filterBar('books', [
         { key: 'trait', options: [['basics', 'Basics'], ...traitsIn.map((t) => [t, traitName(t)])] },
         { key: 'rarity', options: RARITIES.map((r) => [r, cap(r)]) },
+        { key: 'archetype', options: [...archetypes().map((a) => [a.id, a.name]), ['untagged', 'Untagged']] },
       ]) +
       '<div id="results">' +
       (groups.length
@@ -645,7 +655,7 @@ function detailActions(kind, it) {
   </div>`;
 }
 
-const ENGINE_SKIP = new Set(['id', 'disabled', 'onDisplay', 'upload', 'title', 'traits', 'rarity', 'value', 'actionCost', 'copies', 'shortText', 'rulesText', 'flavor', 'flags', 'extension', 'rebinds', 'reminders']);
+const ENGINE_SKIP = new Set(['id', 'disabled', 'onDisplay', 'upload', 'title', 'traits', 'rarity', 'value', 'actionCost', 'copies', 'shortText', 'rulesText', 'flavor', 'flags', 'archetypes', 'extension', 'rebinds', 'reminders']);
 
 views.detail = {
   books(it) {
@@ -680,6 +690,8 @@ views.detail = {
       ${b.onDisplay ? '' : `<h3>Rebinds <small class="muted small">${rebinds.length}</small></h3>
       <div class="rb-list">${rebinds.map((u, i) => rebindCard(u, i, live && S.inline?.openRebind === i, { attr: 'data-ipath', count: rebinds.length })).join('')}</div>
       ${live ? '<button type="button" class="btn ghost add-row" style="width:100%;margin-top:10px" data-act="add-rebind">+ Add rebind</button>' : ''}`}
+      <h3>Archetypes</h3>
+      <div class="chips" style="flex-wrap:wrap;overflow:visible">${archetypes().map((a) => `<button type="button" class="chip arch-chip arch-${esc(a.id)} ${(b.archetypes ?? []).includes(a.id) ? 'on' : ''}" data-itoggle="archetypes" data-val="${esc(a.id)}">${esc(a.name)}</button>`).join('')}</div>
       <h3>Flags</h3>
       <div class="chips" style="flex-wrap:wrap;overflow:visible">${BOOK_FLAGS.map((f) => `<button type="button" class="chip ${(b.flags ?? []).includes(f) ? 'on' : ''}" data-itoggle="flags" data-val="${f}">${f}</button>`).join('')}</div>
       <div class="field check" style="margin-top:12px"><label><input type="checkbox" data-ipath="extension" ${b.extension ? 'checked' : ''}> Extension book (beyond its Trait’s core ten)</label></div>

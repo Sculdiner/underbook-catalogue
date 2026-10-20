@@ -482,3 +482,19 @@ button.pick-icon:disabled { cursor: default; }
 .display-check span { display: flex; flex-direction: column; gap: 2px; }
 .display-check b { color: var(--ink); font-size: .95rem; }
 .display-check small { color: var(--ink3); font-size: .78rem; font-weight: 400; }
+
+/* Archetype tags (2026-10-20): a small coloured label per archetype a book supports. */
+.arch-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 2px; }
+.arch { font-style: normal; font-size: .68rem; line-height: 1; padding: 3px 7px; border-radius: 999px; border: 1px solid currentColor; opacity: .95; }
+.arch-actions { color: #6fb3e0; }
+.arch-conjuration { color: #c48be0; }
+.arch-discard { color: #7cc88a; }
+.arch-big-value { color: #e0a85a; }
+.arch-patience { color: #e07f9a; }
+.chip.arch-chip.on { color: var(--bg); }
+.chip.arch-chip.arch-actions.on { background: #6fb3e0; border-color: #6fb3e0; }
+.chip.arch-chip.arch-conjuration.on { background: #c48be0; border-color: #c48be0; }
+.chip.arch-chip.arch-discard.on { background: #7cc88a; border-color: #7cc88a; }
+.chip.arch-chip.arch-big-value.on { background: #e0a85a; border-color: #e0a85a; }
+.chip.arch-chip.arch-patience.on { background: #e07f9a; border-color: #e07f9a; }
+
