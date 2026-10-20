@@ -17,6 +17,53 @@
       },
       "note": "",
       "at": "2026-10-07T18:10:20.980Z"
+    },
+    {
+      "id": "mvh7w933o4zrr",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "lava-golem",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "lava-golem",
+        "title": "Lava Golem",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "archetypes": [
+          "conjuration"
+        ],
+        "value": 4,
+        "extension": true,
+        "shortText": "Each Pyroclasm you assign: +2 this Encounter.",
+        "rulesText": "Whenever you assign a Pyroclasm, Lava Golem gains +2 Value this Encounter, wherever it is.",
+        "reminders": [
+          "pyroclasm"
+        ],
+        "rebinds": []
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "lava-golem",
+        "title": "Lava Golem",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 4,
+        "extension": true,
+        "shortText": "Each Pyroclasm you assign: +2 this Encounter.",
+        "rulesText": "Whenever you assign a Pyroclasm, Lava Golem gains +2 Value this Encounter, wherever it is.",
+        "reminders": [
+          "pyroclasm"
+        ],
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-20T21:50:49.592Z"
     }
   ],
   "applied": [
@@ -7013,5 +7060,5 @@
       "result": "Applied: on display it shuffles in 2 Pyroclasms, all Pyroclasms +1, then +1 to every Pyroclasm per DESTROY of yours."
     }
   ],
-  "updatedAt": "2026-10-19T16:00:03.783Z"
+  "updatedAt": "2026-10-20T21:50:49.599Z"
 }
