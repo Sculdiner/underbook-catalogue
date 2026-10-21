@@ -17,6 +17,110 @@
       },
       "note": "",
       "at": "2026-10-07T18:10:20.980Z"
+    },
+    {
+      "id": "mvijglx7hoexi",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "a-bestiary-of-bones",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "a-bestiary-of-bones",
+        "title": "A Bestiary of Bones",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "archetypes": [
+          "discard"
+        ],
+        "value": 3,
+        "extension": true,
+        "dynamicValue": {
+          "source": "discarded-by-you",
+          "per": 1
+        },
+        "shortText": "+1 Value for each book you discarded this Encounter.",
+        "rulesText": "This book's Value is 3, +1 for each book you have discarded this Encounter.",
+        "reminders": [
+          "discard",
+          "dynamic-value"
+        ],
+        "rebinds": [
+          {
+            "id": "a-bestiary-of-bones:second-edition",
+            "name": "Second Edition",
+            "before": "Value 3",
+            "after": "Value 5",
+            "text": "Printed Value 5."
+          },
+          {
+            "id": "a-bestiary-of-bones:ossuary-plates",
+            "name": "Ossuary Plates",
+            "before": "+1 per discard",
+            "after": "+2 per discard",
+            "text": "This book's Value is 3, +2 for each book you have discarded this Encounter."
+          },
+          {
+            "id": "a-bestiary-of-bones:bone-pit",
+            "name": "Bone Pit",
+            "before": "No On Assign",
+            "after": "On Assign: discard the top book of your Library",
+            "text": "This book's Value is 3, +1 for each book you have discarded this Encounter. On Assign: discard the top book of your Library."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "a-bestiary-of-bones",
+        "title": "A Bestiary of Bones",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "archetypes": [
+          "discard"
+        ],
+        "value": 3,
+        "extension": true,
+        "dynamicValue": {
+          "source": "discarded-by-you",
+          "per": 1
+        },
+        "shortText": "+1 Value for each book you discarded this Encounter.",
+        "rulesText": "+1 for each book you have discarded this Encounter.",
+        "reminders": [
+          "discard",
+          "dynamic-value"
+        ],
+        "rebinds": [
+          {
+            "id": "a-bestiary-of-bones:second-edition",
+            "name": "Second Edition",
+            "before": "Value 3",
+            "after": "Value 5",
+            "text": "Printed Value 5."
+          },
+          {
+            "id": "a-bestiary-of-bones:ossuary-plates",
+            "name": "Ossuary Plates",
+            "before": "+1 per discard",
+            "after": "+2 per discard",
+            "text": "This book's Value is 3, +2 for each book you have discarded this Encounter."
+          },
+          {
+            "id": "a-bestiary-of-bones:bone-pit",
+            "name": "Bone Pit",
+            "before": "No On Assign",
+            "after": "On Assign: discard the top book of your Library",
+            "text": "This book's Value is 3, +1 for each book you have discarded this Encounter. On Assign: discard the top book of your Library."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-21T20:02:21.306Z"
     }
   ],
   "applied": [
@@ -7452,5 +7556,5 @@
       "result": "Hydra Anatomy is Value 4 and +2 when an effect discards it; Rebinds Many Heads +3, Thick Anatomy 6, Regrowing Head +2."
     }
   ],
-  "updatedAt": "2026-10-21T16:49:27.562Z"
+  "updatedAt": "2026-10-21T20:02:21.307Z"
 }
