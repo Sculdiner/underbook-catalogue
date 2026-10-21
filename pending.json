@@ -17,433 +17,6 @@
       },
       "note": "",
       "at": "2026-10-07T18:10:20.980Z"
-    },
-    {
-      "id": "mvh7w933o4zrr",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "lava-golem",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "lava-golem",
-        "title": "Lava Golem",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "rare",
-        "archetypes": [
-          "conjuration"
-        ],
-        "value": 4,
-        "extension": true,
-        "shortText": "Each Pyroclasm you assign: +2 this Encounter.",
-        "rulesText": "Whenever you assign a Pyroclasm, Lava Golem gains +2 Value this Encounter, wherever it is.",
-        "reminders": [
-          "pyroclasm"
-        ],
-        "rebinds": []
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "lava-golem",
-        "title": "Lava Golem",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "rare",
-        "value": 4,
-        "extension": true,
-        "shortText": "Each Pyroclasm you assign: +2 this Encounter.",
-        "rulesText": "Whenever you assign a Pyroclasm, Lava Golem gains +2 Value this Encounter, wherever it is.",
-        "reminders": [
-          "pyroclasm"
-        ],
-        "rebinds": []
-      },
-      "note": "",
-      "at": "2026-10-20T21:50:49.592Z"
-    },
-    {
-      "id": "mvh7yk0y34w9c",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "tome-of-arcane-recall",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "tome-of-arcane-recall",
-        "title": "Tome of Arcane Recall",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "uncommon",
-        "archetypes": [
-          "discard"
-        ],
-        "value": 2,
-        "extension": true,
-        "shortText": "Return a Magic book from your discard pile to your hand.",
-        "rulesText": "On Assign: return a Magic book of your choice from your discard pile to your hand.",
-        "rebinds": []
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "tome-of-arcane-recall",
-        "title": "Tome of Arcane Recall",
-        "traits": [
-          "magic"
-        ],
-        "rarity": "uncommon",
-        "value": 2,
-        "extension": true,
-        "shortText": "Return a Magic book from your discard pile to your hand.",
-        "rulesText": "On Assign: return a Magic book of your choice from your discard pile to your hand.",
-        "rebinds": []
-      },
-      "note": "",
-      "at": "2026-10-20T21:52:37.090Z"
-    },
-    {
-      "id": "mvh81ueba5eym",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "on-the-brood-of-spiders",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "on-the-brood-of-spiders",
-        "title": "On the Brood of Spiders",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "uncommon",
-        "archetypes": [
-          "conjuration"
-        ],
-        "value": 2,
-        "extension": true,
-        "shortText": "Conjure 2 Spiderlings.",
-        "rulesText": "On Assign: conjure 2 Spiderlings (Monsters, Value 2, 0 Actions) into your hand. They are temporary.",
-        "reminders": [
-          "conjure",
-          "temporary"
-        ],
-        "rebinds": []
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "on-the-brood-of-spiders",
-        "title": "On the Brood of Spiders",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "uncommon",
-        "archetypes": [
-          "conjuration"
-        ],
-        "value": 1,
-        "extension": true,
-        "shortText": "Conjure 2 Spiderlings.",
-        "rulesText": "On Assign: conjure 2 Spiderlings (Monsters, Value 2, 0 Actions) into your hand. They are temporary.",
-        "reminders": [
-          "conjure",
-          "temporary"
-        ],
-        "rebinds": []
-      },
-      "note": "",
-      "at": "2026-10-20T21:55:10.499Z"
-    },
-    {
-      "id": "mvh847jvi8hn2",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "whispers-of-blackwater",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "whispers-of-blackwater",
-        "title": "Whispers of Blackwater",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "common",
-        "archetypes": [
-          "discard"
-        ],
-        "value": 2,
-        "extension": true,
-        "shortText": "Return a random discarded book; +1 Value this Encounter.",
-        "rulesText": "On Assign: return 1 random book from your discard pile to your hand. It gains +1 Value until the end of the Encounter.",
-        "reminders": [
-          "value-duration"
-        ],
-        "rebinds": [
-          {
-            "id": "whispers-of-blackwater:louder-whispers",
-            "name": "Louder Whispers",
-            "before": "+1 Value this Encounter",
-            "after": "+3 Value this Encounter",
-            "text": "On Assign: return 1 random book from your discard pile to your hand. It gains +3 Value until the end of the Encounter."
-          },
-          {
-            "id": "whispers-of-blackwater:many-voices",
-            "name": "Many Voices",
-            "before": "Return 1 book",
-            "after": "Return 2 books",
-            "text": "On Assign: return 2 random different books from your discard pile to your hand. Each gains +1 Value until the end of the Encounter."
-          },
-          {
-            "id": "whispers-of-blackwater:blackwater-passage",
-            "name": "Blackwater Passage",
-            "before": "Return a random book",
-            "after": "Return the highest-Value book",
-            "text": "On Assign: return the highest-Value book from your discard pile to your hand. It gains +1 Value until the end of the Encounter."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "whispers-of-blackwater",
-        "title": "Whispers of Blackwater",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "common",
-        "value": 2,
-        "extension": true,
-        "shortText": "Return a random discarded book; +1 Value this Encounter.",
-        "rulesText": "On Assign: return 1 random book from your discard pile to your hand. It gains +1 Value until the end of the Encounter.",
-        "reminders": [
-          "value-duration"
-        ],
-        "rebinds": [
-          {
-            "id": "whispers-of-blackwater:louder-whispers",
-            "name": "Louder Whispers",
-            "before": "+1 Value this Encounter",
-            "after": "+3 Value this Encounter",
-            "text": "On Assign: return 1 random book from your discard pile to your hand. It gains +3 Value until the end of the Encounter."
-          },
-          {
-            "id": "whispers-of-blackwater:many-voices",
-            "name": "Many Voices",
-            "before": "Return 1 book",
-            "after": "Return 2 books",
-            "text": "On Assign: return 2 random different books from your discard pile to your hand. Each gains +1 Value until the end of the Encounter."
-          },
-          {
-            "id": "whispers-of-blackwater:blackwater-passage",
-            "name": "Blackwater Passage",
-            "before": "Return a random book",
-            "after": "Return the highest-Value book",
-            "text": "On Assign: return the highest-Value book from your discard pile to your hand. It gains +1 Value until the end of the Encounter."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-20T21:57:00.859Z"
-    },
-    {
-      "id": "mvh86p3orzacg",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "the-tide-of-teeth",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "the-tide-of-teeth",
-        "title": "The Tide of Teeth",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "uncommon",
-        "archetypes": [
-          "discard"
-        ],
-        "value": 0,
-        "extension": true,
-        "dynamicValue": {
-          "source": "discard",
-          "max": 4
-        },
-        "shortText": "Value = books in discard, max 4.",
-        "rulesText": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4.",
-        "reminders": [
-          "dynamic-value"
-        ],
-        "rebinds": [
-          {
-            "id": "the-tide-of-teeth:feeding-frenzy",
-            "name": "Feeding Frenzy",
-            "before": "Max 4",
-            "after": "Max 6",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 6."
-          },
-          {
-            "id": "the-tide-of-teeth:blood-in-the-water",
-            "name": "Blood in the Water",
-            "before": "No On Assign",
-            "after": "On Assign: at Value 4, draw 1",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4. On Assign: if The Tide of Teeth has Value 4, draw 1 book."
-          },
-          {
-            "id": "the-tide-of-teeth:endless-teeth",
-            "name": "Endless Teeth",
-            "before": "No On Assign",
-            "after": "On Assign: a Temporary copy to your hand",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4. On Assign: put a Temporary copy of The Tide of Teeth into your hand."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "the-tide-of-teeth",
-        "title": "The Tide of Teeth",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "uncommon",
-        "archetypes": [
-          "discard"
-        ],
-        "value": 0,
-        "extension": true,
-        "dynamicValue": {
-          "source": "discard",
-          "max": 4
-        },
-        "shortText": "Value = books in discard, max 4.",
-        "rulesText": "This book's Value is equal to the number of books in your discard pile, to a maximum of 6.",
-        "reminders": [
-          "dynamic-value"
-        ],
-        "rebinds": [
-          {
-            "id": "the-tide-of-teeth:feeding-frenzy",
-            "name": "Feeding Frenzy",
-            "before": "Max 6",
-            "after": "Max 8",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 8."
-          },
-          {
-            "id": "the-tide-of-teeth:blood-in-the-water",
-            "name": "Blood in the Water",
-            "before": "No On Draw",
-            "after": "When drawn: discard the top Book of your deck.",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 6. When drawn: discard the top Book of your deck."
-          },
-          {
-            "id": "the-tide-of-teeth:endless-teeth",
-            "name": "Endless Teeth",
-            "before": "No On Assign",
-            "after": "On Assign: a Temporary copy to your hand",
-            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 6. On Assign: put a Temporary copy of The Tide of Teeth into your hand."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-20T22:01:20.085Z"
-    },
-    {
-      "id": "mvh8b70czqpcg",
-      "kind": "books",
-      "op": "edit",
-      "targetId": "hydra-anatomy",
-      "before": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "hydra-anatomy",
-        "title": "Hydra Anatomy",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "rare",
-        "archetypes": [
-          "discard"
-        ],
-        "value": 2,
-        "shortText": "Discarded by an effect: +3 Value.",
-        "rulesText": "Whenever this book is discarded by an effect: gain +3 Value.",
-        "reminders": [
-          "effect-discard",
-          "value-duration"
-        ],
-        "rebinds": [
-          {
-            "id": "hydra-anatomy:many-heads",
-            "name": "Many Heads",
-            "before": "Discarded: +3 Value",
-            "after": "Discarded: +5 Value",
-            "text": "Whenever this book is discarded by an effect: gain +5 Value."
-          },
-          {
-            "id": "hydra-anatomy:thick-anatomy",
-            "name": "Thick Anatomy",
-            "before": "Value 2",
-            "after": "Value 4",
-            "text": "Printed Value 4."
-          },
-          {
-            "id": "hydra-anatomy:regrowing-head",
-            "name": "Regrowing Head",
-            "before": "Discarded: +3 Value",
-            "after": "Discarded: +3 Value, shuffled into Library",
-            "text": "Whenever this book is discarded by an effect: gain +3 Value, then shuffle it into your Library instead."
-          }
-        ]
-      },
-      "after": {
-        "actionCost": 1,
-        "copies": 1,
-        "id": "hydra-anatomy",
-        "title": "Hydra Anatomy",
-        "traits": [
-          "monsters"
-        ],
-        "rarity": "rare",
-        "archetypes": [
-          "discard"
-        ],
-        "value": 4,
-        "shortText": "Discarded by an effect: +3 Value.",
-        "rulesText": "Whenever this book is discarded by an effect: gain +2 Value.",
-        "reminders": [
-          "effect-discard",
-          "value-duration"
-        ],
-        "rebinds": [
-          {
-            "id": "hydra-anatomy:many-heads",
-            "name": "Many Heads",
-            "before": "Discarded: +2 Value",
-            "after": "Discarded: +3 Value",
-            "text": "Whenever this book is discarded by an effect: gain +3 Value."
-          },
-          {
-            "id": "hydra-anatomy:thick-anatomy",
-            "name": "Thick Anatomy",
-            "before": "Value 4",
-            "after": "Value 6",
-            "text": "Printed Value 6."
-          },
-          {
-            "id": "hydra-anatomy:regrowing-head",
-            "name": "Regrowing Head",
-            "before": "Discarded: +2 Value",
-            "after": "Discarded: +2 Value, shuffled into Library",
-            "text": "Whenever this book is discarded by an effect: gain +2 Value, then shuffle it into your Library instead."
-          }
-        ]
-      },
-      "note": "",
-      "at": "2026-10-20T22:03:40.958Z"
     }
   ],
   "applied": [
@@ -7438,7 +7011,446 @@
       "at": "2026-10-19T15:58:36.958Z",
       "appliedAt": "2026-10-19T16:00:03.782Z",
       "result": "Applied: on display it shuffles in 2 Pyroclasms, all Pyroclasms +1, then +1 to every Pyroclasm per DESTROY of yours."
+    },
+    {
+      "id": "mvh7w933o4zrr",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "lava-golem",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "lava-golem",
+        "title": "Lava Golem",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "archetypes": [
+          "conjuration"
+        ],
+        "value": 4,
+        "extension": true,
+        "shortText": "Each Pyroclasm you assign: +2 this Encounter.",
+        "rulesText": "Whenever you assign a Pyroclasm, Lava Golem gains +2 Value this Encounter, wherever it is.",
+        "reminders": [
+          "pyroclasm"
+        ],
+        "rebinds": []
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "lava-golem",
+        "title": "Lava Golem",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "rare",
+        "value": 4,
+        "extension": true,
+        "shortText": "Each Pyroclasm you assign: +2 this Encounter.",
+        "rulesText": "Whenever you assign a Pyroclasm, Lava Golem gains +2 Value this Encounter, wherever it is.",
+        "reminders": [
+          "pyroclasm"
+        ],
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-20T21:50:49.592Z",
+      "appliedAt": "2026-10-21T16:49:27.561Z",
+      "result": "Lava Golem is untagged now."
+    },
+    {
+      "id": "mvh7yk0y34w9c",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "tome-of-arcane-recall",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "tome-of-arcane-recall",
+        "title": "Tome of Arcane Recall",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "archetypes": [
+          "discard"
+        ],
+        "value": 2,
+        "extension": true,
+        "shortText": "Return a Magic book from your discard pile to your hand.",
+        "rulesText": "On Assign: return a Magic book of your choice from your discard pile to your hand.",
+        "rebinds": []
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "tome-of-arcane-recall",
+        "title": "Tome of Arcane Recall",
+        "traits": [
+          "magic"
+        ],
+        "rarity": "uncommon",
+        "value": 2,
+        "extension": true,
+        "shortText": "Return a Magic book from your discard pile to your hand.",
+        "rulesText": "On Assign: return a Magic book of your choice from your discard pile to your hand.",
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-20T21:52:37.090Z",
+      "appliedAt": "2026-10-21T16:49:27.561Z",
+      "result": "Tome of Arcane Recall is untagged now."
+    },
+    {
+      "id": "mvh81ueba5eym",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "on-the-brood-of-spiders",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "on-the-brood-of-spiders",
+        "title": "On the Brood of Spiders",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "uncommon",
+        "archetypes": [
+          "conjuration"
+        ],
+        "value": 2,
+        "extension": true,
+        "shortText": "Conjure 2 Spiderlings.",
+        "rulesText": "On Assign: conjure 2 Spiderlings (Monsters, Value 2, 0 Actions) into your hand. They are temporary.",
+        "reminders": [
+          "conjure",
+          "temporary"
+        ],
+        "rebinds": []
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "on-the-brood-of-spiders",
+        "title": "On the Brood of Spiders",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "uncommon",
+        "archetypes": [
+          "conjuration"
+        ],
+        "value": 1,
+        "extension": true,
+        "shortText": "Conjure 2 Spiderlings.",
+        "rulesText": "On Assign: conjure 2 Spiderlings (Monsters, Value 2, 0 Actions) into your hand. They are temporary.",
+        "reminders": [
+          "conjure",
+          "temporary"
+        ],
+        "rebinds": []
+      },
+      "note": "",
+      "at": "2026-10-20T21:55:10.499Z",
+      "appliedAt": "2026-10-21T16:49:27.561Z",
+      "result": "On the Brood of Spiders is Value 1; its Spiderlings are unchanged."
+    },
+    {
+      "id": "mvh847jvi8hn2",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "whispers-of-blackwater",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "whispers-of-blackwater",
+        "title": "Whispers of Blackwater",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "archetypes": [
+          "discard"
+        ],
+        "value": 2,
+        "extension": true,
+        "shortText": "Return a random discarded book; +1 Value this Encounter.",
+        "rulesText": "On Assign: return 1 random book from your discard pile to your hand. It gains +1 Value until the end of the Encounter.",
+        "reminders": [
+          "value-duration"
+        ],
+        "rebinds": [
+          {
+            "id": "whispers-of-blackwater:louder-whispers",
+            "name": "Louder Whispers",
+            "before": "+1 Value this Encounter",
+            "after": "+3 Value this Encounter",
+            "text": "On Assign: return 1 random book from your discard pile to your hand. It gains +3 Value until the end of the Encounter."
+          },
+          {
+            "id": "whispers-of-blackwater:many-voices",
+            "name": "Many Voices",
+            "before": "Return 1 book",
+            "after": "Return 2 books",
+            "text": "On Assign: return 2 random different books from your discard pile to your hand. Each gains +1 Value until the end of the Encounter."
+          },
+          {
+            "id": "whispers-of-blackwater:blackwater-passage",
+            "name": "Blackwater Passage",
+            "before": "Return a random book",
+            "after": "Return the highest-Value book",
+            "text": "On Assign: return the highest-Value book from your discard pile to your hand. It gains +1 Value until the end of the Encounter."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "whispers-of-blackwater",
+        "title": "Whispers of Blackwater",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "common",
+        "value": 2,
+        "extension": true,
+        "shortText": "Return a random discarded book; +1 Value this Encounter.",
+        "rulesText": "On Assign: return 1 random book from your discard pile to your hand. It gains +1 Value until the end of the Encounter.",
+        "reminders": [
+          "value-duration"
+        ],
+        "rebinds": [
+          {
+            "id": "whispers-of-blackwater:louder-whispers",
+            "name": "Louder Whispers",
+            "before": "+1 Value this Encounter",
+            "after": "+3 Value this Encounter",
+            "text": "On Assign: return 1 random book from your discard pile to your hand. It gains +3 Value until the end of the Encounter."
+          },
+          {
+            "id": "whispers-of-blackwater:many-voices",
+            "name": "Many Voices",
+            "before": "Return 1 book",
+            "after": "Return 2 books",
+            "text": "On Assign: return 2 random different books from your discard pile to your hand. Each gains +1 Value until the end of the Encounter."
+          },
+          {
+            "id": "whispers-of-blackwater:blackwater-passage",
+            "name": "Blackwater Passage",
+            "before": "Return a random book",
+            "after": "Return the highest-Value book",
+            "text": "On Assign: return the highest-Value book from your discard pile to your hand. It gains +1 Value until the end of the Encounter."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-20T21:57:00.859Z",
+      "appliedAt": "2026-10-21T16:49:27.561Z",
+      "result": "Whispers of Blackwater is untagged now."
+    },
+    {
+      "id": "mvh86p3orzacg",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "the-tide-of-teeth",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "the-tide-of-teeth",
+        "title": "The Tide of Teeth",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "uncommon",
+        "archetypes": [
+          "discard"
+        ],
+        "value": 0,
+        "extension": true,
+        "dynamicValue": {
+          "source": "discard",
+          "max": 4
+        },
+        "shortText": "Value = books in discard, max 4.",
+        "rulesText": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4.",
+        "reminders": [
+          "dynamic-value"
+        ],
+        "rebinds": [
+          {
+            "id": "the-tide-of-teeth:feeding-frenzy",
+            "name": "Feeding Frenzy",
+            "before": "Max 4",
+            "after": "Max 6",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 6."
+          },
+          {
+            "id": "the-tide-of-teeth:blood-in-the-water",
+            "name": "Blood in the Water",
+            "before": "No On Assign",
+            "after": "On Assign: at Value 4, draw 1",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4. On Assign: if The Tide of Teeth has Value 4, draw 1 book."
+          },
+          {
+            "id": "the-tide-of-teeth:endless-teeth",
+            "name": "Endless Teeth",
+            "before": "No On Assign",
+            "after": "On Assign: a Temporary copy to your hand",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 4. On Assign: put a Temporary copy of The Tide of Teeth into your hand."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "the-tide-of-teeth",
+        "title": "The Tide of Teeth",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "uncommon",
+        "archetypes": [
+          "discard"
+        ],
+        "value": 0,
+        "extension": true,
+        "dynamicValue": {
+          "source": "discard",
+          "max": 4
+        },
+        "shortText": "Value = books in discard, max 4.",
+        "rulesText": "This book's Value is equal to the number of books in your discard pile, to a maximum of 6.",
+        "reminders": [
+          "dynamic-value"
+        ],
+        "rebinds": [
+          {
+            "id": "the-tide-of-teeth:feeding-frenzy",
+            "name": "Feeding Frenzy",
+            "before": "Max 6",
+            "after": "Max 8",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 8."
+          },
+          {
+            "id": "the-tide-of-teeth:blood-in-the-water",
+            "name": "Blood in the Water",
+            "before": "No On Draw",
+            "after": "When drawn: discard the top Book of your deck.",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 6. When drawn: discard the top Book of your deck."
+          },
+          {
+            "id": "the-tide-of-teeth:endless-teeth",
+            "name": "Endless Teeth",
+            "before": "No On Assign",
+            "after": "On Assign: a Temporary copy to your hand",
+            "text": "This book's Value is equal to the number of books in your discard pile, to a maximum of 6. On Assign: put a Temporary copy of The Tide of Teeth into your hand."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-20T22:01:20.085Z",
+      "appliedAt": "2026-10-21T16:49:27.561Z",
+      "result": "The Tide of Teeth caps at 6; Feeding Frenzy at 8; Blood in the Water is now 'When drawn: discard the top book of your Library'; Endless Teeth unchanged."
+    },
+    {
+      "id": "mvh8b70czqpcg",
+      "kind": "books",
+      "op": "edit",
+      "targetId": "hydra-anatomy",
+      "before": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "hydra-anatomy",
+        "title": "Hydra Anatomy",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "archetypes": [
+          "discard"
+        ],
+        "value": 2,
+        "shortText": "Discarded by an effect: +3 Value.",
+        "rulesText": "Whenever this book is discarded by an effect: gain +3 Value.",
+        "reminders": [
+          "effect-discard",
+          "value-duration"
+        ],
+        "rebinds": [
+          {
+            "id": "hydra-anatomy:many-heads",
+            "name": "Many Heads",
+            "before": "Discarded: +3 Value",
+            "after": "Discarded: +5 Value",
+            "text": "Whenever this book is discarded by an effect: gain +5 Value."
+          },
+          {
+            "id": "hydra-anatomy:thick-anatomy",
+            "name": "Thick Anatomy",
+            "before": "Value 2",
+            "after": "Value 4",
+            "text": "Printed Value 4."
+          },
+          {
+            "id": "hydra-anatomy:regrowing-head",
+            "name": "Regrowing Head",
+            "before": "Discarded: +3 Value",
+            "after": "Discarded: +3 Value, shuffled into Library",
+            "text": "Whenever this book is discarded by an effect: gain +3 Value, then shuffle it into your Library instead."
+          }
+        ]
+      },
+      "after": {
+        "actionCost": 1,
+        "copies": 1,
+        "id": "hydra-anatomy",
+        "title": "Hydra Anatomy",
+        "traits": [
+          "monsters"
+        ],
+        "rarity": "rare",
+        "archetypes": [
+          "discard"
+        ],
+        "value": 4,
+        "shortText": "Discarded by an effect: +3 Value.",
+        "rulesText": "Whenever this book is discarded by an effect: gain +2 Value.",
+        "reminders": [
+          "effect-discard",
+          "value-duration"
+        ],
+        "rebinds": [
+          {
+            "id": "hydra-anatomy:many-heads",
+            "name": "Many Heads",
+            "before": "Discarded: +2 Value",
+            "after": "Discarded: +3 Value",
+            "text": "Whenever this book is discarded by an effect: gain +3 Value."
+          },
+          {
+            "id": "hydra-anatomy:thick-anatomy",
+            "name": "Thick Anatomy",
+            "before": "Value 4",
+            "after": "Value 6",
+            "text": "Printed Value 6."
+          },
+          {
+            "id": "hydra-anatomy:regrowing-head",
+            "name": "Regrowing Head",
+            "before": "Discarded: +2 Value",
+            "after": "Discarded: +2 Value, shuffled into Library",
+            "text": "Whenever this book is discarded by an effect: gain +2 Value, then shuffle it into your Library instead."
+          }
+        ]
+      },
+      "note": "",
+      "at": "2026-10-20T22:03:40.958Z",
+      "appliedAt": "2026-10-21T16:49:27.561Z",
+      "result": "Hydra Anatomy is Value 4 and +2 when an effect discards it; Rebinds Many Heads +3, Thick Anatomy 6, Regrowing Head +2."
     }
   ],
-  "updatedAt": "2026-10-20T22:03:40.958Z"
+  "updatedAt": "2026-10-21T16:49:27.562Z"
 }
